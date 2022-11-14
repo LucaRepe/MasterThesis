@@ -1,5 +1,5 @@
 import sys
-import os
+import re
 import r2pipe
 from typing import Tuple, List
 
@@ -66,7 +66,7 @@ class BlockDescriptor(dict):
 def disassemble(filepath):
     """ Disassmles an exe using radare2, :returns A dict {function address} -> {block address} """
     r2 = r2pipe.open(filepath)
-
+    f = open(sys.argv[2], 'w')
     r2.cmd("aaa")  # do an analysis to find functions
     functions = r2.cmdj("aflj")  # get all functions
 
@@ -110,6 +110,8 @@ def disassemble(filepath):
                 if o["type"] == "invalid":
                     continue
                 block.dsm += (int(o["offset"]), o["disasm"], int(o["size"]))
+                f.write(' '.join(re.findall(r'.{1,2}', str(o["bytes"]).upper())) + '\t' + o["disasm"].upper() + '\n')
+                
 
             if o["type"] == "invalid":
                 print(f"Invalid instruction @{block.address + int(o['offset'])} @ block {block.address} "
@@ -133,9 +135,5 @@ def disassemble(filepath):
 
     
     return result
-
-
-if len(sys.argv) != 2 or not os.path.isfile(sys.argv[1]):
-    exit(f"python3 Usage: {sys.argv[0]} <path/to/exe>")
 
 disassemble(sys.argv[1])

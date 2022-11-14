@@ -1,5 +1,5 @@
-# Build image from Ubuntu repository
-FROM ubuntu:22.04
+# Build image from openjdk repository
+FROM openjdk:11-slim
 
 # Creation of MasterThesis directory
 RUN mkdir -p MasterThesis
@@ -8,8 +8,10 @@ RUN mkdir -p MasterThesis
 ADD . /MasterThesis
 
 # The image build will operate from the /MasterThesis directory
-WORKDIR /MasterThesis/ghidra_10.1.5_PUBLIC/support
+WORKDIR /MasterThesis
 
-# Define default command to run at container startup
-# CMD ["analyzeHeadless", "/MasterThesis/", "MasterThesis", "-process", "main-bin", "-scriptPath", "/MasterThesis/headless_scripts/", "-postScript", "disassembler.py", "/MasterThesis/output.txt"]
-CMD analyzeHeadless
+# Define command to run analyzeHeadless
+CMD ["./ghidra_10.1.5_PUBLIC/support/analyzeHeadless", "/MasterThesis/", "GhidraProject", "-import", "main-bin", "-scriptPath", "/MasterThesis/ghidra_10.1.5_PUBLIC/support/", "-postScript", "disassemblerGhidra.py", "/output.txt", "-deleteProject"]
+
+# Define command to visualize output
+RUN cat output.txt

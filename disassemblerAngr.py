@@ -10,9 +10,10 @@ def run():
     cfg.normalize()
     for func_node in cfg.functions.values():
         for block in func_node.blocks:
-            #print(re.sub(r'.', '', str(block.disassembly), count = 10))
-            #print(block.bytes.hex())
-            print(re.sub(r'.', '', str(block.capstone), count = 10) + '\t' + block.bytes.hex())       
+            c = block.capstone
+            for i in c.insns:
+                f.write(' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper() + '\t\t' + i.mnemonic.upper() + " " + i.op_str.upper() + '\n')
+
 
 if __name__ == '__main__':
     run()

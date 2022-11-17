@@ -9,9 +9,15 @@ import __main__ as ghidra_app
 # 00401000      89 c8      MOV EAX, this
 DISTANCE_FROM_ADDRESS_TO_BYTE = 15
 
+# distance from byte to instruction
+#               |<------->|
+# 00401000      89 c8      MOV EAX, this
+DISTANCE_FROM_BYTE_TO_INST = 15
+
 # output format of instructions
-MSG_FORMAT = '{{byte:<{0}}}\n'.format(
-    DISTANCE_FROM_ADDRESS_TO_BYTE
+MSG_FORMAT = '{{byte:<{1}}} {{inst}}\n'.format(
+    DISTANCE_FROM_ADDRESS_TO_BYTE,
+    DISTANCE_FROM_ADDRESS_TO_BYTE+DISTANCE_FROM_BYTE_TO_INST 
 )
 
 
@@ -21,6 +27,17 @@ def unoverflow(x):
 
 def to_hex(integer):
     return '{:02x}'.format(integer)
+
+
+def _get_function_signature(func):
+    # get function signature
+    calling_conv = func.getDefaultCallingConventionName()
+    params = func.getParameters()
+
+    return '\n{calling_conv} {func_name}({params})\n'.format(
+        calling_conv=calling_conv,
+        func_name=func.getName(),
+        params=', '.join([str(param).replace('[', '').replace(']', '').split('@')[0] for param in params]))
 
 
 def _get_instructions(func):
@@ -40,7 +57,7 @@ def _get_instructions(func):
             inst=inst
         )
 
-    return instructions
+    return instructions.upper()
 
 
 def disassemble_func(func):
@@ -51,7 +68,7 @@ def disassemble_func(func):
         string: disassembled function with function signature and instructions
     '''
 
-    return _get_instructions(func)
+    return  _get_instructions(func)
 
 
 def disassemble(program):
@@ -81,7 +98,8 @@ Usage: ./analyzeHeadless <PATH_TO_GHIDRA_PROJECT> <PROJECT_NAME> \
 -postScript|-preScript disassemble.py <PATH_TO_OUTPUT_FILE>')
         return
 
-    # if no output path given, <CURRENT_PROGRAM>.asm will be saved in current dir
+    # if no output path given, 
+    # <CURRENT_PROGRAM>.asm will be saved in current dir
     if len(args) == 0:
         cur_program_name = ghidra_app.currentProgram.getName()
         output = '{}.asm'.format(''.join(cur_program_name.split('.')[:-1]))

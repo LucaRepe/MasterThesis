@@ -130,7 +130,7 @@ Usage: ./analyzeHeadless <PATH_TO_GHIDRA_PROJECT> <PROJECT_NAME> \
 
 
 def addBB(bb, G, bb_func_map):
-    listing = currentProgram.getListing()
+    listing = currentProgram.getListing();
     # iter over the instructions
     codeUnits = listing.getCodeUnits(bb, True)
     lastInstStart = 0x0
@@ -252,36 +252,36 @@ def dumpBlocks():
             continue
 
         G = ('''digraph "func 0x%x" {
-            newrank=true;
-            // Flow Type Legend
-            subgraph cluster_01 { 
-                rank=same;
-                node [shape=plaintext]
-                label = "Legend";
-                key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
-                            <tr><td align="right" port="i1">Jump/Fallthrough</td></tr>
-                            <tr><td align="right" port="i2">Call</td></tr>
-                            <tr><td align="right" port="i3">Conditional Jump</td></tr>
-                            <tr><td align="right" port="i4">Conditional Call</td></tr>
-                            <tr><td align="right" port="i5">Other</td></tr>
-                        </table>>];
-                key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
-                            <tr><td port="i1">&nbsp;</td></tr>
-                            <tr><td port="i2">&nbsp;</td></tr>
-                            <tr><td port="i3">&nbsp;</td></tr>
-                            <tr><td port="i4">&nbsp;</td></tr>
-                            <tr><td port="i5">&nbsp;</td></tr>
-                            </table>>];
-                key:i1:e -> key2:i1:w [color=gray style=dashed];
-                key:i2:e -> key2:i2:w [color=cyan4 style=dashed];
-                key:i3:e -> key2:i3:w [color=gray];
-                key:i4:e -> key2:i4:w [color=cyan4];
-                key:i5:e -> key2:i5:w [color=gray style=dotted];
-            }
-            ''' % func_va)
+  newrank=true;
+  // Flow Type Legend
+  subgraph cluster_01 { 
+    rank=same;
+    node [shape=plaintext]
+    label = "Legend";
+    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                  <tr><td align="right" port="i1">Jump/Fallthrough</td></tr>
+                  <tr><td align="right" port="i2">Call</td></tr>
+                  <tr><td align="right" port="i3">Conditional Jump</td></tr>
+                  <tr><td align="right" port="i4">Conditional Call</td></tr>
+                  <tr><td align="right" port="i5">Other</td></tr>
+               </table>>];
+    key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                   <tr><td port="i1">&nbsp;</td></tr>
+                   <tr><td port="i2">&nbsp;</td></tr>
+                   <tr><td port="i3">&nbsp;</td></tr>
+                   <tr><td port="i4">&nbsp;</td></tr>
+                   <tr><td port="i5">&nbsp;</td></tr>
+                </table>>];
+    key:i1:e -> key2:i1:w [color=gray style=dashed];
+    key:i2:e -> key2:i2:w [color=cyan4 style=dashed];
+    key:i3:e -> key2:i3:w [color=gray];
+    key:i4:e -> key2:i4:w [color=cyan4];
+    key:i5:e -> key2:i5:w [color=gray style=dotted];
+  }
+''' % func_va)
 
         funcs_set.add(func_va)
-        codeBlockIterator = bbModel.getCodeBlocksContaining(func.getBody(), monitor)
+        codeBlockIterator = bbModel.getCodeBlocksContaining(func.getBody(), monitor);
 
 
         # iter over the basic blocks
@@ -293,18 +293,13 @@ def dumpBlocks():
             bb_func_set.add(bb)
             G = addBB(bb, G, bb_func_map)
 
-        print(G+ '\n')
-        print("---------------------------------------------------------")
         G = addSuccessors(bb_func_set, bb_func_map, G)
 
-        print(G)
         G += '}'
-
 
         with open('/home/luca/Scrivania/MasterThesis/%s.dot' % func.getName(), 'w') as dot_output:
             dot_output.write(G)
-        return
-    
+            
 
 if __name__ == '__main__':
     run()

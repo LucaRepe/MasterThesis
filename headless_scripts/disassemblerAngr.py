@@ -59,13 +59,11 @@ def run():
                 list_bytes.append(f' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper())
                 list_instr.append(f'{i.mnemonic} {i.op_str}'.upper())
                 list_addr.append(f'{hex(i.address)}')
-            # print(list_instr)
 
             for instr in list_instr:
                 if 'JE' in instr or 'JNE' in instr or 'JMP' in instr:
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':
-                        # jump_addr = jump_addr.rstrip(jump_addr[-1])
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0X' in jump_addr:
@@ -78,7 +76,6 @@ def run():
                 if 'CALL' in instr:
                     call_addr = instr.split(' ')[1]
                     if call_addr[-1] == ']':
-                        # call_addr = call_addr.rstrip(jump_addr[-1])
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     elif '0X' in call_addr:
@@ -112,38 +109,35 @@ def run():
 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):
-        # print(g.nodes[node]['instr'])
-        # print(g.nodes[node]['addr'])
         if list_sorted:
             if g.nodes[node]['has_return']:
                 list_sorted.pop(0)
             else:
                 g.nodes[node]['edges'].append(list_sorted.pop(0))
                 g.nodes[node]['edge_attr'].append("Fallthrough")
-                for edge in g.nodes[node]['edges']:
-                    for attr in g.nodes[node]['edge_attr']:
-                        if attr == 'Jump':
-                            g.add_edge(node, edge, color='r')
-                        if attr == 'Call':
-                            g.add_edge(node, edge, color='b')
-                        if attr == 'Fallthrough':
-                            g.add_edge(node, edge, color='g')
+                for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                    if attr == 'Call':
+                        g.add_edge(node, edge, color='r')
+                    if attr == 'Fallthrough':
+                        g.add_edge(node, edge, color='g')
+                    if attr == 'Jump':
+                        g.add_edge(node, edge, color='b')
 
-    colors = ['r', 'g', 'b']
-    nx.draw_networkx(g, edge_color=colors, arrows=True)
 
     legend_elements = [
-        Line2D([0], [0], marker='o', color='r', label='Jump',markerfacecolor='r', markersize=15),
-        Line2D([0], [0], marker='o', color='b', label='Call',markerfacecolor='b', markersize=15),
-        Line2D([0], [0], marker='o', color='g', label='Fallthrough',markerfacecolor='g', markersize=15)        
+        Line2D([0], [0], marker='_', color='r', label='Call',markerfacecolor='r', markersize=10),
+        Line2D([0], [0], marker='_', color='g', label='Fallthrough',markerfacecolor='g', markersize=10), 
+        Line2D([0], [0], marker='_', color='b', label='Jump',markerfacecolor='b', markersize=10)        
     ]
+
+    colors = nx.get_edge_attributes(g,'color').values()
+    nx.draw_networkx(g, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
     plt.show()
 
 
 if __name__ == '__main__':
     run()
-
 
 
 if __name__ == '__main__':

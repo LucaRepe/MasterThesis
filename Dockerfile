@@ -11,7 +11,7 @@ ADD . /MasterThesis
 WORKDIR /MasterThesis
 
 # Define command to run analyzeHeadless
-CMD ["./ghidra_10.1.5_PUBLIC/support/analyzeHeadless", "/MasterThesis/", "GhidraProject", "-import", "main-bin", "-scriptPath", "/MasterThesis/ghidra_10.1.5_PUBLIC/support/", "-postScript", "disassemblerGhidra.py", "/output.txt", "-deleteProject"]
+CMD ["./ghidra_10.2.2_PUBLIC/support/analyzeHeadless", "/MasterThesis/", "GhidraProject", "-import", "main-bin", "-scriptPath", "/MasterThesis/ghidra_10.2.2_PUBLIC/support/", "-postScript", "disassemblerGhidra.py", "/output.txt", "-deleteProject"]
 
 # Define command to visualize output
 RUN cat output.txt

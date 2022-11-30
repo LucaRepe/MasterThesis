@@ -1,5 +1,6 @@
 /Books
 /Malware
+/Dots
 analysisGhidra.txt
 analysisIDA.txt
 analysisRadare.txt
@@ -7,3 +8,6 @@ analysisAngr.txt
 main-bin
 main32
 *.dot
+*.id*
+*.nam
+*.til

@@ -2,6 +2,8 @@ import angr
 import sys
 import re
 import networkx as nx
+import pickle
+import xxhash
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
@@ -30,13 +32,16 @@ class BasicBlock:
 def run():
     f = open(sys.argv[2], 'w')
     base_addr = 0x100000
-    p = angr.Project(sys.argv[1], auto_load_libs=False,
-            load_options={'main_opts': {'base_addr': base_addr}})
+    p = angr.Project(sys.argv[1])
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 
     g = nx.DiGraph()
+    x = xxhash.xxh64()
+    number = 0
     for func_node in cfg.functions.values():
+        number += 1
+        print(func_node.name)
         for block in func_node.blocks:
             c = block.capstone
             list_bytes = list()
@@ -58,6 +63,7 @@ def run():
                         " " + i.op_str.upper() + '\n')
                 list_bytes.append(f' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper())
                 list_instr.append(f'{i.mnemonic} {i.op_str}'.upper())
+                x.update(bytes(i.mnemonic.upper().strip(), 'UTF-8'))
                 list_addr.append(f'{hex(i.address)}')
 
             for instr in list_instr:
@@ -134,6 +140,9 @@ def run():
     nx.draw_networkx(g, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
     plt.show()
+    digest = x.intdigest()
+    g.add_node("UniqueHashIdentifier", digest=digest)
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "wb" ))
 
 
 if __name__ == '__main__':

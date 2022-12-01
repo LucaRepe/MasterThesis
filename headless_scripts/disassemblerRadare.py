@@ -2,6 +2,8 @@ import sys
 import re
 import r2pipe
 import networkx as nx
+import pickle
+import xxhash
 from typing import Tuple, List
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
@@ -96,6 +98,7 @@ def run(filepath):
     print(f"Disassembling {len(functions)} functions in {filepath}")
 
     g = nx.DiGraph()
+    x = xxhash.xxh64()
     for function in functions:
         function = FunctionDescriptor(function)
         nome = function.name
@@ -123,12 +126,9 @@ def run(filepath):
                 f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' +
                         block_instr['opcode'].upper() + '\n')
                 list_instr.append(block_instr['opcode'].upper())
+                x.update(bytes(block_instr['opcode'].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
-
-            # print(list_instr)
-            # print(list_bytes)
-            # print(list_addr)
 
             for instr in list_instr:
                 if 'JE' in instr or 'JNE' in instr or 'JMP' in instr:
@@ -204,6 +204,10 @@ def run(filepath):
     plt.legend(handles=legend_elements, loc='upper right')
     plt.show()
     print(g)
+
+    digest = x.intdigest()
+    g.add_node("UniqueHashIdentifier", digest=digest)
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "wb" ))
 
 
 if __name__ == '__main__':

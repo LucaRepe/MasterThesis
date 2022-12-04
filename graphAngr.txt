@@ -1,0 +1,72 @@
+Angr returns some errors regarding unsupported statements from VEX like CAS, GetI, PutI.
+IDA does not split basic blocks at function calls. angr will, because they are a form of control flow and basic blocks
+end at control flow instructions. You generally do not need the supergraph for performing automated analyses.
+
+How to treat when the last instruction is a CALL?
+
+The graph has 537 nodes and 753 edges.
+
+___tmainCRTStartup
+
+    At 0x40120A IDA CALL Sleep(x) but Angr has UnresolvableCallTarget
+        Angr at 0x401213 has as edges 2 of the 3 steps of the loop: 0x401202 and 0x401216
+
+    At 0x401241 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
+
+    At 0x40124D9 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
+
+    At 0x40130F IDA considers as bb a MOV instruction, Angr correctly recognizes it.
+        Angr has edges 0x401333 (correct) and 0x401314 (wrong), it has to fallthrough into 0x40131E according to IDA
+
+    At 0x401360 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
+
+    At 0x4014AB Angr fallthrough in 0x4014B3, IDA doesn't.
+
+    At 0x401404 Angr doesn't fallthrough, IDA does in 0x401409
+
+_WinMainCRTStartup
+
+    0x4014C0 ins't listed as a node in Angr, starts from 0x4014D2.
+
+__dyn_tls_init(x,x,x)
+
+    At 0x401580 ins't listed as a node in Angr, starts from 0x401591.
+
+    At 0x401591 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
+        Angr has ad edge that points at the bb.
+
+_gnu_exception_handler(x) Not totally analyzed.
+
+__matherr
+
+    At 0x401946 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
+
+    At 0x401946 Angr has an edge on himself, doesn't fallthrough on 0x401985.
+
+___report_error
+
+    At 0x401990 fallthrough in 0x4019e1, correct?
+
+___security_init_cookie
+
+    At 0x401F28 Angr doesn't fallthrough
+
+___report_gsfailure
+
+    At 0x401F50 Angr doesn't disassemble correctly
+
+____w64_mingwthr_remove_key_dtor
+
+    At 0x4020D0 Angr doesn't disassemble correctly, starts at 0x4020E1 / 0x4020F0
+
+__FindPESectionByName
+
+    At 0x402290 Angr doesn't disassemble correctly, starts at 0x4022A5
+
+__IsNonwritableInCurrentImage
+
+    At 0x40249E Angr doesn't fallthrough
+
+___setusermatherr
+
+    At 0x402620 doesn't disassemble correctly

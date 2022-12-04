@@ -6,6 +6,7 @@ import pickle
 import xxhash
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+import scipy as sp
 
 from typing import List
 
@@ -20,6 +21,7 @@ class BasicBlock:
     function_beginning: bool
     direct_fun_call: bool
     indirect_fun_call: bool
+    conditional_jump: bool
     direct_jump: bool
     indirect_jump: bool
     has_return: bool
@@ -32,16 +34,14 @@ class BasicBlock:
 def run():
     f = open(sys.argv[2], 'w')
     base_addr = 0x100000
-    p = angr.Project(sys.argv[1])
+    p = angr.Project(sys.argv[1], auto_load_libs=False)
+    # load_options={'main_opts': {'base_addr': base_addr}})
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 
     g = nx.DiGraph()
     x = xxhash.xxh64()
-    number = 0
     for func_node in cfg.functions.values():
-        number += 1
-        print(func_node.name)
         for block in func_node.blocks:
             c = block.capstone
             list_bytes = list()
@@ -52,6 +52,7 @@ def run():
             func_beg = False
             dir_call = False
             indir_call = False
+            conditional_jump = True
             dir_jump = False
             indir_jump = False
             has_return = False
@@ -59,7 +60,8 @@ def run():
                 func_beg = True
 
             for i in c.insns:
-                f.write(' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper() + '\t\t' + i.mnemonic.upper() +
+                f.write(hex(i.address) + '\t' + ' '.join(
+                    re.findall(r'.{1,2}', i.insn.bytes.hex())).upper() + '\t\t' + i.mnemonic.upper() +
                         " " + i.op_str.upper() + '\n')
                 list_bytes.append(f' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper())
                 list_instr.append(f'{i.mnemonic} {i.op_str}'.upper())
@@ -67,7 +69,10 @@ def run():
                 list_addr.append(f'{hex(i.address)}')
 
             for instr in list_instr:
-                if 'JE' in instr or 'JNE' in instr or 'JMP' in instr:
+                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JMP' in instr or 'JLE' in instr or \
+                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr:
+                    if 'JMP' in instr:
+                        conditional_jump = False
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
@@ -104,13 +109,15 @@ def run():
             bb.function_beginning = func_beg
             bb.direct_fun_call = dir_call
             bb.indirect_fun_call = indir_call
+            bb.conditional_jump = conditional_jump
             bb.direct_jump = dir_jump
             bb.indirect_jump = indir_jump
             bb.has_return = has_return
             if len(list_instr) != 0:
                 g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
                            edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
-                           dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call, dir_jump=bb.direct_jump,
+                           dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
+                           cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
                            indir_jump=bb.indirect_jump, has_return=bb.has_return)
 
     list_sorted = sorted(list(g.nodes))[1:]
@@ -119,30 +126,40 @@ def run():
             if g.nodes[node]['has_return']:
                 list_sorted.pop(0)
             else:
-                g.nodes[node]['edges'].append(list_sorted.pop(0))
-                g.nodes[node]['edge_attr'].append("Fallthrough")
-                for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
-                    if attr == 'Call':
-                        g.add_edge(node, edge, color='r')
-                    if attr == 'Fallthrough':
-                        g.add_edge(node, edge, color='g')
-                    if attr == 'Jump':
-                        g.add_edge(node, edge, color='b')
-
+                if not g.nodes[node]['cond_jump']:
+                    list_sorted.pop(0)
+                    for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                        if attr == 'Call':
+                            g.add_edge(node, edge, color='r')
+                        if attr == 'Fallthrough':
+                            g.add_edge(node, edge, color='g')
+                        if attr == 'Jump':
+                            g.add_edge(node, edge, color='b')
+                else:
+                    g.nodes[node]['edges'].append(list_sorted.pop(0))
+                    g.nodes[node]['edge_attr'].append("Fallthrough")
+                    for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                        if attr == 'Call':
+                            g.add_edge(node, edge, color='r')
+                        if attr == 'Fallthrough':
+                            g.add_edge(node, edge, color='g')
+                        if attr == 'Jump':
+                            g.add_edge(node, edge, color='b')
 
     legend_elements = [
         Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
-        Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10), 
-        Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)        
+        Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
+        Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
     ]
 
-    colors = nx.get_edge_attributes(g,'color').values()
+    colors = nx.get_edge_attributes(g, 'color').values()
     nx.draw_networkx(g, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
-    plt.show()
+    # plt.show()
     digest = x.intdigest()
     g.add_node("UniqueHashIdentifier", digest=digest)
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "wb" ))
+    print(digest)
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "wb"))
 
 
 if __name__ == '__main__':

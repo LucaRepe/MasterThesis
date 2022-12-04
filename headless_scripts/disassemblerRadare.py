@@ -22,6 +22,7 @@ class BasicBlock:
     function_beginning: bool
     direct_fun_call: bool
     indirect_fun_call: bool
+    conditional_jump = bool
     direct_jump: bool
     indirect_jump: bool
     has_return: bool
@@ -101,8 +102,6 @@ def run(filepath):
     x = xxhash.xxh64()
     for function in functions:
         function = FunctionDescriptor(function)
-        nome = function.name
-        print(nome)
         basic_blocks_list = r2.cmdj("afbj " + str(function.address))
 
         for block in basic_blocks_list:
@@ -115,6 +114,7 @@ def run(filepath):
             func_beg = False
             dir_call = False
             indir_call = False
+            conditional_jump = True
             dir_jump = False
             indir_jump = False
             has_return = False
@@ -123,7 +123,7 @@ def run(filepath):
                 func_beg = True
 
             for block_instr in block_info:
-                f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' +
+                f.write(hex(block_instr['offset']) + '\t' + ' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' +
                         block_instr['opcode'].upper() + '\n')
                 list_instr.append(block_instr['opcode'].upper())
                 x.update(bytes(block_instr['opcode'].upper().strip(), 'UTF-8'))
@@ -131,7 +131,10 @@ def run(filepath):
                 list_addr.append(hex(block_instr['offset']))
 
             for instr in list_instr:
-                if 'JE' in instr or 'JNE' in instr or 'JMP' in instr:
+                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JMP' in instr or 'JLE' in instr or \
+                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr:
+                    if 'JMP' in instr:
+                        conditional_jump = False
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
@@ -168,13 +171,15 @@ def run(filepath):
             bb.function_beginning = func_beg
             bb.direct_fun_call = dir_call
             bb.indirect_fun_call = indir_call
+            bb.conditional_jump = conditional_jump
             bb.direct_jump = dir_jump
             bb.indirect_jump = indir_jump
             bb.has_return = has_return
             if len(list_instr) != 0:
                 g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
                            edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
-                           dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call, dir_jump=bb.direct_jump,
+                           dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
+                           cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
                            indir_jump=bb.indirect_jump, has_return=bb.has_return)
 
     list_sorted = sorted(list(g.nodes))[1:]
@@ -183,16 +188,25 @@ def run(filepath):
             if g.nodes[node]['has_return']:
                 list_sorted.pop(0)
             else:
-                g.nodes[node]['edges'].append(list_sorted.pop(0))
-                g.nodes[node]['edge_attr'].append("Fallthrough")
-                for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
-                    if attr == 'Call':
-                        g.add_edge(node, edge, color='r')
-                    if attr == 'Fallthrough':
-                        g.add_edge(node, edge, color='g')
-                    if attr == 'Jump':
-                        g.add_edge(node, edge, color='b')
-
+                if not g.nodes[node]['cond_jump']:
+                    list_sorted.pop(0)
+                    for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                        if attr == 'Call':
+                            g.add_edge(node, edge, color='r')
+                        if attr == 'Fallthrough':
+                            g.add_edge(node, edge, color='g')
+                        if attr == 'Jump':
+                            g.add_edge(node, edge, color='b')
+                else:
+                    g.nodes[node]['edges'].append(list_sorted.pop(0))
+                    g.nodes[node]['edge_attr'].append("Fallthrough")
+                    for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                        if attr == 'Call':
+                            g.add_edge(node, edge, color='r')
+                        if attr == 'Fallthrough':
+                            g.add_edge(node, edge, color='g')
+                        if attr == 'Jump':
+                            g.add_edge(node, edge, color='b')
     legend_elements = [
         Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
         Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
@@ -202,10 +216,11 @@ def run(filepath):
     colors = nx.get_edge_attributes(g, 'color').values()
     nx.draw_networkx(g, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
-    plt.show()
+    # plt.show()
     print(g)
 
     digest = x.intdigest()
+    print(digest)
     g.add_node("UniqueHashIdentifier", digest=digest)
     pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "wb" ))
 

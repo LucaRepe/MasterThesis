@@ -6,17 +6,19 @@ How to treat when the last instruction is a CALL?
 
 The graph has 537 nodes and 753 edges.
 
+_pre_c_init
+
+    Angr starts at 0x401000, IDA at 0x401010
+
 ___tmainCRTStartup
 
     At 0x40120A IDA CALL Sleep(x) but Angr has UnresolvableCallTarget
-        Angr at 0x401213 has as edges 2 of the 3 steps of the loop: 0x401202 and 0x401216
+    
+    Angr at 0x401213 has as edges 2 of the 3 steps of the loop: 0x401202 and 0x401216
 
     At 0x401241 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
 
     At 0x40124D9 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-
-    At 0x40130F IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-        Angr has edges 0x401333 (correct) and 0x401314 (wrong), it has to fallthrough into 0x40131E according to IDA
 
     At 0x401360 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
 

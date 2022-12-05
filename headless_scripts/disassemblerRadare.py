@@ -114,7 +114,7 @@ def run(filepath):
             func_beg = False
             dir_call = False
             indir_call = False
-            conditional_jump = True
+            conditional_jump = False
             dir_jump = False
             indir_jump = False
             has_return = False
@@ -133,8 +133,20 @@ def run(filepath):
             for instr in list_instr:
                 if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JMP' in instr or 'JLE' in instr or \
                         'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr:
-                    if 'JMP' in instr:
-                        conditional_jump = False
+                    conditional_jump = True
+                    jump_addr = instr.split(' ')[-1]
+                    if jump_addr[-1] == ']':
+                        indir_jump = True
+                        list_edges.append("UnresolvableJumpTarget")
+                    elif '0X' in jump_addr:
+                        dir_jump = True
+                        list_edges.append(jump_addr.lower())
+                    else:
+                        indir_jump = True
+                        list_edges.append("UnresolvableJumpTarget")
+                    list_edge_attr.append("Jump")
+                if 'JMP' in instr:
+                    conditional_jump = False
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
@@ -187,7 +199,14 @@ def run(filepath):
         if list_sorted:
             if g.nodes[node]['has_return']:
                 list_sorted.pop(0)
-            else:
+                for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                    if attr == 'Call':
+                        g.add_edge(node, edge, color='r')
+                    if attr == 'Fallthrough':
+                        g.add_edge(node, edge, color='g')
+                    if attr == 'Jump':
+                        g.add_edge(node, edge, color='b')
+            elif g.nodes[node]['dir_jump'] or g.nodes[node]['indir_jump']:
                 if not g.nodes[node]['cond_jump']:
                     list_sorted.pop(0)
                     for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
@@ -207,6 +226,16 @@ def run(filepath):
                             g.add_edge(node, edge, color='g')
                         if attr == 'Jump':
                             g.add_edge(node, edge, color='b')
+            else:
+                g.nodes[node]['edges'].append(list_sorted.pop(0))
+                g.nodes[node]['edge_attr'].append("Fallthrough")
+                for edge, attr in zip(g.nodes[node]['edges'], g.nodes[node]['edge_attr']):
+                    if attr == 'Call':
+                        g.add_edge(node, edge, color='r')
+                    if attr == 'Fallthrough':
+                        g.add_edge(node, edge, color='g')
+                    if attr == 'Jump':
+                        g.add_edge(node, edge, color='b')
     legend_elements = [
         Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
         Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),

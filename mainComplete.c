@@ -66,15 +66,6 @@ int main()
             memAlloc();
         }
     }
-    switch (persons[1].age)
-    {
-    case -1:
-            
-        break;
-    
-    default:
-        break;
-    }
     int resAdd = addition(var1, var2);
     int resSub = subtraction(var1, var2);
     conditional_jumps_with_same_target(var1, var2);

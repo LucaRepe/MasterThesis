@@ -2,9 +2,7 @@ Angr returns some errors regarding unsupported statements from VEX like CAS, Get
 IDA does not split basic blocks at function calls. angr will, because they are a form of control flow and basic blocks
 end at control flow instructions. You generally do not need the supergraph for performing automated analyses.
 
-How to treat when the last instruction is a CALL?
-
-The graph has 537 nodes and 753 edges.
+The graph has 536 nodes and 753 edges.
 
 _pre_c_init
 

@@ -1,4 +1,4 @@
-The graph has 328 nodes and 520 edges.
+The graph has 327 nodes and 520 edges.
 The first node in the graph is at 0x4014e0 (_mainCRTStartup), after that resumes normally at 0x401000
 
 _mark_section_writable

@@ -26,6 +26,7 @@ class BasicBlock:
     direct_jump: bool
     indirect_jump: bool
     has_return: bool
+    unique_hash_identifier: int
 
     def __repr__(self):
         return f'{self.start_addr} {self.list_bytes} {self.list_instr} {self.list_addr} {self.list_edges} ' \
@@ -89,17 +90,14 @@ class BlockDescriptor(dict):
 
 
 def run(filepath):
-    """ Disassembles an exe using radare2, :returns A dict {function address} -> {block address} """
     r2 = r2pipe.open(filepath)
     f = open(sys.argv[2], 'w')
-    # r2.cmd("B 1048576")
     r2.cmd("aaaa")  # do an analysis to find functions
     functions = r2.cmdj("aflj")  # get all functions
 
     print(f"Disassembling {len(functions)} functions in {filepath}")
 
     g = nx.DiGraph()
-    x = xxhash.xxh64()
     for function in functions:
         function = FunctionDescriptor(function)
         basic_blocks_list = r2.cmdj("afbj " + str(function.address))
@@ -118,6 +116,7 @@ def run(filepath):
             dir_jump = False
             indir_jump = False
             has_return = False
+            x = xxhash.xxh32()
 
             if block['addr'] == function.address:
                 func_beg = True
@@ -187,12 +186,14 @@ def run(filepath):
             bb.direct_jump = dir_jump
             bb.indirect_jump = indir_jump
             bb.has_return = has_return
+            bb.unique_hash_identifier = x.intdigest()
             if len(list_instr) != 0:
                 g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
                            edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
                            dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
                            cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
-                           indir_jump=bb.indirect_jump, has_return=bb.has_return)
+                           indir_jump=bb.indirect_jump, has_return=bb.has_return,
+                           unique_hash_identifier=bb.unique_hash_identifier)
 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):
@@ -246,12 +247,7 @@ def run(filepath):
     nx.draw_networkx(g, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    print(g)
-
-    digest = x.intdigest()
-    print(digest)
-    g.add_node("UniqueHashIdentifier", digest=digest)
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "wb" ))
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "wb"))
 
 
 if __name__ == '__main__':

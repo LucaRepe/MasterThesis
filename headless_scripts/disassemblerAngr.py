@@ -25,6 +25,7 @@ class BasicBlock:
     direct_jump: bool
     indirect_jump: bool
     has_return: bool
+    unique_hash_identifier: int
 
     def __repr__(self):
         return f'{self.start_addr} {self.list_bytes} {self.list_instr} {self.list_addr} {self.list_edges} ' \
@@ -33,14 +34,11 @@ class BasicBlock:
 
 def run():
     f = open(sys.argv[2], 'w')
-    base_addr = 0x100000
     p = angr.Project(sys.argv[1], auto_load_libs=False)
-    # load_options={'main_opts': {'base_addr': base_addr}})
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 
     g = nx.DiGraph()
-    x = xxhash.xxh64()
     for func_node in cfg.functions.values():
         for block in func_node.blocks:
             c = block.capstone
@@ -56,6 +54,8 @@ def run():
             dir_jump = False
             indir_jump = False
             has_return = False
+            x = xxhash.xxh32()
+            
             if c.addr == func_node.addr:
                 func_beg = True
 
@@ -125,12 +125,14 @@ def run():
             bb.direct_jump = dir_jump
             bb.indirect_jump = indir_jump
             bb.has_return = has_return
+            bb.unique_hash_identifier = x.intdigest()
             if len(list_instr) != 0:
                 g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
                            edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
                            dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
                            cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
-                           indir_jump=bb.indirect_jump, has_return=bb.has_return)
+                           indir_jump=bb.indirect_jump, has_return=bb.has_return,
+                           unique_hash_identifier=bb.unique_hash_identifier)
 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):
@@ -185,9 +187,6 @@ def run():
     nx.draw_networkx(g, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    digest = x.intdigest()
-    g.add_node("UniqueHashIdentifier", digest=digest)
-    print(digest)
     pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "wb"))
 
 

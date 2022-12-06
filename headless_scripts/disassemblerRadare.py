@@ -122,8 +122,7 @@ def run(filepath):
                 func_beg = True
 
             for block_instr in block_info:
-                f.write(hex(block_instr['offset']) + '\t' + ' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' +
-                        block_instr['opcode'].upper() + '\n')
+                f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' +block_instr['opcode'].upper() + '\n')
                 list_instr.append(block_instr['opcode'].upper())
                 x.update(bytes(block_instr['opcode'].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))

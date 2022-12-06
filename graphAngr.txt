@@ -2,27 +2,13 @@ Angr returns some errors regarding unsupported statements from VEX like CAS, Get
 IDA does not split basic blocks at function calls. angr will, because they are a form of control flow and basic blocks
 end at control flow instructions. You generally do not need the supergraph for performing automated analyses.
 
+main.exe
+
 The graph has 536 nodes and 753 edges.
 
 _pre_c_init
 
     Angr starts at 0x401000, IDA at 0x401010
-
-___tmainCRTStartup
-
-    At 0x40120A IDA CALL Sleep(x) but Angr has UnresolvableCallTarget
-    
-    Angr at 0x401213 has as edges 2 of the 3 steps of the loop: 0x401202 and 0x401216
-
-    At 0x401241 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-
-    At 0x40124D9 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-
-    At 0x401360 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-
-    At 0x4014AB Angr fallthrough in 0x4014B3, IDA doesn't.
-
-    At 0x401404 Angr doesn't fallthrough, IDA does in 0x401409
 
 _WinMainCRTStartup
 
@@ -32,24 +18,9 @@ __dyn_tls_init(x,x,x)
 
     At 0x401580 ins't listed as a node in Angr, starts from 0x401591.
 
-    At 0x401591 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-        Angr has ad edge that points at the bb.
-
-_gnu_exception_handler(x) Not totally analyzed.
-
 __matherr
 
-    At 0x401946 IDA considers as bb a MOV instruction, Angr correctly recognizes it.
-
-    At 0x401946 Angr has an edge on himself, doesn't fallthrough on 0x401985.
-
-___report_error
-
-    At 0x401990 fallthrough in 0x4019e1, correct?
-
-___security_init_cookie
-
-    At 0x401F28 Angr doesn't fallthrough
+    At 0x401946 Angr doesn't fallthrough on 0x401985, it does on 0x40194D, repeating the same instructions of the bb before without MOV.
 
 ___report_gsfailure
 
@@ -63,10 +34,6 @@ __FindPESectionByName
 
     At 0x402290 Angr doesn't disassemble correctly, starts at 0x4022A5
 
-__IsNonwritableInCurrentImage
+-------------------------------------
 
-    At 0x40249E Angr doesn't fallthrough
-
-___setusermatherr
-
-    At 0x402620 doesn't disassemble correctly
+mainComplete.exe

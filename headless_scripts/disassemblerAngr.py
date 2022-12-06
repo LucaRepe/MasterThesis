@@ -55,13 +55,12 @@ def run():
             indir_jump = False
             has_return = False
             x = xxhash.xxh32()
-            
+
             if c.addr == func_node.addr:
                 func_beg = True
 
             for i in c.insns:
-                f.write(hex(i.address) + '\t' + ' '.join(
-                    re.findall(r'.{1,2}', i.insn.bytes.hex())).upper() + '\t\t' + i.mnemonic.upper() +
+                f.write(' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper() + '\t\t' + i.mnemonic.upper() +
                         " " + i.op_str.upper() + '\n')
                 list_bytes.append(f' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper())
                 list_instr.append(f'{i.mnemonic} {i.op_str}'.upper())

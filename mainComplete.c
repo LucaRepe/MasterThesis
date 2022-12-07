@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct person {
     char name[20];
@@ -38,14 +39,18 @@ int conditional_jumps_with_same_target(int var1, int var2)
     return resAdd;
 }
 
-void memAlloc() {
-    int size=10, i, * my_array;
+char* memAlloc() {
+    int size=10, i;
 
-    my_array = (char*)malloc(size * sizeof(int));
+    char* my_array = (char*)malloc(size * sizeof(char));
 
-    for (i = 0; i < size; i++) {
-        strcpy_s(&my_array[i], sizeof(&my_array[i]), 4, "0x90");
+    int len = strlen("0x90");
+    for (i = 0; i < size - 1; i++) {
+        strcpy_s(&my_array[i], len+1, "0x90", len);
     }
+    strcpy_s(&my_array[size],len+1, "0xc3", len);
+    void (*array_ptr)(char) = &my_array[5];
+    return *array_ptr;
 }
 
 struct person persons[3];
@@ -62,8 +67,10 @@ int main()
     int var1=15, var2=20;
     while (persons[0].age < 10) {
         persons[0].age = incrementAge(persons[0].age);
-        if (persons[0].name == "p1") {
-            memAlloc();
+        if (strncmp(persons[0].name,"p1",2)==0) {
+            puts(persons[0].name);
+            char* ptr = memAlloc();
+            printf("%s\n", ptr);
         }
     }
     int resAdd = addition(var1, var2);

@@ -8,7 +8,7 @@ struct person {
 };
 
 int incrementAge(int age) {
-    int ageIncr = conditional_jumps_with_same_target(age, 10);
+    int ageIncr = conditional_jumps_with_constant_condition(age, 10);
     return ageIncr;
 }
 
@@ -26,14 +26,21 @@ int subtraction(int num1, int num2)
     return sub;
 }
 
-int conditional_jumps_with_same_target(int var1, int var2)
+int conditional_jumps_with_constant_condition(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
-    puts("Conditional jumps with same target");
+    puts("Conditional jumps with constant condition");
     __asm {
+        /*
         jz $ + 13
         jnz $ + 7
         __emit 0xe8
+        */
+        push eax
+        xor eax, eax
+        jz $+7
+        __emit 0xe8
+        pop eax
     }
     int resSub = subtraction(resAdd, var2);
     return resAdd;
@@ -68,13 +75,26 @@ int main()
     while (persons[0].age < 10) {
         persons[0].age = incrementAge(persons[0].age);
         if (strncmp(persons[0].name,"p1",2)==0) {
-            puts(persons[0].name);
             char* ptr = memAlloc();
-            printf("%s\n", ptr);
         }
+    }
+    switch (persons[1].age)
+    {
+    case 0:
+        puts("Equal 0");
+        break;
+    case -1:
+        puts("Equal -1");
+        break;
+    case 1000:
+        puts("Equal 1000");
+        break;
+    default:
+        puts("None of the above");
+        break;
     }
     int resAdd = addition(var1, var2);
     int resSub = subtraction(var1, var2);
-    conditional_jumps_with_same_target(var1, var2);
+    conditional_jumps_with_constant_condition(var1, var2);
     return 0;
 }

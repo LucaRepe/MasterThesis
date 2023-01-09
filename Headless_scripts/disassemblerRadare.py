@@ -129,8 +129,10 @@ def run(filepath):
                 list_addr.append(hex(block_instr['offset']))
 
             for instr in list_instr:
-                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JMP' in instr or 'JLE' in instr or \
-                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr:
+                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JLE' in instr or \
+                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr or \
+                        'JZ' in instr or 'JNZ' in instr or 'JNBE' in instr or 'JAE' in instr or \
+                        'JNB' in instr or 'JNAE' in instr or 'JNA' in instr:
                     conditional_jump = True
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':

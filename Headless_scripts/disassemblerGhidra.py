@@ -81,22 +81,25 @@ def run():
 
             while instr_iter.hasNext():
                 instr = instr_iter.next()
-                f.write(instr.toString() + '\t\t' + ' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in instr.getBytes()]).upper() + '\n')
+                f.write(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in instr.getBytes()]).upper() + '\t\t' + instr.toString() + '\n')
                 list_bytes.append(f' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in instr.getBytes()]).upper())
                 list_instr.append(f'{instr}')
                 list_addr.append(f'{hex(instr.getAddress().getOffset())}')
             
             for instr in list_instr:
                 if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JLE' in instr or \
-                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr:
+                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr or \
+                        'JZ' in instr or 'JNZ' in instr or 'JNBE' in instr or 'JAE' in instr or \
+                        'JNB' in instr or 'JNAE' in instr or 'JNA' in instr:
                     conditional_jump = True
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
-                    elif '0X' in jump_addr:
+                    elif '0x' in jump_addr:
                         dir_jump = True
-                        list_edges.append(jump_addr.lower())
+                        real_jump_addr = '0x' + jump_addr[4:]
+                        list_edges.append(real_jump_addr)
                     else:
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -107,9 +110,10 @@ def run():
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
-                    elif '0X' in jump_addr:
+                    elif '0x' in jump_addr:
                         dir_jump = True
-                        list_edges.append(jump_addr.lower())
+                        real_jump_addr = '0x' + jump_addr[4:]
+                        list_edges.append(real_jump_addr)
                     else:
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -119,9 +123,10 @@ def run():
                     if call_addr[-1] == ']':
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
-                    elif '0X' in call_addr:
+                    elif '0x' in call_addr:
                         dir_call = True
-                        list_edges.append(call_addr.lower())
+                        real_call_addr = '0x' + call_addr[4:]
+                        list_edges.append(real_call_addr)
                     else:
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
@@ -206,8 +211,7 @@ def run():
     plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
     pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "wb"))
-
-
+    
 if __name__ == '__main__':
     run()
 

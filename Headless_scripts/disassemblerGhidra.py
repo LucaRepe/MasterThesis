@@ -98,7 +98,9 @@ def run():
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0x' in jump_addr:
                         dir_jump = True
-                        real_jump_addr = '0x' + jump_addr[4:]
+                        jump_addr = jump_addr[2:]
+                        real_jump_addr = '0x' + jump_addr.lstrip("0")
+                        print(real_jump_addr)
                         list_edges.append(real_jump_addr)
                     else:
                         indir_jump = True
@@ -112,7 +114,8 @@ def run():
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0x' in jump_addr:
                         dir_jump = True
-                        real_jump_addr = '0x' + jump_addr[4:]
+                        jump_addr = jump_addr[2:]
+                        real_jump_addr = '0x' + jump_addr.lstrip("0")
                         list_edges.append(real_jump_addr)
                     else:
                         indir_jump = True
@@ -125,7 +128,8 @@ def run():
                         list_edges.append("UnresolvableCallTarget")
                     elif '0x' in call_addr:
                         dir_call = True
-                        real_call_addr = '0x' + call_addr[4:]
+                        call_addr = call_addr[2:]
+                        real_call_addr = '0x' + call_addr.lstrip("0")
                         list_edges.append(real_call_addr)
                     else:
                         indir_call = True

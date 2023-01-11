@@ -117,26 +117,28 @@ def run(filepath):
             indir_jump = False
             has_return = False
             x = xxhash.xxh32()
+            bb_list = List[BasicBlock]
 
             if block['addr'] == function.address:
                 func_beg = True
 
-            for block_instr in block_info:
+            for index, block_instr in enumerate(block_info):
                 f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + block_instr['opcode'].upper() + '\n')
                 list_instr.append(block_instr['opcode'].upper())
                 x.update(bytes(block_instr['opcode'].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
-                if 'CALL' in block_instr['opcode'].upper():
-                    list_addr.clear
 
-            for instr in list_instr:
-                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JLE' in instr or \
-                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr or \
-                        'JZ' in instr or 'JNZ' in instr or 'JNBE' in instr or 'JAE' in instr or \
-                        'JNB' in instr or 'JNAE' in instr or 'JNA' in instr:
+                if  'JE' in block_instr['opcode'].upper() or 'JNE' in block_instr['opcode'].upper() or \
+                    'JBE' in block_instr['opcode'].upper() or 'JLE' in block_instr['opcode'].upper() or \
+                    'JA' in block_instr['opcode'].upper() or 'JB' in block_instr['opcode'].upper() or \
+                    'JG' in block_instr['opcode'].upper() or 'JGE' in block_instr['opcode'].upper() or \
+                    'JZ' in block_instr['opcode'].upper() or 'JNZ' in block_instr['opcode'].upper() or \
+                    'JNBE' in block_instr['opcode'].upper() or 'JAE' in block_instr['opcode'].upper() or \
+                    'JNB' in block_instr['opcode'].upper() or 'JNAE' in block_instr['opcode'].upper() or \
+                    'JNA' in block_instr['opcode'].upper():
                     conditional_jump = True
-                    jump_addr = instr.split(' ')[-1]
+                    jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -147,9 +149,9 @@ def run(filepath):
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'JMP' in instr:
+                if 'JMP' in block_instr['opcode'].upper():
                     conditional_jump = False
-                    jump_addr = instr.split(' ')[-1]
+                    jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -160,8 +162,8 @@ def run(filepath):
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'CALL' in instr:
-                    call_addr = instr.split(' ')[1]
+                if 'CALL' in block_instr['opcode'].upper():
+                    call_addr = block_instr['opcode'].upper().split(' ')[1]
                     if call_addr[-1] == ']':
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
@@ -172,8 +174,33 @@ def run(filepath):
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RET' in instr:
+                if 'RET' in block_instr['opcode'].upper():
                     has_return = True
+            
+            if indir_call == True or dir_call == True:
+                bb = BasicBlock()
+                bb.start_addr = hex(list_addr[0])
+                bb.list_bytes = list_bytes
+                bb.list_instr = list_instr
+                bb.list_addr = list_addr
+                bb.list_edges = list_edges
+                bb.list_edge_attr = list_edge_attr
+                bb.function_beginning = func_beg
+                bb.direct_fun_call = dir_call
+                bb.indirect_fun_call = indir_call
+                bb.conditional_jump = conditional_jump
+                bb.direct_jump = dir_jump
+                bb.indirect_jump = indir_jump
+                bb.has_return = has_return
+                bb.unique_hash_identifier = x.intdigest()
+                bb_list.append(bb)
+
+                list_addr.clear
+                list_instr.clear
+                list_bytes.clear
+
+            if 
+
 
             bb = BasicBlock()
             bb.start_addr = hex(block['addr'])

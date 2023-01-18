@@ -92,10 +92,8 @@ class BlockDescriptor(dict):
 def run(filepath):
     r2 = r2pipe.open(filepath)
     f = open(sys.argv[2], 'w')
-    r2.cmd("aaaa")  # do an analysis to find functions
-    functions = r2.cmdj("aflj")  # get all functions
-
-    print(f"Disassembling {len(functions)} functions in {filepath}")
+    r2.cmd("aaaa") 
+    functions = r2.cmdj("aflj") 
 
     g = nx.DiGraph()
     for function in functions:
@@ -117,26 +115,31 @@ def run(filepath):
             indir_jump = False
             has_return = False
             x = xxhash.xxh32()
+            split_bb = False
+            skip_adding = False
 
             if block['addr'] == function.address:
                 func_beg = True
 
             for block_instr in block_info:
-                f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + block_instr['opcode'].upper() + '\n')
+                skip_adding = False
+                f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + block_instr[
+                    'opcode'].upper() + '\n')
                 list_instr.append(block_instr['opcode'].upper())
-                x.update(bytes(block_instr['opcode'].upper().strip(), 'UTF-8'))
+                x.update(bytes(block_instr['opcode'].split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
-                if 'CALL' in block_instr['opcode'].upper():
-                    list_addr.clear
 
-            for instr in list_instr:
-                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JLE' in instr or \
-                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr or \
-                        'JZ' in instr or 'JNZ' in instr or 'JNBE' in instr or 'JAE' in instr or \
-                        'JNB' in instr or 'JNAE' in instr or 'JNA' in instr:
+                if 'JE' in block_instr['opcode'].upper() or 'JNE' in block_instr['opcode'].upper() or \
+                        'JBE' in block_instr['opcode'].upper() or 'JLE' in block_instr['opcode'].upper() or \
+                        'JA' in block_instr['opcode'].upper() or 'JB' in block_instr['opcode'].upper() or \
+                        'JG' in block_instr['opcode'].upper() or 'JGE' in block_instr['opcode'].upper() or \
+                        'JZ' in block_instr['opcode'].upper() or 'JNZ' in block_instr['opcode'].upper() or \
+                        'JNBE' in block_instr['opcode'].upper() or 'JAE' in block_instr['opcode'].upper() or \
+                        'JNB' in block_instr['opcode'].upper() or 'JNAE' in block_instr['opcode'].upper() or \
+                        'JNA' in block_instr['opcode'].upper():
                     conditional_jump = True
-                    jump_addr = instr.split(' ')[-1]
+                    jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -147,9 +150,9 @@ def run(filepath):
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'JMP' in instr:
+                if 'JMP' in block_instr['opcode'].upper():
                     conditional_jump = False
-                    jump_addr = instr.split(' ')[-1]
+                    jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -160,8 +163,9 @@ def run(filepath):
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'CALL' in instr:
-                    call_addr = instr.split(' ')[1]
+                if 'CALL' in block_instr['opcode'].upper():
+                    split_bb = True
+                    call_addr = block_instr['opcode'].upper().split(' ')[1]
                     if call_addr[-1] == ']':
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
@@ -172,32 +176,82 @@ def run(filepath):
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RET' in instr:
+                if 'RET' in block_instr['opcode'].upper():
                     has_return = True
 
-            bb = BasicBlock()
-            bb.start_addr = hex(block['addr'])
-            bb.list_bytes = list_bytes
-            bb.list_instr = list_instr
-            bb.list_addr = list_addr
-            bb.list_edges = list_edges
-            bb.list_edge_attr = list_edge_attr
-            bb.function_beginning = func_beg
-            bb.direct_fun_call = dir_call
-            bb.indirect_fun_call = indir_call
-            bb.conditional_jump = conditional_jump
-            bb.direct_jump = dir_jump
-            bb.indirect_jump = indir_jump
-            bb.has_return = has_return
-            bb.unique_hash_identifier = x.intdigest()
-            if len(list_instr) != 0:
-                g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
-                           edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
-                           dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
-                           cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
-                           indir_jump=bb.indirect_jump, has_return=bb.has_return,
-                           unique_hash_identifier=bb.unique_hash_identifier)
+                if split_bb:
+                    bb = BasicBlock()
+                    func_beg_copy = func_beg
+                    dir_call_copy = dir_call
+                    indir_call_copy = indir_call
+                    conditional_jump_copy = conditional_jump
+                    dir_jump_copy = dir_jump
+                    indir_jump_copy = indir_jump
+                    has_return_copy = has_return
+                    bb.start_addr = hex(int(list_addr[0], 16))
+                    bb.list_bytes = list_bytes.copy()
+                    bb.list_instr = list_instr.copy()
+                    bb.list_addr = list_addr.copy()
+                    bb.list_edges = list_edges.copy()
+                    bb.list_edge_attr = list_edge_attr.copy()
+                    bb.function_beginning = func_beg_copy
+                    bb.direct_fun_call = dir_call_copy
+                    bb.indirect_fun_call = indir_call_copy
+                    bb.conditional_jump = conditional_jump_copy
+                    bb.direct_jump = dir_jump_copy
+                    bb.indirect_jump = indir_jump_copy
+                    bb.has_return = has_return_copy
+                    bb.unique_hash_identifier = x.intdigest()
+                    if len(list_instr) != 0:
+                        g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
+                                   edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
+                                   dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
+                                   cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
+                                   indir_jump=bb.indirect_jump, has_return=bb.has_return,
+                                   unique_hash_identifier=bb.unique_hash_identifier)
 
+                        list_bytes.clear()
+                        list_instr.clear()
+                        list_addr.clear()
+                        list_edges.clear()
+                        list_edge_attr.clear()
+                        func_beg = False
+                        dir_call = False
+                        indir_call = False
+                        conditional_jump = False
+                        dir_jump = False
+                        indir_jump = False
+                        has_return = False
+                        x = xxhash.xxh32()
+                        split_bb = False
+                        skip_adding = True
+
+            if not skip_adding:
+                skip_adding = False
+                bb_not_splitted = BasicBlock()
+                bb_not_splitted.start_addr = hex(int(list_addr[0], 16))
+                bb_not_splitted.list_bytes = list_bytes
+                bb_not_splitted.list_instr = list_instr
+                bb_not_splitted.list_addr = list_addr
+                bb_not_splitted.list_edges = list_edges
+                bb_not_splitted.list_edge_attr = list_edge_attr
+                bb_not_splitted.function_beginning = func_beg
+                bb_not_splitted.direct_fun_call = dir_call
+                bb_not_splitted.indirect_fun_call = indir_call
+                bb_not_splitted.conditional_jump = conditional_jump
+                bb_not_splitted.direct_jump = dir_jump
+                bb_not_splitted.indirect_jump = indir_jump
+                bb_not_splitted.has_return = has_return
+                bb_not_splitted.unique_hash_identifier = x.intdigest()
+                if len(list_instr) != 0:
+                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr,
+                            edges=bb_not_splitted.list_edges, edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
+                            dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
+                            cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
+                            indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
+                            unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
+                skip_adding = False
+                
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):
         if list_sorted:

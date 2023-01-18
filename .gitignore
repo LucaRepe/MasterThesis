@@ -11,3 +11,4 @@ ida-analysis.py
 *.id*
 *.nam
 *.til
+*.exe.i64

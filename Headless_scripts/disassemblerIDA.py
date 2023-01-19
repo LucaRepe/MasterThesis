@@ -3,9 +3,9 @@ import idc
 import idautils
 
 from typing import Tuple, List
-# import networkx as nx
+import networkx as nx
 import pickle
-# import xxhash
+import xxhash
 # import matplotlib.pyplot as plt
 # from matplotlib.lines import Line2D
 

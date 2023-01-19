@@ -1,132 +1,518 @@
+---------- new bb ----------
 E9 55 41 00 00		JMP     TERMINATE
+---------- new bb ----------
+FF 25 08 B1 41 00		JMP     DS:__IMP_TERMINATE
+---------- new bb ----------
 E9 C1 29 00 00		JMP     SUB_4139D0
+---------- new bb ----------
+56		PUSH    ESI
+---------- new bb ----------
 E9 FC 11 00 00		JMP     ?SET_COMMODE@__SCRT_FILE_POLICY@@SAXXZ; __SCRT_FILE_POLICY::SET_COMMODE(VOID)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 23 41 00 00		JMP     _REGISTER_ONEXIT_FUNCTION
+---------- new bb ----------
+FF 25 F4 B0 41 00		JMP     DS:__IMP__REGISTER_ONEXIT_FUNCTION
+---------- new bb ----------
 E9 1D 42 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_3
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 28 12 00 00		JMP     START_0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 5E 3C 00 00		JMP     ___REPORT_GSFAILURE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 E4 25 00 00		JMP     SUB_413620
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 2F 25 00 00		JMP     SUB_413570
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 C0 25 00 00		JMP     SUB_413610
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 A6 28 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA_4
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 F4 40 00 00		JMP     _CRT_AT_QUICK_EXIT
+---------- new bb ----------
+FF 25 00 B1 41 00		JMP     DS:__IMP__CRT_AT_QUICK_EXIT
+---------- new bb ----------
 E9 8A 40 00 00		JMP     __P___ARGC
+---------- new bb ----------
+FF 25 38 B1 41 00		JMP     DS:__IMP___P___ARGC
+---------- new bb ----------
 E9 63 40 00 00		JMP     _INITTERM_E
+---------- new bb ----------
+FF 25 48 B1 41 00		JMP     DS:__IMP__INITTERM_E
+---------- new bb ----------
 E9 A3 32 00 00		JMP     ?_RTC_GETSRCLINE@@YAHPAEPA_WKPAH1K@Z; _RTC_GETSRCLINE(UCHAR *,WCHAR_T *,ULONG,INT *,WCHAR_T *,ULONG)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 47 40 00 00		JMP     _INITIALIZE_NARROW_ENVIRONMENT
+---------- new bb ----------
+FF 25 54 B1 41 00		JMP     DS:__IMP__INITIALIZE_NARROW_ENVIRONMENT
+---------- new bb ----------
 E9 29 1A 00 00		JMP     SUB_412AB0
+---------- new bb ----------
+A1 54 A1 41 00		MOV     EAX, DWORD_41A154
+---------- new bb ----------
 E9 AF 40 00 00		JMP     _INITIALIZE_ONEXIT_TABLE
+---------- new bb ----------
+FF 25 74 B1 41 00		JMP     DS:__IMP__INITIALIZE_ONEXIT_TABLE
+---------- new bb ----------
 E9 4F 24 00 00		JMP     SUB_4134E0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 99 40 00 00		JMP     __STDIO_COMMON_VSPRINTF_S
+---------- new bb ----------
+FF 25 E8 B0 41 00		JMP     DS:__IMP___STDIO_COMMON_VSPRINTF_S
+---------- new bb ----------
 E9 35 2A 00 00		JMP     SUB_413AD0
+---------- new bb ----------
+55		PUSH    EBP; VOLATILE UNSIGNED INT *
+---------- new bb ----------
 E9 A7 40 00 00		JMP     _EXECUTE_ONEXIT_TABLE
+---------- new bb ----------
+FF 25 F8 B0 41 00		JMP     DS:__IMP__EXECUTE_ONEXIT_TABLE
+---------- new bb ----------
 E9 46 11 00 00		JMP     ?SET_APP_TYPE@__SCRT_MAIN_POLICY@@SAXXZ; __SCRT_MAIN_POLICY::SET_APP_TYPE(VOID)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 BC 40 00 00		JMP     _WSPLITPATH_S
+---------- new bb ----------
+FF 25 10 B1 41 00		JMP     DS:__IMP__WSPLITPATH_S
+---------- new bb ----------
 E9 B2 3F 00 00		JMP     __CURRENT_EXCEPTION
+---------- new bb ----------
+FF 25 A8 B0 41 00		JMP     DS:__IMP___CURRENT_EXCEPTION
+---------- new bb ----------
 E9 68 0C 00 00		JMP     SUB_411D30
+---------- new bb ----------
+B8 D7 10 41 00		MOV     EAX, OFFSET J__CRTDBGREPORTW
+---------- new bb ----------
 E9 D9 23 00 00		JMP     __GET_STARTUP_FILE_MODE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 CF 3F 00 00		JMP     _CRTDBGREPORTW
+---------- new bb ----------
+FF 25 68 B1 41 00		JMP     DS:__IMP__CRTDBGREPORTW
+---------- new bb ----------
 E9 4F 13 00 00		JMP     ?_RTC_FAILURE@@YAXPAXH@Z; _RTC_FAILURE(VOID *,INT)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 C7 3F 00 00		JMP     _SET_APP_TYPE
+---------- new bb ----------
+FF 25 60 B1 41 00		JMP     DS:__IMP__SET_APP_TYPE
+---------- new bb ----------
 E9 86 23 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 0C 40 00 00		JMP     _REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK
+---------- new bb ----------
+FF 25 28 B1 41 00		JMP     DS:__IMP__REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK
+---------- new bb ----------
 E9 44 40 00 00		JMP     _CRT_ATEXIT
+---------- new bb ----------
+FF 25 FC B0 41 00		JMP     DS:__IMP__CRT_ATEXIT
+---------- new bb ----------
 E9 22 41 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_2
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 9E 3F 00 00		JMP     _SEH_FILTER_EXE
+---------- new bb ----------
+FF 25 64 B1 41 00		JMP     DS:__IMP__SEH_FILTER_EXE
+---------- new bb ----------
 E9 83 23 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA_0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 1E 1F 00 00		JMP     ___SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 19 41 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_3
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 64 10 00 00		JMP     SUB_412190
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 FF 1D 00 00		JMP     ___SCRT_INITIALIZE_ONEXIT_TABLES
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 E7 3F 00 00		JMP     __P__COMMODE
+---------- new bb ----------
+FF 25 1C B1 41 00		JMP     DS:__IMP___P__COMMODE
+---------- new bb ----------
 E9 80 23 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA_1
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 3B 36 00 00		JMP     @__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
+---------- new bb ----------
+3B 0D 20 A0 41 00		CMP     ECX, ___SECURITY_COOKIE
+---------- new bb ----------
 E9 37 3F 00 00		JMP     MEMSET
+---------- new bb ----------
+FF 25 A0 B0 41 00		JMP     DS:__IMP_MEMSET
+---------- new bb ----------
 E9 3A 3F 00 00		JMP     __VCRT_GETMODULEHANDLEW
+---------- new bb ----------
+FF 25 AC B0 41 00		JMP     DS:__IMP___VCRT_GETMODULEHANDLEW
+---------- new bb ----------
 E9 CD 3F 00 00		JMP     _SEH_FILTER_DLL
+---------- new bb ----------
+FF 25 EC B0 41 00		JMP     DS:__IMP__SEH_FILTER_DLL
+---------- new bb ----------
 E9 23 24 00 00		JMP     ___SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 4E 20 00 00		JMP     ___SCRT_RELEASE_STARTUP_LOCK
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 6F 20 00 00		JMP     ___SCRT_UNINITIALIZE_CRT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 8A 11 00 00		JMP     ?_RTC_ALLOCAFAILURE@@YAXPAXPAU_RTC_ALLOCA_NODE@@H@Z; _RTC_ALLOCAFAILURE(VOID *,_RTC_ALLOCA_NODE *,INT)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 A0 40 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_2
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 76 28 00 00		JMP     SUB_413A10
+---------- new bb ----------
+56		PUSH    ESI
+---------- new bb ----------
 E9 7C 3A 00 00		JMP     ___SCRT_IS_UCRT_DLL_IN_USE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 77 36 00 00		JMP     ___ISA_AVAILABLE_INIT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 B4 3F 00 00		JMP     WCSCPY_S
+---------- new bb ----------
+FF 25 14 B1 41 00		JMP     DS:__IMP_WCSCPY_S
+---------- new bb ----------
 E9 7E 18 00 00		JMP     __VSPRINTF_S_L
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 4B 3F 00 00		JMP     _SET_NEW_MODE
+---------- new bb ----------
+FF 25 20 B1 41 00		JMP     DS:__IMP__SET_NEW_MODE
+---------- new bb ----------
 E9 5F 24 00 00		JMP     ___SCRT_FASTFAIL
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 C3 3E 00 00		JMP     __VCRT_LOADLIBRARYEXW
+---------- new bb ----------
+FF 25 B0 B0 41 00		JMP     DS:__IMP___VCRT_LOADLIBRARYEXW
+---------- new bb ----------
 E9 A2 3E 00 00		JMP     _EXCEPT_HANDLER4_COMMON
+---------- new bb ----------
+FF 25 9C B0 41 00		JMP     DS:__IMP__EXCEPT_HANDLER4_COMMON
+---------- new bb ----------
 E9 76 40 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA_5
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 21 21 00 00		JMP     _ATEXIT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 E3 3E 00 00		JMP     EXIT
+---------- new bb ----------
+FF 25 44 B1 41 00		JMP     DS:__IMP_EXIT
+---------- new bb ----------
 E9 6D 0F 00 00		JMP     SUB_412170
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 D8 23 00 00		JMP     ___SCRT_IS_USER_MATHERR_PRESENT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 33 20 00 00		JMP     __ONEXIT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 FE 25 00 00		JMP     SUB_413810
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 E4 3E 00 00		JMP     _C_EXIT
+---------- new bb ----------
+FF 25 2C B1 41 00		JMP     DS:__IMP__C_EXIT
+---------- new bb ----------
 E9 3F 3F 00 00		JMP     _WMAKEPATH_S
+---------- new bb ----------
+FF 25 0C B1 41 00		JMP     DS:__IMP__WMAKEPATH_S
+---------- new bb ----------
 E9 06 0B 00 00		JMP     __RTC_INITBASE
+---------- new bb ----------
+80 3D 40 A1 41 00 00		CMP     BYTE_41A140, 0
+---------- new bb ----------
 E9 B1 0A 00 00		JMP     __RTC_CHECKESP
+---------- new bb ----------
+75 01		JNZ     SHORT $ESPERROR$4
+---------- new bb ----------
 E9 DC 3F 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_1
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 C8 3E 00 00		JMP     _CONFIGTHREADLOCALE
+---------- new bb ----------
+FF 25 24 B1 41 00		JMP     DS:__IMP__CONFIGTHREADLOCALE
+---------- new bb ----------
 E9 02 40 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_4
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 BE 3F 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_1
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 39 28 00 00		JMP     ??1SHARED_MUTEX@STD@@QAE@XZ; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 5F 22 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA_2
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 AA 25 00 00		JMP     ___SCRT_STUB_FOR_INITIALIZE_MTA_3
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 90 3F 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 8B 3F 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 FC 21 00 00		JMP     __GET_STARTUP_ARGV_MODE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 31 3E 00 00		JMP     _GET_INITIAL_NARROW_ENVIRONMENT
+---------- new bb ----------
+FF 25 50 B1 41 00		JMP     DS:__IMP__GET_INITIAL_NARROW_ENVIRONMENT
+---------- new bb ----------
 E9 0D 27 00 00		JMP     __CRT_DEBUGGER_HOOK
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 51 3E 00 00		JMP     __P___ARGV
+---------- new bb ----------
+FF 25 34 B1 41 00		JMP     DS:__IMP___P___ARGV
+---------- new bb ----------
 E9 23 1C 00 00		JMP     ___SCRT_INITIALIZE_CRT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 F7 3D 00 00		JMP     __SETUSERMATHERR
+---------- new bb ----------
+FF 25 5C B1 41 00		JMP     DS:__IMP___SETUSERMATHERR
+---------- new bb ----------
 E9 B0 17 00 00		JMP     _SPRINTF_S
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 8B 44 00 00		JMP     _MAIN_0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 56 0F 00 00		JMP     ?SET_FMODE@__SCRT_FILE_POLICY@@SAXXZ; __SCRT_FILE_POLICY::SET_FMODE(VOID)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 01 1A 00 00		JMP     ___SCRT_ACQUIRE_STARTUP_LOCK
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 8B 3D 00 00		JMP     __STD_TYPE_INFO_DESTROY_LIST
+---------- new bb ----------
+FF 25 B4 B0 41 00		JMP     DS:__IMP___STD_TYPE_INFO_DESTROY_LIST
+---------- new bb ----------
 E9 37 22 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 92 0A 00 00		JMP     __RTC_SHUTDOWN
+---------- new bb ----------
+6A 01		PUSH    1
+---------- new bb ----------
 E9 3D 25 00 00		JMP     ___SCRT_IS_MANAGED_APP
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 38 17 00 00		JMP     SUB_412A30
+---------- new bb ----------
+B8 48 A1 41 00		MOV     EAX, OFFSET UNK_41A148
+---------- new bb ----------
 E9 52 3E 00 00		JMP     _CONTROLFP_S
+---------- new bb ----------
+FF 25 04 B1 41 00		JMP     DS:__IMP__CONTROLFP_S
+---------- new bb ----------
 E9 FF 25 00 00		JMP     ___SCRT_UNHANDLED_EXCEPTION_FILTER@4; __SCRT_UNHANDLED_EXCEPTION_FILTER(X)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 9A 27 00 00		JMP     ?_ATOMIC_LOAD_UINT@?A0X344232B8@@YAIPDI@Z; `ANONYMOUS NAMESPACE'::_ATOMIC_LOAD_UINT(UINT CONST VOLATILE *)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 C0 07 00 00		JMP     @__CHECKFORDEBUGGERJUSTMYCODE@4; __CHECKFORDEBUGGERJUSTMYCODE(X)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 0B 22 00 00		JMP     __INITIALIZE_DEFAULT_PRECISION
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 B6 25 00 00		JMP     SUB_4138E0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 01 18 00 00		JMP     SUB_412B30
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 EB 3D 00 00		JMP     STRCAT_S
+---------- new bb ----------
+FF 25 18 B1 41 00		JMP     DS:__IMP_STRCAT_S
+---------- new bb ----------
 E9 5D 11 00 00		JMP     ?_RTC_STACKFAILURE@@YAXPAXPBD@Z; _RTC_STACKFAILURE(VOID *,CHAR CONST *)
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 5D 3D 00 00		JMP     _CRTDBGREPORT
+---------- new bb ----------
+FF 25 6C B1 41 00		JMP     DS:__IMP__CRTDBGREPORT
+---------- new bb ----------
 E9 29 22 00 00		JMP     SUB_413580
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 C7 3D 00 00		JMP     STRCPY_S
+---------- new bb ----------
+FF 25 F0 B0 41 00		JMP     DS:__IMP_STRCPY_S
+---------- new bb ----------
 E9 86 3D 00 00		JMP     _EXIT
+---------- new bb ----------
+FF 25 40 B1 41 00		JMP     DS:__IMP__EXIT
+---------- new bb ----------
 E9 6F 3D 00 00		JMP     _INITTERM
+---------- new bb ----------
+FF 25 4C B1 41 00		JMP     DS:__IMP__INITTERM
+---------- new bb ----------
 E9 85 3A 00 00		JMP     ___REPORT_SECURITYFAILURE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 0B 3D 00 00		JMP     __CURRENT_EXCEPTION_CONTEXT
+---------- new bb ----------
+FF 25 A4 B0 41 00		JMP     DS:__IMP___CURRENT_EXCEPTION_CONTEXT
+---------- new bb ----------
 E9 18 3D 00 00		JMP     __VCRT_GETMODULEFILENAMEW
+---------- new bb ----------
+FF 25 98 B0 41 00		JMP     DS:__IMP___VCRT_GETMODULEFILENAMEW
+---------- new bb ----------
 E9 56 19 00 00		JMP     _NTCURRENTTEB
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 44 3D 00 00		JMP     _CONFIGURE_NARROW_ARGV
+---------- new bb ----------
+FF 25 58 B1 41 00		JMP     DS:__IMP__CONFIGURE_NARROW_ARGV
+---------- new bb ----------
 E9 3C 17 00 00		JMP     SUB_412AC0
+---------- new bb ----------
+A1 58 A1 41 00		MOV     EAX, DWORD_41A158
+---------- new bb ----------
 E9 D2 21 00 00		JMP     SUB_413560
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 D8 3E 00 00		JMP     __FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 50 3D 00 00		JMP     _SET_FMODE
+---------- new bb ----------
+FF 25 3C B1 41 00		JMP     DS:__IMP__SET_FMODE
+---------- new bb ----------
 E9 3E 20 00 00		JMP     ___SECURITY_INIT_COOKIE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 A9 3E 00 00		JMP     __SHOULD_INITIALIZE_ENVIRONMENT_4
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 53 3D 00 00		JMP     _CEXIT
+---------- new bb ----------
+FF 25 30 B1 41 00		JMP     DS:__IMP__CEXIT
+---------- new bb ----------
 E9 9F 38 00 00		JMP     ___RAISE_SECURITYFAILURE
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 AC 41 00 00		JMP     SUB_415580
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 D7 04 00 00		JMP     SUB_4118B0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 72 06 00 00		JMP     SUB_411A50
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 4D 04 00 00		JMP     SUB_411830
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
 E9 90 03 00 00		JMP     STRLEN
-E9 C7 0C 00 00		JMP     LOC_4120F0
+---------- new bb ----------
 FF 25 8C B1 41 00		JMP     DS:__IMP_STRLEN
+---------- new bb ----------
+E9 C7 0C 00 00		JMP     LOC_4120F0
+---------- new bb ----------
+55		PUSH    EBP
+---------- new bb ----------
+FF 25 8C B1 41 00		JMP     DS:__IMP_STRLEN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC CC 00 00 00		SUB     ESP, 0CCH
@@ -155,6 +541,7 @@ E8 C1 F9 FF FF		CALL    J___RTC_CHECKESP
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC CC 00 00 00		SUB     ESP, 0CCH
@@ -180,6 +567,7 @@ E8 49 F9 FF FF		CALL    J___RTC_CHECKESP
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC CC 00 00 00		SUB     ESP, 0CCH
@@ -205,6 +593,7 @@ E8 A9 F7 FF FF		CALL    J___RTC_CHECKESP
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
@@ -215,15 +604,20 @@ C3		RETN
 0F B6 11		MOVZX   EDX, BYTE PTR [ECX]
 85 D2		TEST    EDX, EDX
 74 18		JZ      SHORT LOC_411B11
+---------- new bb ----------
 83 3D 18 A6 41 00 00		CMP     DWORD_41A618, 0
 74 0F		JZ      SHORT LOC_411B11
+---------- new bb ----------
 FF 15 3C B0 41 00		CALL    DS:GETCURRENTTHREADID
 39 05 18 A6 41 00		CMP     DWORD_41A618, EAX
 75 01		JNZ     SHORT LOC_411B11
+---------- new bb ----------
 90		NOP
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 53		PUSH    EBX
@@ -232,11 +626,14 @@ C3		RETN
 8B DA		MOV     EBX, EDX
 85 F6		TEST    ESI, ESI
 74 1F		JZ      SHORT LOC_411B5C
+---------- new bb ----------
 85 DB		TEST    EBX, EBX
 74 1B		JZ      SHORT LOC_411B5C
+---------- new bb ----------
 8B 55 08		MOV     EDX, [EBP+PALLOCAINFOLIST]
 85 D2		TEST    EDX, EDX
 74 14		JZ      SHORT LOC_411B5C
+---------- new bb ----------
 57		PUSH    EDI
 B0 CC		MOV     AL, 0CCH
 8B FE		MOV     EDI, ESI
@@ -247,10 +644,12 @@ F3 AA		REP STOSB
 89 5E 0C		MOV     [ESI+0CH], EBX
 89 32		MOV     [EDX], ESI
 5F		POP     EDI
+---------- new bb ----------
 5E		POP     ESI
 5B		POP     EBX
 5D		POP     EBP
 C2 04 00		RETN    4
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
@@ -260,75 +659,95 @@ C2 04 00		RETN    4
 57		PUSH    EDI
 85 D2		TEST    EDX, EDX
 74 4F		JZ      SHORT LOC_411BD1
+---------- new bb ----------
 33 FF		XOR     EDI, EDI
 39 3A		CMP     [EDX], EDI
 7E 49		JLE     SHORT LOC_411BD1
+---------- new bb ----------
 53		PUSH    EBX
 33 DB		XOR     EBX, EBX
 8B F2		MOV     ESI, EDX
 8D 49 00		LEA     ECX, [ECX+0]
+---------- new bb ----------
 8B 4E 04		MOV     ECX, [ESI+4]
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B 14 19		MOV     EDX, [ECX+EBX]
 81 7C 02 FC CC CC CC CC		CMP     DWORD PTR [EDX+EAX-4], 0CCCCCCCCH
 75 12		JNZ     SHORT LOC_411BB5
+---------- new bb ----------
 8B 44 19 04		MOV     EAX, [ECX+EBX+4]
 03 C2		ADD     EAX, EDX
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 3C 10 CC CC CC CC		CMP     DWORD PTR [EAX+EDX], 0CCCCCCCCH
 74 10		JZ      SHORT LOC_411BC5
+---------- new bb ----------
 FF 74 19 08		PUSH    DWORD PTR [ECX+EBX+8]; SOURCE
 8B 45 04		MOV     EAX, [EBP+4]
 50		PUSH    EAX; VOID *
 E8 7C F7 FF FF		CALL    J_?_RTC_STACKFAILURE@@YAXPAXPBD@Z; _RTC_STACKFAILURE(VOID *,CHAR CONST *)
 83 C4 08		ADD     ESP, 8
+---------- new bb ----------
 47		INC     EDI
 83 C3 0C		ADD     EBX, 0CH
 3B 3E		CMP     EDI, [ESI]
 7C C3		JL      SHORT LOC_411B90
+---------- new bb ----------
 8B 75 08		MOV     ESI, [EBP+ALLOCALIST]
 5B		POP     EBX
+---------- new bb ----------
 33 FF		XOR     EDI, EDI
 8B C6		MOV     EAX, ESI
 85 F6		TEST    ESI, ESI
 74 63		JZ      SHORT LOC_411C3C
+---------- new bb ----------
 8D A4 24 00 00 00 00		LEA     ESP, [ESP+0]
+---------- new bb ----------
 8B 40 04		MOV     EAX, [EAX+4]
 47		INC     EDI
 85 C0		TEST    EAX, EAX
 75 F8		JNZ     SHORT LOC_411BE0
+---------- new bb ----------
 81 3E CC CC CC CC		CMP     DWORD PTR [ESI], 0CCCCCCCCH
 75 1B		JNZ     SHORT LOC_411C0B
+---------- new bb ----------
 81 7E 14 CC CC CC CC		CMP     DWORD PTR [ESI+14H], 0CCCCCCCCH
 75 12		JNZ     SHORT LOC_411C0B
+---------- new bb ----------
 81 7E 18 CC CC CC CC		CMP     DWORD PTR [ESI+18H], 0CCCCCCCCH
 75 09		JNZ     SHORT LOC_411C0B
+---------- new bb ----------
 81 7E 1C CC CC CC CC		CMP     DWORD PTR [ESI+1CH], 0CCCCCCCCH
 74 0E		JZ      SHORT LOC_411C19
+---------- new bb ----------
 8B 45 04		MOV     EAX, [EBP+4]
 57		PUSH    EDI; INT
 56		PUSH    ESI; STRUCT _RTC_ALLOCA_NODE *
 50		PUSH    EAX; VOID *
 E8 6B F5 FF FF		CALL    J_?_RTC_ALLOCAFAILURE@@YAXPAXPAU_RTC_ALLOCA_NODE@@H@Z; _RTC_ALLOCAFAILURE(VOID *,_RTC_ALLOCA_NODE *,INT)
 83 C4 0C		ADD     ESP, 0CH
+---------- new bb ----------
 8B 46 0C		MOV     EAX, [ESI+0CH]
 81 7C 30 FC CC CC CC CC		CMP     DWORD PTR [EAX+ESI-4], 0CCCCCCCCH
 74 0E		JZ      SHORT LOC_411C34
+---------- new bb ----------
 8B 45 04		MOV     EAX, [EBP+4]
 57		PUSH    EDI; INT
 56		PUSH    ESI; STRUCT _RTC_ALLOCA_NODE *
 50		PUSH    EAX; VOID *
 E8 50 F5 FF FF		CALL    J_?_RTC_ALLOCAFAILURE@@YAXPAXPAU_RTC_ALLOCA_NODE@@H@Z; _RTC_ALLOCAFAILURE(VOID *,_RTC_ALLOCA_NODE *,INT)
 83 C4 0C		ADD     ESP, 0CH
+---------- new bb ----------
 8B 76 04		MOV     ESI, [ESI+4]
 4F		DEC     EDI
 85 F6		TEST    ESI, ESI
 75 AC		JNZ     SHORT LOC_411BE8
+---------- new bb ----------
 5F		POP     EDI
 5E		POP     ESI
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C2 04 00		RETN    4
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -339,35 +758,45 @@ C2 04 00		RETN    4
 33 F6		XOR     ESI, ESI
 39 33		CMP     [EBX], ESI
 7E 41		JLE     SHORT LOC_411CD2
+---------- new bb ----------
 57		PUSH    EDI
 33 FF		XOR     EDI, EDI
+---------- new bb ----------
 8B 4B 04		MOV     ECX, [EBX+4]
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B 14 39		MOV     EDX, [ECX+EDI]
 81 7C 02 FC CC CC CC CC		CMP     DWORD PTR [EDX+EAX-4], 0CCCCCCCCH
 75 12		JNZ     SHORT LOC_411CB9
+---------- new bb ----------
 8B 44 39 04		MOV     EAX, [ECX+EDI+4]
 03 C2		ADD     EAX, EDX
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 3C 10 CC CC CC CC		CMP     DWORD PTR [EAX+EDX], 0CCCCCCCCH
 74 10		JZ      SHORT LOC_411CC9
+---------- new bb ----------
 FF 74 39 08		PUSH    DWORD PTR [ECX+EDI+8]; SOURCE
 8B 45 04		MOV     EAX, [EBP+4]
 50		PUSH    EAX; VOID *
 E8 78 F6 FF FF		CALL    J_?_RTC_STACKFAILURE@@YAXPAXPBD@Z; _RTC_STACKFAILURE(VOID *,CHAR CONST *)
 83 C4 08		ADD     ESP, 8
+---------- new bb ----------
 46		INC     ESI
 83 C7 0C		ADD     EDI, 0CH
 3B 33		CMP     ESI, [EBX]
 7C C3		JL      SHORT LOC_411C94
+---------- new bb ----------
 5F		POP     EDI
+---------- new bb ----------
 5E		POP     ESI
 5B		POP     EBX
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 75 01		JNZ     SHORT $ESPERROR$4
+---------- new bb ----------
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 00		SUB     ESP, 0
@@ -389,10 +818,13 @@ E8 D3 F3 FF FF		CALL    J_?_RTC_FAILURE@@YAXPAXH@Z; _RTC_FAILURE(VOID *,INT)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 B8 D7 10 41 00		MOV     EAX, OFFSET J__CRTDBGREPORTW
 C3		RETN
+---------- new bb ----------
 80 3D 40 A1 41 00 00		CMP     BYTE_41A140, 0
 75 1F		JNZ     SHORT LOCRET_411D68
+---------- new bb ----------
 6A 00		PUSH    0
 6A 01		PUSH    1
 6A 00		PUSH    0
@@ -403,7 +835,9 @@ E8 64 F3 FF FF		CALL    SUB_4110C3
 50		PUSH    EAX
 E8 C5 F5 FF FF		CALL    SUB_41132A
 83 C4 18		ADD     ESP, 18H
+---------- new bb ----------
 C3		RETN
+---------- new bb ----------
 6A 01		PUSH    1
 6A 01		PUSH    1
 6A 00		PUSH    0
@@ -412,6 +846,7 @@ C3		RETN
 E8 34 F3 FF FF		CALL    SUB_4110C3
 83 C4 14		ADD     ESP, 14H
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 FD F2 FF FF		CALL    J_?SET_APP_TYPE@__SCRT_MAIN_POLICY@@SAXXZ; __SCRT_MAIN_POLICY::SET_APP_TYPE(VOID)
@@ -423,8 +858,10 @@ E8 73 F3 FF FF		CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES
 0F B6 C0		MOVZX   EAX, AL
 85 C0		TEST    EAX, EAX
 75 07		JNZ     SHORT LOC_411DCA
+---------- new bb ----------
 6A 07		PUSH    7
 E8 02 F4 FF FF		CALL    J____SCRT_FASTFAIL
+---------- new bb ----------
 DB E2		FNCLEX
 E8 39 F2 FF FF		CALL    SUB_41100A
 68 95 11 41 00		PUSH    OFFSET SUB_411195; VOID (__CDECL *)()
@@ -433,15 +870,19 @@ E8 0F F4 FF FF		CALL    J__ATEXIT
 E8 1B F4 FF FF		CALL    SUB_4111FE
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_411DEE
+---------- new bb ----------
 6A 07		PUSH    7
 E8 DE F3 FF FF		CALL    J____SCRT_FASTFAIL
+---------- new bb ----------
 E8 99 F2 FF FF		CALL    SUB_41108C
 E8 0B F4 FF FF		CALL    J____SCRT_IS_USER_MATHERR_PRESENT
 85 C0		TEST    EAX, EAX
 74 0D		JZ      SHORT LOC_411E09
+---------- new bb ----------
 68 F5 10 41 00		PUSH    OFFSET USERMATHERRORFUNCTION; USERMATHERRORFUNCTION
 E8 BB F4 FF FF		CALL    J___SETUSERMATHERR
 83 C4 04		ADD     ESP, 4
+---------- new bb ----------
 E8 7B F5 FF FF		CALL    SUB_411389
 E8 29 F2 FF FF		CALL    SUB_41103C
 E8 08 F5 FF FF		CALL    J___INITIALIZE_DEFAULT_PRECISION
@@ -453,22 +894,28 @@ E8 B9 F4 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT
 0F B6 C8		MOVZX   ECX, AL
 85 C9		TEST    ECX, ECX
 74 05		JZ      SHORT LOC_411E37
+---------- new bb ----------
 E8 F0 F2 FF FF		CALL    SUB_411127
+---------- new bb ----------
 E8 35 F4 FF FF		CALL    J____SCRT_STUB_FOR_INITIALIZE_MTA_3
 E8 CC F3 FF FF		CALL    SUB_41120D
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_411E4C
+---------- new bb ----------
 6A 07		PUSH    7
 E8 80 F3 FF FF		CALL    J____SCRT_FASTFAIL
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 E0 F2 FF FF		CALL    J____SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 8D F4 FF FF		CALL    SUB_411325
@@ -478,12 +925,14 @@ E8 24 F3 FF FF		CALL    J__SET_NEW_MODE
 83 C4 04		ADD     ESP, 4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 E5 F4 FF FF		CALL    J____SECURITY_INIT_COOKIE
 E8 13 00 00 00		CALL    ?__SCRT_COMMON_MAIN_SEH@@YAHXZ; __SCRT_COMMON_MAIN_SEH(VOID)
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A FE		PUSH    0FFFFFFFEH
@@ -508,19 +957,25 @@ E8 9E F3 FF FF		CALL    J____SCRT_INITIALIZE_CRT
 0F B6 C0		MOVZX   EAX, AL
 85 C0		TEST    EAX, EAX
 75 07		JNZ     SHORT LOC_411F1B
+---------- new bb ----------
 6A 07		PUSH    7
 E8 B1 F2 FF FF		CALL    J____SCRT_FASTFAIL
+---------- new bb ----------
 C6 45 E7 00		MOV     [EBP+VAR_19], 0
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0
 E8 AF F3 FF FF		CALL    J____SCRT_ACQUIRE_STARTUP_LOCK
 88 45 E6		MOV     [EBP+VAR_1A], AL
 83 3D 60 A1 41 00 01		CMP     DWORD_41A160, 1
 75 09		JNZ     SHORT LOC_411F40
+---------- new bb ----------
 6A 07		PUSH    7
 E8 8E F2 FF FF		CALL    J____SCRT_FASTFAIL
 EB 61		JMP     SHORT LOC_411FA1
+---------- new bb ----------
 83 3D 60 A1 41 00 00		CMP     DWORD_41A160, 0
 75 54		JNZ     SHORT LOC_411F9D
+---------- new bb ----------
 C7 05 60 A1 41 00 01 00 00 00		MOV     DWORD_41A160, 1
 68 18 76 41 00		PUSH    OFFSET LAST; LAST
 68 0C 73 41 00		PUSH    OFFSET FIRST; FIRST
@@ -528,17 +983,21 @@ E8 11 F1 FF FF		CALL    J__INITTERM_E
 83 C4 08		ADD     ESP, 8
 85 C0		TEST    EAX, EAX
 74 16		JZ      SHORT LOC_411F7F
+---------- new bb ----------
 C7 45 C8 FF 00 00 00		MOV     [EBP+VAR_38], 0FFH
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B 45 C8		MOV     EAX, [EBP+VAR_38]
 E9 53 01 00 00		JMP     LOC_4120D2
+---------- new bb ----------
 68 08 72 41 00		PUSH    OFFSET DWORD_417208; LAST
 68 00 70 41 00		PUSH    OFFSET DWORD_417000; FIRST
 E8 D3 F3 FF FF		CALL    J__INITTERM
 83 C4 08		ADD     ESP, 8
 C7 05 60 A1 41 00 02 00 00 00		MOV     DWORD_41A160, 2
 EB 04		JMP     SHORT LOC_411FA1
+---------- new bb ----------
 C6 45 E7 01		MOV     [EBP+VAR_19], 1
+---------- new bb ----------
 0F B6 4D E6		MOVZX   ECX, [EBP+VAR_1A]
 51		PUSH    ECX
 E8 C2 F1 FF FF		CALL    J____SCRT_RELEASE_STARTUP_LOCK
@@ -548,6 +1007,7 @@ E8 98 F0 FF FF		CALL    SUB_41104B
 8B 55 E0		MOV     EDX, [EBP+VAR_20]
 83 3A 00		CMP     DWORD PTR [EDX], 0
 74 33		JZ      SHORT LOC_411FF1
+---------- new bb ----------
 8B 45 E0		MOV     EAX, [EBP+VAR_20]
 50		PUSH    EAX
 E8 56 F1 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE
@@ -555,6 +1015,7 @@ E8 56 F1 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE
 0F B6 C8		MOVZX   ECX, AL
 85 C9		TEST    ECX, ECX
 74 20		JZ      SHORT LOC_411FF1
+---------- new bb ----------
 8B 55 E0		MOV     EDX, [EBP+VAR_20]
 8B 02		MOV     EAX, [EDX]
 89 45 C4		MOV     [EBP+VAR_3C], EAX
@@ -566,11 +1027,13 @@ E8 56 F1 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE
 8B 4D D8		MOV     ECX, [EBP+VAR_28]; THIS
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 FF 55 D8		CALL    [EBP+VAR_28]
+---------- new bb ----------
 E8 41 F0 FF FF		CALL    SUB_411037
 89 45 DC		MOV     [EBP+VAR_24], EAX
 8B 55 DC		MOV     EDX, [EBP+VAR_24]
 83 3A 00		CMP     DWORD PTR [EDX], 0
 74 21		JZ      SHORT LOC_412022
+---------- new bb ----------
 8B 45 DC		MOV     EAX, [EBP+VAR_24]
 50		PUSH    EAX
 E8 13 F1 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE
@@ -578,24 +1041,30 @@ E8 13 F1 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE
 0F B6 C8		MOVZX   ECX, AL
 85 C9		TEST    ECX, ECX
 74 0E		JZ      SHORT LOC_412022
+---------- new bb ----------
 8B 55 DC		MOV     EDX, [EBP+VAR_24]
 8B 02		MOV     EAX, [EDX]
 50		PUSH    EAX; CALLBACK
 E8 DB F0 FF FF		CALL    J__REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK
 83 C4 04		ADD     ESP, 4
+---------- new bb ----------
 E8 79 01 00 00		CALL    ?INVOKE_MAIN@@YAHXZ; INVOKE_MAIN(VOID)
 89 45 D4		MOV     [EBP+CODE], EAX
 E8 BF F2 FF FF		CALL    J____SCRT_IS_MANAGED_APP
 0F B6 C8		MOVZX   ECX, AL
 85 C9		TEST    ECX, ECX
 75 09		JNZ     SHORT LOC_41203F
+---------- new bb ----------
 8B 55 D4		MOV     EDX, [EBP+CODE]
 52		PUSH    EDX; CODE
 E8 BA F1 FF FF		CALL    J_EXIT
+---------- new bb ----------
 0F B6 45 E7		MOVZX   EAX, [EBP+VAR_19]
 85 C0		TEST    EAX, EAX
 75 05		JNZ     SHORT LOC_41204C
+---------- new bb ----------
 E8 5B F3 FF FF		CALL    J__CEXIT
+---------- new bb ----------
 6A 00		PUSH    0
 6A 01		PUSH    1
 E8 27 F1 FF FF		CALL    J____SCRT_UNINITIALIZE_CRT
@@ -605,8 +1074,10 @@ E8 27 F1 FF FF		CALL    J____SCRT_UNINITIALIZE_CRT
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B 45 C0		MOV     EAX, [EBP+VAR_40]
 EB 68		JMP     SHORT LOC_4120D2
+---------- new bb ----------
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 EB 5F		JMP     SHORT LOC_4120D2
+---------- new bb ----------
 8B 55 EC		MOV     EDX, [EBP+MS_EXC.EXC_PTR]
 8B 02		MOV     EAX, [EDX]
 8B 08		MOV     ECX, [EAX]
@@ -618,6 +1089,7 @@ EB 5F		JMP     SHORT LOC_4120D2
 E8 84 F0 FF FF		CALL    J__SEH_FILTER_EXE
 83 C4 08		ADD     ESP, 8
 C3		RETN
+---------- new bb ----------
 8B 65 E8		MOV     ESP, [EBP+MS_EXC.OLD_ESP]
 8B 4D D0		MOV     ECX, [EBP+EXCEPTIONNUM]
 89 4D CC		MOV     [EBP+VAR_34], ECX
@@ -625,19 +1097,25 @@ E8 52 F2 FF FF		CALL    J____SCRT_IS_MANAGED_APP
 0F B6 D0		MOVZX   EDX, AL
 85 D2		TEST    EDX, EDX
 75 09		JNZ     SHORT LOC_4120AC
+---------- new bb ----------
 8B 45 CC		MOV     EAX, [EBP+VAR_34]
 50		PUSH    EAX; CODE
 E8 B0 F2 FF FF		CALL    J__EXIT
+---------- new bb ----------
 0F B6 4D E7		MOVZX   ECX, [EBP+VAR_19]
 85 C9		TEST    ECX, ECX
 75 05		JNZ     SHORT LOC_4120B9
+---------- new bb ----------
 E8 63 F1 FF FF		CALL    J__C_EXIT
+---------- new bb ----------
 8B 55 CC		MOV     EDX, [EBP+VAR_34]
 89 55 BC		MOV     [EBP+VAR_44], EDX
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B 45 BC		MOV     EAX, [EBP+VAR_44]
 EB 07		JMP     SHORT LOC_4120D2
+---------- new bb ----------
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
+---------- new bb ----------
 8B 4D F0		MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]
 64 89 0D 00 00 00 00		MOV     LARGE FS:0, ECX
 59		POP     ECX
@@ -647,6 +1125,7 @@ C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 17 F1 FF FF		CALL    J___GET_STARTUP_ARGV_MODE
@@ -655,11 +1134,13 @@ E8 FC F1 FF FF		CALL    J__CONFIGURE_NARROW_ARGV
 83 C4 04		ADD     ESP, 4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 E5 EE FF FF		CALL    J__INITIALIZE_NARROW_ENVIRONMENT
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 0C		SUB     ESP, 0CH
@@ -682,6 +1163,7 @@ E8 FD F0 FF FF		CALL    _MAIN
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A 01		PUSH    1; TYPE
@@ -689,6 +1171,7 @@ E8 F1 EE FF FF		CALL    J__SET_APP_TYPE
 83 C4 04		ADD     ESP, 4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -700,6 +1183,7 @@ E8 10 EF FF FF		CALL    J___P__COMMODE
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 9A EE FF FF		CALL    J___GET_STARTUP_FILE_MODE
@@ -708,11 +1192,13 @@ E8 5A F1 FF FF		CALL    J__SET_FMODE
 83 C4 04		ADD     ESP, 4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 58 FC FF FF		CALL    ?__SCRT_COMMON_MAIN@@YAHXZ; __SCRT_COMMON_MAIN(VOID)
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 1C		SUB     ESP, 1CH
@@ -731,6 +1217,7 @@ E8 2A 06 00 00		CALL    ?NOTIFY_DEBUGGER@@YAXABUTAGEXCEPTION_VISUALCPP_DEBUG_INF
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 1C		SUB     ESP, 1CH
@@ -755,6 +1242,7 @@ E8 C8 05 00 00		CALL    ?NOTIFY_DEBUGGER@@YAXABUTAGEXCEPTION_VISUALCPP_DEBUG_INF
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 44 01 00 00		SUB     ESP, 144H
@@ -769,8 +1257,10 @@ A1 20 A0 41 00		MOV     EAX, ___SECURITY_COOKIE
 89 85 BC FE FF FF		MOV     [EBP+VAR_144], EAX
 83 FF FF		CMP     EDI, 0FFFFFFFFH
 0F 84 A6 00 00 00		JZ      LOC_4123E6
+---------- new bb ----------
 85 DB		TEST    EBX, EBX
 75 21		JNZ     SHORT LOC_412365
+---------- new bb ----------
 68 A0 80 41 00		PUSH    OFFSET MULTIBYTESTR; "STACK AREA AROUND _ALLOCA MEMORY RESERV"...
 6A 04		PUSH    4; INT
 57		PUSH    EDI; INT
@@ -785,6 +1275,7 @@ E8 DF ED FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 8B 43 0C		MOV     EAX, [EBX+0CH]
 56		PUSH    ESI
 83 E8 24		SUB     EAX, 24H ; '$'
@@ -826,6 +1317,7 @@ FF B5 BC FE FF FF		PUSH    [EBP+VAR_144]; VOID *
 E8 4E 02 00 00		CALL    ?FAILWITHMESSAGE@@YAXPAXHHPBD@Z; FAILWITHMESSAGE(VOID *,INT,INT,CHAR CONST *)
 83 C4 10		ADD     ESP, 10H
 5E		POP     ESI
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 5F		POP     EDI
 33 CD		XOR     ECX, EBP; STACKCOOKIE
@@ -834,15 +1326,18 @@ E8 4E ED FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 0C		MOV     EAX, [EBP+ARG_4]
 83 F8 04		CMP     EAX, 4
 77 23		JA      SHORT LOC_41245E
+---------- new bb ----------
 8B 0C 85 00 A0 41 00		MOV     ECX, DWORD_41A000[EAX*4]
 8B 14 85 5C 7B 41 00		MOV     EDX, DS:LPMULTIBYTESTR[EAX*4]
 83 F9 FF		CMP     ECX, 0FFFFFFFFH
 74 2E		JZ      SHORT LOC_41247C
+---------- new bb ----------
 52		PUSH    EDX; LPMULTIBYTESTR
 50		PUSH    EAX; INT
 51		PUSH    ECX; INT
@@ -851,6 +1346,7 @@ E8 D7 01 00 00		CALL    ?FAILWITHMESSAGE@@YAXPAXHHPBD@Z; FAILWITHMESSAGE(VOID *,
 83 C4 10		ADD     ESP, 10H
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 8B 15 70 7B 41 00		MOV     EDX, DS:OFF_417B70; "UNKNOWN RUNTIME CHECK ERROR\R\N"
 B8 05 00 00 00		MOV     EAX, 5
 52		PUSH    EDX; LPMULTIBYTESTR
@@ -860,8 +1356,10 @@ B9 01 00 00 00		MOV     ECX, 1
 FF 75 08		PUSH    [EBP+ARG_0]; VOID *
 E8 B7 01 00 00		CALL    ?FAILWITHMESSAGE@@YAXPAXHHPBD@Z; FAILWITHMESSAGE(VOID *,INT,INT,CHAR CONST *)
 83 C4 10		ADD     ESP, 10H
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 04 04 00 00		SUB     ESP, 404H
@@ -876,14 +1374,17 @@ A1 20 A0 41 00		MOV     EAX, ___SECURITY_COOKIE
 8B 3D 08 A0 41 00		MOV     EDI, DWORD_41A008
 83 FF FF		CMP     EDI, 0FFFFFFFFH
 74 73		JZ      SHORT LOC_41253A
+---------- new bb ----------
 80 3E 00		CMP     BYTE PTR [ESI], 0
 74 5C		JZ      SHORT LOC_412528
+---------- new bb ----------
 56		PUSH    ESI; CHAR *
 E8 3E 01 00 00		CALL    ?_STRLEN_PRIV@@YAIPBD@Z; _STRLEN_PRIV(CHAR CONST *)
 83 C0 2D		ADD     EAX, 2DH ; '-'
 83 C4 04		ADD     ESP, 4
 3D 00 04 00 00		CMP     EAX, 400H
 77 49		JA      SHORT LOC_412528
+---------- new bb ----------
 68 8C 7B 41 00		PUSH    OFFSET SOURCE; "STACK AROUND THE VARIABLE '"
 8D 85 FC FB FF FF		LEA     EAX, [EBP+DESTINATION]
 68 00 04 00 00		PUSH    400H; SIZEINBYTES
@@ -902,13 +1403,16 @@ E8 1C EE FF FF		CALL    J_STRCAT_S
 83 C4 24		ADD     ESP, 24H
 8D 85 FC FB FF FF		LEA     EAX, [EBP+DESTINATION]
 EB 05		JMP     SHORT LOC_41252D
+---------- new bb ----------
 B8 68 80 41 00		MOV     EAX, OFFSET ASTACKCORRUPTED; "STACK CORRUPTED NEAR UNKNOWN VARIABLE"
+---------- new bb ----------
 50		PUSH    EAX; LPMULTIBYTESTR
 6A 02		PUSH    2; INT
 57		PUSH    EDI; INT
 53		PUSH    EBX; VOID *
 E8 F9 00 00 00		CALL    ?FAILWITHMESSAGE@@YAXPAXHHPBD@Z; FAILWITHMESSAGE(VOID *,INT,INT,CHAR CONST *)
 83 C4 10		ADD     ESP, 10H
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 5F		POP     EDI
 5E		POP     ESI
@@ -918,6 +1422,7 @@ E8 F9 EB FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -930,15 +1435,19 @@ C3		RETN
 33 FF		XOR     EDI, EDI
 2B DE		SUB     EBX, ESI
 89 5D 10		MOV     [EBP+ARG_8], EBX
+---------- new bb ----------
 8B 45 14		MOV     EAX, [EBP+ARG_C]
 89 55 FC		MOV     [EBP+VAR_4], EDX
 83 F8 10		CMP     EAX, 10H
 72 05		JB      SHORT LOC_4125A6
+---------- new bb ----------
 B8 10 00 00 00		MOV     EAX, 10H
+---------- new bb ----------
 8B 4D 0C		MOV     ECX, [EBP+ARG_4]
 03 CF		ADD     ECX, EDI
 3B D0		CMP     EDX, EAX
 73 2C		JNB     SHORT LOC_4125DB
+---------- new bb ----------
 8A 1C 33		MOV     BL, [EBX+ESI]
 0F B6 C3		MOVZX   EAX, BL
 50		PUSH    EAX
@@ -956,6 +1465,7 @@ E8 02 ED FF FF		CALL    J__SPRINTF_S
 46		INC     ESI
 83 C7 03		ADD     EDI, 3
 EB BB		JMP     SHORT LOC_412596
+---------- new bb ----------
 5F		POP     EDI
 C6 06 00		MOV     BYTE PTR [ESI], 0
 5E		POP     ESI
@@ -964,18 +1474,22 @@ C6 01 00		MOV     BYTE PTR [ECX], 0
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 55 08		MOV     EDX, [EBP+ARG_0]
 8B C2		MOV     EAX, EDX
+---------- new bb ----------
 8A 08		MOV     CL, [EAX]
 40		INC     EAX
 84 C9		TEST    CL, CL
 75 F9		JNZ     SHORT LOC_412618
+---------- new bb ----------
 2B C2		SUB     EAX, EDX
 48		DEC     EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 3C 0E 00 00		SUB     ESP, 0E3CH
@@ -997,10 +1511,12 @@ E8 14 ED FF FF		CALL    SUB_41137F
 83 C4 04		ADD     ESP, 4
 85 FF		TEST    EDI, EDI
 75 0F		JNZ     SHORT LOC_412683
+---------- new bb ----------
 56		PUSH    ESI
 E8 08 EA FF FF		CALL    SUB_411082
 83 C4 04		ADD     ESP, 4
 89 85 CC F1 FF FF		MOV     [EBP+VAR_E34], EAX
+---------- new bb ----------
 6A 00		PUSH    0; CCHWIDECHAR
 6A 00		PUSH    0; LPWIDECHARSTR
 6A FF		PUSH    0FFFFFFFFH; CBMULTIBYTE
@@ -1010,6 +1526,7 @@ E8 08 EA FF FF		CALL    SUB_411082
 FF 15 0C B0 41 00		CALL    DS:MULTIBYTETOWIDECHAR
 3D 00 02 00 00		CMP     EAX, 200H
 73 22		JNB     SHORT LOC_4126C0
+---------- new bb ----------
 50		PUSH    EAX; CCHWIDECHAR
 8D 85 D4 F1 FF FF		LEA     EAX, [EBP+WIDECHARSTR]
 50		PUSH    EAX; LPWIDECHARSTR
@@ -1021,12 +1538,15 @@ FF 15 0C B0 41 00		CALL    DS:MULTIBYTETOWIDECHAR
 8D 9D D4 F1 FF FF		LEA     EBX, [EBP+WIDECHARSTR]
 85 C0		TEST    EAX, EAX
 75 05		JNZ     SHORT LOC_4126C5
+---------- new bb ----------
 BB 40 7F 41 00		MOV     EBX, OFFSET ARUNTIMECHECKER; "RUNTIME CHECK ERROR.\R\N UNABLE TO DISP"...
+---------- new bb ----------
 68 02 10 00 00		PUSH    1002H; UNSIGNED INT
 E8 91 FB FF FF		CALL    ?DEBUGGERPROBE@@YA_NK@Z; DEBUGGERPROBE(ULONG)
 83 C4 04		ADD     ESP, 4
 84 C0		TEST    AL, AL
 74 22		JZ      SHORT LOC_4126F8
+---------- new bb ----------
 8B 85 D0 F1 FF FF		MOV     EAX, [EBP+VAR_E30]
 53		PUSH    EBX; WCHAR_T *
 56		PUSH    ESI; VOID *
@@ -1036,17 +1556,24 @@ E8 C5 FB FF FF		CALL    ?DEBUGGERRUNTIME@@YA_NKHPAXPB_W@Z; DEBUGGERRUNTIME(ULONG
 83 C4 10		ADD     ESP, 10H
 84 C0		TEST    AL, AL
 0F 85 27 01 00 00		JNZ     LOC_41281D
+---------- new bb ----------
 EB 02		JMP     SHORT LOC_4126FA
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 83 BD CC F1 FF FF 00		CMP     [EBP+VAR_E34], 0
 75 08		JNZ     SHORT LOC_41270B
+---------- new bb ----------
 85 FF		TEST    EDI, EDI
 0F 84 11 01 00 00		JZ      LOC_41281C
+---------- new bb ----------
 84 C0		TEST    AL, AL
 74 0E		JZ      SHORT LOC_41271D
+---------- new bb ----------
 FF 15 04 B0 41 00		CALL    DS:ISDEBUGGERPRESENT
 85 C0		TEST    EAX, EAX
 0F 85 FF 00 00 00		JNZ     LOC_41281C
+---------- new bb ----------
 68 04 01 00 00		PUSH    104H; UNSIGNED INT
 8D 85 EC FB FF FF		LEA     EAX, [EBP+VAR_414]
 50		PUSH    EAX; WCHAR_T *
@@ -1061,6 +1588,7 @@ E8 33 E9 FF FF		CALL    J_?_RTC_GETSRCLINE@@YAHPAEPA_WKPAH1K@Z; _RTC_GETSRCLINE(
 83 C4 18		ADD     ESP, 18H
 85 FF		TEST    EDI, EDI
 74 32		JZ      SHORT LOC_41277E
+---------- new bb ----------
 53		PUSH    EBX
 FF B5 D0 F1 FF FF		PUSH    [EBP+VAR_E30]
 8D 85 EC FB FF FF		LEA     EAX, [EBP+VAR_414]
@@ -1074,6 +1602,7 @@ FF 75 0C		PUSH    [EBP+ARG_4]
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 FF D7		CALL    EDI
 E9 96 00 00 00		JMP     LOC_412814
+---------- new bb ----------
 6A 00		PUSH    0; LPUSEDDEFAULTCHAR
 6A 00		PUSH    0; LPDEFAULTCHAR
 68 0A 03 00 00		PUSH    30AH; CBMULTIBYTE
@@ -1088,7 +1617,9 @@ BE 14 80 41 00		MOV     ESI, OFFSET AUNKNOWNFILENAM; "UNKNOWN FILENAME"
 FF 15 10 B0 41 00		CALL    DS:WIDECHARTOMULTIBYTE
 85 C0		TEST    EAX, EAX
 74 06		JZ      SHORT LOC_4127B3
+---------- new bb ----------
 8D B5 E0 F8 FF FF		LEA     ESI, [EBP+MULTIBYTESTR]
+---------- new bb ----------
 6A 00		PUSH    0; LPUSEDDEFAULTCHAR
 6A 00		PUSH    0; LPDEFAULTCHAR
 68 0A 03 00 00		PUSH    30AH; CBMULTIBYTE
@@ -1103,7 +1634,9 @@ BF 28 80 41 00		MOV     EDI, OFFSET AUNKNOWNMODULEN; "UNKNOWN MODULE NAME"
 FF 15 10 B0 41 00		CALL    DS:WIDECHARTOMULTIBYTE
 85 C0		TEST    EAX, EAX
 74 06		JZ      SHORT LOC_4127E8
+---------- new bb ----------
 8D BD D4 F5 FF FF		LEA     EDI, [EBP+VAR_A2C]
+---------- new bb ----------
 FF B5 C4 F1 FF FF		PUSH    [EBP+VAR_E3C]
 8B 9D CC F1 FF FF		MOV     EBX, [EBP+VAR_E34]
 8B CB		MOV     ECX, EBX; THIS
@@ -1115,10 +1648,13 @@ FF B5 C8 F1 FF FF		PUSH    [EBP+VAR_E38]
 FF 75 0C		PUSH    [EBP+ARG_4]
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 FF D3		CALL    EBX
+---------- new bb ----------
 83 C4 1C		ADD     ESP, 1CH
 83 F8 01		CMP     EAX, 1
 75 01		JNZ     SHORT LOC_41281D
+---------- new bb ----------
 CC		INT     3; TRAP TO DEBUGGER
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 5F		POP     EDI
 5E		POP     ESI
@@ -1128,6 +1664,7 @@ E8 16 E9 FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A FE		PUSH    0FFFFFFFEH
@@ -1153,6 +1690,7 @@ FF 75 08		PUSH    [EBP+LPARGUMENTS]; LPARGUMENTS
 68 88 13 6D 40		PUSH    406D1388H; DWEXCEPTIONCODE
 FF 15 08 B0 41 00		CALL    DS:RAISEEXCEPTION
 EB 16		JMP     SHORT LOC_412914
+---------- new bb ----------
 8B 45 EC		MOV     EAX, [EBP+MS_EXC.EXC_PTR]
 8B 00		MOV     EAX, [EAX]
 33 C9		XOR     ECX, ECX
@@ -1160,7 +1698,9 @@ EB 16		JMP     SHORT LOC_412914
 0F 94 C1		SETZ    CL
 8B C1		MOV     EAX, ECX
 C3		RETN
+---------- new bb ----------
 8B 65 E8		MOV     ESP, [EBP+MS_EXC.OLD_ESP]
+---------- new bb ----------
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B 4D F0		MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]
 64 89 0D 00 00 00 00		MOV     LARGE FS:0, ECX
@@ -1171,6 +1711,7 @@ C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 04 04 00 00		SUB     ESP, 404H
@@ -1183,14 +1724,17 @@ A1 20 A0 41 00		MOV     EAX, ___SECURITY_COOKIE
 8B 3D 0C A0 41 00		MOV     EDI, DWORD_41A00C
 83 FF FF		CMP     EDI, 0FFFFFFFFH
 74 75		JZ      SHORT LOC_4129E8
+---------- new bb ----------
 85 F6		TEST    ESI, ESI
 74 5C		JZ      SHORT LOC_4129D3
+---------- new bb ----------
 56		PUSH    ESI; CHAR *
 E8 93 FC FF FF		CALL    ?_STRLEN_PRIV@@YAIPBD@Z; _STRLEN_PRIV(CHAR CONST *)
 83 C0 3A		ADD     EAX, 3AH ; ':'
 83 C4 04		ADD     ESP, 4
 3D 00 04 00 00		CMP     EAX, 400H
 77 49		JA      SHORT LOC_4129D3
+---------- new bb ----------
 68 BC 7B 41 00		PUSH    OFFSET ATHEVARIABLE; "THE VARIABLE '"
 8D 85 FC FB FF FF		LEA     EAX, [EBP+DESTINATION]
 68 00 04 00 00		PUSH    400H; SIZEINBYTES
@@ -1209,7 +1753,9 @@ E8 71 E9 FF FF		CALL    J_STRCAT_S
 83 C4 24		ADD     ESP, 24H
 8D 85 FC FB FF FF		LEA     EAX, [EBP+DESTINATION]
 EB 05		JMP     SHORT LOC_4129D8
+---------- new bb ----------
 B8 D8 81 41 00		MOV     EAX, OFFSET AAVARIABLEISBEI; "A VARIABLE IS BEING USED WITHOUT BEING "...
+---------- new bb ----------
 50		PUSH    EAX; LPMULTIBYTESTR
 8B 45 04		MOV     EAX, [EBP+4]
 6A 03		PUSH    3; INT
@@ -1217,6 +1763,7 @@ B8 D8 81 41 00		MOV     EAX, OFFSET AAVARIABLEISBEI; "A VARIABLE IS BEING USED W
 50		PUSH    EAX; VOID *
 E8 4B FC FF FF		CALL    ?FAILWITHMESSAGE@@YAXPAXHHPBD@Z; FAILWITHMESSAGE(VOID *,INT,INT,CHAR CONST *)
 83 C4 10		ADD     ESP, 10H
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 5F		POP     EDI
 33 CD		XOR     ECX, EBP; STACKCOOKIE
@@ -1225,8 +1772,10 @@ E8 4C E7 FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 B8 48 A1 41 00		MOV     EAX, OFFSET UNK_41A148
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 AB E8 FF FF		CALL    SUB_4112F3
@@ -1241,9 +1790,12 @@ E8 30 E6 FF FF		CALL    J___STDIO_COMMON_VSPRINTF_S
 83 C4 1C		ADD     ESP, 1CH
 85 C0		TEST    EAX, EAX
 79 03		JNS     SHORT LOC_412A6B
+---------- new bb ----------
 83 C8 FF		OR      EAX, 0FFFFFFFFH
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8D 45 14		LEA     EAX, [EBP+ARGLIST]
@@ -1256,23 +1808,30 @@ E8 26 E7 FF FF		CALL    J___VSPRINTF_S_L
 83 C4 14		ADD     ESP, 14H
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 A1 54 A1 41 00		MOV     EAX, DWORD_41A154
 C3		RETN
+---------- new bb ----------
 A1 58 A1 41 00		MOV     EAX, DWORD_41A158
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 08		MOV     EAX, [EBP+ERRNUM]
 83 F8 04		CMP     EAX, 4
 77 09		JA      SHORT LOC_412AE4
+---------- new bb ----------
 8B 04 85 18 82 41 00		MOV     EAX, DS:OFF_418218[EAX*4]; "STACK POINTER CORRUPTION"
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 B8 05 00 00 00		MOV     EAX, 5
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 A1 58 A1 41 00		MOV     EAX, DWORD_41A158
@@ -1281,19 +1840,23 @@ A1 58 A1 41 00		MOV     EAX, DWORD_41A158
 C7 05 54 A1 41 00 00 00 00 00		MOV     DWORD_41A154, 0
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 55 08		MOV     EDX, [EBP+ERRNUM]
 83 FA 04		CMP     EDX, 4
 77 13		JA      SHORT LOC_412B7E
+---------- new bb ----------
 8B 04 95 00 A0 41 00		MOV     EAX, DWORD_41A000[EDX*4]
 8B 4D 0C		MOV     ECX, [EBP+ERRTYPE]
 89 0C 95 00 A0 41 00		MOV     DWORD_41A000[EDX*4], ECX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 83 C8 FF		OR      EAX, 0FFFFFFFFH
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 18		SUB     ESP, 18H
@@ -1318,44 +1881,57 @@ C3		RETN
 8B 55 F0		MOV     EDX, [EBP+VAR_10]
 89 55 FC		MOV     [EBP+VAR_4], EDX
 EB 09		JMP     SHORT LOC_412BE0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 83 C0 28		ADD     EAX, 28H ; '('
 89 45 FC		MOV     [EBP+VAR_4], EAX
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 3B 4D E8		CMP     ECX, [EBP+VAR_18]
 74 23		JZ      SHORT LOC_412C0B
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 8B 45 0C		MOV     EAX, [EBP+ARG_4]
 3B 42 0C		CMP     EAX, [EDX+0CH]
 72 16		JB      SHORT LOC_412C09
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 8B 51 0C		MOV     EDX, [ECX+0CH]
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 03 50 08		ADD     EDX, [EAX+8]
 39 55 0C		CMP     [EBP+ARG_4], EDX
 73 05		JNB     SHORT LOC_412C09
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 EB 04		JMP     SHORT LOC_412C0D
+---------- new bb ----------
 EB CC		JMP     SHORT LOC_412BD7
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 10		SUB     ESP, 10H
 83 7D 08 00		CMP     [EBP+ARG_0], 0
 75 04		JNZ     SHORT LOC_412C50
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 55		JMP     SHORT LOC_412CA5
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 89 45 FC		MOV     [EBP+VAR_4], EAX
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 0F B7 11		MOVZX   EDX, WORD PTR [ECX]
 81 FA 4D 5A 00 00		CMP     EDX, 5A4DH
 74 04		JZ      SHORT LOC_412C68
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 3D		JMP     SHORT LOC_412CA5
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 03 48 3C		ADD     ECX, [EAX+3CH]
@@ -1365,8 +1941,10 @@ EB 3D		JMP     SHORT LOC_412CA5
 8B 45 F8		MOV     EAX, [EBP+VAR_8]
 81 38 50 45 00 00		CMP     DWORD PTR [EAX], 4550H
 74 04		JZ      SHORT LOC_412C89
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 1C		JMP     SHORT LOC_412CA5
+---------- new bb ----------
 8B 4D F8		MOV     ECX, [EBP+VAR_8]
 83 C1 18		ADD     ECX, 18H
 89 4D F0		MOV     [EBP+VAR_10], ECX
@@ -1374,28 +1952,36 @@ EB 1C		JMP     SHORT LOC_412CA5
 0F B7 02		MOVZX   EAX, WORD PTR [EDX]
 3D 0B 01 00 00		CMP     EAX, 10BH
 74 04		JZ      SHORT LOC_412CA3
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 02		JMP     SHORT LOC_412CA5
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 64 A1 18 00 00 00		MOV     EAX, LARGE FS:18H
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
 E8 B4 E4 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 85 C0		TEST    EAX, EAX
 75 04		JNZ     SHORT LOC_412CF3
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 32		JMP     SHORT LOC_412D25
+---------- new bb ----------
 E8 7D E6 FF FF		CALL    J__NTCURRENTTEB
 8B 40 04		MOV     EAX, [EAX+4]
 89 45 FC		MOV     [EBP+VAR_4], EAX
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 BA 64 A1 41 00		MOV     EDX, OFFSET UNK_41A164
 33 C0		XOR     EAX, EAX
@@ -1403,32 +1989,45 @@ F0 0F B1 0A		LOCK CMPXCHG [EDX], ECX
 89 45 F8		MOV     [EBP+VAR_8], EAX
 83 7D F8 00		CMP     [EBP+VAR_8], 0
 74 0E		JZ      SHORT LOC_412D23
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 3B 45 F8		CMP     EAX, [EBP+VAR_8]
 75 04		JNZ     SHORT LOC_412D21
+---------- new bb ----------
 B0 01		MOV     AL, 1
 EB 04		JMP     SHORT LOC_412D25
+---------- new bb ----------
 EB DB		JMP     SHORT LOC_412CFE
+---------- new bb ----------
 32 C0		XOR     AL, AL
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 57 E4 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_412D53
+---------- new bb ----------
 E8 53 E4 FF FF		CALL    J____ISA_AVAILABLE_INIT
 EB 12		JMP     SHORT LOC_412D65
+---------- new bb ----------
 E8 A6 E4 FF FF		CALL    SUB_4111FE
 85 C0		TEST    EAX, EAX
 74 04		JZ      SHORT LOC_412D60
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 07		JMP     SHORT LOC_412D67
+---------- new bb ----------
 E8 C2 E3 FF FF		CALL    SUB_411127
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A 00		PUSH    0
@@ -1437,37 +2036,49 @@ E8 A2 E3 FF FF		CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES
 0F B6 C0		MOVZX   EAX, AL
 85 C0		TEST    EAX, EAX
 75 04		JNZ     SHORT LOC_412D98
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 02		JMP     SHORT LOC_412D9A
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 87 E4 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_1
 0F B6 C0		MOVZX   EAX, AL
 85 C0		TEST    EAX, EAX
 75 04		JNZ     SHORT LOC_412DC3
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 17		JMP     SHORT LOC_412DDA
+---------- new bb ----------
 E8 95 E4 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_1_0
 0F B6 C8		MOVZX   ECX, AL
 85 C9		TEST    ECX, ECX
 75 09		JNZ     SHORT LOC_412DD8
+---------- new bb ----------
 E8 35 E3 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_2
 32 C0		XOR     AL, AL
 EB 02		JMP     SHORT LOC_412DDA
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
 E8 84 E3 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 85 C0		TEST    EAX, EAX
 75 28		JNZ     SHORT LOC_412E47
+---------- new bb ----------
 83 7D 0C 01		CMP     [EBP+ARG_4], 1
 75 22		JNZ     SHORT LOC_412E47
+---------- new bb ----------
 8B 45 14		MOV     EAX, [EBP+ARG_C]
 89 45 F8		MOV     [EBP+VAR_8], EAX
 8B 4D 10		MOV     ECX, [EBP+ARG_8]
@@ -1480,6 +2091,7 @@ E8 84 E3 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 8B 4D FC		MOV     ECX, [EBP+VAR_4]; THIS
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 FF 55 FC		CALL    [EBP+VAR_4]
+---------- new bb ----------
 8B 4D 1C		MOV     ECX, [EBP+EXCEPTIONPTR]
 51		PUSH    ECX; EXCEPTIONPTR
 8B 55 18		MOV     EDX, [EBP+EXCEPTIONNUM]
@@ -1489,21 +2101,27 @@ E8 0F E3 FF FF		CALL    J__SEH_FILTER_DLL
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 27 E3 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 85 C0		TEST    EAX, EAX
 74 0F		JZ      SHORT LOC_412E8B
+---------- new bb ----------
 68 6C A1 41 00		PUSH    OFFSET TABLE; TABLE
 E8 15 E2 FF FF		CALL    J__EXECUTE_ONEXIT_TABLE
 83 C4 04		ADD     ESP, 4
 EB 0E		JMP     SHORT LOC_412E99
+---------- new bb ----------
 E8 55 E3 FF FF		CALL    J____SCRT_STUB_FOR_INITIALIZE_MTA_5
 85 C0		TEST    EAX, EAX
 75 05		JNZ     SHORT LOC_412E99
+---------- new bb ----------
 E8 0E E5 FF FF		CALL    J__CEXIT
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A 00		PUSH    0
@@ -1512,64 +2130,85 @@ E8 E8 E4 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_4_0
 E8 87 E3 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 7D 08 00		CMP     [EBP+ARG_0], 0
 75 07		JNZ     SHORT LOC_412EE0
+---------- new bb ----------
 C6 05 68 A1 41 00 01		MOV     BYTE_41A168, 1
+---------- new bb ----------
 E8 BF E2 FF FF		CALL    J____ISA_AVAILABLE_INIT
 E8 91 E3 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_0
 0F B6 C0		MOVZX   EAX, AL
 85 C0		TEST    EAX, EAX
 75 04		JNZ     SHORT LOC_412EF5
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 1C		JMP     SHORT LOC_412F11
+---------- new bb ----------
 E8 86 E3 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_0_0
 0F B6 C8		MOVZX   ECX, AL
 85 C9		TEST    ECX, ECX
 75 0E		JNZ     SHORT LOC_412F0F
+---------- new bb ----------
 6A 00		PUSH    0
 E8 16 E1 FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_3
 83 C4 04		ADD     ESP, 4
 32 C0		XOR     AL, AL
 EB 02		JMP     SHORT LOC_412F11
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 1C		SUB     ESP, 1CH
 0F B6 05 69 A1 41 00		MOVZX   EAX, BYTE_41A169
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_412F48
+---------- new bb ----------
 B0 01		MOV     AL, 1
 E9 B6 00 00 00		JMP     LOC_412FFE
+---------- new bb ----------
 83 7D 08 00		CMP     [EBP+ARG_0], 0
 74 0D		JZ      SHORT LOC_412F5B
+---------- new bb ----------
 83 7D 08 01		CMP     [EBP+ARG_0], 1
 74 07		JZ      SHORT LOC_412F5B
+---------- new bb ----------
 6A 05		PUSH    5
 E8 71 E2 FF FF		CALL    J____SCRT_FASTFAIL
+---------- new bb ----------
 E8 3F E2 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 85 C0		TEST    EAX, EAX
 74 32		JZ      SHORT LOC_412F96
+---------- new bb ----------
 83 7D 08 00		CMP     [EBP+ARG_0], 0
 75 2C		JNZ     SHORT LOC_412F96
+---------- new bb ----------
 68 6C A1 41 00		PUSH    OFFSET TABLE; TABLE
 E8 13 E1 FF FF		CALL    J__INITIALIZE_ONEXIT_TABLE
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 04		JZ      SHORT LOC_412F7F
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 7F		JMP     SHORT LOC_412FFE
+---------- new bb ----------
 68 78 A1 41 00		PUSH    OFFSET STRU_41A178; TABLE
 E8 FE E0 FF FF		CALL    J__INITIALIZE_ONEXIT_TABLE
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 04		JZ      SHORT LOC_412F94
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 6A		JMP     SHORT LOC_412FFE
+---------- new bb ----------
 EB 5F		JMP     SHORT LOC_412FF5
+---------- new bb ----------
 C7 45 FC FF FF FF FF		MOV     [EBP+VAR_4], 0FFFFFFFFH
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 89 4D F0		MOV     [EBP+VAR_10], ECX
@@ -1595,11 +2234,14 @@ A3 74 A1 41 00		MOV     TABLE._END, EAX
 89 15 7C A1 41 00		MOV     STRU_41A178._LAST, EDX
 8B 45 EC		MOV     EAX, [EBP+VAR_14]
 A3 80 A1 41 00		MOV     STRU_41A178._END, EAX
+---------- new bb ----------
 C6 05 69 A1 41 00 01		MOV     BYTE_41A169, 1
 B0 01		MOV     AL, 1
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A FE		PUSH    0FFFFFFFEH
@@ -1621,6 +2263,7 @@ A1 20 A0 41 00		MOV     EAX, ___SECURITY_COOKIE
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 89 45 D0		MOV     [EBP+VAR_30], EAX
 C7 45 DC 00 00 40 00		MOV     [EBP+VAR_24], 400000H
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0
 8B 4D DC		MOV     ECX, [EBP+VAR_24]
 51		PUSH    ECX; VOID *
@@ -1629,10 +2272,12 @@ E8 B0 FB FF FF		CALL    ?IS_POTENTIALLY_VALID_IMAGE_BASE@@YA_NQAX@Z; IS_POTENTIA
 0F B6 D0		MOVZX   EDX, AL
 85 D2		TEST    EDX, EDX
 75 13		JNZ     SHORT LOC_4130AD
+---------- new bb ----------
 C6 45 E7 00		MOV     [EBP+VAR_19], 0
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8A 45 E7		MOV     AL, [EBP+VAR_19]
 E9 AA 00 00 00		JMP     LOC_413157
+---------- new bb ----------
 8B 45 D0		MOV     EAX, [EBP+VAR_30]
 2B 45 DC		SUB     EAX, [EBP+VAR_24]
 89 45 CC		MOV     [EBP+VAR_34], EAX
@@ -1645,41 +2290,53 @@ E8 CD FA FF FF		CALL    ?FIND_PE_SECTION@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z; FI
 89 45 D8		MOV     [EBP+VAR_28], EAX
 83 7D D8 00		CMP     [EBP+VAR_28], 0
 75 10		JNZ     SHORT LOC_4130DF
+---------- new bb ----------
 C6 45 E6 00		MOV     [EBP+VAR_1A], 0
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8A 45 E6		MOV     AL, [EBP+VAR_1A]
 EB 78		JMP     SHORT LOC_413157
+---------- new bb ----------
 8B 45 D8		MOV     EAX, [EBP+VAR_28]
 8B 48 24		MOV     ECX, [EAX+24H]
 81 E1 00 00 00 80		AND     ECX, 80000000H
 74 10		JZ      SHORT LOC_4130FD
+---------- new bb ----------
 C6 45 E5 00		MOV     [EBP+VAR_1B], 0
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8A 45 E5		MOV     AL, [EBP+VAR_1B]
 EB 5A		JMP     SHORT LOC_413157
+---------- new bb ----------
 C6 45 E4 01		MOV     [EBP+VAR_1C], 1
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8A 45 E4		MOV     AL, [EBP+VAR_1C]
 EB 4A		JMP     SHORT LOC_413157
+---------- new bb ----------
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 EB 41		JMP     SHORT LOC_413157
+---------- new bb ----------
 8B 55 EC		MOV     EDX, [EBP+MS_EXC.EXC_PTR]
 8B 02		MOV     EAX, [EDX]
 8B 08		MOV     ECX, [EAX]
 89 4D C8		MOV     [EBP+VAR_38], ECX
 81 7D C8 05 00 00 C0		CMP     [EBP+VAR_38], 0C0000005H
 75 09		JNZ     SHORT LOC_413132
+---------- new bb ----------
 C7 45 D4 01 00 00 00		MOV     [EBP+VAR_2C], 1
 EB 07		JMP     SHORT LOC_413139
+---------- new bb ----------
 C7 45 D4 00 00 00 00		MOV     [EBP+VAR_2C], 0
+---------- new bb ----------
 8B 45 D4		MOV     EAX, [EBP+VAR_2C]
 C3		RETN
+---------- new bb ----------
 8B 65 E8		MOV     ESP, [EBP+MS_EXC.OLD_ESP]
 C6 45 E3 00		MOV     [EBP+VAR_1D], 0
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8A 45 E3		MOV     AL, [EBP+VAR_1D]
 EB 07		JMP     SHORT LOC_413157
+---------- new bb ----------
 C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
+---------- new bb ----------
 8B 4D F0		MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]
 64 89 0D 00 00 00 00		MOV     LARGE FS:0, ECX
 59		POP     ECX
@@ -1689,31 +2346,41 @@ C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 D7 DF FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE
 85 C0		TEST    EAX, EAX
 75 02		JNZ     SHORT LOC_4131CE
+---------- new bb ----------
 EB 13		JMP     SHORT LOC_4131E1
+---------- new bb ----------
 0F B6 45 08		MOVZX   EAX, [EBP+ARG_0]
 85 C0		TEST    EAX, EAX
 74 02		JZ      SHORT LOC_4131D8
+---------- new bb ----------
 EB 09		JMP     SHORT LOC_4131E1
+---------- new bb ----------
 33 C9		XOR     ECX, ECX
 BA 64 A1 41 00		MOV     EDX, OFFSET UNK_41A164
 87 0A		XCHG    ECX, [EDX]
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 0F B6 05 68 A1 41 00		MOVZX   EAX, BYTE_41A168
 85 C0		TEST    EAX, EAX
 74 0C		JZ      SHORT LOC_41320A
+---------- new bb ----------
 0F B6 4D 0C		MOVZX   ECX, [EBP+ARG_4]
 85 C9		TEST    ECX, ECX
 74 04		JZ      SHORT LOC_41320A
+---------- new bb ----------
 B0 01		MOV     AL, 1
 EB 1C		JMP     SHORT LOC_413226
+---------- new bb ----------
 0F B6 55 08		MOVZX   EDX, [EBP+ARG_0]
 52		PUSH    EDX
 E8 0E DF FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_3_0
@@ -1723,8 +2390,10 @@ E8 0E DF FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_3_0
 E8 FD DD FF FF		CALL    J___SHOULD_INITIALIZE_ENVIRONMENT_3
 83 C4 04		ADD     ESP, 4
 B0 01		MOV     AL, 1
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 0C		SUB     ESP, 0CH
@@ -1732,19 +2401,25 @@ A1 6C A1 41 00		MOV     EAX, TABLE._FIRST
 89 45 F4		MOV     [EBP+VAR_C], EAX
 83 7D F4 FF		CMP     [EBP+VAR_C], 0FFFFFFFFH
 75 26		JNZ     SHORT LOC_41327A
+---------- new bb ----------
 8B 4D 08		MOV     ECX, [EBP+FUNCTION]
 51		PUSH    ECX; FUNCTION
 E8 A7 DE FF FF		CALL    J__CRT_ATEXIT
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 75 08		JNZ     SHORT LOC_41326C
+---------- new bb ----------
 8B 55 08		MOV     EDX, [EBP+FUNCTION]
 89 55 FC		MOV     [EBP+VAR_4], EDX
 EB 07		JMP     SHORT LOC_413273
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 EB 29		JMP     SHORT LOC_4132A1
+---------- new bb ----------
 EB 27		JMP     SHORT LOC_4132A1
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+FUNCTION]
 50		PUSH    EAX; FUNCTION
 68 6C A1 41 00		PUSH    OFFSET TABLE; TABLE
@@ -1752,14 +2427,19 @@ E8 91 DD FF FF		CALL    J__REGISTER_ONEXIT_FUNCTION
 83 C4 08		ADD     ESP, 8
 85 C0		TEST    EAX, EAX
 75 08		JNZ     SHORT LOC_413297
+---------- new bb ----------
 8B 4D 08		MOV     ECX, [EBP+FUNCTION]
 89 4D F8		MOV     [EBP+VAR_8], ECX
 EB 07		JMP     SHORT LOC_41329E
+---------- new bb ----------
 C7 45 F8 00 00 00 00		MOV     [EBP+VAR_8], 0
+---------- new bb ----------
 8B 45 F8		MOV     EAX, [EBP+VAR_8]
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
@@ -1767,12 +2447,15 @@ A1 78 A1 41 00		MOV     EAX, STRU_41A178._FIRST
 89 45 FC		MOV     [EBP+VAR_4], EAX
 83 7D FC FF		CMP     [EBP+VAR_4], 0FFFFFFFFH
 75 10		JNZ     SHORT LOC_4132E4
+---------- new bb ----------
 8B 4D 08		MOV     ECX, [EBP+FUNCTION]
 51		PUSH    ECX; FUNCTION
 E8 7D DD FF FF		CALL    J__CRT_AT_QUICK_EXIT
 83 C4 04		ADD     ESP, 4
 EB 19		JMP     SHORT LOC_4132FB
+---------- new bb ----------
 EB 17		JMP     SHORT LOC_4132FB
+---------- new bb ----------
 8B 55 08		MOV     EDX, [EBP+FUNCTION]
 89 55 F8		MOV     [EBP+VAR_8], EDX
 8B 45 F8		MOV     EAX, [EBP+VAR_8]
@@ -1780,9 +2463,11 @@ EB 17		JMP     SHORT LOC_4132FB
 68 78 A1 41 00		PUSH    OFFSET STRU_41A178; TABLE
 E8 21 DD FF FF		CALL    J__REGISTER_ONEXIT_FUNCTION
 83 C4 08		ADD     ESP, 8
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -1792,13 +2477,17 @@ E8 EB DE FF FF		CALL    J___ONEXIT
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 09		JZ      SHORT LOC_41332D
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
 EB 07		JMP     SHORT LOC_413334
+---------- new bb ----------
 C7 45 FC FF FF FF FF		MOV     [EBP+VAR_4], 0FFFFFFFFH
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 14		SUB     ESP, 14H
@@ -1836,81 +2525,99 @@ FF 15 14 B0 41 00		CALL    DS:QUERYPERFORMANCECOUNTER
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
 81 3D 20 A0 41 00 4E E6 40 BB		CMP     ___SECURITY_COOKIE, 0BB40E64EH
 74 1C		JZ      SHORT LOC_41340C
+---------- new bb ----------
 A1 20 A0 41 00		MOV     EAX, ___SECURITY_COOKIE
 25 00 00 FF FF		AND     EAX, 0FFFF0000H
 74 10		JZ      SHORT LOC_41340C
+---------- new bb ----------
 8B 0D 20 A0 41 00		MOV     ECX, ___SECURITY_COOKIE
 F7 D1		NOT     ECX
 89 0D 24 A0 41 00		MOV     DWORD_41A024, ECX
 EB 4A		JMP     SHORT LOC_413456
+---------- new bb ----------
 E8 3F FF FF FF		CALL    ___GET_ENTROPY
 89 45 FC		MOV     [EBP+VAR_4], EAX
 81 7D FC 4E E6 40 BB		CMP     [EBP+VAR_4], 0BB40E64EH
 75 09		JNZ     SHORT LOC_413426
+---------- new bb ----------
 C7 45 FC 4F E6 40 BB		MOV     [EBP+VAR_4], 0BB40E64FH
 EB 1C		JMP     SHORT LOC_413442
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 E2 00 00 FF FF		AND     EDX, 0FFFF0000H
 75 11		JNZ     SHORT LOC_413442
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 0D 11 47 00 00		OR      EAX, 4711H
 C1 E0 10		SHL     EAX, 10H
 0B 45 FC		OR      EAX, [EBP+VAR_4]
 89 45 FC		MOV     [EBP+VAR_4], EAX
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 89 0D 20 A0 41 00		MOV     ___SECURITY_COOKIE, ECX
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 F7 D2		NOT     EDX
 89 15 24 A0 41 00		MOV     DWORD_41A024, EDX
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B8 01 00 00 00		MOV     EAX, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B8 00 40 00 00		MOV     EAX, 4000H
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 68 90 A1 41 00		PUSH    OFFSET LISTHEAD; LISTHEAD
 FF 15 58 B0 41 00		CALL    DS:INITIALIZESLISTHEAD
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B0 01		MOV     AL, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 68 00 00 03 00		PUSH    30000H; MASK
@@ -1920,23 +2627,29 @@ E8 BE DD FF FF		CALL    J__CONTROLFP_S
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_413552
+---------- new bb ----------
 6A 07		PUSH    7
 E8 7A DC FF FF		CALL    J____SCRT_FASTFAIL
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B8 A0 A1 41 00		MOV     EAX, OFFSET UNK_41A1A0
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
@@ -1961,28 +2674,35 @@ E8 9C DD FF FF		CALL    SUB_411352
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
 83 3D 1C A0 41 00 00		CMP     DWORD_41A01C, 0
 75 09		JNZ     SHORT LOC_4135F6
+---------- new bb ----------
 C7 45 FC 01 00 00 00		MOV     [EBP+VAR_4], 1
 EB 07		JMP     SHORT LOC_4135FD
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B8 0C A6 41 00		MOV     EAX, OFFSET UNK_41A60C
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B8 00 A6 41 00		MOV     EAX, OFFSET UNK_41A600
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 2C 03 00 00		SUB     ESP, 32CH
@@ -1990,8 +2710,10 @@ C3		RETN
 FF 15 48 B0 41 00		CALL    DS:ISPROCESSORFEATUREPRESENT
 85 C0		TEST    EAX, EAX
 74 05		JZ      SHORT LOC_41364A
+---------- new bb ----------
 8B 4D 08		MOV     ECX, [EBP+ARG_0]
 CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)
+---------- new bb ----------
 6A 03		PUSH    3
 E8 4D DC FF FF		CALL    J___CRT_DEBUGGER_HOOK
 83 C4 04		ADD     ESP, 4
@@ -2036,9 +2758,12 @@ C7 45 A4 01 00 00 00		MOV     [EBP+VAR_5C], 1
 FF 15 04 B0 41 00		CALL    DS:ISDEBUGGERPRESENT
 83 F8 01		CMP     EAX, 1
 75 06		JNZ     SHORT LOC_41371C
+---------- new bb ----------
 C6 45 FF 01		MOV     [EBP+VAR_1], 1
 EB 04		JMP     SHORT LOC_413720
+---------- new bb ----------
 C6 45 FF 00		MOV     [EBP+VAR_1], 0
+---------- new bb ----------
 8A 4D FF		MOV     CL, [EBP+VAR_1]
 88 4D FE		MOV     [EBP+VAR_2], CL
 8D 55 A0		LEA     EDX, [EBP+VAR_60]
@@ -2053,15 +2778,19 @@ FF 15 54 B0 41 00		CALL    DS:UNHANDLEDEXCEPTIONFILTER
 89 45 F8		MOV     [EBP+VAR_8], EAX
 83 7D F8 00		CMP     [EBP+VAR_8], 0
 75 12		JNZ     SHORT LOC_413762
+---------- new bb ----------
 0F B6 55 FE		MOVZX   EDX, [EBP+VAR_2]
 85 D2		TEST    EDX, EDX
 75 0A		JNZ     SHORT LOC_413762
+---------- new bb ----------
 6A 03		PUSH    3
 E8 3F DB FF FF		CALL    J___CRT_DEBUGGER_HOOK
 83 C4 04		ADD     ESP, 4
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 48		SUB     ESP, 48H
@@ -2077,24 +2806,30 @@ FF 15 4C B0 41 00		CALL    DS:GETSTARTUPINFOW
 8B 55 E4		MOV     EDX, [EBP+STARTUPINFO.DWFLAGS]
 83 E2 01		AND     EDX, 1
 74 09		JZ      SHORT LOC_4137F1
+---------- new bb ----------
 0F B7 45 E8		MOVZX   EAX, [EBP+STARTUPINFO.WSHOWWINDOW]
 89 45 FC		MOV     [EBP+VAR_4], EAX
 EB 07		JMP     SHORT LOC_4137F8
+---------- new bb ----------
 C7 45 FC 0A 00 00 00		MOV     [EBP+VAR_4], 0AH
+---------- new bb ----------
 66 8B 45 FC		MOV     AX, WORD PTR [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 E8 3D D8 FF FF		CALL    J____SCRT_STUB_FOR_INITIALIZE_MTA_4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
@@ -2103,14 +2838,18 @@ FF 15 44 B0 41 00		CALL    DS:GETMODULEHANDLEW
 89 45 FC		MOV     [EBP+VAR_4], EAX
 83 7D FC 00		CMP     [EBP+VAR_4], 0
 75 04		JNZ     SHORT LOC_41384B
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 64		JMP     SHORT LOC_4138AF
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 0F B7 08		MOVZX   ECX, WORD PTR [EAX]
 81 F9 4D 5A 00 00		CMP     ECX, 5A4DH
 74 04		JZ      SHORT LOC_41385D
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 52		JMP     SHORT LOC_4138AF
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 03 42 3C		ADD     EAX, [EDX+3CH]
@@ -2118,41 +2857,53 @@ EB 52		JMP     SHORT LOC_4138AF
 8B 4D F8		MOV     ECX, [EBP+VAR_8]
 81 39 50 45 00 00		CMP     DWORD PTR [ECX], 4550H
 74 04		JZ      SHORT LOC_413878
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 37		JMP     SHORT LOC_4138AF
+---------- new bb ----------
 8B 55 F8		MOV     EDX, [EBP+VAR_8]
 0F B7 42 18		MOVZX   EAX, WORD PTR [EDX+18H]
 3D 0B 01 00 00		CMP     EAX, 10BH
 74 04		JZ      SHORT LOC_41388A
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 25		JMP     SHORT LOC_4138AF
+---------- new bb ----------
 8B 4D F8		MOV     ECX, [EBP+VAR_8]
 83 79 74 0E		CMP     DWORD PTR [ECX+74H], 0EH
 77 04		JA      SHORT LOC_413897
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 18		JMP     SHORT LOC_4138AF
+---------- new bb ----------
 BA 08 00 00 00		MOV     EDX, 8
 6B C2 0E		IMUL    EAX, EDX, 0EH
 8B 4D F8		MOV     ECX, [EBP+VAR_8]
 83 7C 01 78 00		CMP     DWORD PTR [ECX+EAX+78H], 0
 75 04		JNZ     SHORT LOC_4138AD
+---------- new bb ----------
 32 C0		XOR     AL, AL
 EB 02		JMP     SHORT LOC_4138AF
+---------- new bb ----------
 B0 01		MOV     AL, 1
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 68 0C 13 41 00		PUSH    OFFSET TOPLEVELEXCEPTIONFILTER; LPTOPLEVELEXCEPTIONFILTER
 FF 15 50 B0 41 00		CALL    DS:SETUNHANDLEDEXCEPTIONFILTER
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 08		SUB     ESP, 8
@@ -2162,21 +2913,27 @@ C3		RETN
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 3A 63 73 6D E0		CMP     DWORD PTR [EDX], 0E06D7363H
 75 5B		JNZ     SHORT LOC_413984
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 83 78 10 03		CMP     DWORD PTR [EAX+10H], 3
 75 52		JNZ     SHORT LOC_413984
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 81 79 14 20 05 93 19		CMP     DWORD PTR [ECX+14H], 19930520H
 74 24		JZ      SHORT LOC_413962
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 7A 14 21 05 93 19		CMP     DWORD PTR [EDX+14H], 19930521H
 74 18		JZ      SHORT LOC_413962
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 81 78 14 22 05 93 19		CMP     DWORD PTR [EAX+14H], 19930522H
 74 0C		JZ      SHORT LOC_413962
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 81 79 14 00 40 99 01		CMP     DWORD PTR [ECX+14H], 1994000H
 75 22		JNZ     SHORT LOC_413984
+---------- new bb ----------
 E8 57 D7 FF FF		CALL    J___CURRENT_EXCEPTION
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 89 10		MOV     [EAX], EDX
@@ -2187,51 +2944,68 @@ E8 F1 D9 FF FF		CALL    J___CURRENT_EXCEPTION_CONTEXT
 8B 55 F8		MOV     EDX, [EBP+VAR_8]
 89 10		MOV     [EAX], EDX
 E8 81 D6 FF FF		CALL    J_TERMINATE
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C2 04 00		RETN    4
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 C7 05 AC A1 41 00 00 00 00 00		MOV     DWORD_41A1AC, 0
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 56		PUSH    ESI
 BE E4 8B 41 00		MOV     ESI, OFFSET UNK_418BE4
 8B C6		MOV     EAX, ESI
 3D E8 8D 41 00		CMP     EAX, OFFSET UNK_418DE8
 73 1D		JNB     SHORT LOC_4139FC
+---------- new bb ----------
 57		PUSH    EDI
+---------- new bb ----------
 8B 3E		MOV     EDI, [ESI]
 85 FF		TEST    EDI, EDI
 74 0A		JZ      SHORT LOC_4139F0
+---------- new bb ----------
 8B CF		MOV     ECX, EDI; THIS
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 FF D7		CALL    EDI
+---------- new bb ----------
 83 C6 04		ADD     ESI, 4
 81 FE E8 8D 41 00		CMP     ESI, OFFSET UNK_418DE8
 72 E5		JB      SHORT LOC_4139E0
+---------- new bb ----------
 5F		POP     EDI
+---------- new bb ----------
 5E		POP     ESI
 C3		RETN
+---------- new bb ----------
 56		PUSH    ESI
 BE F0 8E 41 00		MOV     ESI, OFFSET UNK_418EF0
 8B C6		MOV     EAX, ESI
 3D F4 90 41 00		CMP     EAX, OFFSET UNK_4190F4
 73 1D		JNB     SHORT LOC_413A3C
+---------- new bb ----------
 57		PUSH    EDI
+---------- new bb ----------
 8B 3E		MOV     EDI, [ESI]
 85 FF		TEST    EDI, EDI
 74 0A		JZ      SHORT LOC_413A30
+---------- new bb ----------
 8B CF		MOV     ECX, EDI; THIS
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 FF D7		CALL    EDI
+---------- new bb ----------
 83 C6 04		ADD     ESI, 4
 81 FE F4 90 41 00		CMP     ESI, OFFSET UNK_4190F4
 72 E5		JB      SHORT LOC_413A20
+---------- new bb ----------
 5F		POP     EDI
+---------- new bb ----------
 5E		POP     ESI
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 08		MOV     EAX, [EBP+ARG_0]
@@ -2255,6 +3029,7 @@ E8 5B D7 FF FF		CALL    J__EXCEPT_HANDLER4_COMMON
 83 C4 18		ADD     ESP, 18H
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -2262,6 +3037,7 @@ C3		RETN
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -2272,6 +3048,7 @@ C3		RETN
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP; VOLATILE UNSIGNED INT *
 8B EC		MOV     EBP, ESP
 8B 45 08		MOV     EAX, [EBP+ARG_0]
@@ -2280,6 +3057,7 @@ E8 35 D8 FF FF		CALL    J_?_ATOMIC_LOAD_UINT@?A0X344232B8@@YAIPDI@Z; `ANONYMOUS 
 83 C4 04		ADD     ESP, 4
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 08		MOV     EAX, [EBP+ARG_0]
@@ -2288,9 +3066,12 @@ E8 B4 00 00 00		CALL    ___CASTGUARD_COMPAT_CHECK
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 01		JZ      SHORT LOC_413B04
+---------- new bb ----------
 CC		INT     3; TRAP TO DEBUGGER
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 08		MOV     EAX, [EBP+ARG_0]
@@ -2299,21 +3080,27 @@ E8 94 00 00 00		CALL    ___CASTGUARD_COMPAT_CHECK
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_413B2A
+---------- new bb ----------
 B9 41 00 00 00		MOV     ECX, 41H ; 'A'
 CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 3D 08 D0 41 00 00		CMP     DS:___CASTGUARD_CHECK_FAILURE_OS_HANDLED_FPTR, 0
 74 0F		JZ      SHORT LOC_413B9B
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 50		PUSH    EAX
 8B 0D 08 D0 41 00		MOV     ECX, DS:___CASTGUARD_CHECK_FAILURE_OS_HANDLED_FPTR
 FF D1		CALL    ECX ; ___CASTGUARD_CHECK_FAILURE_OS_HANDLED_FPTR
 83 C4 04		ADD     ESP, 4
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 10		SUB     ESP, 10H
@@ -2326,13 +3113,17 @@ C7 45 F4 00 89 41 00		MOV     [EBP+VAR_C], OFFSET UNK_418900
 2B 4D FC		SUB     ECX, [EBP+VAR_4]
 3B 4D F0		CMP     ECX, [EBP+VAR_10]
 77 09		JA      SHORT LOC_413BE1
+---------- new bb ----------
 C7 45 F8 01 00 00 00		MOV     [EBP+VAR_8], 1
 EB 07		JMP     SHORT LOC_413BE8
+---------- new bb ----------
 C7 45 F8 00 00 00 00		MOV     [EBP+VAR_8], 0
+---------- new bb ----------
 8B 45 F8		MOV     EAX, [EBP+VAR_8]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 10		MOV     EAX, [EBP+ARG_8]
@@ -2345,15 +3136,19 @@ E8 DC 00 00 00		CALL    ___CASTGUARD_SLOW_PATH_COMPAT_CHECK
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 11		JZ      SHORT LOC_413C2C
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 50		PUSH    EAX
 E8 8C FF FF FF		CALL    ___CASTGUARD_COMPAT_CHECK
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 01		JZ      SHORT LOC_413C2C
+---------- new bb ----------
 CC		INT     3; TRAP TO DEBUGGER
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 10		MOV     EAX, [EBP+ARG_8]
@@ -2366,16 +3161,20 @@ E8 9C 00 00 00		CALL    ___CASTGUARD_SLOW_PATH_COMPAT_CHECK
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 17		JZ      SHORT LOC_413C72
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 50		PUSH    EAX
 E8 4C FF FF FF		CALL    ___CASTGUARD_COMPAT_CHECK
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_413C72
+---------- new bb ----------
 B9 41 00 00 00		MOV     ECX, 41H ; 'A'
 CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)
+---------- new bb ----------
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 0C		SUB     ESP, 0CH
@@ -2387,13 +3186,17 @@ C7 45 F8 C0 87 41 00		MOV     [EBP+VAR_8], OFFSET UNK_4187C0
 2B 4D F4		SUB     ECX, [EBP+VAR_C]
 3B 4D 10		CMP     ECX, [EBP+ARG_8]
 76 09		JBE     SHORT LOC_413D1A
+---------- new bb ----------
 C7 45 FC 01 00 00 00		MOV     [EBP+VAR_4], 1
 EB 07		JMP     SHORT LOC_413D21
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -2402,13 +3205,17 @@ E8 48 D3 FF FF		CALL    SUB_411096
 83 C4 04		ADD     ESP, 4
 3D 62 12 41 00		CMP     EAX, OFFSET J_??1SHARED_MUTEX@STD@@QAE@XZ; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 74 09		JZ      SHORT LOC_413D61
+---------- new bb ----------
 C7 45 FC 01 00 00 00		MOV     [EBP+VAR_4], 1
 EB 07		JMP     SHORT LOC_413D68
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 14 04 00 00		SUB     ESP, 414H
@@ -2417,15 +3224,18 @@ A1 20 A0 41 00		MOV     EAX, ___SECURITY_COOKIE
 89 45 FC		MOV     [EBP+VAR_4], EAX
 80 3D B4 A1 41 00 00		CMP     BYTE_41A1B4, 0
 0F 85 1A 01 00 00		JNZ     LOC_413EBA
+---------- new bb ----------
 C6 05 B4 A1 41 00 01		MOV     BYTE_41A1B4, 1
 E8 74 01 00 00		CALL    ?GETPDBDLLFROMINSTALLPATH@@YAPAUHINSTANCE__@@XZ; GETPDBDLLFROMINSTALLPATH(VOID)
 85 C0		TEST    EAX, EAX
 0F 85 08 01 00 00		JNZ     LOC_413EBC
+---------- new bb ----------
 68 20 83 41 00		PUSH    OFFSET AVCRUNTIME140DD; "VCRUNTIME140D.DLL"
 E8 96 D3 FF FF		CALL    J___VCRT_GETMODULEHANDLEW
 83 C4 04		ADD     ESP, 4
 85 C0		TEST    EAX, EAX
 74 78		JZ      SHORT LOC_413E3D
+---------- new bb ----------
 68 04 01 00 00		PUSH    104H
 8D 8D EC FB FF FF		LEA     ECX, [EBP+FULLPATH]
 51		PUSH    ECX
@@ -2434,6 +3244,7 @@ E8 99 D5 FF FF		CALL    J___VCRT_GETMODULEFILENAMEW
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 5F		JZ      SHORT LOC_413E3D
+---------- new bb ----------
 68 04 01 00 00		PUSH    104H; BUFFERCOUNT
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+BUFFER]
 50		PUSH    EAX; BUFFER
@@ -2443,6 +3254,7 @@ E8 1A 04 00 00		CALL    ?GETPDBDLLPATHFROMFILEPATH@@YAHPB_WPA_WI@Z; GETPDBDLLPAT
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 40		JZ      SHORT LOC_413E3D
+---------- new bb ----------
 68 00 09 00 00		PUSH    900H
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+BUFFER]
 6A 00		PUSH    0
@@ -2451,9 +3263,11 @@ E8 C1 D3 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 0F 85 A1 00 00 00		JNZ     LOC_413EBC
+---------- new bb ----------
 FF 15 40 B0 41 00		CALL    DS:GETLASTERROR
 83 F8 57		CMP     EAX, 57H ; 'W'
 75 17		JNZ     SHORT LOC_413E3D
+---------- new bb ----------
 6A 08		PUSH    8
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+BUFFER]
 6A 00		PUSH    0
@@ -2462,6 +3276,7 @@ E8 9B D3 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 75 7F		JNZ     SHORT LOC_413EBC
+---------- new bb ----------
 68 00 0A 00 00		PUSH    0A00H
 6A 00		PUSH    0
 68 D4 84 41 00		PUSH    OFFSET AMSPDB140; "MSPDB140"
@@ -2469,9 +3284,11 @@ E8 83 D3 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 75 67		JNZ     SHORT LOC_413EBC
+---------- new bb ----------
 FF 15 40 B0 41 00		CALL    DS:GETLASTERROR
 83 F8 57		CMP     EAX, 57H ; 'W'
 75 5A		JNZ     SHORT LOC_413EBA
+---------- new bb ----------
 68 04 01 00 00		PUSH    104H
 8D 85 EC FB FF FF		LEA     EAX, [EBP+FULLPATH]
 50		PUSH    EAX
@@ -2480,6 +3297,7 @@ E8 FD D4 FF FF		CALL    J___VCRT_GETMODULEFILENAMEW
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 40		JZ      SHORT LOC_413EBA
+---------- new bb ----------
 68 04 01 00 00		PUSH    104H; BUFFERCOUNT
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+BUFFER]
 50		PUSH    EAX; BUFFER
@@ -2489,6 +3307,7 @@ E8 7E 03 00 00		CALL    ?GETPDBDLLPATHFROMFILEPATH@@YAHPB_WPA_WI@Z; GETPDBDLLPAT
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 74 21		JZ      SHORT LOC_413EBA
+---------- new bb ----------
 6A 08		PUSH    8
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+BUFFER]
 6A 00		PUSH    0
@@ -2501,13 +3320,16 @@ E8 8A D2 FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 33 CD		XOR     ECX, EBP; STACKCOOKIE
 E8 7A D2 FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 1C 02 00 00		SUB     ESP, 21CH
@@ -2525,6 +3347,7 @@ E8 8A D2 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 FF		TEST    EDI, EDI
 75 39		JNZ     SHORT LOC_413F89
+---------- new bb ----------
 68 00 08 00 00		PUSH    800H
 50		PUSH    EAX
 68 B0 83 41 00		PUSH    OFFSET AADVAPI32DLL; "ADVAPI32.DLL"
@@ -2533,9 +3356,11 @@ E8 71 D2 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 FF		TEST    EDI, EDI
 75 20		JNZ     SHORT LOC_413F89
+---------- new bb ----------
 FF 15 40 B0 41 00		CALL    DS:GETLASTERROR
 83 F8 57		CMP     EAX, 57H ; 'W'
 75 79		JNZ     SHORT LOC_413FED
+---------- new bb ----------
 57		PUSH    EDI
 57		PUSH    EDI
 68 B0 83 41 00		PUSH    OFFSET AADVAPI32DLL; "ADVAPI32.DLL"
@@ -2544,24 +3369,28 @@ E8 51 D2 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 FF		TEST    EDI, EDI
 74 64		JZ      SHORT LOC_413FED
+---------- new bb ----------
 68 D0 83 41 00		PUSH    OFFSET PROCNAME; "REGOPENKEYEXW"
 57		PUSH    EDI; HMODULE
 FF 15 28 B0 41 00		CALL    DS:GETPROCADDRESS
 8B F0		MOV     ESI, EAX
 85 F6		TEST    ESI, ESI
 74 52		JZ      SHORT LOC_413FED
+---------- new bb ----------
 68 E0 83 41 00		PUSH    OFFSET AREGQUERYVALUEE; "REGQUERYVALUEEXW"
 57		PUSH    EDI; HMODULE
 FF 15 28 B0 41 00		CALL    DS:GETPROCADDRESS
 8B D8		MOV     EBX, EAX
 85 DB		TEST    EBX, EBX
 74 40		JZ      SHORT LOC_413FED
+---------- new bb ----------
 68 F4 83 41 00		PUSH    OFFSET AREGCLOSEKEY; "REGCLOSEKEY"
 57		PUSH    EDI; HMODULE
 FF 15 28 B0 41 00		CALL    DS:GETPROCADDRESS
 89 85 E8 FD FF FF		MOV     [EBP+VAR_218], EAX
 85 C0		TEST    EAX, EAX
 74 2A		JZ      SHORT LOC_413FED
+---------- new bb ----------
 8D 85 F0 FD FF FF		LEA     EAX, [EBP+VAR_210]
 8B CE		MOV     ECX, ESI; THIS
 50		PUSH    EAX
@@ -2573,8 +3402,10 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 85 C0		TEST    EAX, EAX
 74 1A		JZ      SHORT LOC_414000
+---------- new bb ----------
 57		PUSH    EDI; HLIBMODULE
 FF 15 2C B0 41 00		CALL    DS:FREELIBRARY
+---------- new bb ----------
 5F		POP     EDI
 5E		POP     ESI
 33 C0		XOR     EAX, EAX
@@ -2585,6 +3416,7 @@ E8 44 D1 FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 8D 85 EC FD FF FF		LEA     EAX, [EBP+VAR_214]
 C7 85 EC FD FF FF 08 02 00 00		MOV     [EBP+VAR_214], 208H
 50		PUSH    EAX
@@ -2608,32 +3440,41 @@ FF D3		CALL    EBX
 FF 15 2C B0 41 00		CALL    DS:FREELIBRARY
 85 F6		TEST    ESI, ESI
 75 94		JNZ     SHORT LOC_413FED
+---------- new bb ----------
 83 BD E4 FD FF FF 01		CMP     [EBP+VAR_21C], 1
 75 8B		JNZ     SHORT LOC_413FED
+---------- new bb ----------
 8B 8D EC FD FF FF		MOV     ECX, [EBP+VAR_214]
 F6 C1 01		TEST    CL, 1
 75 80		JNZ     SHORT LOC_413FED
+---------- new bb ----------
 D1 E9		SHR     ECX, 1
 8B D1		MOV     EDX, ECX
 83 F9 02		CMP     ECX, 2
 0F 82 73 FF FF FF		JB      LOC_413FED
+---------- new bb ----------
 49		DEC     ECX
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+VAR_20C]
 66 39 34 48		CMP     [EAX+ECX*2], SI
 8D 04 48		LEA     EAX, [EAX+ECX*2]
 0F 85 5F FF FF FF		JNZ     LOC_413FED
+---------- new bb ----------
 66 83 78 FE 5C		CMP     WORD PTR [EAX-2], 5CH ; '\'
 74 0A		JZ      SHORT LOC_41409F
+---------- new bb ----------
 B9 5C 00 00 00		MOV     ECX, 5CH ; '\'
 66 89 08		MOV     [EAX], CX
 8B CA		MOV     ECX, EDX
+---------- new bb ----------
 8B C1		MOV     EAX, ECX
 F7 D0		NOT     EAX
 83 F8 12		CMP     EAX, 12H
 0F 82 41 FF FF FF		JB      LOC_413FED
+---------- new bb ----------
 8D 41 11		LEA     EAX, [ECX+11H]
 3D 04 01 00 00		CMP     EAX, 104H
 0F 87 33 FF FF FF		JA      LOC_413FED
+---------- new bb ----------
 A1 FC 82 41 00		MOV     EAX, DS:DWORD_4182FC
 89 84 4D F4 FD FF FF		MOV     [EBP+ECX*2+VAR_20C], EAX
 A1 00 83 41 00		MOV     EAX, DS:DWORD_418300
@@ -2661,9 +3502,11 @@ E8 96 D0 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 85 F6		TEST    ESI, ESI
 75 1F		JNZ     SHORT LOC_414163
+---------- new bb ----------
 FF 15 40 B0 41 00		CALL    DS:GETLASTERROR
 83 F8 57		CMP     EAX, 57H ; 'W'
 75 14		JNZ     SHORT LOC_414163
+---------- new bb ----------
 6A 08		PUSH    8
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+VAR_20C]
 56		PUSH    ESI
@@ -2671,6 +3514,7 @@ FF 15 40 B0 41 00		CALL    DS:GETLASTERROR
 E8 73 D0 FF FF		CALL    J___VCRT_LOADLIBRARYEXW
 83 C4 0C		ADD     ESP, 0CH
 8B F0		MOV     ESI, EAX
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 8B C6		MOV     EAX, ESI
 5F		POP     EDI
@@ -2681,6 +3525,7 @@ E8 CE CF FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 0C 06 00 00		SUB     ESP, 60CH
@@ -2707,6 +3552,7 @@ E8 50 CE FF FF		CALL    J__WSPLITPATH_S
 83 C4 24		ADD     ESP, 24H
 85 C0		TEST    EAX, EAX
 75 6D		JNZ     SHORT LOC_4142CE
+---------- new bb ----------
 68 BC 84 41 00		PUSH    OFFSET AMSPDB140_0; "MSPDB140"
 8D 85 F4 FB FF FF		LEA     EAX, [EBP+FILENAME]
 6A 09		PUSH    9; SIZEINWORDS
@@ -2715,6 +3561,7 @@ E8 44 CF FF FF		CALL    J_WCSCPY_S
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 75 53		JNZ     SHORT LOC_4142CE
+---------- new bb ----------
 68 B0 84 41 00		PUSH    OFFSET ADLL; "DLL"
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+EXT]
 6A 04		PUSH    4; SIZEINWORDS
@@ -2723,6 +3570,7 @@ E8 2A CF FF FF		CALL    J_WCSCPY_S
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 75 39		JNZ     SHORT LOC_4142CE
+---------- new bb ----------
 8D 85 F4 FD FF FF		LEA     EAX, [EBP+EXT]
 50		PUSH    EAX; EXT
 8D 85 F4 FB FF FF		LEA     EAX, [EBP+FILENAME]
@@ -2745,6 +3593,7 @@ E8 76 CE FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 33 C0		XOR     EAX, EAX
 33 CD		XOR     ECX, EBP; STACKCOOKIE
@@ -2753,6 +3602,7 @@ E8 65 CE FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 8B 45 14		MOV     EAX, [EBP+ARG_C]
@@ -2773,6 +3623,7 @@ C7 00 00 00 00 00		MOV     DWORD PTR [EAX], 0
 FF 15 30 B0 41 00		CALL    DS:VIRTUALQUERY
 85 C0		TEST    EAX, EAX
 0F 84 44 03 00 00		JZ      LOC_414697
+---------- new bb ----------
 FF 75 1C		PUSH    [EBP+ARG_14]
 FF 75 18		PUSH    [EBP+ARG_10]
 FF 75 B8		PUSH    [EBP+BUFFER.ALLOCATIONBASE]
@@ -2780,16 +3631,20 @@ E8 0F D0 FF FF		CALL    J___VCRT_GETMODULEFILENAMEW
 83 C4 0C		ADD     ESP, 0CH
 85 C0		TEST    EAX, EAX
 0F 84 2B 03 00 00		JZ      LOC_414697
+---------- new bb ----------
 8B 45 B8		MOV     EAX, [EBP+BUFFER.ALLOCATIONBASE]
 B9 4D 5A 00 00		MOV     ECX, 5A4DH
 66 39 08		CMP     [EAX], CX
 0F 85 1A 03 00 00		JNZ     LOC_414697
+---------- new bb ----------
 8B 48 3C		MOV     ECX, [EAX+3CH]
 85 C9		TEST    ECX, ECX
 0F 8E 0F 03 00 00		JLE     LOC_414697
+---------- new bb ----------
 03 C8		ADD     ECX, EAX
 81 39 50 45 00 00		CMP     DWORD PTR [ECX], 4550H
 0F 85 01 03 00 00		JNZ     LOC_414697
+---------- new bb ----------
 0F B7 51 14		MOVZX   EDX, WORD PTR [ECX+14H]
 2B F0		SUB     ESI, EAX
 0F B7 79 06		MOVZX   EDI, WORD PTR [ECX+6]
@@ -2798,40 +3653,52 @@ B9 4D 5A 00 00		MOV     ECX, 5A4DH
 33 C0		XOR     EAX, EAX
 85 FF		TEST    EDI, EDI
 74 1C		JZ      SHORT LOC_4143C7
+---------- new bb ----------
 03 CA		ADD     ECX, EDX
 8D 49 00		LEA     ECX, [ECX+0]
+---------- new bb ----------
 8B 51 04		MOV     EDX, [ECX+4]
 3B F2		CMP     ESI, EDX
 72 08		JB      SHORT LOC_4143BF
+---------- new bb ----------
 8B DE		MOV     EBX, ESI
 2B DA		SUB     EBX, EDX
 3B 31		CMP     ESI, [ECX]
 72 08		JB      SHORT LOC_4143C7
+---------- new bb ----------
 40		INC     EAX
 83 C1 28		ADD     ECX, 28H ; '('
 3B C7		CMP     EAX, EDI
 72 E9		JB      SHORT LOC_4143B0
+---------- new bb ----------
 3B C7		CMP     EAX, EDI
 0F 84 C8 02 00 00		JZ      LOC_414697
+---------- new bb ----------
 40		INC     EAX
 80 3D B5 A1 41 00 00		CMP     BYTE_41A1B5, 0
 89 45 F4		MOV     [EBP+VAR_C], EAX
 75 28		JNZ     SHORT LOC_414404
+---------- new bb ----------
 83 3D B0 A1 41 00 00		CMP     DWORD_41A1B0, 0
 0F 85 AE 02 00 00		JNZ     LOC_414697
+---------- new bb ----------
 E8 92 F9 FF FF		CALL    SUB_413D80
 A3 B0 A1 41 00		MOV     DWORD_41A1B0, EAX
 85 C0		TEST    EAX, EAX
 0F 84 9C 02 00 00		JZ      LOC_414697
+---------- new bb ----------
 C6 05 B5 A1 41 00 01		MOV     BYTE_41A1B5, 1
 EB 05		JMP     SHORT LOC_414409
+---------- new bb ----------
 A1 B0 A1 41 00		MOV     EAX, DWORD_41A1B0
+---------- new bb ----------
 68 EC 84 41 00		PUSH    OFFSET APDBOPENVALIDAT; "PDBOPENVALIDATE5"
 50		PUSH    EAX; HMODULE
 FF 15 28 B0 41 00		CALL    DS:GETPROCADDRESS
 8B F0		MOV     ESI, EAX
 85 F6		TEST    ESI, ESI
 0F 84 78 02 00 00		JZ      LOC_414697
+---------- new bb ----------
 8D 45 E8		LEA     EAX, [EBP+VAR_18]
 8B CE		MOV     ECX, ESI; THIS
 50		PUSH    EAX
@@ -2848,6 +3715,7 @@ FF D6		CALL    ESI
 83 C4 20		ADD     ESP, 20H
 85 C0		TEST    EAX, EAX
 0F 84 4E 02 00 00		JZ      LOC_414697
+---------- new bb ----------
 8B 7D E8		MOV     EDI, [EBP+VAR_18]
 C7 45 F8 00 00 00 00		MOV     [EBP+VAR_8], 0
 C7 45 DC 00 00 00 00		MOV     [EBP+VAR_24], 0
@@ -2859,6 +3727,7 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 3D 41 91 32 01		CMP     EAX, 1329141H
 0F 85 3F 01 00 00		JNZ     $DONE1$77
+---------- new bb ----------
 8B 7D E8		MOV     EDI, [EBP+VAR_18]
 8B 07		MOV     EAX, [EDI]
 8B 70 1C		MOV     ESI, [EAX+1CH]
@@ -2872,6 +3741,7 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 85 C0		TEST    EAX, EAX
 0F 84 18 01 00 00		JZ      $DONE1$77
+---------- new bb ----------
 8B 7D E0		MOV     EDI, [EBP+VAR_20]
 6A 00		PUSH    0
 6A 00		PUSH    0
@@ -2888,6 +3758,7 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 85 C0		TEST    EAX, EAX
 0F 84 DA 00 00 00		JZ      $DONE2$76
+---------- new bb ----------
 8B 7D EC		MOV     EDI, [EBP+VAR_14]
 8B 07		MOV     EAX, [EDI]
 8B 70 68		MOV     ESI, [EAX+68H]
@@ -2899,9 +3770,11 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 84 C0		TEST    AL, AL
 0F 84 A6 00 00 00		JZ      $DONE3$75
+---------- new bb ----------
 8B 7D F8		MOV     EDI, [EBP+VAR_8]
 85 FF		TEST    EDI, EDI
 0F 84 9B 00 00 00		JZ      $DONE3$75
+---------- new bb ----------
 8B 07		MOV     EAX, [EDI]
 8B 70 08		MOV     ESI, [EAX+8]
 8B CE		MOV     ECX, ESI; THIS
@@ -2910,6 +3783,7 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 85 C0		TEST    EAX, EAX
 74 61		JZ      SHORT LOC_414567
+---------- new bb ----------
 8B 7D F8		MOV     EDI, [EBP+VAR_8]
 6A 00		PUSH    0
 8B 07		MOV     EAX, [EDI]
@@ -2929,16 +3803,20 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 84 C0		TEST    AL, AL
 74 47		JZ      SHORT $DONE4$74
+---------- new bb ----------
 0F B7 45 FC		MOVZX   EAX, [EBP+VAR_4]
 3B 45 F4		CMP     EAX, [EBP+VAR_C]
 75 14		JNZ     SHORT LOC_41454F
+---------- new bb ----------
 8B 4D E4		MOV     ECX, [EBP+VAR_1C]
 3B CB		CMP     ECX, EBX
 77 0D		JA      SHORT LOC_41454F
+---------- new bb ----------
 8B 45 D8		MOV     EAX, [EBP+VAR_28]
 03 C1		ADD     EAX, ECX
 3B D8		CMP     EBX, EAX
 0F 82 83 00 00 00		JB      LOC_4145D2
+---------- new bb ----------
 8B 7D F8		MOV     EDI, [EBP+VAR_8]
 8B 07		MOV     EAX, [EDI]
 8B 70 08		MOV     ESI, [EAX+8]
@@ -2948,12 +3826,15 @@ FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHA
 FF D6		CALL    ESI
 85 C0		TEST    EAX, EAX
 75 9F		JNZ     SHORT LOC_414506
+---------- new bb ----------
 33 C9		XOR     ECX, ECX
+---------- new bb ----------
 51		PUSH    ECX; LPMEM
 6A 00		PUSH    0; DWFLAGS
 FF 15 34 B0 41 00		CALL    DS:GETPROCESSHEAP
 50		PUSH    EAX; HHEAP
 FF 15 38 B0 41 00		CALL    DS:HEAPFREE
+---------- new bb ----------
 8B 7D F8		MOV     EDI, [EBP+VAR_8]
 8B 07		MOV     EAX, [EDI]
 8B 30		MOV     ESI, [EAX]
@@ -2961,6 +3842,7 @@ FF 15 38 B0 41 00		CALL    DS:HEAPFREE
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 8B CF		MOV     ECX, EDI
 FF D6		CALL    ESI
+---------- new bb ----------
 8B 7D EC		MOV     EDI, [EBP+VAR_14]
 8B 07		MOV     EAX, [EDI]
 8B 70 40		MOV     ESI, [EAX+40H]
@@ -2968,6 +3850,7 @@ FF D6		CALL    ESI
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 8B CF		MOV     ECX, EDI
 FF D6		CALL    ESI
+---------- new bb ----------
 8B 7D E0		MOV     EDI, [EBP+VAR_20]
 8B 07		MOV     EAX, [EDI]
 8B 70 38		MOV     ESI, [EAX+38H]
@@ -2975,6 +3858,7 @@ FF D6		CALL    ESI
 FF 15 00 D0 41 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR; STD::SHARED_MUTEX::~SHARED_MUTEX(VOID)
 8B CF		MOV     ECX, EDI
 FF D6		CALL    ESI
+---------- new bb ----------
 8B 7D E8		MOV     EDI, [EBP+VAR_18]
 8B 17		MOV     EDX, [EDI]
 8B 72 2C		MOV     ESI, [EDX+2CH]
@@ -2989,11 +3873,14 @@ FF D6		CALL    ESI
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 8B 75 F0		MOV     ESI, [EBP+VAR_10]
 85 F6		TEST    ESI, ESI
 74 A0		JZ      SHORT $DONE4$74
+---------- new bb ----------
 81 FE FF FF FF 1F		CMP     ESI, 1FFFFFFFH
 73 98		JNB     SHORT $DONE4$74
+---------- new bb ----------
 C1 E6 03		SHL     ESI, 3
 FF 15 34 B0 41 00		CALL    DS:GETPROCESSHEAP
 56		PUSH    ESI; DWBYTES
@@ -3003,6 +3890,7 @@ FF 15 00 B0 41 00		CALL    DS:HEAPALLOC
 89 45 F4		MOV     [EBP+VAR_C], EAX
 85 C0		TEST    EAX, EAX
 0F 84 7A FF FF FF		JZ      $DONE4$74
+---------- new bb ----------
 8B 7D F8		MOV     EDI, [EBP+VAR_8]
 50		PUSH    EAX
 8D 45 F0		LEA     EAX, [EBP+VAR_10]
@@ -3021,18 +3909,23 @@ FF D6		CALL    ESI
 8B 4D F4		MOV     ECX, [EBP+VAR_C]
 84 C0		TEST    AL, AL
 0F 84 3C FF FF FF		JZ      $DONE5$73
+---------- new bb ----------
 2B 5D E4		SUB     EBX, [EBP+VAR_1C]
 3B 19		CMP     EBX, [ECX]
 0F 82 31 FF FF FF		JB      $DONE5$73
+---------- new bb ----------
 8B 55 F0		MOV     EDX, [EBP+VAR_10]
 B8 01 00 00 00		MOV     EAX, 1
 3B D0		CMP     EDX, EAX
 76 0A		JBE     SHORT LOC_41464E
+---------- new bb ----------
 3B 1C C1		CMP     EBX, [ECX+EAX*8]
 72 05		JB      SHORT LOC_41464E
+---------- new bb ----------
 40		INC     EAX
 3B C2		CMP     EAX, EDX
 72 F6		JB      SHORT LOC_414644
+---------- new bb ----------
 8B 44 C1 FC		MOV     EAX, [ECX+EAX*8-4]
 8B 4D 14		MOV     ECX, [EBP+ARG_C]
 25 FF FF FF 00		AND     EAX, 0FFFFFFH
@@ -3054,8 +3947,10 @@ FF D6		CALL    ESI
 8B 4D F4		MOV     ECX, [EBP+VAR_C]
 84 C0		TEST    AL, AL
 0F 84 DE FE FF FF		JZ      $DONE5$73
+---------- new bb ----------
 C7 45 DC 01 00 00 00		MOV     [EBP+VAR_24], 1
 E9 D2 FE FF FF		JMP     $DONE5$73
+---------- new bb ----------
 5F		POP     EDI
 5E		POP     ESI
 33 C0		XOR     EAX, EAX
@@ -3063,10 +3958,16 @@ E9 D2 FE FF FF		JMP     $DONE5$73
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 3B 0D 20 A0 41 00		CMP     ECX, ___SECURITY_COOKIE
 75 01		JNZ     SHORT $FAILURE$4
+---------- new bb ----------
 C3		RETN
+---------- new bb ----------
 E9 9F C8 FF FF		JMP     J____REPORT_GSFAILURE
+---------- new bb ----------
+E9 5E 3C 00 00		JMP     ___REPORT_GSFAILURE
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
@@ -3085,11 +3986,14 @@ E8 97 F2 FF FF		CALL    __EXCEPT_HANDLER4
 8B 51 04		MOV     EDX, [ECX+4]
 83 E2 66		AND     EDX, 66H
 75 2A		JNZ     SHORT LOC_4147F4
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 81 38 63 73 6D E0		CMP     DWORD PTR [EAX], 0E06D7363H
 75 1F		JNZ     SHORT LOC_4147F4
+---------- new bb ----------
 83 7D FC 01		CMP     [EBP+VAR_4], 1
 75 19		JNZ     SHORT LOC_4147F4
+---------- new bb ----------
 E8 DE C8 FF FF		CALL    J___CURRENT_EXCEPTION
 8B 4D 08		MOV     ECX, [EBP+ARG_0]
 89 08		MOV     [EAX], ECX
@@ -3097,10 +4001,12 @@ E8 81 CB FF FF		CALL    J___CURRENT_EXCEPTION_CONTEXT
 8B 55 10		MOV     EDX, [EBP+ARG_8]
 89 10		MOV     [EAX], EDX
 E8 11 C8 FF FF		CALL    J_TERMINATE
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 48		SUB     ESP, 48H
@@ -3117,8 +4023,10 @@ A3 2C A0 41 00		MOV     DWORD_41A02C, EAX
 FF 15 48 B0 41 00		CALL    DS:ISPROCESSORFEATUREPRESENT
 85 C0		TEST    EAX, EAX
 75 07		JNZ     SHORT LOC_41485C
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
 E9 E7 02 00 00		JMP     LOC_414B43
+---------- new bb ----------
 C7 45 F0 00 00 00 00		MOV     [EBP+VAR_10], 0
 C7 45 F4 00 00 00 00		MOV     [EBP+VAR_C], 0
 C7 45 F8 00 00 00 00		MOV     [EBP+VAR_8], 0
@@ -3149,9 +4057,12 @@ D1 E1		SHL     ECX, 1
 35 6E 74 65 6C		XOR     EAX, 6C65746EH
 0B D0		OR      EDX, EAX
 75 09		JNZ     SHORT LOC_4148D6
+---------- new bb ----------
 C7 45 D4 01 00 00 00		MOV     [EBP+VAR_2C], 1
 EB 07		JMP     SHORT LOC_4148DD
+---------- new bb ----------
 C7 45 D4 00 00 00 00		MOV     [EBP+VAR_2C], 0
+---------- new bb ----------
 8A 4D D4		MOV     CL, BYTE PTR [EBP+VAR_2C]
 88 4D DF		MOV     [EBP+VAR_21], CL
 8D 75 E0		LEA     ESI, [EBP+VAR_20]
@@ -3169,33 +4080,41 @@ BA 04 00 00 00		MOV     EDX, 4
 0F B6 55 DF		MOVZX   EDX, [EBP+VAR_21]
 85 D2		TEST    EDX, EDX
 74 6F		JZ      SHORT LOC_414980
+---------- new bb ----------
 8B 45 D8		MOV     EAX, [EBP+VAR_28]
 25 F0 3F FF 0F		AND     EAX, 0FFF3FF0H
 3D C0 06 01 00		CMP     EAX, 106C0H
 74 53		JZ      SHORT LOC_414973
+---------- new bb ----------
 8B 4D D8		MOV     ECX, [EBP+VAR_28]
 81 E1 F0 3F FF 0F		AND     ECX, 0FFF3FF0H
 81 F9 60 06 02 00		CMP     ECX, 20660H
 74 42		JZ      SHORT LOC_414973
+---------- new bb ----------
 8B 55 D8		MOV     EDX, [EBP+VAR_28]
 81 E2 F0 3F FF 0F		AND     EDX, 0FFF3FF0H
 81 FA 70 06 02 00		CMP     EDX, 20670H
 74 31		JZ      SHORT LOC_414973
+---------- new bb ----------
 8B 45 D8		MOV     EAX, [EBP+VAR_28]
 25 F0 3F FF 0F		AND     EAX, 0FFF3FF0H
 3D 50 06 03 00		CMP     EAX, 30650H
 74 22		JZ      SHORT LOC_414973
+---------- new bb ----------
 8B 4D D8		MOV     ECX, [EBP+VAR_28]
 81 E1 F0 3F FF 0F		AND     ECX, 0FFF3FF0H
 81 F9 60 06 03 00		CMP     ECX, 30660H
 74 11		JZ      SHORT LOC_414973
+---------- new bb ----------
 8B 55 D8		MOV     EDX, [EBP+VAR_28]
 81 E2 F0 3F FF 0F		AND     EDX, 0FFF3FF0H
 81 FA 70 06 03 00		CMP     EDX, 30670H
 75 0D		JNZ     SHORT LOC_414980
+---------- new bb ----------
 A1 BC A1 41 00		MOV     EAX, DWORD_41A1BC
 83 C8 01		OR      EAX, 1
 A3 BC A1 41 00		MOV     DWORD_41A1BC, EAX
+---------- new bb ----------
 B9 04 00 00 00		MOV     ECX, 4
 6B D1 03		IMUL    EDX, ECX, 3
 B8 04 00 00 00		MOV     EAX, 4
@@ -3210,6 +4129,7 @@ C1 E1 00		SHL     ECX, 0
 89 54 0D F0		MOV     [EBP+ECX+VAR_10], EDX
 83 7D C8 07		CMP     [EBP+VAR_38], 7
 7C 51		JL      SHORT LOC_414A06
+---------- new bb ----------
 8D 75 E0		LEA     ESI, [EBP+VAR_20]
 B8 07 00 00 00		MOV     EAX, 7
 33 C9		XOR     ECX, ECX
@@ -3229,9 +4149,11 @@ C1 E0 00		SHL     EAX, 0
 8B 4C 05 E0		MOV     ECX, [EBP+EAX+VAR_20]
 81 E1 00 02 00 00		AND     ECX, 200H
 74 0F		JZ      SHORT LOC_414A06
+---------- new bb ----------
 8B 15 BC A1 41 00		MOV     EDX, DWORD_41A1BC
 83 CA 02		OR      EDX, 2
 89 15 BC A1 41 00		MOV     DWORD_41A1BC, EDX
+---------- new bb ----------
 C7 05 B8 A1 41 00 01 00 00 00		MOV     DWORD_41A1B8, 1
 A1 2C A0 41 00		MOV     EAX, DWORD_41A02C
 83 C8 02		OR      EAX, 2
@@ -3241,6 +4163,7 @@ C1 E1 00		SHL     ECX, 0
 8B 54 0D F0		MOV     EDX, [EBP+ECX+VAR_10]
 81 E2 00 00 10 00		AND     EDX, 100000H
 0F 84 0C 01 00 00		JZ      LOC_414B41
+---------- new bb ----------
 C7 05 B8 A1 41 00 02 00 00 00		MOV     DWORD_41A1B8, 2
 A1 2C A0 41 00		MOV     EAX, DWORD_41A02C
 83 C8 04		OR      EAX, 4
@@ -3250,11 +4173,13 @@ C1 E1 00		SHL     ECX, 0
 8B 54 0D F0		MOV     EDX, [EBP+ECX+VAR_10]
 81 E2 00 00 00 08		AND     EDX, 8000000H
 0F 84 DD 00 00 00		JZ      LOC_414B41
+---------- new bb ----------
 B8 04 00 00 00		MOV     EAX, 4
 C1 E0 00		SHL     EAX, 0
 8B 4C 05 F0		MOV     ECX, [EBP+EAX+VAR_10]
 81 E1 00 00 00 10		AND     ECX, 10000000H
 0F 84 C5 00 00 00		JZ      LOC_414B41
+---------- new bb ----------
 33 C9		XOR     ECX, ECX
 0F 01 D0		XGETBV
 89 45 CC		MOV     [EBP+VAR_34], EAX
@@ -3267,8 +4192,10 @@ C1 E0 00		SHL     EAX, 0
 89 45 C4		MOV     [EBP+VAR_3C], EAX
 83 7D C0 06		CMP     [EBP+VAR_40], 6
 0F 85 9E 00 00 00		JNZ     LOC_414B41
+---------- new bb ----------
 83 7D C4 00		CMP     [EBP+VAR_3C], 0
 0F 85 94 00 00 00		JNZ     LOC_414B41
+---------- new bb ----------
 C7 05 B8 A1 41 00 03 00 00 00		MOV     DWORD_41A1B8, 3
 8B 0D 2C A0 41 00		MOV     ECX, DWORD_41A02C
 83 C9 08		OR      ECX, 8
@@ -3278,6 +4205,7 @@ D1 E2		SHL     EDX, 1
 8B 44 15 F0		MOV     EAX, [EBP+EDX+VAR_10]
 83 E0 20		AND     EAX, 20H
 74 6B		JZ      SHORT LOC_414B41
+---------- new bb ----------
 C7 05 B8 A1 41 00 05 00 00 00		MOV     DWORD_41A1B8, 5
 8B 0D 2C A0 41 00		MOV     ECX, DWORD_41A02C
 83 C9 20		OR      ECX, 20H
@@ -3288,6 +4216,7 @@ D1 E2		SHL     EDX, 1
 25 00 00 03 D0		AND     EAX, 0D0030000H
 3D 00 00 03 D0		CMP     EAX, 0D0030000H
 75 3B		JNZ     SHORT LOC_414B41
+---------- new bb ----------
 8B 4D CC		MOV     ECX, [EBP+VAR_34]
 8B 55 D0		MOV     EDX, [EBP+VAR_30]
 81 E1 E0 00 00 00		AND     ECX, 0E0H
@@ -3296,13 +4225,17 @@ D1 E2		SHL     EDX, 1
 89 55 BC		MOV     [EBP+VAR_44], EDX
 81 7D B8 E0 00 00 00		CMP     [EBP+VAR_48], 0E0H
 75 1D		JNZ     SHORT LOC_414B41
+---------- new bb ----------
 83 7D BC 00		CMP     [EBP+VAR_44], 0
 75 17		JNZ     SHORT LOC_414B41
+---------- new bb ----------
 C7 05 B8 A1 41 00 06 00 00 00		MOV     DWORD_41A1B8, 6
 A1 2C A0 41 00		MOV     EAX, DWORD_41A02C
 83 C8 40		OR      EAX, 40H
 A3 2C A0 41 00		MOV     DWORD_41A02C, EAX
+---------- new bb ----------
 33 C0		XOR     EAX, EAX
+---------- new bb ----------
 5E		POP     ESI
 5B		POP     EBX
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
@@ -3311,18 +4244,23 @@ E8 F1 C5 FF FF		CALL    J_@__SECURITY_CHECK_COOKIE@4; __SECURITY_CHECK_COOKIE(X)
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 51		PUSH    ECX
 83 3D 30 A0 41 00 00		CMP     DWORD_41A030, 0
 74 09		JZ      SHORT LOC_414C36
+---------- new bb ----------
 C7 45 FC 01 00 00 00		MOV     [EBP+VAR_4], 1
 EB 07		JMP     SHORT LOC_414C3D
+---------- new bb ----------
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A 00		PUSH    0; LPTOPLEVELEXCEPTIONFILTER
@@ -3336,6 +4274,7 @@ FF 15 24 B0 41 00		CALL    DS:GETCURRENTPROCESS
 FF 15 20 B0 41 00		CALL    DS:TERMINATEPROCESS
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 24 03 00 00		SUB     ESP, 324H
@@ -3343,8 +4282,10 @@ C3		RETN
 FF 15 48 B0 41 00		CALL    DS:ISPROCESSORFEATUREPRESENT
 85 C0		TEST    EAX, EAX
 74 07		JZ      SHORT LOC_414CAC
+---------- new bb ----------
 B9 02 00 00 00		MOV     ECX, 2
 CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)
+---------- new bb ----------
 A3 C8 A2 41 00		MOV     DWORD_41A2C8, EAX
 89 0D C4 A2 41 00		MOV     DWORD_41A2C4, ECX
 89 15 C0 A2 41 00		MOV     DWORD_41A2C0, EDX
@@ -3388,12 +4329,14 @@ E8 1C C6 FF FF		CALL    J____RAISE_SECURITYFAILURE
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 6A 08		PUSH    8
 E8 7C C5 FF FF		CALL    J____REPORT_SECURITYFAILURE
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 1C 03 00 00		SUB     ESP, 31CH
@@ -3401,8 +4344,10 @@ C3		RETN
 FF 15 48 B0 41 00		CALL    DS:ISPROCESSORFEATUREPRESENT
 85 C0		TEST    EAX, EAX
 74 05		JZ      SHORT LOC_414E0A
+---------- new bb ----------
 8B 4D 08		MOV     ECX, [EBP+ARG_0]
 CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)
+---------- new bb ----------
 A3 C8 A2 41 00		MOV     DWORD_41A2C8, EAX
 89 0D C4 A2 41 00		MOV     DWORD_41A2C4, ECX
 89 15 C0 A2 41 00		MOV     DWORD_41A2C0, EDX
@@ -3438,6 +4383,7 @@ E8 ED C4 FF FF		CALL    J____RAISE_SECURITYFAILURE
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 20 03 00 00		SUB     ESP, 320H
@@ -3445,8 +4391,10 @@ C3		RETN
 FF 15 48 B0 41 00		CALL    DS:ISPROCESSORFEATUREPRESENT
 85 C0		TEST    EAX, EAX
 74 05		JZ      SHORT LOC_414F1A
+---------- new bb ----------
 8B 4D 08		MOV     ECX, [EBP+ARG_0]
 CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)
+---------- new bb ----------
 A3 C8 A2 41 00		MOV     DWORD_41A2C8, EAX
 89 0D C4 A2 41 00		MOV     DWORD_41A2C4, ECX
 89 15 C0 A2 41 00		MOV     DWORD_41A2C0, EDX
@@ -3474,14 +4422,19 @@ C7 05 C8 A1 41 00 09 04 00 C0		MOV     DWORD_41A1C8, 0C0000409H
 C7 05 CC A1 41 00 01 00 00 00		MOV     DWORD_41A1CC, 1
 83 7D 0C 00		CMP     [EBP+ARG_4], 0
 76 0D		JBE     SHORT LOC_414FBD
+---------- new bb ----------
 83 7D 10 00		CMP     [EBP+ARG_8], 0
 75 07		JNZ     SHORT LOC_414FBD
+---------- new bb ----------
 C7 45 0C 00 00 00 00		MOV     [EBP+ARG_4], 0
+---------- new bb ----------
 83 7D 0C 0E		CMP     [EBP+ARG_4], 0EH
 76 09		JBE     SHORT LOC_414FCC
+---------- new bb ----------
 8B 4D 0C		MOV     ECX, [EBP+ARG_4]
 83 E9 01		SUB     ECX, 1
 89 4D 0C		MOV     [EBP+ARG_4], ECX
+---------- new bb ----------
 8B 55 0C		MOV     EDX, [EBP+ARG_4]
 83 C2 01		ADD     EDX, 1
 89 15 D8 A1 41 00		MOV     DWORD_41A1D8, EDX
@@ -3491,109 +4444,168 @@ B8 04 00 00 00		MOV     EAX, 4
 89 91 DC A1 41 00		MOV     DWORD_41A1DC[ECX], EDX
 C7 45 FC 00 00 00 00		MOV     [EBP+VAR_4], 0
 EB 09		JMP     SHORT LOC_414FFB
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 83 C0 01		ADD     EAX, 1
 89 45 FC		MOV     [EBP+VAR_4], EAX
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 3B 4D 0C		CMP     ECX, [EBP+ARG_4]
 73 15		JNB     SHORT LOC_415018
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 8B 4D 10		MOV     ECX, [EBP+ARG_8]
 8B 04 81		MOV     EAX, [ECX+EAX*4]
 89 04 95 E0 A1 41 00		MOV     DWORD_41A1E0[EDX*4], EAX
 EB DA		JMP     SHORT LOC_414FF2
+---------- new bb ----------
 68 04 85 41 00		PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO
 E8 8A C3 FF FF		CALL    J____RAISE_SECURITYFAILURE
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 FF 25 B4 B0 41 00		JMP     DS:__IMP___STD_TYPE_INFO_DESTROY_LIST
+---------- new bb ----------
 FF 25 A8 B0 41 00		JMP     DS:__IMP___CURRENT_EXCEPTION
+---------- new bb ----------
 FF 25 A4 B0 41 00		JMP     DS:__IMP___CURRENT_EXCEPTION_CONTEXT
+---------- new bb ----------
 FF 25 A0 B0 41 00		JMP     DS:__IMP_MEMSET
+---------- new bb ----------
 FF 25 9C B0 41 00		JMP     DS:__IMP__EXCEPT_HANDLER4_COMMON
+---------- new bb ----------
 FF 25 98 B0 41 00		JMP     DS:__IMP___VCRT_GETMODULEFILENAMEW
+---------- new bb ----------
 FF 25 AC B0 41 00		JMP     DS:__IMP___VCRT_GETMODULEHANDLEW
+---------- new bb ----------
 FF 25 B0 B0 41 00		JMP     DS:__IMP___VCRT_LOADLIBRARYEXW
+---------- new bb ----------
 FF 25 6C B1 41 00		JMP     DS:__IMP__CRTDBGREPORT
+---------- new bb ----------
 FF 25 68 B1 41 00		JMP     DS:__IMP__CRTDBGREPORTW
+---------- new bb ----------
 FF 25 64 B1 41 00		JMP     DS:__IMP__SEH_FILTER_EXE
+---------- new bb ----------
 FF 25 60 B1 41 00		JMP     DS:__IMP__SET_APP_TYPE
+---------- new bb ----------
 FF 25 5C B1 41 00		JMP     DS:__IMP___SETUSERMATHERR
+---------- new bb ----------
 FF 25 58 B1 41 00		JMP     DS:__IMP__CONFIGURE_NARROW_ARGV
+---------- new bb ----------
 FF 25 54 B1 41 00		JMP     DS:__IMP__INITIALIZE_NARROW_ENVIRONMENT
+---------- new bb ----------
 FF 25 50 B1 41 00		JMP     DS:__IMP__GET_INITIAL_NARROW_ENVIRONMENT
+---------- new bb ----------
 FF 25 4C B1 41 00		JMP     DS:__IMP__INITTERM
+---------- new bb ----------
 FF 25 48 B1 41 00		JMP     DS:__IMP__INITTERM_E
+---------- new bb ----------
 FF 25 44 B1 41 00		JMP     DS:__IMP_EXIT
+---------- new bb ----------
 FF 25 40 B1 41 00		JMP     DS:__IMP__EXIT
+---------- new bb ----------
 FF 25 3C B1 41 00		JMP     DS:__IMP__SET_FMODE
+---------- new bb ----------
 FF 25 38 B1 41 00		JMP     DS:__IMP___P___ARGC
+---------- new bb ----------
 FF 25 34 B1 41 00		JMP     DS:__IMP___P___ARGV
+---------- new bb ----------
 FF 25 30 B1 41 00		JMP     DS:__IMP__CEXIT
+---------- new bb ----------
 FF 25 2C B1 41 00		JMP     DS:__IMP__C_EXIT
+---------- new bb ----------
 FF 25 28 B1 41 00		JMP     DS:__IMP__REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK
+---------- new bb ----------
 FF 25 24 B1 41 00		JMP     DS:__IMP__CONFIGTHREADLOCALE
+---------- new bb ----------
 FF 25 20 B1 41 00		JMP     DS:__IMP__SET_NEW_MODE
+---------- new bb ----------
 FF 25 1C B1 41 00		JMP     DS:__IMP___P__COMMODE
+---------- new bb ----------
 FF 25 F0 B0 41 00		JMP     DS:__IMP_STRCPY_S
+---------- new bb ----------
 FF 25 18 B1 41 00		JMP     DS:__IMP_STRCAT_S
+---------- new bb ----------
 FF 25 E8 B0 41 00		JMP     DS:__IMP___STDIO_COMMON_VSPRINTF_S
+---------- new bb ----------
 FF 25 EC B0 41 00		JMP     DS:__IMP__SEH_FILTER_DLL
+---------- new bb ----------
 FF 25 74 B1 41 00		JMP     DS:__IMP__INITIALIZE_ONEXIT_TABLE
+---------- new bb ----------
 FF 25 F4 B0 41 00		JMP     DS:__IMP__REGISTER_ONEXIT_FUNCTION
+---------- new bb ----------
 FF 25 F8 B0 41 00		JMP     DS:__IMP__EXECUTE_ONEXIT_TABLE
+---------- new bb ----------
 FF 25 FC B0 41 00		JMP     DS:__IMP__CRT_ATEXIT
+---------- new bb ----------
 FF 25 00 B1 41 00		JMP     DS:__IMP__CRT_AT_QUICK_EXIT
+---------- new bb ----------
 FF 25 04 B1 41 00		JMP     DS:__IMP__CONTROLFP_S
+---------- new bb ----------
 FF 25 08 B1 41 00		JMP     DS:__IMP_TERMINATE
+---------- new bb ----------
 FF 25 0C B1 41 00		JMP     DS:__IMP__WMAKEPATH_S
+---------- new bb ----------
 FF 25 10 B1 41 00		JMP     DS:__IMP__WSPLITPATH_S
+---------- new bb ----------
 FF 25 14 B1 41 00		JMP     DS:__IMP_WCSCPY_S
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B0 01		MOV     AL, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B0 01		MOV     AL, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B0 01		MOV     AL, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B0 01		MOV     AL, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 B0 01		MOV     AL, 1
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 33 C0		XOR     EAX, EAX
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 83 EC 54		SUB     ESP, 54H
 83 3D B8 A1 41 00 01		CMP     DWORD_41A1B8, 1
 7D 08		JGE     SHORT LOC_415287
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 E9 19 01 00 00		JMP     LOC_4153A0
+---------- new bb ----------
 81 7D 08 B4 02 00 C0		CMP     [EBP+ARG_0], 0C00002B4H
 74 11		JZ      SHORT LOC_4152A1
+---------- new bb ----------
 81 7D 08 B5 02 00 C0		CMP     [EBP+ARG_0], 0C00002B5H
 74 08		JZ      SHORT LOC_4152A1
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
 E9 FF 00 00 00		JMP     LOC_4153A0
+---------- new bb ----------
 C7 45 F4 01 00 00 00		MOV     [EBP+VAR_C], 1
 C7 45 F0 02 00 00 00		MOV     [EBP+VAR_10], 2
 C7 45 EC 04 00 00 00		MOV     [EBP+VAR_14], 4
@@ -3620,37 +4632,51 @@ C7 45 AC 20 10 00 00		MOV     [EBP+VAR_54], 1020H
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 81 E1 81 00 00 00		AND     ECX, 81H
 75 07		JNZ     SHORT LOC_415345
+---------- new bb ----------
 B8 90 00 00 C0		MOV     EAX, 0C0000090H
 EB 5B		JMP     SHORT LOC_4153A0
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 E2 04 02 00 00		AND     EDX, 204H
 75 07		JNZ     SHORT LOC_415357
+---------- new bb ----------
 B8 8E 00 00 C0		MOV     EAX, 0C000008EH
 EB 49		JMP     SHORT LOC_4153A0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 25 02 01 00 00		AND     EAX, 102H
 75 07		JNZ     SHORT LOC_415368
+---------- new bb ----------
 B8 90 00 00 C0		MOV     EAX, 0C0000090H
 EB 38		JMP     SHORT LOC_4153A0
+---------- new bb ----------
 8B 4D FC		MOV     ECX, [EBP+VAR_4]
 81 E1 08 04 00 00		AND     ECX, 408H
 75 07		JNZ     SHORT LOC_41537A
+---------- new bb ----------
 B8 91 00 00 C0		MOV     EAX, 0C0000091H
 EB 26		JMP     SHORT LOC_4153A0
+---------- new bb ----------
 8B 55 FC		MOV     EDX, [EBP+VAR_4]
 81 E2 10 08 00 00		AND     EDX, 810H
 75 07		JNZ     SHORT LOC_41538C
+---------- new bb ----------
 B8 93 00 00 C0		MOV     EAX, 0C0000093H
 EB 14		JMP     SHORT LOC_4153A0
+---------- new bb ----------
 8B 45 FC		MOV     EAX, [EBP+VAR_4]
 25 20 10 00 00		AND     EAX, 1020H
 75 07		JNZ     SHORT LOC_41539D
+---------- new bb ----------
 B8 8F 00 00 C0		MOV     EAX, 0C000008FH
 EB 03		JMP     SHORT LOC_4153A0
+---------- new bb ----------
 8B 45 08		MOV     EAX, [EBP+ARG_0]
+---------- new bb ----------
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC FC 00 00 00		SUB     ESP, 0FCH
@@ -3678,13 +4704,16 @@ E8 2D BE FF FF		CALL    J_STRLEN
 89 45 D4		MOV     [EBP+VAR_2C], EAX
 C7 45 EC 00 00 00 00		MOV     [EBP+VAR_14], 0
 EB 09		JMP     SHORT LOC_4155E7
+---------- new bb ----------
 8B 45 EC		MOV     EAX, [EBP+VAR_14]
 83 C0 01		ADD     EAX, 1
 89 45 EC		MOV     [EBP+VAR_14], EAX
+---------- new bb ----------
 8B 45 F8		MOV     EAX, [EBP+SIZE]
 83 E8 01		SUB     EAX, 1
 39 45 EC		CMP     [EBP+VAR_14], EAX
 7D 2B		JGE     SHORT LOC_41561D
+---------- new bb ----------
 8B F4		MOV     ESI, ESP
 8B 45 D4		MOV     EAX, [EBP+VAR_2C]
 50		PUSH    EAX
@@ -3700,6 +4729,7 @@ FF 15 F0 B0 41 00		CALL    DS:__IMP_STRCPY_S
 3B F4		CMP     ESI, ESP
 E8 1F BC FF FF		CALL    J___RTC_CHECKESP
 EB C1		JMP     SHORT LOC_4155DE
+---------- new bb ----------
 8B F4		MOV     ESI, ESP
 8B 45 D4		MOV     EAX, [EBP+VAR_2C]
 50		PUSH    EAX
@@ -3728,6 +4758,7 @@ E8 D3 BB FF FF		CALL    J___RTC_CHECKESP
 8B E5		MOV     ESP, EBP
 5D		POP     EBP
 C3		RETN
+---------- new bb ----------
 55		PUSH    EBP
 8B EC		MOV     EBP, ESP
 81 EC 00 01 00 00		SUB     ESP, 100H
@@ -3787,10 +4818,12 @@ FF 15 7C B1 41 00		CALL    DS:STRNCPY_S
 E8 05 BA FF FF		CALL    J___RTC_CHECKESP
 C7 45 F8 0F 00 00 00		MOV     [EBP+VAR_8], 0FH
 C7 45 EC 14 00 00 00		MOV     [EBP+VAR_14], 14H
+---------- new bb ----------
 B8 18 00 00 00		MOV     EAX, 18H
 6B C8 00		IMUL    ECX, EAX, 0
 83 B9 14 A5 41 00 0A		CMP     DWORD_41A514[ECX], 0AH
 7D 5B		JGE     SHORT LOC_4158AF
+---------- new bb ----------
 B8 18 00 00 00		MOV     EAX, 18H
 6B C8 00		IMUL    ECX, EAX, 0
 8B 91 14 A5 41 00		MOV     EDX, DWORD_41A514[ECX]
@@ -3813,20 +4846,27 @@ FF 15 90 B1 41 00		CALL    DS:STRNCMP
 E8 99 B9 FF FF		CALL    J___RTC_CHECKESP
 85 C0		TEST    EAX, EAX
 75 08		JNZ     SHORT LOC_4158AD
+---------- new bb ----------
 E8 25 BB FF FF		CALL    SUB_4113CF
 89 45 E0		MOV     [EBP+VAR_20], EAX
+---------- new bb ----------
 EB 94		JMP     SHORT LOC_415843
+---------- new bb ----------
 B8 18 00 00 00		MOV     EAX, 18H
 C1 E0 00		SHL     EAX, 0
 8B 88 14 A5 41 00		MOV     ECX, DWORD_41A514[EAX]
 89 8D 00 FF FF FF		MOV     [EBP+VAR_100], ECX
 83 BD 00 FF FF FF FF		CMP     [EBP+VAR_100], 0FFFFFFFFH
 74 30		JZ      SHORT LOC_4158FC
+---------- new bb ----------
 83 BD 00 FF FF FF 00		CMP     [EBP+VAR_100], 0
 74 0E		JZ      SHORT LOC_4158E3
+---------- new bb ----------
 81 BD 00 FF FF FF E8 03 00 00		CMP     [EBP+VAR_100], 3E8H
 74 34		JZ      SHORT LOC_415915
+---------- new bb ----------
 EB 4B		JMP     SHORT LOC_41592E
+---------- new bb ----------
 8B F4		MOV     ESI, ESP
 68 FC 7B 41 00		PUSH    OFFSET BUFFER; "EQUAL 0"
 FF 15 70 B1 41 00		CALL    DS:PUTS
@@ -3834,6 +4874,7 @@ FF 15 70 B1 41 00		CALL    DS:PUTS
 3B F4		CMP     ESI, ESP
 E8 40 B9 FF FF		CALL    J___RTC_CHECKESP
 EB 49		JMP     SHORT LOC_415945
+---------- new bb ----------
 8B F4		MOV     ESI, ESP
 68 F8 7C 41 00		PUSH    OFFSET AEQUAL1; "EQUAL -1"
 FF 15 70 B1 41 00		CALL    DS:PUTS
@@ -3841,6 +4882,7 @@ FF 15 70 B1 41 00		CALL    DS:PUTS
 3B F4		CMP     ESI, ESP
 E8 27 B9 FF FF		CALL    J___RTC_CHECKESP
 EB 30		JMP     SHORT LOC_415945
+---------- new bb ----------
 8B F4		MOV     ESI, ESP
 68 04 7D 41 00		PUSH    OFFSET AEQUAL1000; "EQUAL 1000"
 FF 15 70 B1 41 00		CALL    DS:PUTS
@@ -3848,12 +4890,14 @@ FF 15 70 B1 41 00		CALL    DS:PUTS
 3B F4		CMP     ESI, ESP
 E8 0E B9 FF FF		CALL    J___RTC_CHECKESP
 EB 17		JMP     SHORT LOC_415945
+---------- new bb ----------
 8B F4		MOV     ESI, ESP
 68 10 7D 41 00		PUSH    OFFSET ANONEOFTHEABOVE; "NONE OF THE ABOVE"
 FF 15 70 B1 41 00		CALL    DS:PUTS
 83 C4 04		ADD     ESP, 4
 3B F4		CMP     ESI, ESP
 E8 F5 B8 FF FF		CALL    J___RTC_CHECKESP
+---------- new bb ----------
 8B 45 EC		MOV     EAX, [EBP+VAR_14]
 50		PUSH    EAX
 8B 4D F8		MOV     ECX, [EBP+VAR_8]

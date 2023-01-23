@@ -45,6 +45,7 @@ def run():
     log(idc.ARGV[2] + '\n')
 
     idc.auto_wait()
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
     g = nx.DiGraph()
     for func in idautils.Functions():
         flowchart = idaapi.FlowChart(idaapi.get_func(func))
@@ -79,15 +80,8 @@ def run():
                 list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
                 list_addr.append(hex(cur_addr))
 
-
-                if 'JE' in idc.GetDisasm(cur_addr).upper() or 'JNE' in idc.GetDisasm(cur_addr).upper() or \
-                        'JBE' in idc.GetDisasm(cur_addr).upper() or 'JLE' in idc.GetDisasm(cur_addr).upper() or \
-                        'JA' in idc.GetDisasm(cur_addr).upper() or 'JB' in idc.GetDisasm(cur_addr).upper() or \
-                        'JG' in idc.GetDisasm(cur_addr).upper() or 'JGE' in idc.GetDisasm(cur_addr).upper() or \
-                        'JZ' in idc.GetDisasm(cur_addr).upper() or 'JNZ' in idc.GetDisasm(cur_addr).upper() or \
-                        'JNBE' in idc.GetDisasm(cur_addr).upper() or 'JAE' in idc.GetDisasm(cur_addr).upper() or \
-                        'JNB' in idc.GetDisasm(cur_addr).upper() or 'JNAE' in idc.GetDisasm(cur_addr).upper() or \
-                        'JNA' in idc.GetDisasm(cur_addr).upper():
+                mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
+                if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     jump_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
                     if jump_addr[-1] == ']':

@@ -50,6 +50,7 @@ def to_hex(integer):
 
 def run():
     f = open("/home/luca/Scrivania/MasterThesis/analysisGhidra.txt", 'w')
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
     g = nx.DiGraph()
     bbModel = BasicBlockModel(currentProgram)
     functionManager = currentProgram.getFunctionManager()
@@ -88,12 +89,10 @@ def run():
                 list_instr.append(f'{instr}')
                 list_addr.append(f'{hex(instr.getAddress().getOffset())}')
                 x.update(bytes(instr.getMnemonicString().split(' ')[0].upper().strip(), 'UTF-8'))
-            
+
                 instr = instr.toString()
-                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JLE' in instr or \
-                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr or \
-                        'JZ' in instr or 'JNZ' in instr or 'JNBE' in instr or 'JAE' in instr or \
-                        'JNB' in instr or 'JNAE' in instr or 'JNA' in instr:
+                mnemonic = instr.split(' ')[0]
+                if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     jump_addr = instr.split(' ')[-1]
                     if jump_addr[-1] == ']':
@@ -151,7 +150,6 @@ def run():
                     indir_jump_copy = indir_jump
                     has_return_copy = has_return
                     bb.start_addr = hex(int(list_addr[0], 16))
-                    # bb.start_addr = hex(bbm.getFirstStartAddress().getOffset())
                     bb.list_bytes = list_bytes.copy()
                     bb.list_instr = list_instr.copy()
                     bb.list_addr = list_addr.copy()
@@ -268,7 +266,7 @@ def run():
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "wb"))
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidraNew.p", "wb"))
     
 if __name__ == '__main__':
     run()

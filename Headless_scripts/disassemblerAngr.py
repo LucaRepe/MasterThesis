@@ -38,6 +38,7 @@ def run():
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
     g = nx.DiGraph()
     for func_node in cfg.functions.values():
         for block in func_node.blocks:
@@ -67,13 +68,9 @@ def run():
                 x.update(bytes(i.mnemonic.upper().strip(), 'UTF-8'))
                 list_addr.append(f'{hex(i.address)}')
 
-            for instr in list_instr:
-                if 'JE' in instr or 'JNE' in instr or 'JBE' in instr or 'JLE' in instr or \
-                        'JA' in instr or 'JB' in instr or 'JG' in instr or 'JGE' in instr or \
-                        'JZ' in instr or 'JNZ' in instr or 'JNBE' in instr or 'JAE' in instr or \
-                        'JNB' in instr or 'JNAE' in instr or 'JNA' in instr:
+                if i.mnemonic.upper() in cond_jump_instructions:
                     conditional_jump = True
-                    jump_addr = instr.split(' ')[-1]
+                    jump_addr = i.op_str.upper()
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -84,9 +81,9 @@ def run():
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'JMP' in instr:
+                if 'JMP' in i.mnemonic.upper():
                     conditional_jump = False
-                    jump_addr = instr.split(' ')[-1]
+                    jump_addr = i.op_str.upper()
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
@@ -97,8 +94,8 @@ def run():
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'CALL' in instr:
-                    call_addr = instr.split(' ')[1]
+                if 'CALL' in i.mnemonic.upper():
+                    call_addr = i.op_str.upper()
                     if call_addr[-1] == ']':
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
@@ -109,7 +106,7 @@ def run():
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RET' in instr:
+                if 'RET' in i.mnemonic.upper():
                     has_return = True
 
             bb = BasicBlock()
@@ -188,7 +185,7 @@ def run():
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "wb"))
+    pickle.dump(g, open(sys.argv[3], "wb"))
 
 
 if __name__ == '__main__':

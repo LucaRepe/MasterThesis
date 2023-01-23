@@ -94,7 +94,7 @@ def run(filepath):
     f = open(sys.argv[2], 'w')
     r2.cmd("aaaa") 
     functions = r2.cmdj("aflj") 
-
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
     g = nx.DiGraph()
     for function in functions:
         function = FunctionDescriptor(function)
@@ -130,14 +130,8 @@ def run(filepath):
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
 
-                if 'JE' in block_instr['opcode'].upper() or 'JNE' in block_instr['opcode'].upper() or \
-                        'JBE' in block_instr['opcode'].upper() or 'JLE' in block_instr['opcode'].upper() or \
-                        'JA' in block_instr['opcode'].upper() or 'JB' in block_instr['opcode'].upper() or \
-                        'JG' in block_instr['opcode'].upper() or 'JGE' in block_instr['opcode'].upper() or \
-                        'JZ' in block_instr['opcode'].upper() or 'JNZ' in block_instr['opcode'].upper() or \
-                        'JNBE' in block_instr['opcode'].upper() or 'JAE' in block_instr['opcode'].upper() or \
-                        'JNB' in block_instr['opcode'].upper() or 'JNAE' in block_instr['opcode'].upper() or \
-                        'JNA' in block_instr['opcode'].upper():
+                mnemonic = block_instr['opcode'].upper().split(' ')[0]
+                if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':

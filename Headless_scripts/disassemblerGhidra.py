@@ -258,15 +258,15 @@ def run():
                     if attr == 'Jump':
                         g.add_edge(node, edge, color='b')
 
-    legend_elements = [
-        Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
-        Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
-        Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
-    ]
+    # legend_elements = [
+        # Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
+        # Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
+        # Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
+    # ]
 
-    colors = nx.get_edge_attributes(g, 'color').values()
-    nx.draw_networkx(g, edge_color=colors, arrows=True)
-    plt.legend(handles=legend_elements, loc='upper right')
+    # colors = nx.get_edge_attributes(g, 'color').values()
+    # nx.draw_networkx(g, edge_color=colors, arrows=True)
+    # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
     pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "wb"))
     

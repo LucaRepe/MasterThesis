@@ -5,8 +5,6 @@ graphAngr.txt
 graphRadare.txt
 main-bin
 main32
-disass.py
-ida-analysis.py
 *.dot
 *.id*
 *.nam

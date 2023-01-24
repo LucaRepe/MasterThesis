@@ -38,7 +38,9 @@ def run():
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 
-    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
+     'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
+     'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
     for func_node in cfg.functions.values():
         for block in func_node.blocks:

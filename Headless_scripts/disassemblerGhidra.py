@@ -50,7 +50,9 @@ def to_hex(integer):
 
 def run():
     f = open("/home/luca/Scrivania/MasterThesis/analysisGhidra.txt", 'w')
-    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
+     'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
+     'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
     bbModel = BasicBlockModel(currentProgram)
     functionManager = currentProgram.getFunctionManager()

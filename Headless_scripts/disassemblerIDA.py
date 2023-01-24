@@ -44,7 +44,9 @@ def run():
     log = f.write
 
     idc.auto_wait()
-    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
+     'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
+     'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
     for func in idautils.Functions():
         flowchart = idaapi.FlowChart(idaapi.get_func(func))
@@ -86,21 +88,27 @@ def run():
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
-                    elif '0X' in jump_addr:
+                    elif 'SUB_' in jump_addr:
                         dir_jump = True
+                        jump_addr = '0x' + jump_addr[4:]
+                        list_edges.append(jump_addr.lower())
+                    elif 'LOC_' in jump_addr:
+                        dir_jump = True
+                        jump_addr = '0x' + jump_addr[4:]
                         list_edges.append(jump_addr.lower())
                     else:
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'JMP' in idc.GetDisasm(cur_addr).upper():
+                if 'JMP' in mnemonic:
                     conditional_jump = False
                     jump_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
-                    elif '0X' in jump_addr:
+                    elif 'SUB_' in jump_addr:
                         dir_jump = True
+                        jump_addr = '0x' + jump_addr[4:]
                         list_edges.append(jump_addr.lower())
                     else:
                         indir_jump = True
@@ -112,14 +120,15 @@ def run():
                     if call_addr[-1] == ']':
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
-                    elif '0X' in call_addr:
+                    elif 'SUB_' in call_addr:
                         dir_call = True
+                        call_addr = '0x' + call_addr[4:]
                         list_edges.append(call_addr.lower())
                     else:
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RETN' in idc.GetDisasm(cur_addr).upper():
+                if 'RETN' in mnemonic:
                     has_return = True
 
                 if split_bb:

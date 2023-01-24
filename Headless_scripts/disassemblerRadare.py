@@ -94,7 +94,9 @@ def run(filepath):
     f = open(sys.argv[2], 'w')
     r2.cmd("aaaa") 
     functions = r2.cmdj("aflj") 
-    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
+     'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
+     'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
     for function in functions:
         function = FunctionDescriptor(function)
@@ -131,33 +133,42 @@ def run(filepath):
                 list_addr.append(hex(block_instr['offset']))
 
                 mnemonic = block_instr['opcode'].upper().split(' ')[0]
+                # f.write(mnemonic + '\n')
                 if mnemonic in cond_jump_instructions:
+                    f.write("COND JMP" + '\n')
                     conditional_jump = True
                     jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
+                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0X' in jump_addr:
+                        f.write("DIR JMP" + '\n')
                         dir_jump = True
                         list_edges.append(jump_addr.lower())
                     else:
+                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'JMP' in block_instr['opcode'].upper():
+                if 'JMP' in mnemonic:
+                    f.write("JMP" + '\n')
                     conditional_jump = False
                     jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
+                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0X' in jump_addr:
+                        f.write("DIR JMP" + '\n')
                         dir_jump = True
                         list_edges.append(jump_addr.lower())
                     else:
+                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'CALL' in block_instr['opcode'].upper():
+                if 'CALL' in mnemonic:
                     split_bb = True
                     call_addr = block_instr['opcode'].upper().split(' ')[1]
                     if call_addr[-1] == ']':
@@ -170,7 +181,7 @@ def run(filepath):
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RET' in block_instr['opcode'].upper():
+                if 'RET' in mnemonic:
                     has_return = True
 
                 if split_bb:

@@ -125,46 +125,37 @@ def run(filepath):
 
             for block_instr in block_info:
                 skip_adding = False
-                f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + block_instr[
-                    'opcode'].upper() + '\n')
+                f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + 
+                    block_instr['opcode'].upper() + '\n')
                 list_instr.append(block_instr['opcode'].upper())
                 x.update(bytes(block_instr['opcode'].split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
 
                 mnemonic = block_instr['opcode'].upper().split(' ')[0]
-                # f.write(mnemonic + '\n')
                 if mnemonic in cond_jump_instructions:
-                    f.write("COND JMP" + '\n')
                     conditional_jump = True
                     jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
-                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0X' in jump_addr:
-                        f.write("DIR JMP" + '\n')
                         dir_jump = True
                         list_edges.append(jump_addr.lower())
                     else:
-                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
                 if 'JMP' in mnemonic:
-                    f.write("JMP" + '\n')
                     conditional_jump = False
                     jump_addr = block_instr['opcode'].upper().split(' ')[-1]
                     if jump_addr[-1] == ']':
-                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     elif '0X' in jump_addr:
-                        f.write("DIR JMP" + '\n')
                         dir_jump = True
                         list_edges.append(jump_addr.lower())
                     else:
-                        f.write("INDIR JMP" + '\n')
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")

@@ -266,7 +266,7 @@ def run():
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidraNew.p", "wb"))
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "wb"))
     
 if __name__ == '__main__':
     run()

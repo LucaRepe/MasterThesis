@@ -42,7 +42,6 @@ class BasicBlock:
 def run():
     f = open(idc.ARGV[1], 'w') if len(idc.ARGV) > 1 else sys.stdout
     log = f.write
-    log(idc.ARGV[2] + '\n')
 
     idc.auto_wait()
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', 'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA']
@@ -107,10 +106,7 @@ def run():
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
-                if 'CALL' in idc.GetDisasm(cur_addr).upper():
-                    if 'CALLBACK' in idc.GetDisasm(cur_addr).upper():
-                        cur_addr = idc.next_head(cur_addr, end)
-                        continue
+                if 'CALL' in mnemonic:
                     split_bb = True
                     call_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
                     if call_addr[-1] == ']':

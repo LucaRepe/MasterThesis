@@ -36,6 +36,7 @@ def run():
     
     print(f'{"Radare"}')
     print(f'{"nodes_count "} {nodes_count}')
+    print(f'{"edges_count "} {len(radare.edges)}')
     print(f'{"func_beg_count "} {func_beg_count}')
     print(f'{"dir_call_count "} {dir_call_count}')
     print(f'{"indir_call_count "} {indir_call_count}')
@@ -73,6 +74,7 @@ def run():
             ret_count +=1
     
     print(f'{"Angr"}')
+    print(f'{"edges_count "} {len(angr.edges)}')
     print(f'{"nodes_count "} {nodes_count}')
     print(f'{"func_beg_count "} {func_beg_count}')
     print(f'{"dir_call_count "} {dir_call_count}')
@@ -112,6 +114,7 @@ def run():
 
     print(f'{"Ida"}')
     print(f'{"nodes_count "} {nodes_count}')
+    print(f'{"edges_count "} {len(ida.edges)}')
     print(f'{"func_beg_count "} {func_beg_count}')
     print(f'{"dir_call_count "} {dir_call_count}')
     print(f'{"indir_call_count "} {indir_call_count}')
@@ -150,6 +153,7 @@ def run():
     
     print(f'{"Ghidra"}')
     print(f'{"nodes_count "} {nodes_count}')
+    print(f'{"edges_count "} {len(ghidra.edges)}')
     print(f'{"func_beg_count "} {func_beg_count}')
     print(f'{"dir_call_count "} {dir_call_count}')
     print(f'{"indir_call_count "} {indir_call_count}')

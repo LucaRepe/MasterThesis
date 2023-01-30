@@ -6,13 +6,13 @@ from ghidra.program.model.block import BasicBlockModel
 from ghidra.program.model.block import CodeBlockIterator
 from ghidra.program.model.block import CodeBlockReference 
 from ghidra.program.model.block import CodeBlockReferenceIterator 
-from ghidra.program.model.listing import CodeUnitIterator;
-from ghidra.program.model.listing import Function;
-from ghidra.program.model.listing import FunctionManager;
-from ghidra.program.model.listing import Listing;
+from ghidra.program.model.listing import CodeUnitIterator
+from ghidra.program.model.listing import Function
+from ghidra.program.model.listing import FunctionManager
+from ghidra.program.model.listing import Listing
 from ghidra.program.database.code import InstructionDB
+from ghidra.program.model.address import Address
 
-import sys
 import networkx as nx
 import pickle
 import xxhash
@@ -50,6 +50,7 @@ def to_hex(integer):
 
 def run():
     f = open("/home/luca/Scrivania/MasterThesis/analysisGhidra.txt", 'w')
+    currentProgram.setImageBase(currentProgram.getAddressFactory().getDefaultAddressSpace().getAddress('0x0000'), False)
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
      'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
      'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']

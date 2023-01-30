@@ -34,7 +34,7 @@ class BasicBlock:
 
 def run():
     f = open(sys.argv[2], 'w')
-    p = angr.Project(sys.argv[1], auto_load_libs=False)
+    p = angr.Project(sys.argv[1], auto_load_libs=False, main_opts={'base_addr': 0} )
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 

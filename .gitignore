@@ -4,7 +4,6 @@
 graphAngr.txt
 graphRadare.txt
 main-bin
-main32
 *.dot
 *.id*
 *.nam

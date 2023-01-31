@@ -1,8 +1,6 @@
 /Books
 /Malware
 /Dots
-graphAngr.txt
-graphRadare.txt
 main-bin
 *.dot
 *.id*

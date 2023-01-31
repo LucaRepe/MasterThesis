@@ -92,10 +92,10 @@ def run():
                         dir_jump = True
                         jump_addr = '0x' + jump_addr[4:]
                         list_edges.append(jump_addr.lower())
-                    elif 'LOC_' in jump_addr:
-                        dir_jump = True
-                        jump_addr = '0x' + jump_addr[4:]
-                        list_edges.append(jump_addr.lower())
+                    # elif 'LOC_' in jump_addr:
+                        # dir_jump = True
+                        # jump_addr = '0x' + jump_addr[4:]
+                        # list_edges.append(jump_addr.lower())
                     else:
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")

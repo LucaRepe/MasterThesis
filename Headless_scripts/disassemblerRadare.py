@@ -90,7 +90,7 @@ class BlockDescriptor(dict):
 
 
 def run(filepath):
-    r2 = r2pipe.open(filepath)
+    r2 = r2pipe.open(filepath, flags=['-B 0x0000'])
     f = open(sys.argv[2], 'w')
     r2.cmd("aaaa") 
     functions = r2.cmdj("aflj") 

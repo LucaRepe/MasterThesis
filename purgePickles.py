@@ -51,8 +51,6 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida.p", "rb"))
 
-    print(ida)
-
     base_address = 0x5e0000
     bbl_string = open('/home/luca/Scrivania/MasterThesis/testmain-14268.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)

@@ -2,10 +2,10 @@ import pickle
 import networkx as nx
 
 def run():
-    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "rb"))
-    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "rb"))
-    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida.p", "rb"))
-    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "rb"))
+    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/radare_purged.p", "rb"))
+    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "rb"))
+    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "rb"))
+    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra_purged.p", "rb"))
 
     nodes_count = 0
     func_beg_count = 0

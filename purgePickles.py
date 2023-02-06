@@ -45,6 +45,10 @@ def purge(graph_purged):
     return graph_purged
 
 
+def jaccard(s1, s2):
+    return float(len(s1.intersection(s2)) / len(s1.union(s2)))
+
+
 def run():
     ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "rb"))
     radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "rb"))
@@ -62,22 +66,31 @@ def run():
         ground_truth.add(hex(real_address))
 
     ghidra_purged = nx.DiGraph()
+    set_nodes_ghidra = set()
     for addr in ground_truth:
         for node in ghidra:
+            set_nodes_ghidra.add(node)
             if addr == node:
                 ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
                                        bytes=ghidra.nodes[node].get('bytes'), addr=ghidra.nodes[node].get('addr'),
-                                       edges=ghidra.nodes[node].get('edges'), edge_attr=ghidra.nodes[node].get('edge_attr'),
-                                       func_beg=ghidra.nodes[node].get('func_beg'), dir_call=ghidra.nodes[node].get('dir_call'),
-                                       indir_call=ghidra.nodes[node].get('indir_call'), cond_jump=ghidra.nodes[node].get('cond_jump'),
-                                       dir_jump=ghidra.nodes[node].get('dir_jump'), indir_jump=ghidra.nodes[node].get('indir_jump'),
-                                       has_return=ghidra.nodes[node].get('has_return'), unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
+                                       edges=ghidra.nodes[node].get('edges'),
+                                       edge_attr=ghidra.nodes[node].get('edge_attr'),
+                                       func_beg=ghidra.nodes[node].get('func_beg'), 
+                                       dir_call=ghidra.nodes[node].get('dir_call'),
+                                       indir_call=ghidra.nodes[node].get('indir_call'), 
+                                       cond_jump=ghidra.nodes[node].get('cond_jump'),
+                                       dir_jump=ghidra.nodes[node].get('dir_jump'), 
+                                       indir_jump=ghidra.nodes[node].get('indir_jump'),
+                                       has_return=ghidra.nodes[node].get('has_return'), 
+                                       unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
 
     ghidra_purged = purge(ghidra_purged)
 
     radare_purged = nx.DiGraph()
+    set_nodes_radare = set()
     for addr in ground_truth:
         for node in radare:
+            set_nodes_radare.add(node)
             if addr == node:
                 radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
                                        bytes=radare.nodes[node].get('bytes'), addr=radare.nodes[node].get('addr'),
@@ -95,8 +108,10 @@ def run():
     radare_purged = purge(radare_purged)
 
     angr_purged = nx.DiGraph()
+    set_nodes_angr = set()
     for addr in ground_truth:
         for node in angr:
+            set_nodes_angr.add(node)
             if addr == node:
                 angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
                                        bytes=angr.nodes[node].get('bytes'), addr=angr.nodes[node].get('addr'),
@@ -114,8 +129,10 @@ def run():
     angr_purged = purge(angr_purged)
 
     ida_purged = nx.DiGraph()
+    set_nodes_ida = set()
     for addr in ground_truth:
         for node in ida:
+            set_nodes_ida.add(node)
             if addr == node:
                 ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
                                      bytes=ida.nodes[node].get('bytes'), addr=ida.nodes[node].get('addr'),
@@ -155,6 +172,38 @@ def run():
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "wb"))
 
+    print(f'{"Pin subset check"}')
+    print(len(ground_truth))
+    print(f'{"Ghidra"} {ground_truth.issubset(set_nodes_ghidra)}')
+    print(len(set_nodes_ghidra))
+    print(f'{"Radare"} {ground_truth.issubset(set_nodes_radare)}')
+    print(len(set_nodes_radare))
+    print(f'{"Angr"} {ground_truth.issubset(set_nodes_angr)}')
+    print(len(set_nodes_angr))
+    print(f'{"Ida"} {ground_truth.issubset(set_nodes_ida)}')
+    print(len(set_nodes_ida))
+
+    print(f'{"Jaccard similarity check"}')
+    set_nodes_ghidra_purged = set()
+    for node in ghidra_purged:
+        set_nodes_ghidra_purged.add(node)
+    
+    set_nodes_radare_purged = set()
+    for node in radare_purged:
+        set_nodes_radare_purged.add(node)
+
+    set_nodes_angr_purged = set()
+    for node in angr_purged:
+        set_nodes_angr_purged.add(node)
+
+    set_nodes_ida_purged = set()
+    for node in ida_purged:
+        set_nodes_ida_purged.add(node)
+
+    print(f'{"Ghidra"} {jaccard(ground_truth, set_nodes_ghidra_purged)}')
+    print(f'{"Radare"} {jaccard(ground_truth, set_nodes_radare_purged)}')
+    print(f'{"Angr"} {jaccard(ground_truth, set_nodes_angr_purged)}')
+    print(f'{"Ida"} {jaccard(ground_truth, set_nodes_ida_purged)}')
 
 if __name__ == '__main__':
     run()

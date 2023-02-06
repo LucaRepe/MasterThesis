@@ -93,6 +93,7 @@ def run():
                 list_addr.append(f'{hex(instr.getAddress().getOffset())}')
                 x.update(bytes(instr.getMnemonicString().split(' ')[0].upper().strip(), 'UTF-8'))
 
+                print(f'{instr.toString()} {instr.getFlowType()}')
                 instr = instr.toString()
                 mnemonic = instr.split(' ')[0]
                 if mnemonic in cond_jump_instructions:

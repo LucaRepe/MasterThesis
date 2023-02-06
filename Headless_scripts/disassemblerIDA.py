@@ -118,18 +118,19 @@ def run():
                 if 'CALL' in mnemonic:
                     split_bb = True
                     call_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
-                    if call_addr[-1] == ']':
+                    arg_addr = idc.get_operand_value(cur_addr,0)
+                    if arg_addr < 0x1000:
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
-                    elif 'SUB_' in call_addr:
+                    else:
+                        dir_call = True
+                        list_edges.append(hex(arg_addr))
+                    if 'SUB_' in call_addr:
                         dir_call = True
                         call_addr = '0x' + call_addr[4:]
                         list_edges.append(call_addr.lower())
-                    else:
-                        indir_call = True
-                        list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RETN' in mnemonic:
+                if 'RETN' in mnemonic or 'RET' in mnemonic:
                     has_return = True
 
                 if split_bb:

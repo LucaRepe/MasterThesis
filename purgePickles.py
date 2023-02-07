@@ -54,7 +54,8 @@ def run():
     radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "rb"))
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida.p", "rb"))
-
+        
+        
     base_address = 0x5e0000
     bbl_string = open('/home/luca/Scrivania/MasterThesis/testmain-14268.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
@@ -66,9 +67,12 @@ def run():
         ground_truth.add(hex(real_address))
 
     ghidra_purged = nx.DiGraph()
+    set_addr_ghidra = set()
     set_nodes_ghidra = set()
     for addr in ground_truth:
         for node in ghidra:
+            if ghidra.nodes[node].get('addr') != None:
+                set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
             set_nodes_ghidra.add(node)
             if addr == node:
                 ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
@@ -87,9 +91,12 @@ def run():
     ghidra_purged = purge(ghidra_purged)
 
     radare_purged = nx.DiGraph()
+    set_addr_radare = set()
     set_nodes_radare = set()
     for addr in ground_truth:
         for node in radare:
+            if radare.nodes[node].get('addr') != None:
+                set_addr_radare.update(radare.nodes[node].get('addr'))
             set_nodes_radare.add(node)
             if addr == node:
                 radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
@@ -108,9 +115,12 @@ def run():
     radare_purged = purge(radare_purged)
 
     angr_purged = nx.DiGraph()
+    set_addr_angr = set()
     set_nodes_angr = set()
     for addr in ground_truth:
         for node in angr:
+            if angr.nodes[node].get('addr') != None:
+                set_addr_angr.update(angr.nodes[node].get('addr'))
             set_nodes_angr.add(node)
             if addr == node:
                 angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
@@ -130,8 +140,11 @@ def run():
 
     ida_purged = nx.DiGraph()
     set_nodes_ida = set()
+    set_addr_ida = set()
     for addr in ground_truth:
         for node in ida:
+            if ida.nodes[node].get('addr') != None:
+                set_addr_ida.update(ida.nodes[node].get('addr'))
             set_nodes_ida.add(node)
             if addr == node:
                 ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
@@ -172,16 +185,12 @@ def run():
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "wb"))
 
-    print(f'{"Pin subset check"}')
-    print(len(ground_truth))
-    print(f'{"Ghidra"} {ground_truth.issubset(set_nodes_ghidra)}')
-    print(len(set_nodes_ghidra))
-    print(f'{"Radare"} {ground_truth.issubset(set_nodes_radare)}')
-    print(len(set_nodes_radare))
-    print(f'{"Angr"} {ground_truth.issubset(set_nodes_angr)}')
-    print(len(set_nodes_angr))
-    print(f'{"Ida"} {ground_truth.issubset(set_nodes_ida)}')
-    print(len(set_nodes_ida))
+    print(f'{"Pin subset check - nodes:"} {len(ground_truth)}')
+    print(f'{"Ghidra is"} {ground_truth.issubset(set_addr_ghidra)} {"- nodes:"} {len(set_addr_ghidra)}')
+    print(f'{"Radare is"} {ground_truth.issubset(set_addr_radare)} {"- nodes:"} {len(set_addr_radare)}')
+    print(f'{"Angr is"} {ground_truth.issubset(set_addr_angr)} {"- nodes:"} {len(set_addr_angr)}')
+    print(f'{"Ida is"} {ground_truth.issubset(set_addr_ida)} {"- nodes:"} {len(set_addr_ida)}')
+    print('\n')
 
     print(f'{"Jaccard similarity check"}')
     set_nodes_ghidra_purged = set()

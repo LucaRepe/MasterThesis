@@ -242,7 +242,6 @@ def run():
 
 
     print(f'{"Jaccard similarity check on edges"}')
-
     print(f'{"Ghidra"} {jaccard(ground_truth, set_edges_ghidra_purged)}')
     print(f'{"Radare"} {jaccard(ground_truth, set_edges_radare_purged)}')
     print(f'{"Angr"} {jaccard(ground_truth, set_edges_angr_purged)}')

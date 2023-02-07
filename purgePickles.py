@@ -66,6 +66,7 @@ def run():
             continue
         ground_truth.add(hex(real_address))
 
+
     ghidra_purged = nx.DiGraph()
     set_addr_ghidra = set()
     set_nodes_ghidra = set()
@@ -185,34 +186,68 @@ def run():
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "wb"))
 
-    print(f'{"Pin subset check - nodes:"} {len(ground_truth)}')
-    print(f'{"Ghidra is"} {ground_truth.issubset(set_addr_ghidra)} {"- nodes:"} {len(set_addr_ghidra)}')
-    print(f'{"Radare is"} {ground_truth.issubset(set_addr_radare)} {"- nodes:"} {len(set_addr_radare)}')
-    print(f'{"Angr is"} {ground_truth.issubset(set_addr_angr)} {"- nodes:"} {len(set_addr_angr)}')
-    print(f'{"Ida is"} {ground_truth.issubset(set_addr_ida)} {"- nodes:"} {len(set_addr_ida)}')
+    print(f'{"Pin subset check - addresses:"} {len(ground_truth)}')
+    print(f'{"Ghidra is"} {ground_truth.issubset(set_addr_ghidra)} {"- addresses:"} {len(set_addr_ghidra)}')
+    print(f'{"Radare is"} {ground_truth.issubset(set_addr_radare)} {"- addresses:"} {len(set_addr_radare)}')
+    print(f'{"Angr is"} {ground_truth.issubset(set_addr_angr)} {"- addresses:"} {len(set_addr_angr)}')
+    print(f'{"Ida is"} {ground_truth.issubset(set_addr_ida)} {"- addresses:"} {len(set_addr_ida)}')
     print('\n')
 
-    print(f'{"Jaccard similarity check"}')
     set_nodes_ghidra_purged = set()
+    set_addr_ghidra_purged = set()
+    set_edges_ghidra_purged = set()
     for node in ghidra_purged:
         set_nodes_ghidra_purged.add(node)
-    
+        if ghidra_purged.nodes[node].get('addr') != None:
+            set_addr_ghidra_purged.update(ghidra_purged.nodes[node].get('addr'))
+        if ghidra_purged.nodes[node].get('edges') != None:
+            set_edges_ghidra_purged.update(ghidra_purged.nodes[node].get('edges'))
+        
     set_nodes_radare_purged = set()
+    set_addr_radare_purged = set()
+    set_edges_radare_purged = set()
     for node in radare_purged:
         set_nodes_radare_purged.add(node)
+        if radare_purged.nodes[node].get('addr') != None:
+            set_addr_radare_purged.update(radare_purged.nodes[node].get('addr'))
+        if radare_purged.nodes[node].get('edges') != None:
+            set_edges_radare_purged.update(radare_purged.nodes[node].get('edges'))
 
     set_nodes_angr_purged = set()
+    set_addr_angr_purged = set()
+    set_edges_angr_purged = set()
     for node in angr_purged:
         set_nodes_angr_purged.add(node)
+        if angr_purged.nodes[node].get('addr') != None:
+            set_addr_angr_purged.update(angr_purged.nodes[node].get('addr'))
+        if angr_purged.nodes[node].get('edges') != None:
+            set_edges_angr_purged.update(angr_purged.nodes[node].get('edges'))
 
     set_nodes_ida_purged = set()
+    set_addr_ida_purged = set()
+    set_edges_ida_purged = set()
     for node in ida_purged:
         set_nodes_ida_purged.add(node)
+        if ida_purged.nodes[node].get('addr') != None:
+            set_addr_ida_purged.update(ida_purged.nodes[node].get('addr'))
+        if ida_purged.nodes[node].get('edges') != None:
+            set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
 
-    print(f'{"Ghidra"} {jaccard(ground_truth, set_nodes_ghidra_purged)}')
-    print(f'{"Radare"} {jaccard(ground_truth, set_nodes_radare_purged)}')
-    print(f'{"Angr"} {jaccard(ground_truth, set_nodes_angr_purged)}')
-    print(f'{"Ida"} {jaccard(ground_truth, set_nodes_ida_purged)}')
+    print(f'{"Jaccard similarity check on addresses"}')
+    print(f'{"Ghidra"} {jaccard(ground_truth, set_addr_ghidra_purged)}')
+    print(f'{"Radare"} {jaccard(ground_truth, set_addr_radare_purged)}')
+    print(f'{"Angr"} {jaccard(ground_truth, set_addr_angr_purged)}')
+    print(f'{"Ida"} {jaccard(ground_truth, set_addr_ida_purged)}')
+    print('\n')
+
+
+    print(f'{"Jaccard similarity check on edges"}')
+
+    print(f'{"Ghidra"} {jaccard(ground_truth, set_edges_ghidra_purged)}')
+    print(f'{"Radare"} {jaccard(ground_truth, set_edges_radare_purged)}')
+    print(f'{"Angr"} {jaccard(ground_truth, set_edges_angr_purged)}')
+    print(f'{"Ida"} {jaccard(ground_truth, set_edges_ida_purged)}')
+
 
 if __name__ == '__main__':
     run()

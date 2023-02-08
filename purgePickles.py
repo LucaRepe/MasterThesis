@@ -71,10 +71,11 @@ def run():
     set_addr_ghidra = set()
     set_nodes_ghidra = set()
     for addr in ground_truth:
-        for node in ghidra:            
-            if addr == node:
+        for node in ghidra:
+            if ghidra.nodes[node].get('addr') is not None:
                 set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
-                set_nodes_ghidra.add(node)
+            set_nodes_ghidra.add(node)
+            if addr == node:
                 ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
                                        bytes=ghidra.nodes[node].get('bytes'), addr=ghidra.nodes[node].get('addr'),
                                        edges=ghidra.nodes[node].get('edges'),
@@ -95,9 +96,10 @@ def run():
     set_nodes_radare = set()
     for addr in ground_truth:
         for node in radare:
-            if addr == node:
+            if radare.nodes[node].get('addr') is not None:
                 set_addr_radare.update(radare.nodes[node].get('addr'))
-                set_nodes_radare.add(node)
+            set_nodes_radare.add(node)
+            if addr == node:
                 radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
                                        bytes=radare.nodes[node].get('bytes'), addr=radare.nodes[node].get('addr'),
                                        edges=radare.nodes[node].get('edges'),
@@ -118,9 +120,10 @@ def run():
     set_nodes_angr = set()
     for addr in ground_truth:
         for node in angr:
-            if addr == node:
+            if angr.nodes[node].get('addr') is not None:
                 set_addr_angr.update(angr.nodes[node].get('addr'))
-                set_nodes_angr.add(node)
+            set_nodes_angr.add(node)
+            if addr == node:
                 angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
                                        bytes=angr.nodes[node].get('bytes'), addr=angr.nodes[node].get('addr'),
                                        edges=angr.nodes[node].get('edges'),
@@ -141,9 +144,10 @@ def run():
     set_nodes_ida = set()
     for addr in ground_truth:
         for node in ida:
-            if addr == node:
+            if ida.nodes[node].get('addr') is not None:
                 set_addr_ida.update(ida.nodes[node].get('addr'))
-                set_nodes_ida.add(node)
+            set_nodes_ida.add(node)
+            if addr == node:
                 ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
                                      bytes=ida.nodes[node].get('bytes'), addr=ida.nodes[node].get('addr'),
                                      edges=ida.nodes[node].get('edges'),

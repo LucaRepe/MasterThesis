@@ -59,18 +59,17 @@ def run():
     base_address = 0x5e0000
     bbl_string = open('/home/luca/Scrivania/MasterThesis/testmain-14268.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
-    ground_truth = set()
+    pin_trace = set()
     for addr in bbl_list:
         real_address = int(addr, 16) - base_address
         if real_address < 0:
             continue
-        ground_truth.add(hex(real_address))
-
+        pin_trace.add(hex(real_address))
 
     ghidra_purged = nx.DiGraph()
     set_addr_ghidra = set()
     set_nodes_ghidra = set()
-    for addr in ground_truth:
+    for addr in pin_trace:
         for node in ghidra:
             if ghidra.nodes[node].get('addr') is not None:
                 set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
@@ -89,12 +88,14 @@ def run():
                                        has_return=ghidra.nodes[node].get('has_return'), 
                                        unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
 
+    
     ghidra_purged = purge(ghidra_purged)
+
 
     radare_purged = nx.DiGraph()
     set_addr_radare = set()
     set_nodes_radare = set()
-    for addr in ground_truth:
+    for addr in pin_trace:
         for node in radare:
             if radare.nodes[node].get('addr') is not None:
                 set_addr_radare.update(radare.nodes[node].get('addr'))
@@ -115,10 +116,11 @@ def run():
 
     radare_purged = purge(radare_purged)
 
+
     angr_purged = nx.DiGraph()
     set_addr_angr = set()
     set_nodes_angr = set()
-    for addr in ground_truth:
+    for addr in pin_trace:
         for node in angr:
             if angr.nodes[node].get('addr') is not None:
                 set_addr_angr.update(angr.nodes[node].get('addr'))
@@ -142,7 +144,7 @@ def run():
     ida_purged = nx.DiGraph()
     set_addr_ida = set()
     set_nodes_ida = set()
-    for addr in ground_truth:
+    for addr in pin_trace:
         for node in ida:
             if ida.nodes[node].get('addr') is not None:
                 set_addr_ida.update(ida.nodes[node].get('addr'))
@@ -186,11 +188,11 @@ def run():
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "wb"))
 
-    print(f'{"Pin subset check - addresses:"} {len(ground_truth)}')
-    print(f'{"Ghidra is"} {ground_truth.issubset(set_addr_ghidra)} {"- addresses:"} {len(set_addr_ghidra)}')
-    print(f'{"Radare is"} {ground_truth.issubset(set_addr_radare)} {"- addresses:"} {len(set_addr_radare)}')
-    print(f'{"Angr is"} {ground_truth.issubset(set_addr_angr)} {"- addresses:"} {len(set_addr_angr)}')
-    print(f'{"Ida is"} {ground_truth.issubset(set_addr_ida)} {"- addresses:"} {len(set_addr_ida)}')
+    print(f'{"Pin subset check on original addresses"}')
+    print(f'{"Ghidra is"} {pin_trace.issubset(set_addr_ghidra)} {"- addresses:"} {len(set_addr_ghidra)}')
+    print(f'{"Radare is"} {pin_trace.issubset(set_addr_radare)} {"- addresses:"} {len(set_addr_radare)}')
+    print(f'{"Angr is"} {pin_trace.issubset(set_addr_angr)} {"- addresses:"} {len(set_addr_angr)}')
+    print(f'{"Ida is"} {pin_trace.issubset(set_addr_ida)} {"- addresses:"} {len(set_addr_ida)}')
     print('\n')
 
     set_nodes_ghidra_purged = set()
@@ -233,48 +235,44 @@ def run():
         if ida_purged.nodes[node].get('edges') is not None:
             set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
 
-    print(f'{"Jaccard similarity check on addresses"}')
-    print(f'{"Ghidra"} {jaccard(ground_truth, set_addr_ghidra_purged)}')
-    print(f'{"Radare"} {jaccard(ground_truth, set_addr_radare_purged)}')
-    print(f'{"Angr"} {jaccard(ground_truth, set_addr_angr_purged)}')
-    print(f'{"Ida"} {jaccard(ground_truth, set_addr_ida_purged)}')
+    print(f'{"Jaccard similarity check on purged addresses"}')
+    print(f'{"Ghidra"} {jaccard(pin_trace, set_addr_ghidra_purged)}')
+    print(f'{"Radare"} {jaccard(pin_trace, set_addr_radare_purged)}')
+    print(f'{"Angr"} {jaccard(pin_trace, set_addr_angr_purged)}')
+    print(f'{"Ida"} {jaccard(pin_trace, set_addr_ida_purged)}')
     print('\n')
 
 
     print(f'{"Jaccard similarity check on edges"}')
-    print(f'{"Ghidra"} {jaccard(ground_truth, set_edges_ghidra_purged)}')
-    print(f'{"Radare"} {jaccard(ground_truth, set_edges_radare_purged)}')
-    print(f'{"Angr"} {jaccard(ground_truth, set_edges_angr_purged)}')
-    print(f'{"Ida"} {jaccard(ground_truth, set_edges_ida_purged)}')
+    print(f'{"Ghidra"} {jaccard(pin_trace, set_edges_ghidra_purged)}')
+    print(f'{"Radare"} {jaccard(pin_trace, set_edges_radare_purged)}')
+    print(f'{"Angr"} {jaccard(pin_trace, set_edges_angr_purged)}')
+    print(f'{"Ida"} {jaccard(pin_trace, set_edges_ida_purged)}')
     print('\n')
 
-    ground_truth_graph = nx.DiGraph()
-    ground_truth_graph.add_nodes_from(ground_truth)
-
-    print(f'{"Pin vs Ghidra"}')
-    ghidra_diff = ground_truth_graph.nodes() - ghidra.nodes()
-    print(len(ghidra_diff))
+    print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra))}')
+    print(pin_trace.difference(set_addr_ghidra))
+    # {'0x1576', '0x1579', '0x1553', '0x15bf', '0x14f0', '0x14f1', '0x1506', '0x158a', '0x1500', '0x1509', 
+    # '0x14f9', '0x15a3', '0x15bd', '0x1572', '0x1580', '0x14f5', '0x150b', '0x15ce', '0x1577', '0x15ab', 
+    # '0x15cd', '0x15a6', '0x15ad', '0x15a1', '0x1566', '0x1551', '0x2600', '0x15a0', '0x1575', '0x14f6', 
+    # '0x158f', '0x15b8', '0x14f4', '0x1578', '0x156d', '0x14f3'}
     print('\n')
 
-    print(f'{"Pin vs Radare"}')
-    radare_diff = ground_truth_graph.nodes() - radare.nodes()
-    print(len(radare_diff))
+    print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare))}')
+    print(pin_trace.difference(set_addr_radare))
     print('\n')
 
-    print(f'{"Pin vs Angr"}')
-    angr_diff = ground_truth_graph.nodes() - angr.nodes()
-    print(len(angr_diff))
+    print(f'{"Addresses present on Pin that are missing in Angr: "} {len(pin_trace.difference(set_addr_angr))}')
+    print(pin_trace.difference(set_addr_angr))
     print('\n')
 
-    print(f'{"Pin vs Ida"}')
-    ida_diff = ground_truth_graph.nodes() - ida.nodes()
-    print(len(ida_diff))
+    print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida))}')
+    print(pin_trace.difference(set_addr_ida))
+    # {'0x1500', '0x1196', '0x117f', '0x164d', '0x1185', '0x14f6', '0x1180', '0x1179', '0x14f9', '0x1644',
+    # '0x1198', '0x2139', '0x2133', '0x1190', '0x14f5', '0x14f1', '0x14f3', '0x117d', '0x1177', '0x118d', 
+    # '0x1188', '0x1174', '0x1187', '0x1181', '0x117c', '0x1641', '0x119a', '0x14f4', '0x1184', '0x164a'}
     print('\n')
 
-    print(ghidra_diff.difference(radare_diff))
-    # ghidra - radare {'0x1566', '0x2600', '0x1572', '0x15b8', '0x14f0', '0x15a0', '0x15cd', '0x1551', '0x1580', '0x1506'}
-
-    print(ida_diff.difference(radare_diff))
 
 if __name__ == '__main__':
     run()

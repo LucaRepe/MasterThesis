@@ -71,11 +71,10 @@ def run():
     set_addr_ghidra = set()
     set_nodes_ghidra = set()
     for addr in ground_truth:
-        for node in ghidra:
-            if ghidra.nodes[node].get('addr') != None:
-                set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
-            set_nodes_ghidra.add(node)
+        for node in ghidra:            
             if addr == node:
+                set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
+                set_nodes_ghidra.add(node)
                 ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
                                        bytes=ghidra.nodes[node].get('bytes'), addr=ghidra.nodes[node].get('addr'),
                                        edges=ghidra.nodes[node].get('edges'),
@@ -96,10 +95,9 @@ def run():
     set_nodes_radare = set()
     for addr in ground_truth:
         for node in radare:
-            if radare.nodes[node].get('addr') != None:
-                set_addr_radare.update(radare.nodes[node].get('addr'))
-            set_nodes_radare.add(node)
             if addr == node:
+                set_addr_radare.update(radare.nodes[node].get('addr'))
+                set_nodes_radare.add(node)
                 radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
                                        bytes=radare.nodes[node].get('bytes'), addr=radare.nodes[node].get('addr'),
                                        edges=radare.nodes[node].get('edges'),
@@ -120,10 +118,9 @@ def run():
     set_nodes_angr = set()
     for addr in ground_truth:
         for node in angr:
-            if angr.nodes[node].get('addr') != None:
-                set_addr_angr.update(angr.nodes[node].get('addr'))
-            set_nodes_angr.add(node)
             if addr == node:
+                set_addr_angr.update(angr.nodes[node].get('addr'))
+                set_nodes_angr.add(node)
                 angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
                                        bytes=angr.nodes[node].get('bytes'), addr=angr.nodes[node].get('addr'),
                                        edges=angr.nodes[node].get('edges'),
@@ -140,14 +137,13 @@ def run():
     angr_purged = purge(angr_purged)
 
     ida_purged = nx.DiGraph()
-    set_nodes_ida = set()
     set_addr_ida = set()
+    set_nodes_ida = set()
     for addr in ground_truth:
         for node in ida:
-            if ida.nodes[node].get('addr') != None:
-                set_addr_ida.update(ida.nodes[node].get('addr'))
-            set_nodes_ida.add(node)
             if addr == node:
+                set_addr_ida.update(ida.nodes[node].get('addr'))
+                set_nodes_ida.add(node)
                 ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
                                      bytes=ida.nodes[node].get('bytes'), addr=ida.nodes[node].get('addr'),
                                      edges=ida.nodes[node].get('edges'),
@@ -198,9 +194,9 @@ def run():
     set_edges_ghidra_purged = set()
     for node in ghidra_purged:
         set_nodes_ghidra_purged.add(node)
-        if ghidra_purged.nodes[node].get('addr') != None:
+        if ghidra_purged.nodes[node].get('addr') is not None:
             set_addr_ghidra_purged.update(ghidra_purged.nodes[node].get('addr'))
-        if ghidra_purged.nodes[node].get('edges') != None:
+        if ghidra_purged.nodes[node].get('edges') is not None:
             set_edges_ghidra_purged.update(ghidra_purged.nodes[node].get('edges'))
         
     set_nodes_radare_purged = set()
@@ -208,9 +204,9 @@ def run():
     set_edges_radare_purged = set()
     for node in radare_purged:
         set_nodes_radare_purged.add(node)
-        if radare_purged.nodes[node].get('addr') != None:
+        if radare_purged.nodes[node].get('addr') is not None:
             set_addr_radare_purged.update(radare_purged.nodes[node].get('addr'))
-        if radare_purged.nodes[node].get('edges') != None:
+        if radare_purged.nodes[node].get('edges') is not None:
             set_edges_radare_purged.update(radare_purged.nodes[node].get('edges'))
 
     set_nodes_angr_purged = set()
@@ -218,9 +214,9 @@ def run():
     set_edges_angr_purged = set()
     for node in angr_purged:
         set_nodes_angr_purged.add(node)
-        if angr_purged.nodes[node].get('addr') != None:
+        if angr_purged.nodes[node].get('addr') is not None:
             set_addr_angr_purged.update(angr_purged.nodes[node].get('addr'))
-        if angr_purged.nodes[node].get('edges') != None:
+        if angr_purged.nodes[node].get('edges') is not None:
             set_edges_angr_purged.update(angr_purged.nodes[node].get('edges'))
 
     set_nodes_ida_purged = set()
@@ -228,9 +224,9 @@ def run():
     set_edges_ida_purged = set()
     for node in ida_purged:
         set_nodes_ida_purged.add(node)
-        if ida_purged.nodes[node].get('addr') != None:
+        if ida_purged.nodes[node].get('addr') is not None:
             set_addr_ida_purged.update(ida_purged.nodes[node].get('addr'))
-        if ida_purged.nodes[node].get('edges') != None:
+        if ida_purged.nodes[node].get('edges') is not None:
             set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
 
     print(f'{"Jaccard similarity check on addresses"}')
@@ -246,7 +242,35 @@ def run():
     print(f'{"Radare"} {jaccard(ground_truth, set_edges_radare_purged)}')
     print(f'{"Angr"} {jaccard(ground_truth, set_edges_angr_purged)}')
     print(f'{"Ida"} {jaccard(ground_truth, set_edges_ida_purged)}')
+    print('\n')
 
+    ground_truth_graph = nx.DiGraph()
+    ground_truth_graph.add_nodes_from(ground_truth)
+
+    print(f'{"Pin vs Ghidra"}')
+    ghidra_diff = ground_truth_graph.nodes() - ghidra.nodes()
+    print(len(ghidra_diff))
+    print('\n')
+
+    print(f'{"Pin vs Radare"}')
+    radare_diff = ground_truth_graph.nodes() - radare.nodes()
+    print(len(radare_diff))
+    print('\n')
+
+    print(f'{"Pin vs Angr"}')
+    angr_diff = ground_truth_graph.nodes() - angr.nodes()
+    print(len(angr_diff))
+    print('\n')
+
+    print(f'{"Pin vs Ida"}')
+    ida_diff = ground_truth_graph.nodes() - ida.nodes()
+    print(len(ida_diff))
+    print('\n')
+
+    print(ghidra_diff.difference(radare_diff))
+    # ghidra - radare {'0x1566', '0x2600', '0x1572', '0x15b8', '0x14f0', '0x15a0', '0x15cd', '0x1551', '0x1580', '0x1506'}
+
+    print(ida_diff.difference(radare_diff))
 
 if __name__ == '__main__':
     run()

@@ -86,10 +86,8 @@ def run():
                 if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     jump_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
-                    if jump_addr[-1] == ']':
-                        indir_jump = True
-                        list_edges.append("UnresolvableJumpTarget")
-                    elif 'SUB_' in jump_addr:
+                    arg_addr = idc.get_operand_value(cur_addr,0)
+                    if 'SUB_' in jump_addr:
                         dir_jump = True
                         jump_addr = '0x' + jump_addr[4:]
                         list_edges.append(jump_addr.lower())
@@ -97,23 +95,27 @@ def run():
                         dir_jump = True
                         jump_addr = '0x' + jump_addr[4:]
                         list_edges.append(jump_addr.lower())
-                    else:
+                    elif arg_addr < 0x1000:
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
+                    else:                     
+                        dir_jump = True
+                        list_edges.append(hex(arg_addr))
                     list_edge_attr.append("Jump")
                 if 'JMP' in mnemonic:
                     conditional_jump = False
                     jump_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
-                    if jump_addr[-1] == ']':
-                        indir_jump = True
-                        list_edges.append("UnresolvableJumpTarget")
-                    elif 'SUB_' in jump_addr:
+                    arg_addr = idc.get_operand_value(cur_addr,0) 
+                    if 'LOC_' in jump_addr:
                         dir_jump = True
                         jump_addr = '0x' + jump_addr[4:]
                         list_edges.append(jump_addr.lower())
-                    else:
+                    elif arg_addr < 0x1000:
                         indir_jump = True
                         list_edges.append("UnresolvableJumpTarget")
+                    else:                      
+                        dir_jump = True
+                        list_edges.append(hex(arg_addr))
                     list_edge_attr.append("Jump")
                 if 'CALL' in mnemonic:
                     split_bb = True

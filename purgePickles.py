@@ -6,6 +6,7 @@ import networkx as nx
 def purge(graph_purged):
     list_sorted = sorted(list(graph_purged.nodes))[1:]
     for node in sorted(list(graph_purged.nodes)):
+        print(node)
         if list_sorted:
             if graph_purged.nodes[node]['has_return']:
                 list_sorted.pop(0)
@@ -56,8 +57,9 @@ def run():
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida.p", "rb"))
         
         
-    base_address = 0x5e0000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/testmain-14268.bbl').read()
+    # base_address = 0x5e0000
+    base_address = 0xca0000
+    bbl_string = open('/home/luca/Scrivania/MasterThesis/testmainCL.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
     for addr in bbl_list:
@@ -257,8 +259,6 @@ def run():
     print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida))}')
     print(pin_trace.difference(set_addr_ida))
     print('\n')
-    prova = list(pin_trace.difference(set_addr_ida))
-    print(sorted(prova))
 
     print(f'{"Jaccard similarity check on nodes"}')
     print(f'{"Ghidra vs Radare"} {jaccard(set_nodes_ghidra_purged, set_nodes_radare_purged)}')

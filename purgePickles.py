@@ -244,10 +244,6 @@ def run():
 
     print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra))}')
     print(pin_trace.difference(set_addr_ghidra))
-    # {'0x1576', '0x1579', '0x1553', '0x15bf', '0x14f0', '0x14f1', '0x1506', '0x158a', '0x1500', '0x1509', 
-    # '0x14f9', '0x15a3', '0x15bd', '0x1572', '0x1580', '0x14f5', '0x150b', '0x15ce', '0x1577', '0x15ab', 
-    # '0x15cd', '0x15a6', '0x15ad', '0x15a1', '0x1566', '0x1551', '0x2600', '0x15a0', '0x1575', '0x14f6', 
-    # '0x158f', '0x15b8', '0x14f4', '0x1578', '0x156d', '0x14f3'}
     print('\n')
 
     print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare))}')
@@ -260,10 +256,9 @@ def run():
 
     print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida))}')
     print(pin_trace.difference(set_addr_ida))
-    # {'0x1500', '0x1196', '0x117f', '0x164d', '0x1185', '0x14f6', '0x1180', '0x1179', '0x14f9', '0x1644',
-    # '0x1198', '0x2139', '0x2133', '0x1190', '0x14f5', '0x14f1', '0x14f3', '0x117d', '0x1177', '0x118d', 
-    # '0x1188', '0x1174', '0x1187', '0x1181', '0x117c', '0x1641', '0x119a', '0x14f4', '0x1184', '0x164a'}
     print('\n')
+    prova = list(pin_trace.difference(set_addr_ida))
+    print(sorted(prova))
 
     print(f'{"Jaccard similarity check on nodes"}')
     print(f'{"Ghidra vs Radare"} {jaccard(set_nodes_ghidra_purged, set_nodes_radare_purged)}')
@@ -308,7 +303,6 @@ def run():
     print(f'{"Ida vs Angr"} {jaccard(set_edges_ida_purged, set_edges_angr_purged)}')
     print(f'{"Ida vs Radare"} {jaccard(set_edges_ida_purged, set_edges_radare_purged)}')
     print('\n')
-
 
 
 if __name__ == '__main__':

@@ -6,7 +6,6 @@ import networkx as nx
 def purge(graph_purged):
     list_sorted = sorted(list(graph_purged.nodes))[1:]
     for node in sorted(list(graph_purged.nodes)):
-        print(node)
         if list_sorted:
             if graph_purged.nodes[node]['has_return']:
                 list_sorted.pop(0)

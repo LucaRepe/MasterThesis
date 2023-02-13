@@ -49,6 +49,7 @@ def run():
      'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
      'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
+    nodes_set = set()
     for func in idautils.Functions():
         flowchart = idaapi.FlowChart(idaapi.get_func(func))
         for bb in flowchart:
@@ -136,6 +137,9 @@ def run():
                     has_return = True
 
                 if split_bb:
+                    if hex(int(list_addr[0], 16)) in nodes_set:
+                        continue
+                    nodes_set.add(hex(int(list_addr[0], 16)))
                     bb = BasicBlock()
                     func_beg_copy = func_beg
                     dir_call_copy = dir_call
@@ -186,6 +190,9 @@ def run():
 
             if not skip_adding:
                 skip_adding = False
+                if hex(int(list_addr[0], 16)) in nodes_set:
+                    continue
+                nodes_set.add(hex(int(list_addr[0], 16)))
                 bb_not_splitted = BasicBlock()
                 bb_not_splitted.start_addr = hex(int(list_addr[0], 16))
                 bb_not_splitted.list_bytes = list_bytes
@@ -209,6 +216,7 @@ def run():
                             indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
                             unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
                 skip_adding = False
+
 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):

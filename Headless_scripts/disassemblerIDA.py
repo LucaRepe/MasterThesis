@@ -122,10 +122,22 @@ def run():
                     split_bb = True
                     call_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
                     arg_addr = idc.get_operand_value(cur_addr,0)
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_reg:
+                        log('reg' + '\n')
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem:
+                        log('mem' + '\n')
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_imm:
+                        log('imm' + '\n')
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_far:
+                        log('far' + '\n')
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_near:
+                        log('near' + '\n')
                     if arg_addr < 0x1000:
+                        log('reg da addr' + '\n')
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     else:
+                        log('mem da addr' + '\n')
                         dir_call = True
                         list_edges.append(hex(arg_addr))
                     if 'SUB_' in call_addr:

@@ -86,64 +86,39 @@ def run():
                 mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 if mnemonic in cond_jump_instructions:
                     conditional_jump = True
-                    jump_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
                     arg_addr = idc.get_operand_value(cur_addr,0)
-                    if 'SUB_' in jump_addr:
-                        dir_jump = True
-                        jump_addr = '0x' + jump_addr[4:]
-                        list_edges.append(jump_addr.lower())
-                    elif 'LOC_' in jump_addr:
-                        dir_jump = True
-                        jump_addr = '0x' + jump_addr[4:]
-                        list_edges.append(jump_addr.lower())
-                    elif arg_addr < 0x1000:
-                        indir_jump = True
-                        list_edges.append("UnresolvableJumpTarget")
-                    else:                     
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem or \
+                        idc.get_operand_type(cur_addr, 0) == idc.o_far or \
+                        idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_jump = True
                         list_edges.append(hex(arg_addr))
+                    else:
+                        indir_jump = True
+                        list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
                 if 'JMP' in mnemonic:
                     conditional_jump = False
-                    jump_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
-                    arg_addr = idc.get_operand_value(cur_addr,0) 
-                    if 'LOC_' in jump_addr:
-                        dir_jump = True
-                        jump_addr = '0x' + jump_addr[4:]
-                        list_edges.append(jump_addr.lower())
-                    elif arg_addr < 0x1000:
-                        indir_jump = True
-                        list_edges.append("UnresolvableJumpTarget")
-                    else:                      
+                    arg_addr = idc.get_operand_value(cur_addr,0)
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem or \
+                        idc.get_operand_type(cur_addr, 0) == idc.o_far or \
+                        idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_jump = True
                         list_edges.append(hex(arg_addr))
+                    else:
+                        indir_jump = True
+                        list_edges.append("UnresolvableJumpTarget")
                     list_edge_attr.append("Jump")
                 if 'CALL' in mnemonic:
                     split_bb = True
-                    call_addr = idc.GetDisasm(cur_addr).upper().split(' ')[-1]
                     arg_addr = idc.get_operand_value(cur_addr,0)
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_reg:
-                        log('reg' + '\n')
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem:
-                        log('mem' + '\n')
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_imm:
-                        log('imm' + '\n')
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_far:
-                        log('far' + '\n')
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_near:
-                        log('near' + '\n')
-                    if arg_addr < 0x1000:
-                        log('reg da addr' + '\n')
-                        indir_call = True
-                        list_edges.append("UnresolvableCallTarget")
-                    else:
-                        log('mem da addr' + '\n')
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem or \
+                        idc.get_operand_type(cur_addr, 0) == idc.o_far or \
+                        idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_call = True
                         list_edges.append(hex(arg_addr))
-                    if 'SUB_' in call_addr:
-                        dir_call = True
-                        call_addr = '0x' + call_addr[4:]
-                        list_edges.append(call_addr.lower())
+                    else:
+                        indir_call = True
+                        list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
                 if 'RETN' in mnemonic or 'RET' in mnemonic:
                     has_return = True

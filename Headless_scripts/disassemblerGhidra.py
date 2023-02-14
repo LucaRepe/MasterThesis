@@ -13,6 +13,7 @@ from ghidra.program.model.listing import FunctionManager
 from ghidra.program.model.listing import Listing
 from ghidra.program.database.code import InstructionDB
 from ghidra.program.model.address import Address
+from ghidra.program.model.lang import OperandType
 
 import networkx as nx
 import pickle
@@ -98,12 +99,11 @@ def run():
             list_addr.append(f'{hex(instr.getAddress().getOffset())}')
             x.update(bytes(instr.getMnemonicString().split(' ')[0].upper().strip(), 'UTF-8'))
 
-            # print(f'{instr.toString()} {instr.getFlowType()}')
-            instr = instr.toString()
-            mnemonic = instr.split(' ')[0]
+            # instr = instr.toString()
+            mnemonic = instr.toString().split(' ')[0]
             if mnemonic in cond_jump_instructions:
                 conditional_jump = True
-                jump_addr = instr.split(' ')[-1]
+                jump_addr = instr.toString().split(' ')[-1]
                 if jump_addr[-1] == ']':
                     indir_jump = True
                     list_edges.append("UnresolvableJumpTarget")
@@ -116,9 +116,9 @@ def run():
                     indir_jump = True
                     list_edges.append("UnresolvableJumpTarget")
                 list_edge_attr.append("Jump")
-            if 'JMP' in instr:
+            if 'JMP' in instr.toString():
                 conditional_jump = False
-                jump_addr = instr.split(' ')[-1]
+                jump_addr = instr.toString().split(' ')[-1]
                 if jump_addr[-1] == ']':
                     indir_jump = True
                     list_edges.append("UnresolvableJumpTarget")
@@ -131,9 +131,43 @@ def run():
                     indir_jump = True
                     list_edges.append("UnresolvableJumpTarget")
                 list_edge_attr.append("Jump")
-            if 'CALL' in instr:
+            if 'CALL' in instr.toString():
+                print('\n')
+                print(f'{instr.toString()} {instr.getFlowType()}')
+                op_type = instr.getOperandType(0)
+                op_ref_type = instr.getOperandRefType(0)
+                print(f'{instr.getDefaultOperandRepresentation(0)}')
+                print(f'{(op_ref_type)} {type(op_ref_type)}')
+                tipo = OperandType()
+                if tipo.isImmediate(op_type):
+                    print("Imm")
+                    print('\n')
+                if tipo.isIndirect(op_type):
+                    print("Indir")
+                    print('\n')
+                if tipo.isImplicit(op_type):
+                    print("Impl")
+                    print('\n')
+                if tipo.isRegister(op_type): # Si
+                    print("Reg")
+                    print('\n')
+                if tipo.isRelative(op_type):
+                    print("Rela")
+                    print('\n')
+                if tipo.isAddress(op_type): # Si
+                    print("Addr")
+                    print('\n')
+                if tipo.isScalar(op_type):
+                    print("Scala")
+                    print('\n')
                 split_bb = True
-                call_addr = instr.split(' ')[1]
+                call_addr = instr.toString().split(' ')[1]
+                if op_ref_type.isUnConditional():
+                    print("Direct")
+                    print('\n')
+                else:
+                    print("Indirect")
+                    print('\n')   	
                 if call_addr[-1] == ']':
                     indir_call = True
                     list_edges.append("UnresolvableCallTarget")
@@ -146,7 +180,7 @@ def run():
                     indir_call = True
                     list_edges.append("UnresolvableCallTarget")
                 list_edge_attr.append("Call")
-            if 'RET' in instr:
+            if 'RET' in instr.toString():
                 has_return = True
 
             if split_bb:

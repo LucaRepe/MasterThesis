@@ -57,7 +57,6 @@ def run():
         
         
     base_address = 0x5e0000
-    # base_address = 0xca0000
     bbl_string = open('/home/luca/Scrivania/MasterThesis/testmainMinGW.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
@@ -166,30 +165,13 @@ def run():
 
     ida_purged = purge(ida_purged)
 
-    G = angr.nodes() - ida.nodes()
-
-    # for node in G:
-        # print(node)
-        # print(f"{'instr'} {angr.nodes[node].get('instr')}")
-        # print(f"{'edges'} {angr.nodes[node].get('edges')}")
-        # print(f"{'edge_attr'} {angr.nodes[node].get('edge_attr')}")
-        # print(f"{'func_beg'} {angr.nodes[node].get('func_beg')}")
-        # print(f"{'dir_call'} {angr.nodes[node].get('dir_call')}")
-        # print(f"{'indir_call'} {angr.nodes[node].get('indir_call')}")
-        # print(f"{'cond_jump'} {angr.nodes[node].get('cond_jump')}")
-        # print(f"{'dir_jump'} {angr.nodes[node].get('dir_jump')}")
-        # print(f"{'indir_jump'} {angr.nodes[node].get('indir_jump')}")
-        # print(f"{'has_return'} {angr.nodes[node].get('has_return')}")
-        # print('\n')
-
-    # print(G)
-
     pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra_purged.p", "wb"))
     pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/radare_purged.p", "wb"))
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "wb"))
 
-    print(f'{"Pin subset check on original addresses"}')
+    print(f'{"--- Pin subset check on original addresses ---"}')
+    print('\n')
     print(f'{"Ghidra is"} {pin_trace.issubset(set_addr_ghidra)} {"- addresses:"} {len(set_addr_ghidra)}')
     print(f'{"Radare is"} {pin_trace.issubset(set_addr_radare)} {"- addresses:"} {len(set_addr_radare)}')
     print(f'{"Angr is"} {pin_trace.issubset(set_addr_angr)} {"- addresses:"} {len(set_addr_angr)}')
@@ -236,7 +218,8 @@ def run():
         if ida_purged.nodes[node].get('edges') is not None:
             set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
 
-    print(f'{"Jaccard similarity check on purged addresses"}')
+    print(f'{"--- Jaccard similarity check on purged addresses ---"}')
+    print('\n')
     print(f'{"Ghidra"} {jaccard(pin_trace, set_addr_ghidra_purged)}')
     print(f'{"Radare"} {jaccard(pin_trace, set_addr_radare_purged)}')
     print(f'{"Angr"} {jaccard(pin_trace, set_addr_angr_purged)}')
@@ -259,7 +242,8 @@ def run():
     print(pin_trace.difference(set_addr_ida))
     print('\n')
 
-    print(f'{"Jaccard similarity check on nodes"}')
+    print(f'{"--- Jaccard similarity check on nodes ---"}')
+    print('\n')
     print(f'{"Ghidra vs Radare"} {jaccard(set_nodes_ghidra_purged, set_nodes_radare_purged)}')
     print(f'{"Ghidra vs Angr"} {jaccard(set_nodes_ghidra_purged, set_nodes_angr_purged)}')
     print(f'{"Ghidra vs Ida"} {jaccard(set_nodes_ghidra_purged, set_nodes_ida_purged)}')
@@ -280,7 +264,8 @@ def run():
     print(f'{"Ida vs Radare"} {jaccard(set_nodes_ida_purged, set_nodes_radare_purged)}')
     print('\n')
 
-    print(f'{"Jaccard similarity check on edges"}')
+    print(f'{"--- Jaccard similarity check on edges ---"}')
+    print('\n')
     print(f'{"Ghidra vs Radare"} {jaccard(set_edges_ghidra_purged, set_edges_radare_purged)}')
     print(f'{"Ghidra vs Angr"} {jaccard(set_edges_ghidra_purged, set_edges_angr_purged)}')
     print(f'{"Ghidra vs Ida"} {jaccard(set_edges_ghidra_purged, set_edges_ida_purged)}')

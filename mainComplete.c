@@ -30,18 +30,24 @@ int conditional_jumps_with_constant_condition(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
     puts("Conditional jumps with constant condition");
-    __asm {
-        /*
-        jz $ + 13
-        jnz $ + 7
-        __emit 0xe8
-        */
+    /*
         push eax
         xor eax, eax
         jz $+7
         __emit 0xe8
         pop eax
-    }
+        */
+
+       /*
+       __asm__ ( "movl $10, %eax;"
+                "movl $20, %ebx;"
+                "addl %ebx, %eax;"
+    );
+       */
+
+    asm ("jz $ + $13;\n\t"
+        "jnz $ + $7;\n\t"
+        "emit %0xe8;\n\t");
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
@@ -53,9 +59,9 @@ char* memAlloc() {
 
     int len = strlen("0x90");
     for (i = 0; i < size - 1; i++) {
-        strcpy_s(&my_array[i], len+1, "0x90", len);
+        strcpy(&my_array[i], "0x90");
     }
-    strcpy_s(&my_array[size],len+1, "0xc3", len);
+    strcpy(&my_array[size],"0xc3");
     void (*array_ptr)(char) = &my_array[5];
     return *array_ptr;
 }

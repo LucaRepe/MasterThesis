@@ -87,8 +87,7 @@ def run():
                 if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     arg_addr = idc.get_operand_value(cur_addr,0)
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem or \
-                        idc.get_operand_type(cur_addr, 0) == idc.o_far or \
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_far or \
                         idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_jump = True
                         list_edges.append(hex(arg_addr))
@@ -99,8 +98,7 @@ def run():
                 if 'JMP' in mnemonic:
                     conditional_jump = False
                     arg_addr = idc.get_operand_value(cur_addr,0)
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem or \
-                        idc.get_operand_type(cur_addr, 0) == idc.o_far or \
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_far or \
                         idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_jump = True
                         list_edges.append(hex(arg_addr))
@@ -111,8 +109,7 @@ def run():
                 if 'CALL' in mnemonic:
                     split_bb = True
                     arg_addr = idc.get_operand_value(cur_addr,0)
-                    if idc.get_operand_type(cur_addr, 0) == idc.o_mem or \
-                        idc.get_operand_type(cur_addr, 0) == idc.o_far or \
+                    if idc.get_operand_type(cur_addr, 0) == idc.o_far or \
                         idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_call = True
                         list_edges.append(hex(arg_addr))

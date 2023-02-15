@@ -99,15 +99,12 @@ def run():
             list_addr.append(f'{hex(instr.getAddress().getOffset())}')
             x.update(bytes(instr.getMnemonicString().split(' ')[0].upper().strip(), 'UTF-8'))
 
-            # instr = instr.toString()
             mnemonic = instr.toString().split(' ')[0]
             if mnemonic in cond_jump_instructions:
                 conditional_jump = True
                 jump_addr = instr.toString().split(' ')[-1]
-                if jump_addr[-1] == ']':
-                    indir_jump = True
-                    list_edges.append("UnresolvableJumpTarget")
-                elif '0x' in jump_addr:
+                if instr.getFlowType().toString() == 'CONDITIONAL_JUMP' or \
+                    instr.getFlowType().toString() == 'CALL_TERMINATOR':
                     dir_jump = True
                     jump_addr = jump_addr[2:]
                     real_jump_addr = '0x' + jump_addr.lstrip("0")
@@ -119,10 +116,8 @@ def run():
             if 'JMP' in instr.toString():
                 conditional_jump = False
                 jump_addr = instr.toString().split(' ')[-1]
-                if jump_addr[-1] == ']':
-                    indir_jump = True
-                    list_edges.append("UnresolvableJumpTarget")
-                elif '0x' in jump_addr:
+                if instr.getFlowType().toString() == 'UNCONDITIONAL_JUMP' or \
+                    instr.getFlowType().toString() == 'CALL_TERMINATOR':
                     dir_jump = True
                     jump_addr = jump_addr[2:]
                     real_jump_addr = '0x' + jump_addr.lstrip("0")
@@ -132,46 +127,10 @@ def run():
                     list_edges.append("UnresolvableJumpTarget")
                 list_edge_attr.append("Jump")
             if 'CALL' in instr.toString():
-                print('\n')
-                print(f'{instr.toString()} {instr.getFlowType()}')
-                op_type = instr.getOperandType(0)
-                op_ref_type = instr.getOperandRefType(0)
-                print(f'{instr.getDefaultOperandRepresentation(0)}')
-                print(f'{(op_ref_type)} {type(op_ref_type)}')
-                tipo = OperandType()
-                if tipo.isImmediate(op_type):
-                    print("Imm")
-                    print('\n')
-                if tipo.isIndirect(op_type):
-                    print("Indir")
-                    print('\n')
-                if tipo.isImplicit(op_type):
-                    print("Impl")
-                    print('\n')
-                if tipo.isRegister(op_type): # Si
-                    print("Reg")
-                    print('\n')
-                if tipo.isRelative(op_type):
-                    print("Rela")
-                    print('\n')
-                if tipo.isAddress(op_type): # Si
-                    print("Addr")
-                    print('\n')
-                if tipo.isScalar(op_type):
-                    print("Scala")
-                    print('\n')
                 split_bb = True
                 call_addr = instr.toString().split(' ')[1]
-                if op_ref_type.isUnConditional():
-                    print("Direct")
-                    print('\n')
-                else:
-                    print("Indirect")
-                    print('\n')   	
-                if call_addr[-1] == ']':
-                    indir_call = True
-                    list_edges.append("UnresolvableCallTarget")
-                elif '0x' in call_addr:
+                if instr.getFlowType().toString() == 'UNCONDITIONAL_CALL' or \
+                    instr.getFlowType().toString() == 'CALL_TERMINATOR':
                     dir_call = True
                     call_addr = call_addr[2:]
                     real_call_addr = '0x' + call_addr.lstrip("0")
@@ -179,6 +138,7 @@ def run():
                 else:
                     indir_call = True
                     list_edges.append("UnresolvableCallTarget")
+                
                 list_edge_attr.append("Call")
             if 'RET' in instr.toString():
                 has_return = True

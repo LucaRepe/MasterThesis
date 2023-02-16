@@ -3,7 +3,7 @@ import pickle
 import networkx as nx
 
 
-def purge(graph_purged):
+def old_purge(graph_purged):
     list_sorted = sorted(list(graph_purged.nodes))[1:]
     for node in sorted(list(graph_purged.nodes)):
         if list_sorted:
@@ -44,6 +44,14 @@ def purge(graph_purged):
                         graph_purged.add_edge(node, edge, color='b')
     return graph_purged
 
+def purge(graph, max_addr, min_addr):
+    print(graph)
+    for node in graph.copy():
+        if node != 'UnresolvableCallTarget' and node != 'UnresolvableJumpTarget':
+            if int(node,16) < min_addr or int(node,16) > max_addr:
+                graph.remove_node(node)
+    print(graph)
+
 
 def jaccard(s1, s2):
     return float(len(s1.intersection(s2)) / len(s1.union(s2)))
@@ -55,7 +63,6 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ida.p", "rb"))
         
-        
     base_address = 0x5e0000
     bbl_string = open('/home/luca/Scrivania/MasterThesis/testmainMinGW.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
@@ -66,6 +73,10 @@ def run():
             continue
         pin_trace.add(hex(real_address))
 
+    min_pin_addr = min(pin_trace)
+    max_pin_addr = max(pin_trace)
+    int_min = int(min_pin_addr,16)
+    int_max = int(max_pin_addr,16)
     ghidra_purged = nx.DiGraph()
     set_addr_ghidra = set()
     set_nodes_ghidra = set()
@@ -89,7 +100,8 @@ def run():
                                        unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
 
     
-    ghidra_purged = purge(ghidra_purged)
+    ghidra_purged = old_purge(ghidra_purged)
+    purge(ghidra, int_max, int_min)
 
 
     radare_purged = nx.DiGraph()
@@ -114,7 +126,7 @@ def run():
                                        has_return=radare.nodes[node].get('has_return'),
                                        unique_hash_identifier=radare.nodes[node].get('unique_hash_identifier'))
 
-    radare_purged = purge(radare_purged)
+    radare_purged = old_purge(radare_purged)
 
 
     angr_purged = nx.DiGraph()
@@ -139,7 +151,7 @@ def run():
                                        has_return=angr.nodes[node].get('has_return'),
                                        unique_hash_identifier=angr.nodes[node].get('unique_hash_identifier'))
 
-    angr_purged = purge(angr_purged)
+    angr_purged = old_purge(angr_purged)
 
     ida_purged = nx.DiGraph()
     set_addr_ida = set()
@@ -163,7 +175,7 @@ def run():
                                      has_return=ida.nodes[node].get('has_return'),
                                      unique_hash_identifier=ida.nodes[node].get('unique_hash_identifier'))
 
-    ida_purged = purge(ida_purged)
+    ida_purged = old_purge(ida_purged)
 
     pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ghidra_purged.p", "wb"))
     pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/radare_purged.p", "wb"))

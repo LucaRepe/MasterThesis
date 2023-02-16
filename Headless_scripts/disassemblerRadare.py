@@ -300,7 +300,7 @@ def run(filepath):
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "wb"))
+    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare.p", "wb"))
 
 
 if __name__ == '__main__':

@@ -50,10 +50,10 @@ def jaccard(s1, s2):
 
 
 def run():
-    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra.p", "rb"))
-    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/radare.p", "rb"))
-    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/angr.p", "rb"))
-    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida.p", "rb"))
+    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ghidra.p", "rb"))
+    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/radare.p", "rb"))
+    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/angr.p", "rb"))
+    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ida.p", "rb"))
         
         
     base_address = 0x5e0000
@@ -165,10 +165,10 @@ def run():
 
     ida_purged = purge(ida_purged)
 
-    pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra_purged.p", "wb"))
-    pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/radare_purged.p", "wb"))
-    pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "wb"))
-    pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "wb"))
+    pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ghidra_purged.p", "wb"))
+    pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/radare_purged.p", "wb"))
+    pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/angr_purged.p", "wb"))
+    pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ida_purged.p", "wb"))
 
     print(f'{"--- Pin subset check on original addresses ---"}')
     print('\n')

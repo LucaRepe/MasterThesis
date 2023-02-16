@@ -1,0 +1,100 @@
+{"Time": "133210152779127721", "Type": "INF", "Title": "JLP MD5", "Desc": "b636e50b7ef4bfefbb693c224a39ed72" }
+{"Time": "133210152779127721", "Type": "INF", "Title": "PROCESS NAME", "Desc": "C:\Users\Dude\Desktop\mainComplete.exe" }
+{"Time": "133210152779127721", "Type": "INF", "Title": "BASEADDRESS", "Desc": "0xca0000" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783034515", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152783190066", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133210152783190066", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133210152783190066", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" }
+{"Time": "133210152783190066", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" }
+{"Time": "133210152783659464", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133210152784440028", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\FileSystem" }
+{"Time": "133210152784440028", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\FileSystem" }
+{"Time": "133210152785531820", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133210152785531820", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133210152785844787", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\Windows\SYSTEM32\apphelp.dll" }
+{"Time": "133210152786001820", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\apphelp.dll" }
+{"Time": "133210152786001820", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133210152786001820", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133210152786784001", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152786941118", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152787717990", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152788656881", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152791003163", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133210152791003163", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133210152792096939", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152792096939", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152792565543", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133210152792565543", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133210152794128176", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Users\Dude\Desktop\mainComplete.exe" }
+{"Time": "133210152794596850", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\ntdll.dll" }
+{"Time": "133210152794753207", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\kernel32.dll" }
+{"Time": "133210152794909447", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\KernelBase.dll" }
+{"Time": "133210152794909447", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\sechost.dll" }
+{"Time": "133210152794909447", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\rpcrt4.dll" }
+{"Time": "133210152795689732", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume2\Windows\apppatch\sysmain.sdb" }
+{"Time": "133210152795689732", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryInformationFile", "Arg": "\Device\HarddiskVolume2\Windows\apppatch\sysmain.sdb" }
+{"Time": "133210152795845723", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryInformationFile", "Arg": "\Device\HarddiskVolume2\Windows\apppatch\sysmain.sdb" }
+{"Time": "133210152795845723", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133210152795845723", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133210152797562931", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenProcess" }
+{"Time": "133210152797562931", "Type": "BEHwA", "Cat": "PROCESS", "Sym": "NtOpenProcess", "Arg": "C:\Users\Dude\Desktop\mainComplete.exe" }
+{"Time": "133210152798031172", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume2\Users\Dude\Desktop\mainComplete.exe" }
+{"Time": "133210152798344137", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\USER\S-1-5-21-819176645-2346129417-596548618-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133210152798344137", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\USER\S-1-5-21-819176645-2346129417-596548618-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133210152798501274", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume2\Users\Dude\Desktop\mainComplete.exe" }
+{"Time": "133210152798501274", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\USER\S-1-5-21-819176645-2346129417-596548618-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133210152798501274", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\USER\S-1-5-21-819176645-2346129417-596548618-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133210152799282509", "Type": "BEHwA", "Cat": "MUTEX", "Sym": "NtOpenMutant", "Arg": "Local\ShimViewer‰@‰ ‰ ‰+²èÔ" }
+{"Time": "133210152800690161", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152803033907", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwUnmapViewOfSection" }
+{"Time": "133210152803658940", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152803658940", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152803815151", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume2\Users\Dude\Desktop\mainComplete.exe" }
+{"Time": "133210152803815151", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\USER\S-1-5-21-819176645-2346129417-596548618-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133210152803815151", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\USER\S-1-5-21-819176645-2346129417-596548618-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133210152804127641", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133210152804596400", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152806000913", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152809751368", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152809751368", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133210152809751368", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133210152809751368", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133210152809907526", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152809907526", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152810063285", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152810688895", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152811001371", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133210152811470100", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume2\Windows\SysWOW64\msvcrt.dll" }
+{"Time": "133210152812251383", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152812251383", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152813345215", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152813501264", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152814595022", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\Nls\Sorting\Versions" }
+{"Time": "133210152814595022", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\Nls\Sorting\Versions" }
+{"Time": "133210152814751364", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\Nls\Sorting\Versions" }
+{"Time": "133210152815220306", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152817405295", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152818814391", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133210152819127381", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtDeviceIoControlFile", "Arg": "\Device\ConDrv" }
+{"Time": "133210152819283343", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtWriteFile", "Arg": "\Device\ConDrv" }
+{"Time": "133210152819752819", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwTerminateProcess" }
+{"Time": "133210152822093986", "Type": "INF", "Title": "EXITCODE", "Desc": "0" }
+{"Time": "133210152822093986", "Type": "INF", "Title": "PROGRAM INSTRUCTIONS", "Desc": "671" }
+{"Time": "133210152822093986", "Type": "INF", "Title": "LIBRARY INSTRUCTIONS", "Desc": "8100" }

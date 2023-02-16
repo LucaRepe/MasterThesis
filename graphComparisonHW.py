@@ -2,10 +2,10 @@ import pickle
 import networkx as nx
 
 def run():
-    radare_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/radare_purged.p", "rb"))
-    angr_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/angr_purged.p", "rb"))
-    ida_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ida_purged.p", "rb"))
-    ghidra_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/ghidra_purged.p", "rb"))
+    radare_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/radare_purged.p", "rb"))
+    angr_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/angr_purged.p", "rb"))
+    ida_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ida_purged.p", "rb"))
+    ghidra_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ghidra_purged.p", "rb"))
 
 
     nodes_count = 0
@@ -18,7 +18,6 @@ def run():
     ret_count = 0
 
     for node in ghidra_purged.nodes:
-        # print(ghidra_purged.nodes[node])
         nodes_count += 1
         if ghidra_purged.nodes[node].get('func_beg'):
             func_beg_count +=1
@@ -57,7 +56,6 @@ def run():
     ret_count = 0
 
     for node in radare_purged.nodes:
-        # print(radare_purged.nodes[node])
         nodes_count += 1
         if radare_purged.nodes[node].get('func_beg'):
             func_beg_count +=1
@@ -96,7 +94,6 @@ def run():
     ret_count = 0
 
     for node in angr_purged.nodes:
-        # print(angr_purged.nodes[node])
         nodes_count += 1
         if angr_purged.nodes[node].get('func_beg'):
             func_beg_count +=1
@@ -135,7 +132,6 @@ def run():
     ret_count = 0
 
     for node in ida_purged.nodes:
-        # print(ida_purged.nodes[node])
         nodes_count += 1
         if ida_purged.nodes[node].get('has_return'):
             ret_count +=1

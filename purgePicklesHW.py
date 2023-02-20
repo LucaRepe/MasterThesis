@@ -47,9 +47,10 @@ def old_purge(graph_purged):
 def purge(graph, max_addr, min_addr):
     print(graph)
     for node in graph.copy():
-        if node != 'UnresolvableCallTarget' and node != 'UnresolvableJumpTarget':
-            if int(node,16) < min_addr or int(node,16) > max_addr:
-                graph.remove_node(node)
+        if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
+            continue
+        if int(node,16) < min_addr or int(node,16) > max_addr:
+            graph.remove_node(node)
     print(graph)
 
 
@@ -79,66 +80,55 @@ def run():
     int_max = int(max_pin_addr,16)
     ghidra_purged = nx.DiGraph()
     set_addr_ghidra = set()
-    set_nodes_ghidra = set()
-    for addr in pin_trace:
-        for node in ghidra:
-            if ghidra.nodes[node].get('addr') is not None:
-                set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
-            set_nodes_ghidra.add(node)
-            if addr == node:
-                ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
-                                       bytes=ghidra.nodes[node].get('bytes'), addr=ghidra.nodes[node].get('addr'),
-                                       edges=ghidra.nodes[node].get('edges'),
-                                       edge_attr=ghidra.nodes[node].get('edge_attr'),
-                                       func_beg=ghidra.nodes[node].get('func_beg'), 
-                                       dir_call=ghidra.nodes[node].get('dir_call'),
-                                       indir_call=ghidra.nodes[node].get('indir_call'), 
-                                       cond_jump=ghidra.nodes[node].get('cond_jump'),
-                                       dir_jump=ghidra.nodes[node].get('dir_jump'), 
-                                       indir_jump=ghidra.nodes[node].get('indir_jump'),
-                                       has_return=ghidra.nodes[node].get('has_return'), 
-                                       unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
+    for node in ghidra:
+        if ghidra.nodes[node].get('addr') is not None:
+            set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
+        if node in pin_trace:
+            ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
+                                    bytes=ghidra.nodes[node].get('bytes'), addr=ghidra.nodes[node].get('addr'),
+                                    edges=ghidra.nodes[node].get('edges'),
+                                    edge_attr=ghidra.nodes[node].get('edge_attr'),
+                                    func_beg=ghidra.nodes[node].get('func_beg'), 
+                                    dir_call=ghidra.nodes[node].get('dir_call'),
+                                    indir_call=ghidra.nodes[node].get('indir_call'), 
+                                    cond_jump=ghidra.nodes[node].get('cond_jump'),
+                                    dir_jump=ghidra.nodes[node].get('dir_jump'), 
+                                    indir_jump=ghidra.nodes[node].get('indir_jump'),
+                                    has_return=ghidra.nodes[node].get('has_return'), 
+                                    unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
 
-    
-    ghidra_purged = old_purge(ghidra_purged)
-    purge(ghidra, int_max, int_min)
-
+    # ghidra_purged = old_purge(ghidra_purged)
+    ghidra_purged = purge(ghidra, int_max, int_min)
 
     radare_purged = nx.DiGraph()
     set_addr_radare = set()
-    set_nodes_radare = set()
-    for addr in pin_trace:
-        for node in radare:
-            if radare.nodes[node].get('addr') is not None:
-                set_addr_radare.update(radare.nodes[node].get('addr'))
-            set_nodes_radare.add(node)
-            if addr == node:
-                radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
-                                       bytes=radare.nodes[node].get('bytes'), addr=radare.nodes[node].get('addr'),
-                                       edges=radare.nodes[node].get('edges'),
-                                       edge_attr=radare.nodes[node].get('edge_attr'),
-                                       func_beg=radare.nodes[node].get('func_beg'),
-                                       dir_call=radare.nodes[node].get('dir_call'),
-                                       indir_call=radare.nodes[node].get('indir_call'),
-                                       cond_jump=radare.nodes[node].get('cond_jump'),
-                                       dir_jump=radare.nodes[node].get('dir_jump'),
-                                       indir_jump=radare.nodes[node].get('indir_jump'),
-                                       has_return=radare.nodes[node].get('has_return'),
-                                       unique_hash_identifier=radare.nodes[node].get('unique_hash_identifier'))
+    for node in radare:
+        if radare.nodes[node].get('addr') is not None:
+            set_addr_radare.update(radare.nodes[node].get('addr'))
+        if node in pin_trace:
+            radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
+                                    bytes=radare.nodes[node].get('bytes'), addr=radare.nodes[node].get('addr'),
+                                    edges=radare.nodes[node].get('edges'),
+                                    edge_attr=radare.nodes[node].get('edge_attr'),
+                                    func_beg=radare.nodes[node].get('func_beg'),
+                                    dir_call=radare.nodes[node].get('dir_call'),
+                                    indir_call=radare.nodes[node].get('indir_call'),
+                                    cond_jump=radare.nodes[node].get('cond_jump'),
+                                    dir_jump=radare.nodes[node].get('dir_jump'),
+                                    indir_jump=radare.nodes[node].get('indir_jump'),
+                                    has_return=radare.nodes[node].get('has_return'),
+                                    unique_hash_identifier=radare.nodes[node].get('unique_hash_identifier'))
 
     radare_purged = old_purge(radare_purged)
-
+    
 
     angr_purged = nx.DiGraph()
     set_addr_angr = set()
-    set_nodes_angr = set()
-    for addr in pin_trace:
-        for node in angr:
-            if angr.nodes[node].get('addr') is not None:
+    for node in angr:
+        if angr.nodes[node].get('addr') is not None:
                 set_addr_angr.update(angr.nodes[node].get('addr'))
-            set_nodes_angr.add(node)
-            if addr == node:
-                angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
+        if node in pin_trace:
+            angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
                                        bytes=angr.nodes[node].get('bytes'), addr=angr.nodes[node].get('addr'),
                                        edges=angr.nodes[node].get('edges'),
                                        edge_attr=angr.nodes[node].get('edge_attr'),
@@ -155,25 +145,22 @@ def run():
 
     ida_purged = nx.DiGraph()
     set_addr_ida = set()
-    set_nodes_ida = set()
-    for addr in pin_trace:
-        for node in ida:
-            if ida.nodes[node].get('addr') is not None:
-                set_addr_ida.update(ida.nodes[node].get('addr'))
-            set_nodes_ida.add(node)
-            if addr == node:
-                ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
-                                     bytes=ida.nodes[node].get('bytes'), addr=ida.nodes[node].get('addr'),
-                                     edges=ida.nodes[node].get('edges'),
-                                     edge_attr=ida.nodes[node].get('edge_attr'),
-                                     func_beg=ida.nodes[node].get('func_beg'),
-                                     dir_call=ida.nodes[node].get('dir_call'),
-                                     indir_call=ida.nodes[node].get('indir_call'),
-                                     cond_jump=ida.nodes[node].get('cond_jump'),
-                                     dir_jump=ida.nodes[node].get('dir_jump'),
-                                     indir_jump=ida.nodes[node].get('indir_jump'),
-                                     has_return=ida.nodes[node].get('has_return'),
-                                     unique_hash_identifier=ida.nodes[node].get('unique_hash_identifier'))
+    for node in ida:
+        if ida.nodes[node].get('addr') is not None:
+            set_addr_ida.update(ida.nodes[node].get('addr'))
+        if node in pin_trace:
+            ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
+                                    bytes=ida.nodes[node].get('bytes'), addr=ida.nodes[node].get('addr'),
+                                    edges=ida.nodes[node].get('edges'),
+                                    edge_attr=ida.nodes[node].get('edge_attr'),
+                                    func_beg=ida.nodes[node].get('func_beg'),
+                                    dir_call=ida.nodes[node].get('dir_call'),
+                                    indir_call=ida.nodes[node].get('indir_call'),
+                                    cond_jump=ida.nodes[node].get('cond_jump'),
+                                    dir_jump=ida.nodes[node].get('dir_jump'),
+                                    indir_jump=ida.nodes[node].get('indir_jump'),
+                                    has_return=ida.nodes[node].get('has_return'),
+                                    unique_hash_identifier=ida.nodes[node].get('unique_hash_identifier'))
 
     ida_purged = old_purge(ida_purged)
 
@@ -229,7 +216,9 @@ def run():
             set_addr_ida_purged.update(ida_purged.nodes[node].get('addr'))
         if ida_purged.nodes[node].get('edges') is not None:
             set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
-
+    
+    # print(pin_trace-set_addr_angr_purged)
+    # print('\n')
     print(f'{"--- Jaccard similarity check on purged addresses ---"}')
     print('\n')
     print(f'{"Ghidra"} {jaccard(pin_trace, set_addr_ghidra_purged)}')
@@ -238,20 +227,20 @@ def run():
     print(f'{"Ida"} {jaccard(pin_trace, set_addr_ida_purged)}')
     print('\n')
 
-    print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra))}')
-    print(pin_trace.difference(set_addr_ghidra))
+    print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra_purged))}')
+    print(pin_trace.difference(set_addr_ghidra_purged))
     print('\n')
 
-    print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare))}')
-    print(pin_trace.difference(set_addr_radare))
+    print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare_purged))}')
+    print(pin_trace.difference(set_addr_radare_purged))
     print('\n')
 
-    print(f'{"Addresses present on Pin that are missing in Angr: "} {len(pin_trace.difference(set_addr_angr))}')
-    print(pin_trace.difference(set_addr_angr))
+    print(f'{"Addresses present on Pin that are missing in Angr: "} {len(pin_trace.difference(set_addr_angr_purged))}')
+    print(pin_trace.difference(set_addr_angr_purged))
     print('\n')
 
-    print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida))}')
-    print(pin_trace.difference(set_addr_ida))
+    print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida_purged))}')
+    print(pin_trace.difference(set_addr_ida_purged))
     print('\n')
 
     print(f'{"--- Jaccard similarity check on nodes ---"}')

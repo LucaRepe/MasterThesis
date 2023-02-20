@@ -2,56 +2,13 @@ import re
 import pickle
 import networkx as nx
 
-
-def old_purge(graph_purged):
-    list_sorted = sorted(list(graph_purged.nodes))[1:]
-    for node in sorted(list(graph_purged.nodes)):
-        if list_sorted:
-            if graph_purged.nodes[node]['has_return']:
-                list_sorted.pop(0)
-                for edge, attr in zip(graph_purged.nodes[node]['edges'], graph_purged.nodes[node]['edge_attr']):
-                    if attr == 'Call':
-                        graph_purged.add_edge(node, edge, color='r')
-                    if attr == 'Fallthrough':
-                        graph_purged.add_edge(node, edge, color='g')
-                    if attr == 'Jump':
-                        graph_purged.add_edge(node, edge, color='b')
-            elif graph_purged.nodes[node]['dir_jump'] or graph_purged.nodes[node]['indir_jump']:
-                if not graph_purged.nodes[node]['cond_jump']:
-                    list_sorted.pop(0)
-                    for edge, attr in zip(graph_purged.nodes[node]['edges'], graph_purged.nodes[node]['edge_attr']):
-                        if attr == 'Call':
-                            graph_purged.add_edge(node, edge, color='r')
-                        if attr == 'Fallthrough':
-                            graph_purged.add_edge(node, edge, color='g')
-                        if attr == 'Jump':
-                            graph_purged.add_edge(node, edge, color='b')
-                else:
-                    for edge, attr in zip(graph_purged.nodes[node]['edges'], graph_purged.nodes[node]['edge_attr']):
-                        if attr == 'Call':
-                            graph_purged.add_edge(node, edge, color='r')
-                        if attr == 'Fallthrough':
-                            graph_purged.add_edge(node, edge, color='g')
-                        if attr == 'Jump':
-                            graph_purged.add_edge(node, edge, color='b')
-            else:
-                for edge, attr in zip(graph_purged.nodes[node]['edges'], graph_purged.nodes[node]['edge_attr']):
-                    if attr == 'Call':
-                        graph_purged.add_edge(node, edge, color='r')
-                    if attr == 'Fallthrough':
-                        graph_purged.add_edge(node, edge, color='g')
-                    if attr == 'Jump':
-                        graph_purged.add_edge(node, edge, color='b')
-    return graph_purged
-
 def purge(graph, max_addr, min_addr):
-    print(graph)
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             continue
         if int(node,16) < min_addr or int(node,16) > max_addr:
             graph.remove_node(node)
-    print(graph)
+    return graph
 
 
 def jaccard(s1, s2):
@@ -78,91 +35,38 @@ def run():
     max_pin_addr = max(pin_trace)
     int_min = int(min_pin_addr,16)
     int_max = int(max_pin_addr,16)
-    ghidra_purged = nx.DiGraph()
+    ghidra_purged = ghidra.copy()
     set_addr_ghidra = set()
     for node in ghidra:
         if ghidra.nodes[node].get('addr') is not None:
             set_addr_ghidra.update(ghidra.nodes[node].get('addr'))
-        if node in pin_trace:
-            ghidra_purged.add_node(node, instr=ghidra.nodes[node].get('instr'),
-                                    bytes=ghidra.nodes[node].get('bytes'), addr=ghidra.nodes[node].get('addr'),
-                                    edges=ghidra.nodes[node].get('edges'),
-                                    edge_attr=ghidra.nodes[node].get('edge_attr'),
-                                    func_beg=ghidra.nodes[node].get('func_beg'), 
-                                    dir_call=ghidra.nodes[node].get('dir_call'),
-                                    indir_call=ghidra.nodes[node].get('indir_call'), 
-                                    cond_jump=ghidra.nodes[node].get('cond_jump'),
-                                    dir_jump=ghidra.nodes[node].get('dir_jump'), 
-                                    indir_jump=ghidra.nodes[node].get('indir_jump'),
-                                    has_return=ghidra.nodes[node].get('has_return'), 
-                                    unique_hash_identifier=ghidra.nodes[node].get('unique_hash_identifier'))
 
-    # ghidra_purged = old_purge(ghidra_purged)
-    ghidra_purged = purge(ghidra, int_max, int_min)
+    ghidra_purged = purge(ghidra_purged, int_max, int_min)
 
-    radare_purged = nx.DiGraph()
+    radare_purged = radare.copy()
     set_addr_radare = set()
     for node in radare:
         if radare.nodes[node].get('addr') is not None:
             set_addr_radare.update(radare.nodes[node].get('addr'))
-        if node in pin_trace:
-            radare_purged.add_node(node, instr=radare.nodes[node].get('instr'),
-                                    bytes=radare.nodes[node].get('bytes'), addr=radare.nodes[node].get('addr'),
-                                    edges=radare.nodes[node].get('edges'),
-                                    edge_attr=radare.nodes[node].get('edge_attr'),
-                                    func_beg=radare.nodes[node].get('func_beg'),
-                                    dir_call=radare.nodes[node].get('dir_call'),
-                                    indir_call=radare.nodes[node].get('indir_call'),
-                                    cond_jump=radare.nodes[node].get('cond_jump'),
-                                    dir_jump=radare.nodes[node].get('dir_jump'),
-                                    indir_jump=radare.nodes[node].get('indir_jump'),
-                                    has_return=radare.nodes[node].get('has_return'),
-                                    unique_hash_identifier=radare.nodes[node].get('unique_hash_identifier'))
 
-    radare_purged = old_purge(radare_purged)
+    radare_purged = purge(radare_purged, int_max, int_min)
     
 
-    angr_purged = nx.DiGraph()
+    angr_purged = angr.copy()
     set_addr_angr = set()
     for node in angr:
         if angr.nodes[node].get('addr') is not None:
                 set_addr_angr.update(angr.nodes[node].get('addr'))
-        if node in pin_trace:
-            angr_purged.add_node(node, instr=angr.nodes[node].get('instr'),
-                                       bytes=angr.nodes[node].get('bytes'), addr=angr.nodes[node].get('addr'),
-                                       edges=angr.nodes[node].get('edges'),
-                                       edge_attr=angr.nodes[node].get('edge_attr'),
-                                       func_beg=angr.nodes[node].get('func_beg'),
-                                       dir_call=angr.nodes[node].get('dir_call'),
-                                       indir_call=angr.nodes[node].get('indir_call'),
-                                       cond_jump=angr.nodes[node].get('cond_jump'),
-                                       dir_jump=angr.nodes[node].get('dir_jump'),
-                                       indir_jump=angr.nodes[node].get('indir_jump'),
-                                       has_return=angr.nodes[node].get('has_return'),
-                                       unique_hash_identifier=angr.nodes[node].get('unique_hash_identifier'))
 
-    angr_purged = old_purge(angr_purged)
+    angr_purged = purge(angr_purged, int_max, int_min)
 
-    ida_purged = nx.DiGraph()
+    ida_purged = ida.copy()
     set_addr_ida = set()
     for node in ida:
         if ida.nodes[node].get('addr') is not None:
             set_addr_ida.update(ida.nodes[node].get('addr'))
-        if node in pin_trace:
-            ida_purged.add_node(node, instr=ida.nodes[node].get('instr'),
-                                    bytes=ida.nodes[node].get('bytes'), addr=ida.nodes[node].get('addr'),
-                                    edges=ida.nodes[node].get('edges'),
-                                    edge_attr=ida.nodes[node].get('edge_attr'),
-                                    func_beg=ida.nodes[node].get('func_beg'),
-                                    dir_call=ida.nodes[node].get('dir_call'),
-                                    indir_call=ida.nodes[node].get('indir_call'),
-                                    cond_jump=ida.nodes[node].get('cond_jump'),
-                                    dir_jump=ida.nodes[node].get('dir_jump'),
-                                    indir_jump=ida.nodes[node].get('indir_jump'),
-                                    has_return=ida.nodes[node].get('has_return'),
-                                    unique_hash_identifier=ida.nodes[node].get('unique_hash_identifier'))
 
-    ida_purged = old_purge(ida_purged)
+    ida_purged = purge(ida_purged, int_max, int_min)
 
     pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ghidra_purged.p", "wb"))
     pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/radare_purged.p", "wb"))

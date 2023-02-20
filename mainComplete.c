@@ -18,6 +18,7 @@ int subtraction(int num1, int num2)
 {
     int sub;
     sub = num1 - num2;
+    int add = addition(num1, num2);
     return sub;
 }
 

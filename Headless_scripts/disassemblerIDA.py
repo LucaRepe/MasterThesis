@@ -82,6 +82,7 @@ def run():
                 x.update(bytes(idc.GetDisasm(cur_addr).split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
                 list_addr.append(hex(cur_addr))
+                log(cur_addr)
 
                 mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 if mnemonic in cond_jump_instructions:

@@ -1,6 +1,5 @@
 import re
 import pickle
-import networkx as nx
 
 def purge(graph, max_addr, min_addr):
     for node in graph.copy():

@@ -7,11 +7,6 @@ struct person {
     int age;
 };
 
-int incrementAge(int age) {
-    int ageIncr = conditional_jumps_with_same_target(age, 10);
-    return ageIncr;
-}
-
 int addition(int num1, int num2)
 {
     int sum;
@@ -30,47 +25,34 @@ int conditional_jumps_with_same_target(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
     puts("Conditional jumps with same target");
-    /*
-        push eax
-        xor eax, eax
-        jz $+7
+    __asm {
+        jz $ + 13
+        jnz $ + 7
         __emit 0xe8
-        pop eax
-        */
-
-       /*
-        __asm__("movl %edx, %eax\n\t"
-        "addl $2, %eax\n\t");
-
-       __asm__ ( "movl $10, %eax;"
-                "movl $20, %ebx;"
-                "addl %ebx, %eax;"
-    );
-       */
-
-    __asm__("movl %edx, %eax\n\t"
-        "addl $2, %eax\n\t");
-
-    __asm__("jz $ + $13;\n\t"
-        "jnz $ + $7;\n\t"
-        "emit %0xe8;\n\t");
-        
+    }
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
 
+int incrementAge(int age) {
+    puts("Enter incrementAge");
+    int ageIncr = conditional_jumps_with_same_target(age, 10);
+    return ageIncr;
+}
+
 char* memAlloc() {
-    int size=10, i;
+    puts("Enter malloc");
+    int size = 10, i;
 
     char* my_array = (char*)malloc(size * sizeof(char));
 
     int len = strlen("0x90");
     for (i = 0; i < size - 1; i++) {
-        strcpy(&my_array[i], "0x90");
+        strcpy_s(&my_array[i], len+1, "0x90");
     }
-    strcpy(&my_array[size],"0xc3");
-    void (*array_ptr)(char) = &my_array[5];
-    return *array_ptr;
+    strcpy_s(&my_array[size], len+1, "0xc3");
+    char* array_ptr = &my_array[5];
+    return array_ptr;
 }
 
 struct person persons[3];
@@ -83,11 +65,13 @@ int main()
     strncpy_s(persons[0].name, sizeof(persons[0].name), "p1", 2);
     strncpy_s(persons[1].name, sizeof(persons[1].name), "p2", 2);
     strncpy_s(persons[2].name, sizeof(persons[2].name), "p3", 2);
-    
-    int var1=15, var2=20;
+
+    int var1 = 15, var2 = 20;
     while (persons[0].age < 10) {
+        puts("Enter while");
         persons[0].age = incrementAge(persons[0].age);
-        if (strncmp(persons[0].name,"p1",2)==0) {
+        if (strncmp(persons[0].name, "p1", 2) == 0) {
+            puts("Enter if");
             char* ptr = memAlloc();
         }
     }
@@ -108,6 +92,6 @@ int main()
     }
     int resAdd = addition(var1, var2);
     int resSub = subtraction(var1, var2);
-    //conditional_jumps_with_same_target(var1, var2);
+    conditional_jumps_with_same_target(var1, var2);
     return 0;
 }

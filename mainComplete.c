@@ -18,20 +18,24 @@ int subtraction(int num1, int num2)
 {
     int sub;
     sub = num1 - num2;
-    int add = addition(num1, num2);
     return sub;
 }
 
+int incrementAge(int age) {
+    int ageIncr = addition(age, 10);
+    return ageIncr;
+}
+
 char* memAlloc() {
-    int size=10, i;
+    int size = 10, i;
 
     char* my_array = (char*)malloc(size * sizeof(char));
 
     int len = strlen("0x90");
     for (i = 0; i < size - 1; i++) {
-        strncpy(&my_array[i], "0x90", len);
+        strcpy_s(&my_array[i], len + 1, "0x90");
     }
-    strncpy(&my_array[size],"0xc3", len);
+    strcpy_s(&my_array[size], len + 1, "0xc3");
     char* array_ptr = &my_array[5];
     return array_ptr;
 }
@@ -43,16 +47,16 @@ int main()
     persons[0].age = 0;
     persons[1].age = -1;
     persons[2].age = 1000;
-    strncpy(persons[0].name, "p1", 2);
-    strncpy(persons[1].name, "p2" ,2);
-    strncpy(persons[2].name, "p3", 2);
-    
-    int var1=15, var2=20, i=0;
-    while (i< 10) {
-        if (strncmp(persons[0].name,"p1",2)==0) {
+    strncpy_s(persons[0].name, sizeof(persons[0].name), "p1", 2);
+    strncpy_s(persons[1].name, sizeof(persons[1].name), "p2", 2);
+    strncpy_s(persons[2].name, sizeof(persons[2].name), "p3", 2);
+
+    int var1 = 15, var2 = 20;
+    while (persons[0].age < 10) {
+        persons[0].age = incrementAge(persons[0].age);
+        if (strncmp(persons[0].name, "p1", 2) == 0) {
             char* ptr = memAlloc();
         }
-        i++;
     }
     switch (persons[1].age)
     {

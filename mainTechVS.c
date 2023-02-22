@@ -25,21 +25,21 @@ int conditional_jumps_with_same_target(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
     puts("Conditional jumps with same target");
-    __asm__("jz . + 13;\n\t"
-        "jnz . + 7;\n\t"
-        ".byte 0xe8;\n\t");
+    __asm {
+        jz $ + 13
+        jnz $ + 7
+        __emit 0xe8
+    }
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
 
 int incrementAge(int age) {
-    puts("Enter incrementAge");
     int ageIncr = conditional_jumps_with_same_target(age, 10);
     return ageIncr;
 }
 
 char* memAlloc() {
-    puts("Enter malloc");
     int size = 10, i;
 
     char* my_array = (char*)malloc(size * sizeof(char));
@@ -66,10 +66,8 @@ int main()
 
     int var1 = 15, var2 = 20;
     while (persons[0].age < 10) {
-        puts("Enter while");
         persons[0].age = incrementAge(persons[0].age);
         if (strncmp(persons[0].name, "p1", 2) == 0) {
-            puts("Enter if");
             char* ptr = memAlloc();
         }
     }

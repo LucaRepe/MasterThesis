@@ -50,9 +50,19 @@ def run():
      'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
     nodes_set = set()
+
     for func in idautils.Functions():
+        flags = idc.get_func_flags(func)
+        # skip library functions
+        if flags & idc.FUNC_LIB:
+            continue
+
+        log('--- new func ---\n\n')
+        
         flowchart = idaapi.FlowChart(idaapi.get_func(func))
         for bb in flowchart:
+            log('--- new bb ---\n\n')
+
             list_bytes = list()
             list_instr = list()
             list_addr = list()
@@ -74,10 +84,10 @@ def run():
 
             if bb.start_ea == idc.get_func_attr(func, idc.FUNCATTR_START):
                 func_beg = True
-
+            
             while cur_addr <= end:
                 skip_adding = False
-                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\n')
+                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\t\t' + hex(cur_addr)+ '\n')
                 list_instr.append(idc.GetDisasm(cur_addr).upper())
                 x.update(bytes(idc.GetDisasm(cur_addr).split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
@@ -122,7 +132,8 @@ def run():
 
                 if split_bb:
                     if hex(int(list_addr[0], 16)) in nodes_set:
-                        # log('split bb\n')
+                        log('split bb\n')
+                        # cur_addr = idc.next_head(cur_addr, end)
                         continue
                     nodes_set.add(hex(int(list_addr[0], 16)))
                     bb = BasicBlock()
@@ -175,9 +186,9 @@ def run():
 
             if not skip_adding:
                 skip_adding = False
-                if hex(int(list_addr[0], 16)) in nodes_set:
+                # if hex(int(list_addr[0], 16)) in nodes_set:
                     # log('not skip\n')
-                    continue
+                    # continue
                 nodes_set.add(hex(int(list_addr[0], 16)))
                 bb_not_splitted = BasicBlock()
                 bb_not_splitted.start_addr = hex(int(list_addr[0], 16))

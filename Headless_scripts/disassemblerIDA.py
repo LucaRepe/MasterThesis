@@ -53,11 +53,11 @@ def run():
 
     for func in idautils.Functions():
         flags = idc.get_func_flags(func)
-        # skip library functions
+
         if flags & idc.FUNC_LIB:
             continue
 
-        log('--- new func ---\n\n')
+        log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
         
         flowchart = idaapi.FlowChart(idaapi.get_func(func))
         for bb in flowchart:
@@ -132,8 +132,6 @@ def run():
 
                 if split_bb:
                     if hex(int(list_addr[0], 16)) in nodes_set:
-                        log('split bb\n')
-                        # cur_addr = idc.next_head(cur_addr, end)
                         continue
                     nodes_set.add(hex(int(list_addr[0], 16)))
                     bb = BasicBlock()
@@ -186,9 +184,8 @@ def run():
 
             if not skip_adding:
                 skip_adding = False
-                # if hex(int(list_addr[0], 16)) in nodes_set:
-                    # log('not skip\n')
-                    # continue
+                if hex(int(list_addr[0], 16)) in nodes_set:
+                    continue
                 nodes_set.add(hex(int(list_addr[0], 16)))
                 bb_not_splitted = BasicBlock()
                 bb_not_splitted.start_addr = hex(int(list_addr[0], 16))

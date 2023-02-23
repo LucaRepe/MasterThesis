@@ -1,10 +1,10 @@
---- new func ---
 
+--- new func --- ___mingw_invalidParameterHandler
 --- new bb ---
 
 C3		RETN		0x1000
---- new func ---
 
+--- new func --- _pre_c_init
 --- new bb ---
 
 83 EC 1C		SUB     ESP, 1CH		0x1010
@@ -90,8 +90,8 @@ C3		RETN		0x1101
 85 C9		TEST    ECX, ECX		0x111a
 0F 95 C0		SETNZ   AL		0x111c
 E9 3C FF FF FF		JMP     LOC_1060		0x111f
---- new func ---
 
+--- new func --- _pre_cpp_init
 --- new bb ---
 
 83 EC 2C		SUB     ESP, 2CH		0x1130
@@ -106,8 +106,8 @@ C7 04 24 1C 60 00 00		MOV     [ESP+2CH+VAR_2C], OFFSET _ARGC		0x115e
 E8 52 14 00 00		CALL    ___GETMAINARGS		0x1165
 83 C4 2C		ADD     ESP, 2CH		0x116a
 C3		RETN		0x116d
---- new func ---
 
+--- new func --- ___tmainCRTStartup
 --- new bb ---
 
 8D 4C 24 04		LEA     ECX, [ESP+ARG_0]		0x1170
@@ -399,8 +399,8 @@ E9 C1 FE FF FF		JMP     LOC_135C		0x1496
 
 89 04 24		MOV     [ESP+90H+DWMILLISECONDS], EAX; CODE		0x149b
 E8 B9 10 00 00		CALL    _EXIT		0x149e
---- new func ---
 
+--- new func --- _WinMainCRTStartup
 --- new bb ---
 
 C7 05 60 60 00 00 01 00 00 00		MOV     DS:_MINGW_APP_TYPE, 1		0x14b0
@@ -408,8 +408,8 @@ E9 B1 FC FF FF		JMP     ___TMAINCRTSTARTUP		0x14ba
 --- new bb ---
 
 8D 4C 24 04		LEA     ECX, [ESP+ARG_0]		0x1170
---- new func ---
 
+--- new func --- _mainCRTStartup
 --- new bb ---
 
 C7 05 60 60 00 00 00 00 00 00		MOV     DS:_MINGW_APP_TYPE, 0		0x14c0
@@ -417,8 +417,8 @@ E9 A1 FC FF FF		JMP     ___TMAINCRTSTARTUP		0x14ca
 --- new bb ---
 
 8D 4C 24 04		LEA     ECX, [ESP+ARG_0]		0x1170
---- new func ---
 
+--- new func --- _atexit
 --- new bb ---
 
 83 EC 1C		SUB     ESP, 1CH		0x14d0
@@ -431,8 +431,8 @@ E8 95 10 00 00		CALL    __ONEXIT		0x14da
 0F B6 C0		MOVZX   EAX, AL		0x14e7
 F7 D8		NEG     EAX		0x14ea
 C3		RETN		0x14ec
---- new func ---
 
+--- new func --- ___gcc_register_frame
 --- new bb ---
 
 55		PUSH    EBP		0x14f0
@@ -488,8 +488,8 @@ C3		RETN		0x1579
 C7 05 04 30 00 00 00 00 00 00		MOV     _DEREGISTER_FRAME_FN, 0		0x1580
 BE 00 00 00 00		MOV     ESI, 0		0x158a
 EB C0		JMP     SHORT LOC_1551		0x158f
---- new func ---
 
+--- new func --- ___gcc_deregister_frame
 --- new bb ---
 
 55		PUSH    EBP		0x15a0
@@ -516,8 +516,8 @@ FF 15 F0 70 00 00		CALL    DS:__IMP__FREELIBRARY@4; FREELIBRARY(X)		0x15c4
 
 C9		LEAVE		0x15cd
 C3		RETN		0x15ce
---- new func ---
 
+--- new func --- _main
 --- new bb ---
 
 55		PUSH    EBP		0x15d0
@@ -530,8 +530,8 @@ E8 42 0F 00 00		CALL    _PUTS		0x15e5
 B8 00 00 00 00		MOV     EAX, 0		0x15ea
 C9		LEAVE		0x15ef
 C3		RETN		0x15f0
---- new func ---
 
+--- new func --- ___do_global_dtors
 --- new bb ---
 
 A1 08 30 00 00		MOV     EAX, _P_62152		0x1600
@@ -558,8 +558,8 @@ C3		RETN		0x162a
 --- new bb ---
 
 C3		RETN		0x1630
---- new func ---
 
+--- new func --- ___do_global_ctors
 --- new bb ---
 
 53		PUSH    EBX		0x1640
@@ -601,8 +601,8 @@ C3		RETN		0x1674
 --- new bb ---
 
 EB BD		JMP     SHORT LOC_164F		0x1690
---- new func ---
 
+--- new func --- ___main
 --- new bb ---
 
 A1 3C 60 00 00		MOV     EAX, DS:_INITIALIZED		0x16a0
@@ -618,19 +618,19 @@ EB 84		JMP     SHORT ___DO_GLOBAL_CTORS		0x16ba
 --- new bb ---
 
 53		PUSH    EBX		0x1640
---- new func ---
 
+--- new func --- _my_lconv_init
 --- new bb ---
 
 FF 25 30 71 00 00		JMP     DS:__IMP____LCONV_INIT		0x16c0
---- new func ---
 
+--- new func --- __setargv
 --- new bb ---
 
 31 C0		XOR     EAX, EAX		0x16d0
 C3		RETN		0x16d2
---- new func ---
 
+--- new func --- ___dyn_tls_dtor@12
 --- new bb ---
 
 83 EC 1C		SUB     ESP, 1CH		0x16e0
@@ -657,8 +657,8 @@ E8 38 09 00 00		CALL    ___MINGW_TLSCALLBACK		0x1713
 B8 01 00 00 00		MOV     EAX, 1		0x1718
 83 C4 1C		ADD     ESP, 1CH		0x171d
 C2 0C 00		RETN    0CH		0x1720
---- new func ---
 
+--- new func --- ___dyn_tls_init@12
 --- new bb ---
 
 56		PUSH    ESI		0x1730
@@ -728,14 +728,14 @@ B8 01 00 00 00		MOV     EAX, 1		0x17bf
 5B		POP     EBX		0x17c4
 5E		POP     ESI		0x17c5
 C2 0C 00		RETN    0CH		0x17c6
---- new func ---
 
+--- new func --- ___tlregdtor
 --- new bb ---
 
 31 C0		XOR     EAX, EAX		0x17d0
 C3		RETN		0x17d2
---- new func ---
 
+--- new func --- __matherr
 --- new bb ---
 
 56		PUSH    ESI		0x17e0
@@ -777,14 +777,14 @@ E8 01 0D 00 00		CALL    _FPRINTF		0x184e
 5B		POP     TYPE		0x1858
 5E		POP     ESI		0x1859
 C3		RETN		0x185a
---- new func ---
 
+--- new func --- _fpreset
 --- new bb ---
 
 DB E3		FNINIT		0x1860
 C3		RETN		0x1862
---- new func ---
 
+--- new func --- ___report_error
 --- new bb ---
 
 53		PUSH    EBX		0x1870
@@ -805,8 +805,8 @@ E8 20 0D 00 00		CALL    ___ACRT_IOB_FUNC		0x18ab
 89 54 24 04		MOV     [ESP+1CH+ELEMENTSIZE], EDX; FORMAT		0x18bb
 E8 48 0C 00 00		CALL    _VFPRINTF		0x18bf
 E8 A3 0C 00 00		CALL    _ABORT		0x18c4
---- new func ---
 
+--- new func --- _mark_section_writable
 --- new bb ---
 
 57		PUSH    EDI		0x18d0
@@ -930,8 +930,8 @@ E8 59 FE FF FF		CALL    ___REPORT_ERROR		0x1a12
 89 5C 24 04		MOV     [ESP+3CH+LPBUFFER], ADDR		0x1a17
 C7 04 24 BC 41 00 00		MOV     [ESP+3CH+P], OFFSET AADDRESSPHASNOI; "ADDRESS %P HAS NO IMAGE-SECTION"		0x1a1b
 E8 49 FE FF FF		CALL    ___REPORT_ERROR		0x1a22
---- new func ---
 
+--- new func --- __pei386_runtime_relocator
 --- new bb ---
 
 55		PUSH    EBP		0x1a30
@@ -1163,8 +1163,8 @@ E9 28 FE FF FF		JMP     LOC_1ABA		0x1c8d
 89 44 24 04		MOV     [ESP+4], EAX		0x1c92
 C7 04 24 38 42 00 00		MOV     DWORD PTR [ESP], OFFSET AUNKNOWNPSEUDOR_0; "  UNKNOWN PSEUDO RELOCATION PROTOCOL VE"...		0x1c96
 E8 CE FB FF FF		CALL    ___REPORT_ERROR		0x1c9d
---- new func ---
 
+--- new func --- ___mingw_raise_matherr
 --- new bb ---
 
 83 EC 3C		SUB     ESP, 3CH		0x1cb0
@@ -1197,8 +1197,8 @@ DD D8		FSTP    ST		0x1cfc
 
 83 C4 3C		ADD     ESP, 3CH		0x1cfe
 C3		RETN		0x1d01
---- new func ---
 
+--- new func --- ___mingw_setusermatherr
 --- new bb ---
 
 8B 44 24 04		MOV     EAX, [ESP+F]		0x1d10
@@ -1207,8 +1207,8 @@ E9 76 08 00 00		JMP     ___SETUSERMATHERR		0x1d19
 --- new bb ---
 
 FF 25 44 71 00 00		JMP     DS:__IMP____SETUSERMATHERR		0x2594
---- new func ---
 
+--- new func --- __gnu_exception_handler@4
 --- new bb ---
 
 53		PUSH    EBX		0x1d20
@@ -1351,8 +1351,8 @@ C7 04 24 04 00 00 00		MOV     [ESP+1CH+SIGNAL], 4; SIGNAL		0x1eb1
 E8 67 06 00 00		CALL    _SIGNAL		0x1eb8
 83 C8 FF		OR      EAX, 0FFFFFFFFH		0x1ebd
 EB 90		JMP     SHORT LOC_1E52		0x1ec0
---- new func ---
 
+--- new func --- ___mingwthr_run_key_dtors.part.0
 --- new bb ---
 
 55		PUSH    EBP		0x1ed0
@@ -1406,8 +1406,8 @@ FF 15 08 71 00 00		CALL    DS:__IMP__LEAVECRITICALSECTION@4; LEAVECRITICALSECTIO
 5F		POP     EDI		0x1f3a
 5D		POP     EBP		0x1f3b
 C3		RETN		0x1f3c
---- new func ---
 
+--- new func --- ____w64_mingwthr_add_key_dtor
 --- new bb ---
 
 A1 80 60 00 00		MOV     EAX, DS:___MINGWTHR_CS_INIT		0x1f40
@@ -1451,8 +1451,8 @@ C3		RETN		0x1faf
 
 83 C8 FF		OR      NEW_KEY, 0FFFFFFFFH		0x1fb0
 EB F6		JMP     SHORT LOC_1FAB		0x1fb3
---- new func ---
 
+--- new func --- ____w64_mingwthr_remove_key_dtor
 --- new bb ---
 
 53		PUSH    EBX		0x1fc0
@@ -1517,8 +1517,8 @@ C3		RETN		0x2036
 
 89 15 7C 60 00 00		MOV     DS:_KEY_DTOR_LIST, EDX		0x2040
 EB D0		JMP     SHORT LOC_2018		0x2046
---- new func ---
 
+--- new func --- ___mingw_TLScallback
 --- new bb ---
 
 53		PUSH    EBX		0x2050
@@ -1610,8 +1610,8 @@ E8 3B F7 FF FF		CALL    _FPRESET		0x2120
 B8 01 00 00 00		MOV     EAX, 1		0x2128
 5B		POP     EBX		0x212d
 C3		RETN		0x212e
---- new func ---
 
+--- new func --- __ValidateImageBase.part.0
 --- new bb ---
 
 03 40 3C		ADD     PIMAGEBASE, [PIMAGEBASE+3CH]		0x2130
@@ -1627,8 +1627,8 @@ C3		RETN		0x2147
 
 31 C0		XOR     PNTHEADER, PNTHEADER		0x2150
 C3		RETN		0x2152
---- new func ---
 
+--- new func --- __ValidateImageBase
 --- new bb ---
 
 8B 44 24 04		MOV     EAX, [ESP+PDOSHEADER]		0x2160
@@ -1644,8 +1644,8 @@ C3		RETN		0x2172
 --- new bb ---
 
 03 40 3C		ADD     PIMAGEBASE, [PIMAGEBASE+3CH]		0x2130
---- new func ---
 
+--- new func --- __FindPESection
 --- new bb ---
 
 56		PUSH    ESI		0x2180
@@ -1686,8 +1686,8 @@ C3		RETN		0x2172
 5B		POP     RVA_0		0x21ba
 5E		POP     ESI		0x21bb
 C3		RETN		0x21bc
---- new func ---
 
+--- new func --- __FindPESectionByName
 --- new bb ---
 
 55		PUSH    EBP		0x21c0
@@ -1756,8 +1756,8 @@ C3		RETN		0x2243
 5F		POP     EDI		0x2251
 5D		POP     EBP		0x2252
 C3		RETN		0x2253
---- new func ---
 
+--- new func --- ___mingw_GetSectionForAddress
 --- new bb ---
 
 31 D2		XOR     EDX, EDX		0x2260
@@ -1815,8 +1815,8 @@ C3		RETN		0x22ce
 
 89 D0		MOV     EAX, EDX		0x22d0
 C3		RETN		0x22d2
---- new func ---
 
+--- new func --- ___mingw_GetSectionCount
 --- new bb ---
 
 31 C0		XOR     EAX, EAX		0x22e0
@@ -1835,8 +1835,8 @@ A1 3C 00 40 00		MOV     EAX, DS:40003CH		0x22fb
 --- new bb ---
 
 C3		RETN		0x2307
---- new func ---
 
+--- new func --- __FindPESectionExec
 --- new bb ---
 
 31 D2		XOR     EDX, EDX		0x2310
@@ -1886,8 +1886,8 @@ F6 42 27 20		TEST    BYTE PTR [PSECTION+27H], 20H		0x2350
 89 D0		MOV     EAX, EDX		0x2369
 5B		POP     EBX		0x236b
 C3		RETN		0x236c
---- new func ---
 
+--- new func --- __GetPEImageBase
 --- new bb ---
 
 31 D2		XOR     EDX, EDX		0x2370
@@ -1904,8 +1904,8 @@ B8 00 00 40 00		MOV     EAX, 400000H		0x2389
 
 89 D0		MOV     EAX, EDX		0x2391
 C3		RETN		0x2393
---- new func ---
 
+--- new func --- __IsNonwritableInCurrentImage
 --- new bb ---
 
 31 C0		XOR     EAX, EAX		0x23a0
@@ -1969,8 +1969,8 @@ C3		RETN		0x2410
 F7 D0		NOT     EAX		0x241d
 C1 E8 1F		SHR     EAX, 1FH		0x241f
 C3		RETN		0x2422
---- new func ---
 
+--- new func --- ___mingw_enum_import_library_names
 --- new bb ---
 
 31 C9		XOR     ECX, ECX		0x2430
@@ -2061,8 +2061,8 @@ EB 0F		JMP     SHORT LOC_24B6		0x24a5
 81 C1 00 00 40 00		ADD     ECX, 400000H		0x24ce
 89 C8		MOV     IMPORTDESC, ECX		0x24d4
 C3		RETN		0x24d6
---- new func ---
 
+--- new func --- ___chkstk_ms
 --- new bb ---
 
 51		PUSH    ECX		0x24e0
@@ -2084,144 +2084,144 @@ C3		RETN		0x24d6
 58		POP     EAX		0x2507
 59		POP     ECX		0x2508
 C3		RETN		0x2509
---- new func ---
 
+--- new func --- _vfprintf
 --- new bb ---
 
 FF 25 8C 71 00 00		JMP     DS:__IMP__VFPRINTF		0x250c
---- new func ---
 
+--- new func --- _strncmp
 --- new bb ---
 
 FF 25 88 71 00 00		JMP     DS:__IMP__STRNCMP		0x2514
---- new func ---
 
+--- new func --- _strlen
 --- new bb ---
 
 FF 25 84 71 00 00		JMP     DS:__IMP__STRLEN		0x251c
---- new func ---
 
+--- new func --- _signal
 --- new bb ---
 
 FF 25 80 71 00 00		JMP     DS:__IMP__SIGNAL		0x2524
---- new func ---
 
+--- new func --- _puts
 --- new bb ---
 
 FF 25 7C 71 00 00		JMP     DS:__IMP__PUTS		0x252c
---- new func ---
 
+--- new func --- _memcpy
 --- new bb ---
 
 FF 25 78 71 00 00		JMP     DS:__IMP__MEMCPY		0x2534
---- new func ---
 
+--- new func --- _malloc
 --- new bb ---
 
 FF 25 74 71 00 00		JMP     DS:__IMP__MALLOC		0x253c
---- new func ---
 
+--- new func --- _fwrite
 --- new bb ---
 
 FF 25 70 71 00 00		JMP     DS:__IMP__FWRITE		0x2544
---- new func ---
 
+--- new func --- _free
 --- new bb ---
 
 FF 25 6C 71 00 00		JMP     DS:__IMP__FREE		0x254c
---- new func ---
 
+--- new func --- _fprintf
 --- new bb ---
 
 FF 25 68 71 00 00		JMP     DS:__IMP__FPRINTF		0x2554
---- new func ---
 
+--- new func --- _exit
 --- new bb ---
 
 FF 25 64 71 00 00		JMP     DS:__IMP__EXIT		0x255c
---- new func ---
 
+--- new func --- _calloc
 --- new bb ---
 
 FF 25 60 71 00 00		JMP     DS:__IMP__CALLOC		0x2564
---- new func ---
 
+--- new func --- _abort
 --- new bb ---
 
 FF 25 5C 71 00 00		JMP     DS:__IMP__ABORT		0x256c
---- new func ---
 
+--- new func --- __onexit
 --- new bb ---
 
 FF 25 58 71 00 00		JMP     DS:__IMP___ONEXIT		0x2574
---- new func ---
 
+--- new func --- __initterm
 --- new bb ---
 
 FF 25 50 71 00 00		JMP     DS:__IMP___INITTERM		0x257c
---- new func ---
 
+--- new func --- __cexit
 --- new bb ---
 
 FF 25 4C 71 00 00		JMP     DS:__IMP___CEXIT		0x2584
---- new func ---
 
+--- new func --- __amsg_exit
 --- new bb ---
 
 FF 25 48 71 00 00		JMP     DS:__IMP___AMSG_EXIT		0x258c
---- new func ---
 
+--- new func --- ___setusermatherr
 --- new bb ---
 
 FF 25 44 71 00 00		JMP     DS:__IMP____SETUSERMATHERR		0x2594
---- new func ---
 
+--- new func --- ___set_app_type
 --- new bb ---
 
 FF 25 40 71 00 00		JMP     DS:__IMP____SET_APP_TYPE		0x259c
---- new func ---
 
+--- new func --- ___p__fmode
 --- new bb ---
 
 FF 25 3C 71 00 00		JMP     DS:__IMP____P__FMODE		0x25a4
---- new func ---
 
+--- new func --- ___p__commode
 --- new bb ---
 
 FF 25 38 71 00 00		JMP     DS:__IMP____P__COMMODE		0x25ac
---- new func ---
 
+--- new func --- ___p__acmdln
 --- new bb ---
 
 FF 25 34 71 00 00		JMP     DS:__IMP____P__ACMDLN		0x25b4
---- new func ---
 
+--- new func --- ___getmainargs
 --- new bb ---
 
 FF 25 28 71 00 00		JMP     DS:__IMP____GETMAINARGS		0x25bc
---- new func ---
 
+--- new func --- ___acrt_iob_func
 --- new bb ---
 
 8B 44 24 04		MOV     EAX, [ESP+INDEX]		0x25d0
 C1 E0 05		SHL     EAX, 5		0x25d4
 03 05 54 71 00 00		ADD     EAX, DS:__IMP___IOB		0x25d7
 C3		RETN		0x25dd
---- new func ---
 
+--- new func --- __get_invalid_parameter_handler
 --- new bb ---
 
 A1 B0 60 00 00		MOV     EAX, DS:_BSS_0		0x25e0
 C3		RETN		0x25e5
---- new func ---
 
+--- new func --- __set_invalid_parameter_handler
 --- new bb ---
 
 8B 44 24 04		MOV     EAX, [ESP+NEW_HANDLER]		0x25f0
 87 05 B0 60 00 00		XCHG    EAX, DS:_BSS_0		0x25f4
 C3		RETN		0x25fa
---- new func ---
 
+--- new func --- _register_frame_ctor
 --- new bb ---
 
 E9 EB EE FF FF		JMP     ___GCC_REGISTER_FRAME		0x2600

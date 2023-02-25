@@ -127,12 +127,17 @@ def run(filepath):
                 skip_adding = False
                 f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + 
                     block_instr['opcode'].upper() + '\n')
-                list_instr.append(block_instr['opcode'].upper())
-                x.update(bytes(block_instr['opcode'].split(' ')[0].upper().strip(), 'UTF-8'))
+                mnemonic = block_instr['opcode'].upper().split(' ')[0]
+                norm_instr = block_instr['opcode'].upper()
+                if mnemonic in cond_jump_instructions:
+                    norm_instr = 'JZ ' + block_instr['opcode'].upper().split(' ')[1]
+                elif 'RETN' in mnemonic:
+                    norm_instr = 'RET'
+                list_instr.append(norm_instr.upper())
+                x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
 
-                mnemonic = block_instr['opcode'].upper().split(' ')[0]
                 if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     jump_addr = block_instr['opcode'].upper().split(' ')[-1]
@@ -172,7 +177,7 @@ def run(filepath):
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RET' in mnemonic:
+                if 'RET' in mnemonic or 'RETN' in mnemonic:
                     has_return = True
 
                 if split_bb:

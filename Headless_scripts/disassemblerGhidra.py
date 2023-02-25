@@ -95,11 +95,16 @@ def run():
             skip_adding = False
             f.write(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in instr.getBytes()]).upper() + '\t\t' + instr.toString() + '\n')
             list_bytes.append(f' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in instr.getBytes()]).upper())
-            list_instr.append(f'{instr}')
-            list_addr.append(f'{hex(instr.getAddress().getOffset())}')
-            x.update(bytes(instr.getMnemonicString().split(' ')[0].upper().strip(), 'UTF-8'))
-
             mnemonic = instr.toString().split(' ')[0]
+            norm_instr = instr.toString()
+            if mnemonic in cond_jump_instructions:
+                norm_instr = 'JZ ' + instr.toString().split(' ')[1]
+            elif 'RETN' in mnemonic:
+                norm_instr = 'RET'
+            list_instr.append(f'{norm_instr}')
+            list_addr.append(f'{hex(instr.getAddress().getOffset())}')
+            x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
+
             if mnemonic in cond_jump_instructions:
                 conditional_jump = True
                 jump_addr = instr.toString().split(' ')[-1]
@@ -140,7 +145,7 @@ def run():
                     list_edges.append("UnresolvableCallTarget")
                 
                 list_edge_attr.append("Call")
-            if 'RET' in instr.toString():
+            if 'RET' in instr.toString() or 'RETN' in instr.toString():
                 has_return = True
 
             if split_bb:

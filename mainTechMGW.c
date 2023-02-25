@@ -25,7 +25,7 @@ int conditional_jumps_with_same_target(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
     puts("Conditional jumps with same target");
-    __asm__("jz . + 13;\n\t"
+    asm inline("jz . + 13;\n\t"
         "jnz . + 7;\n\t"
         ".byte 0xe8;\n\t");
     int resSub = subtraction(resAdd, var2);

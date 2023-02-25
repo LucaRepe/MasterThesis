@@ -50,6 +50,15 @@ def run():
     plt.legend(handles=legend_elements, loc='upper right')
     plt.show()
 
+    colors = nx.get_edge_attributes(radare_purged, 'color').values()
+    nx.draw_networkx(radare_purged, edge_color=colors, arrows=True)
+    plt.legend(handles=legend_elements, loc='upper right')
+    plt.show()
+
+    colors = nx.get_edge_attributes(angr_purged, 'color').values()
+    nx.draw_networkx(angr, edge_color=colors, arrows=True)
+    plt.legend(handles=legend_elements, loc='upper right')
+    plt.show()
 
 
 if __name__ == '__main__':

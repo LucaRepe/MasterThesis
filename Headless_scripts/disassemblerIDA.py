@@ -88,12 +88,17 @@ def run():
             while cur_addr <= end:
                 skip_adding = False
                 log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\t\t' + hex(cur_addr)+ '\n')
-                list_instr.append(idc.GetDisasm(cur_addr).upper())
-                x.update(bytes(idc.GetDisasm(cur_addr).split(' ')[0].upper().strip(), 'UTF-8'))
+                mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
+                norm_instr = idc.GetDisasm(cur_addr).upper()
+                if mnemonic in cond_jump_instructions:
+                    norm_instr = 'JZ ' + idc.get_operand_value(cur_addr,0)
+                elif 'RETN' in mnemonic:
+                    norm_instr = 'RET'
+                list_instr.append(norm_instr)
+                x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
                 list_addr.append(hex(cur_addr))
 
-                mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 if mnemonic in cond_jump_instructions:
                     conditional_jump = True
                     arg_addr = idc.get_operand_value(cur_addr,0)
@@ -127,7 +132,7 @@ def run():
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RETN' in mnemonic or 'RET' in mnemonic:
+                if 'RET' in mnemonic or 'RETN' in mnemonic:
                     has_return = True
 
                 if split_bb:

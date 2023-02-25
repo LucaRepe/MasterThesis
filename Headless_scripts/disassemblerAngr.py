@@ -66,8 +66,13 @@ def run():
                 f.write(' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper() + '\t\t' + i.mnemonic.upper() +
                         " " + i.op_str.upper() + '\n')
                 list_bytes.append(f' '.join(re.findall(r'.{1,2}', i.insn.bytes.hex())).upper())
-                list_instr.append(f'{i.mnemonic} {i.op_str}'.upper())
-                x.update(bytes(i.mnemonic.upper().strip(), 'UTF-8'))
+                norm_instr = i.mnemonic.upper() + ' ' + i.op_str.upper()    
+                if i.mnemonic.upper() in cond_jump_instructions:
+                    norm_instr = 'JZ ' + i.op_str.upper()
+                elif 'RETN' in i.mnemonic.upper():
+                    norm_instr = 'RET'
+                list_instr.append(f'{norm_instr}'.upper())
+                x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
                 list_addr.append(f'{hex(i.address)}')
 
                 if i.mnemonic.upper() in cond_jump_instructions:
@@ -108,7 +113,7 @@ def run():
                         indir_call = True
                         list_edges.append("UnresolvableCallTarget")
                     list_edge_attr.append("Call")
-                if 'RET' in i.mnemonic.upper():
+                if 'RET' in i.mnemonic.upper() or 'RETN' in i.mnemonic.upper():
                     has_return = True
 
             bb = BasicBlock()

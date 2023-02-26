@@ -1,6 +1,9 @@
 import pickle
 import networkx as nx
 
+def return_eq(node1, node2):
+    return node1['unique_hash_identifier']==node2['unique_hash_identifier']
+
 def run():
     radare_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_purged.p", "rb"))
     angr_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "rb"))
@@ -159,6 +162,7 @@ def run():
     print(f'{"indir_jump_count "} {indir_jump_count}')
     print(f'{"ret_count "} {ret_count}' '\n')
 
+    print(nx.graph_edit_distance(ghidra_purged, radare_purged))
 
 if __name__ == '__main__':
     run()

@@ -26,6 +26,7 @@ class BasicBlock:
     start_addr: int
     list_bytes: List[List]
     list_instr: List[str]
+    list_instr_norm: List[str]
     list_addr: List[int]
     list_edges: List[int]
     list_edge_attr: List[str]
@@ -63,14 +64,13 @@ def run():
     block = blocks.next()
 
     while block:
-        # print(block.getName())
-        # print(block.getMinAddress())
         functionManager = currentProgram.getFunctionManager()
         listing = currentProgram.getListing()
         ins_iter = listing.getInstructions(block, True)
 
         list_bytes = list()
         list_instr = list()
+        list_instr_norm = list()
         list_addr = list()
         list_edges = list()
         list_edge_attr = list()
@@ -101,7 +101,8 @@ def run():
                 norm_instr = 'JZ ' + instr.toString().split(' ')[1]
             elif 'RETN' in mnemonic:
                 norm_instr = 'RET'
-            list_instr.append(f'{norm_instr}')
+            list_instr.append(f'{instr}')
+            list_instr_norm.append(f'{norm_instr}')
             list_addr.append(f'{hex(instr.getAddress().getOffset())}')
             x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
 
@@ -160,6 +161,7 @@ def run():
                 bb.start_addr = hex(int(list_addr[0], 16))
                 bb.list_bytes = list_bytes.copy()
                 bb.list_instr = list_instr.copy()
+                bb.list_instr_norm = list_instr_norm.copy()
                 bb.list_addr = list_addr.copy()
                 bb.list_edges = list_edges.copy()
                 bb.list_edge_attr = list_edge_attr.copy()
@@ -172,15 +174,15 @@ def run():
                 bb.has_return = has_return_copy
                 bb.unique_hash_identifier = x.intdigest()
                 if len(list_instr) != 0:
-                    g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
-                            edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
-                            dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
-                            cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
-                            indir_jump=bb.indirect_jump, has_return=bb.has_return,
+                    g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm, bytes=bb.list_bytes,
+                            addr=bb.list_addr, edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
+                            dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call, cond_jump=bb.conditional_jump,
+                            dir_jump=bb.direct_jump, indir_jump=bb.indirect_jump, has_return=bb.has_return,
                             unique_hash_identifier=bb.unique_hash_identifier)
 
                     list_bytes.clear()
                     list_instr.clear()
+                    list_instr_norm.clear()
                     list_addr.clear()
                     list_edges.clear()
                     list_edge_attr.clear()
@@ -201,6 +203,7 @@ def run():
             bb_not_splitted.start_addr = hex(int(list_addr[0], 16))
             bb_not_splitted.list_bytes = list_bytes
             bb_not_splitted.list_instr = list_instr
+            bb_not_splitted.list_instr_norm = list_instr_norm
             bb_not_splitted.list_addr = list_addr
             bb_not_splitted.list_edges = list_edges
             bb_not_splitted.list_edge_attr = list_edge_attr
@@ -213,8 +216,9 @@ def run():
             bb_not_splitted.has_return = has_return
             bb_not_splitted.unique_hash_identifier = x.intdigest()
             if len(list_instr) != 0:
-                g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr,
-                        edges=bb_not_splitted.list_edges, edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
+                g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, instr_norm=bb_not_splitted.list_instr_norm,
+                        bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr,edges=bb_not_splitted.list_edges,
+                        edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
                         dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
                         cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
                         indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,

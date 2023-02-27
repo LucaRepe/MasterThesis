@@ -16,6 +16,7 @@ class BasicBlock:
     start_addr: int
     list_bytes: List[List]
     list_instr: List[str]
+    list_instr_norm: List[str]
     list_addr: List[int]
     list_edges: List[int]
     list_edge_attr: List[str]
@@ -106,6 +107,7 @@ def run(filepath):
             block_info = r2.cmdj("pdbj@" + str(block['addr']))
             list_bytes = list()
             list_instr = list()
+            list_instr_norm = list()
             list_addr = list()
             list_edges = list()
             list_edge_attr = list()
@@ -133,7 +135,8 @@ def run(filepath):
                     norm_instr = 'JZ ' + block_instr['opcode'].upper().split(' ')[1]
                 elif 'RETN' in mnemonic:
                     norm_instr = 'RET'
-                list_instr.append(norm_instr.upper())
+                list_instr.append(block_instr['opcode'].upper())
+                list_instr_norm.append(norm_instr.upper())
                 x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())))
                 list_addr.append(hex(block_instr['offset']))
@@ -192,6 +195,7 @@ def run(filepath):
                     bb.start_addr = hex(int(list_addr[0], 16))
                     bb.list_bytes = list_bytes.copy()
                     bb.list_instr = list_instr.copy()
+                    bb.list_instr_norm = list_instr_norm.copy()
                     bb.list_addr = list_addr.copy()
                     bb.list_edges = list_edges.copy()
                     bb.list_edge_attr = list_edge_attr.copy()
@@ -204,15 +208,16 @@ def run(filepath):
                     bb.has_return = has_return_copy
                     bb.unique_hash_identifier = x.intdigest()
                     if len(list_instr) != 0:
-                        g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
-                                   edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
-                                   dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
-                                   cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
-                                   indir_jump=bb.indirect_jump, has_return=bb.has_return,
-                                   unique_hash_identifier=bb.unique_hash_identifier)
+                        g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm, bytes=bb.list_bytes,
+                                   addr=bb.list_addr, edges=bb.list_edges, edge_attr=bb.list_edge_attr,
+                                   func_beg=bb.function_beginning, dir_call=bb.direct_fun_call,
+                                   indir_call=bb.indirect_fun_call, cond_jump=bb.conditional_jump,
+                                   dir_jump=bb.direct_jump, indir_jump=bb.indirect_jump,
+                                   has_return=bb.has_return, unique_hash_identifier=bb.unique_hash_identifier)
 
                         list_bytes.clear()
                         list_instr.clear()
+                        list_instr_norm.clear()
                         list_addr.clear()
                         list_edges.clear()
                         list_edge_attr.clear()
@@ -233,6 +238,7 @@ def run(filepath):
                 bb_not_splitted.start_addr = hex(int(list_addr[0], 16))
                 bb_not_splitted.list_bytes = list_bytes
                 bb_not_splitted.list_instr = list_instr
+                bb_not_splitted.list_instr_norm = list_instr_norm
                 bb_not_splitted.list_addr = list_addr
                 bb_not_splitted.list_edges = list_edges
                 bb_not_splitted.list_edge_attr = list_edge_attr
@@ -245,12 +251,13 @@ def run(filepath):
                 bb_not_splitted.has_return = has_return
                 bb_not_splitted.unique_hash_identifier = x.intdigest()
                 if len(list_instr) != 0:
-                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr,
-                            edges=bb_not_splitted.list_edges, edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
-                            dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
-                            cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
-                            indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
-                            unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
+                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, instr_norm=bb_not_splitted.list_instr_norm,
+                               bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr, edges=bb_not_splitted.list_edges,
+                               edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
+                               dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
+                               cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
+                               indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
+                               unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
                 skip_adding = False
                 
     list_sorted = sorted(list(g.nodes))[1:]

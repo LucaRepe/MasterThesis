@@ -15,6 +15,7 @@ class BasicBlock:
     start_addr: int
     list_bytes: List[List]
     list_instr: List[str]
+    list_instr_norm: List[str]
     list_addr: List[int]
     list_edges: List[int]
     list_edge_attr: List[str]
@@ -47,6 +48,7 @@ def run():
             c = block.capstone
             list_bytes = list()
             list_instr = list()
+            list_instr_norm = list()
             list_addr = list()
             list_edges = list()
             list_edge_attr = list()
@@ -71,7 +73,8 @@ def run():
                     norm_instr = 'JZ ' + i.op_str.upper()
                 elif 'RETN' in i.mnemonic.upper():
                     norm_instr = 'RET'
-                list_instr.append(f'{norm_instr}'.upper())
+                list_instr.append(f'{i.mnemonic} {i.op_str}'.upper())
+                list_instr_norm.append(f'{norm_instr}'.upper())
                 x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
                 list_addr.append(f'{hex(i.address)}')
 
@@ -120,6 +123,7 @@ def run():
             bb.start_addr = hex(block.addr)
             bb.list_bytes = list_bytes
             bb.list_instr = list_instr
+            bb.list_instr_norm = list_instr_norm
             bb.list_addr = list_addr
             bb.list_edges = list_edges
             bb.list_edge_attr = list_edge_attr
@@ -132,11 +136,11 @@ def run():
             bb.has_return = has_return
             bb.unique_hash_identifier = x.intdigest()
             if len(list_instr) != 0:
-                g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
-                           edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
-                           dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
-                           cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
-                           indir_jump=bb.indirect_jump, has_return=bb.has_return,
+                g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm, bytes=bb.list_bytes,
+                           addr=bb.list_addr, edges=bb.list_edges, edge_attr=bb.list_edge_attr,
+                           func_beg=bb.function_beginning, dir_call=bb.direct_fun_call,
+                           indir_call=bb.indirect_fun_call, cond_jump=bb.conditional_jump,
+                           dir_jump=bb.direct_jump, indir_jump=bb.indirect_jump, has_return=bb.has_return,
                            unique_hash_identifier=bb.unique_hash_identifier)
 
     list_sorted = sorted(list(g.nodes))[1:]

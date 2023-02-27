@@ -22,6 +22,7 @@ class BasicBlock:
     start_addr: int
     list_bytes: List[List]
     list_instr: List[str]
+    list_instr_norm: List[str]
     list_addr: List[int]
     list_edges: List[int]
     list_edge_attr: List[str]
@@ -57,14 +58,15 @@ def run():
         if flags & idc.FUNC_LIB:
             continue
 
-        log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
+        # log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
         
         flowchart = idaapi.FlowChart(idaapi.get_func(func))
         for bb in flowchart:
-            log('--- new bb ---\n\n')
+            # log('--- new bb ---\n\n')
 
             list_bytes = list()
             list_instr = list()
+            list_instr_norm = list()
             list_addr = list()
             list_edges = list()
             list_edge_attr = list()
@@ -91,10 +93,11 @@ def run():
                 mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 norm_instr = idc.GetDisasm(cur_addr).upper()
                 if mnemonic in cond_jump_instructions:
-                    norm_instr = 'JZ ' + idc.get_operand_value(cur_addr,0)
+                    norm_instr = 'JZ ' + hex(idc.get_operand_value(cur_addr,0))
                 elif 'RETN' in mnemonic:
                     norm_instr = 'RET'
-                list_instr.append(norm_instr)
+                list_instr.append(idc.GetDisasm(cur_addr).upper())
+                list_instr_norm.append(norm_instr)
                 x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
                 list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
                 list_addr.append(hex(cur_addr))
@@ -136,8 +139,8 @@ def run():
                     has_return = True
 
                 if split_bb:
-                    if hex(int(list_addr[0], 16)) in nodes_set:
-                        continue
+                    # if hex(int(list_addr[0], 16)) in nodes_set:
+                        # continue
                     nodes_set.add(hex(int(list_addr[0], 16)))
                     bb = BasicBlock()
                     func_beg_copy = func_beg
@@ -150,6 +153,7 @@ def run():
                     bb.start_addr = hex(int(list_addr[0], 16))
                     bb.list_bytes = list_bytes.copy()
                     bb.list_instr = list_instr.copy()
+                    bb.list_instr_norm = list_instr_norm.copy()
                     bb.list_addr = list_addr.copy()
                     bb.list_edges = list_edges.copy()
                     bb.list_edge_attr = list_edge_attr.copy()
@@ -162,7 +166,7 @@ def run():
                     bb.has_return = has_return_copy
                     bb.unique_hash_identifier = x.intdigest()
                     if len(list_instr) != 0:
-                        g.add_node(bb.start_addr, instr=bb.list_instr, bytes=bb.list_bytes, addr=bb.list_addr,
+                        g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm, bytes=bb.list_bytes, addr=bb.list_addr,
                                    edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
                                    dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
                                    cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
@@ -171,6 +175,7 @@ def run():
 
                         list_bytes.clear()
                         list_instr.clear()
+                        list_instr_norm.clear()
                         list_addr.clear()
                         list_edges.clear()
                         list_edge_attr.clear()
@@ -189,13 +194,14 @@ def run():
 
             if not skip_adding:
                 skip_adding = False
-                if hex(int(list_addr[0], 16)) in nodes_set:
-                    continue
+                # if hex(int(list_addr[0], 16)) in nodes_set:
+                    # continue
                 nodes_set.add(hex(int(list_addr[0], 16)))
                 bb_not_splitted = BasicBlock()
                 bb_not_splitted.start_addr = hex(int(list_addr[0], 16))
                 bb_not_splitted.list_bytes = list_bytes
                 bb_not_splitted.list_instr = list_instr
+                bb_not_splitted.list_instr_norm = list_instr_norm
                 bb_not_splitted.list_addr = list_addr
                 bb_not_splitted.list_edges = list_edges
                 bb_not_splitted.list_edge_attr = list_edge_attr
@@ -208,12 +214,13 @@ def run():
                 bb_not_splitted.has_return = has_return
                 bb_not_splitted.unique_hash_identifier = x.intdigest()
                 if len(list_instr) != 0:
-                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr,
-                            edges=bb_not_splitted.list_edges, edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
-                            dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
-                            cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
-                            indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
-                            unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
+                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, instr_norm=bb_not_splitted.list_instr_norm,
+                                bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr, edges=bb_not_splitted.list_edges, 
+                                edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning, 
+                                dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
+                                cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
+                                indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
+                                unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
                 skip_adding = False
 
 

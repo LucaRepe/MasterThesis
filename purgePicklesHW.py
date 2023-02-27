@@ -4,8 +4,8 @@ import pickle
 def purge(graph, max_addr, min_addr):
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
-            continue
-        if int(node,16) < min_addr or int(node,16) > max_addr:
+            graph.remove_node(node)
+        elif int(node,16) < min_addr or int(node,16) > max_addr:
             graph.remove_node(node)
     return graph
 

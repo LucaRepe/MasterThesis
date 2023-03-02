@@ -45,18 +45,17 @@ def run():
     log = f.write
 
     idc.auto_wait()
-    idaapi.rebase_program(-0x400000, 0x0000)
+    idaapi.rebase_program(-1*idaapi.get_imagebase(), 0)
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
      'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
      'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
-    nodes_set = set()
 
     for func in idautils.Functions():
 
-        # log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
+        log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
         
-        flowchart = idaapi.FlowChart(idaapi.get_func(func))
+        flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT)#  and idaapi.FC_CALL_ENDS)
         for bb in flowchart:
             # log('--- new bb ---\n\n')
 
@@ -85,7 +84,7 @@ def run():
             
             while cur_addr <= end:
                 skip_adding = False
-                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\t\t' + hex(cur_addr)+ '\n')
+                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\n')
                 mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 norm_instr = idc.GetDisasm(cur_addr).upper()
                 if mnemonic in cond_jump_instructions:
@@ -135,9 +134,6 @@ def run():
                     has_return = True
 
                 if split_bb:
-                    # if hex(int(list_addr[0], 16)) in nodes_set:
-                        # continue
-                    nodes_set.add(hex(int(list_addr[0], 16)))
                     bb = BasicBlock()
                     func_beg_copy = func_beg
                     dir_call_copy = dir_call
@@ -190,9 +186,6 @@ def run():
 
             if not skip_adding:
                 skip_adding = False
-                # if hex(int(list_addr[0], 16)) in nodes_set:
-                    # continue
-                nodes_set.add(hex(int(list_addr[0], 16)))
                 bb_not_splitted = BasicBlock()
                 bb_not_splitted.start_addr = hex(int(list_addr[0], 16))
                 bb_not_splitted.list_bytes = list_bytes

@@ -1,4990 +1,2264 @@
 
 --- new func --- sub_1005
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1005
-End addr 0x100a
-Current 0x1005
-E9 0D 12 00 00		JMP     SUB_2217		0x1005
---- new bb ---
-Start addr 0x2217
-End addr 0x2217
-skip bb 
+JMP     SUB_2217		0x1005
 
 --- new func --- sub_100F
-FlowChart size is  2
 --- new bb ---
-Start addr 0x100f
-End addr 0x1014
-Current 0x100f
-E9 77 1C 00 00		JMP     SUB_2C8B		0x100f
---- new bb ---
-Start addr 0x2c8b
-End addr 0x2c8b
-skip bb 
+JMP     SUB_2C8B		0x100f
 
 --- new func --- start
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1014
-End addr 0x1019
-Current 0x1014
-E9 B9 09 00 00		JMP     START_0		0x1014
---- new bb ---
-Start addr 0x19d2
-End addr 0x19d2
-skip bb 
+JMP     START_0		0x1014
 
 --- new func --- sub_101E
-FlowChart size is  2
 --- new bb ---
-Start addr 0x101e
-End addr 0x1023
-Current 0x101e
-E9 6F 0F 00 00		JMP     SUB_1F92		0x101e
---- new bb ---
-Start addr 0x1f92
-End addr 0x1f92
-skip bb 
+JMP     SUB_1F92		0x101e
 
 --- new func --- j_nullsub_2
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1023
-End addr 0x1028
-Current 0x1023
-E9 22 0F 00 00		JMP     NULLSUB_2		0x1023
---- new bb ---
-Start addr 0x1f4a
-End addr 0x1f4a
-skip bb 
+JMP     NULLSUB_2		0x1023
 
 --- new func --- sub_102D
-FlowChart size is  2
 --- new bb ---
-Start addr 0x102d
-End addr 0x1032
-Current 0x102d
-E9 5A 0F 00 00		JMP     SUB_1F8C		0x102d
---- new bb ---
-Start addr 0x1f8c
-End addr 0x1f8c
-skip bb 
+JMP     SUB_1F8C		0x102d
 
 --- new func --- sub_1037
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1037
-End addr 0x103c
-Current 0x1037
-E9 63 11 00 00		JMP     SUB_219F		0x1037
---- new bb ---
-Start addr 0x219f
-End addr 0x219f
-skip bb 
+JMP     SUB_219F		0x1037
 
 --- new func --- sub_104B
-FlowChart size is  2
 --- new bb ---
-Start addr 0x104b
-End addr 0x1050
-Current 0x104b
-E9 AD 0E 00 00		JMP     SUB_1EFD		0x104b
---- new bb ---
-Start addr 0x1efd
-End addr 0x1efd
-skip bb 
+JMP     SUB_1EFD		0x104b
 
 --- new func --- j___SEH_prolog4
-FlowChart size is  2
 --- new bb ---
-Start addr 0x106e
-End addr 0x1073
-Current 0x106e
-E9 1D 12 00 00		JMP     __SEH_PROLOG4		0x106e
---- new bb ---
-Start addr 0x2290
-End addr 0x2290
-skip bb 
+JMP     __SEH_PROLOG4		0x106e
 
 --- new func --- j___get_startup_file_mode
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1073
-End addr 0x1078
-Current 0x1073
-E9 79 0E 00 00		JMP     __GET_STARTUP_FILE_MODE		0x1073
---- new bb ---
-Start addr 0x1ef1
-End addr 0x1ef1
-skip bb 
+JMP     __GET_STARTUP_FILE_MODE		0x1073
 
 --- new func --- UserMathErrorFunction
-FlowChart size is  2
 --- new bb ---
-Start addr 0x107d
-End addr 0x1082
-Current 0x107d
-E9 65 0E 00 00		JMP     USERMATHERRORFUNCTION_0		0x107d
---- new bb ---
-Start addr 0x1ee7
-End addr 0x1ee7
-skip bb 
+JMP     USERMATHERRORFUNCTION_0		0x107d
 
 --- new func --- sub_1087
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1087
-End addr 0x108c
-Current 0x1087
-E9 FC 1B 00 00		JMP     SUB_2C88		0x1087
---- new bb ---
-Start addr 0x2c88
-End addr 0x2c88
-skip bb 
+JMP     SUB_2C88		0x1087
 
 --- new func --- sub_108C
-FlowChart size is  2
 --- new bb ---
-Start addr 0x108c
-End addr 0x1091
-Current 0x108c
-E9 5D 0E 00 00		JMP     SUB_1EEE		0x108c
---- new bb ---
-Start addr 0x1eee
-End addr 0x1eee
-skip bb 
+JMP     SUB_1EEE		0x108c
 
 --- new func --- j____scrt_is_nonwritable_in_current_image
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1091
-End addr 0x1096
-Current 0x1091
-E9 08 0C 00 00		JMP     ___SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x1091
---- new bb ---
-Start addr 0x1c9e
-End addr 0x1c9e
-skip bb 
+JMP     ___SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x1091
 
 --- new func --- sub_1096
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1096
-End addr 0x109b
-Current 0x1096
-E9 F0 1B 00 00		JMP     SUB_2C8B		0x1096
---- new bb ---
-Start addr 0x2c8b
-End addr 0x2c8b
-skip bb 
+JMP     SUB_2C8B		0x1096
 
 --- new func --- j____scrt_initialize_onexit_tables
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10a0
-End addr 0x10a5
-Current 0x10a0
-E9 51 0B 00 00		JMP     ___SCRT_INITIALIZE_ONEXIT_TABLES		0x10a0
---- new bb ---
-Start addr 0x1bf6
-End addr 0x1bf6
-skip bb 
+JMP     ___SCRT_INITIALIZE_ONEXIT_TABLES		0x10a0
 
 --- new func --- sub_10AA
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10aa
-End addr 0x10af
-Current 0x10aa
-E9 48 0E 00 00		JMP     SUB_1EF7		0x10aa
---- new bb ---
-Start addr 0x1ef7
-End addr 0x1ef7
-skip bb 
+JMP     SUB_1EF7		0x10aa
 
 --- new func --- sub_10B4
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10b4
-End addr 0x10b9
-Current 0x10b4
-E9 57 03 00 00		JMP     LOC_1410		0x10b4
---- new bb ---
-Start addr 0x1410
-End addr 0x1410
-skip bb 
+JMP     LOC_1410		0x10b4
 
 --- new func --- j____scrt_initialize_default_local_stdio_options
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10b9
-End addr 0x10be
-Current 0x10b9
-E9 9B 0E 00 00		JMP     ___SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS		0x10b9
---- new bb ---
-Start addr 0x1f59
-End addr 0x1f59
-skip bb 
+JMP     ___SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS		0x10b9
 
 --- new func --- j____scrt_release_startup_lock
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10be
-End addr 0x10c3
-Current 0x10be
-E9 94 0C 00 00		JMP     ___SCRT_RELEASE_STARTUP_LOCK		0x10be
---- new bb ---
-Start addr 0x1d57
-End addr 0x1d57
-skip bb 
+JMP     ___SCRT_RELEASE_STARTUP_LOCK		0x10be
 
 --- new func --- j____scrt_uninitialize_crt
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10c3
-End addr 0x10c8
-Current 0x10c3
-E9 B3 0C 00 00		JMP     ___SCRT_UNINITIALIZE_CRT		0x10c3
---- new bb ---
-Start addr 0x1d7b
-End addr 0x1d7b
-skip bb 
+JMP     ___SCRT_UNINITIALIZE_CRT		0x10c3
 
 --- new func --- sub_10C8
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10c8
-End addr 0x10cd
-Current 0x10c8
-E9 BB 1B 00 00		JMP     SUB_2C88		0x10c8
---- new bb ---
-Start addr 0x2c88
-End addr 0x2c88
-skip bb 
+JMP     SUB_2C88		0x10c8
 
 --- new func --- sub_10CD
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10cd
-End addr 0x10d2
-Current 0x10cd
-E9 7C 11 00 00		JMP     SUB_224E		0x10cd
---- new bb ---
-Start addr 0x224e
-End addr 0x224e
-skip bb 
+JMP     SUB_224E		0x10cd
 
 --- new func --- j____scrt_is_ucrt_dll_in_use
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10d2
-End addr 0x10d7
-Current 0x10d2
-E9 8A 16 00 00		JMP     ___SCRT_IS_UCRT_DLL_IN_USE		0x10d2
---- new bb ---
-Start addr 0x2761
-End addr 0x2761
-skip bb 
+JMP     ___SCRT_IS_UCRT_DLL_IN_USE		0x10d2
 
 --- new func --- sub_10D7
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10d7
-End addr 0x10dc
-Current 0x10d7
-E9 3C 14 00 00		JMP     SUB_2518		0x10d7
---- new bb ---
-Start addr 0x2518
-End addr 0x2518
-skip bb 
+JMP     SUB_2518		0x10d7
 
 --- new func --- j____scrt_fastfail
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10e6
-End addr 0x10eb
-Current 0x10e6
-E9 AD 0E 00 00		JMP     ___SCRT_FASTFAIL		0x10e6
---- new bb ---
-Start addr 0x1f98
-End addr 0x1f98
-skip bb 
+JMP     ___SCRT_FASTFAIL		0x10e6
 
 --- new func --- sub_10EB
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10eb
-End addr 0x10f0
-Current 0x10eb
-E9 A1 1B 00 00		JMP     SUB_2C91		0x10eb
---- new bb ---
-Start addr 0x2c91
-End addr 0x2c91
-skip bb 
+JMP     SUB_2C91		0x10eb
 
 --- new func --- j__atexit
-FlowChart size is  2
 --- new bb ---
-Start addr 0x10f0
-End addr 0x10f5
-Current 0x10f0
-E9 1B 0D 00 00		JMP     _ATEXIT		0x10f0
---- new bb ---
-Start addr 0x1e10
-End addr 0x1e10
-skip bb 
+JMP     _ATEXIT		0x10f0
 
 --- new func --- sub_1104
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1104
-End addr 0x1109
-Current 0x1104
-E9 74 0E 00 00		JMP     SUB_1F7D		0x1104
---- new bb ---
-Start addr 0x1f7d
-End addr 0x1f7d
-skip bb 
+JMP     SUB_1F7D		0x1104
 
 --- new func --- j___onexit
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1109
-End addr 0x110e
-Current 0x1109
-E9 9F 0C 00 00		JMP     __ONEXIT		0x1109
---- new bb ---
-Start addr 0x1dad
-End addr 0x1dad
-skip bb 
+JMP     __ONEXIT		0x1109
 
 --- new func --- sub_110E
-FlowChart size is  2
 --- new bb ---
-Start addr 0x110e
-End addr 0x1113
-Current 0x110e
-E9 23 10 00 00		JMP     SUB_2136		0x110e
---- new bb ---
-Start addr 0x2136
-End addr 0x2136
-skip bb 
+JMP     SUB_2136		0x110e
 
 --- new func --- sub_1127
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1127
-End addr 0x112c
-Current 0x1127
-E9 59 1B 00 00		JMP     SUB_2C85		0x1127
---- new bb ---
-Start addr 0x2c85
-End addr 0x2c85
-skip bb 
+JMP     SUB_2C85		0x1127
 
 --- new func --- sub_1140
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1140
-End addr 0x1145
-Current 0x1140
-E9 40 1B 00 00		JMP     SUB_2C85		0x1140
---- new bb ---
-Start addr 0x2c85
-End addr 0x2c85
-skip bb 
+JMP     SUB_2C85		0x1140
 
 --- new func --- j_nullsub_1
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1145
-End addr 0x114a
-Current 0x1145
-E9 F9 11 00 00		JMP     NULLSUB_1		0x1145
---- new bb ---
-Start addr 0x2343
-End addr 0x2343
-skip bb 
+JMP     NULLSUB_1		0x1145
 
 --- new func --- sub_114A
-FlowChart size is  2
 --- new bb ---
-Start addr 0x114a
-End addr 0x114f
-Current 0x114a
-E9 21 05 00 00		JMP     SUB_1670		0x114a
---- new bb ---
-Start addr 0x1670
-End addr 0x1670
-skip bb 
+JMP     SUB_1670		0x114a
 
 --- new func --- sub_114F
-FlowChart size is  2
 --- new bb ---
-Start addr 0x114f
-End addr 0x1154
-Current 0x114f
-E9 A6 0D 00 00		JMP     SUB_1EFA		0x114f
---- new bb ---
-Start addr 0x1efa
-End addr 0x1efa
-skip bb 
+JMP     SUB_1EFA		0x114f
 
 --- new func --- sub_1154
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1154
-End addr 0x1159
-Current 0x1154
-E9 E2 0F 00 00		JMP     SUB_213B		0x1154
---- new bb ---
-Start addr 0x213b
-End addr 0x213b
-skip bb 
+JMP     SUB_213B		0x1154
 
 --- new func --- sub_1159
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1159
-End addr 0x115e
-Current 0x1159
-E9 A2 02 00 00		JMP     SUB_1400		0x1159
---- new bb ---
-Start addr 0x1400
-End addr 0x1400
-skip bb 
+JMP     SUB_1400		0x1159
 
 --- new func --- sub_115E
-FlowChart size is  2
 --- new bb ---
-Start addr 0x115e
-End addr 0x1163
-Current 0x115e
-E9 1F 1B 00 00		JMP     SUB_2C82		0x115e
---- new bb ---
-Start addr 0x2c82
-End addr 0x2c82
-skip bb 
+JMP     SUB_2C82		0x115e
 
 --- new func --- sub_1163
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1163
-End addr 0x1168
-Current 0x1163
-E9 1A 1B 00 00		JMP     SUB_2C82		0x1163
---- new bb ---
-Start addr 0x2c82
-End addr 0x2c82
-skip bb 
+JMP     SUB_2C82		0x1163
 
 --- new func --- sub_116D
-FlowChart size is  2
 --- new bb ---
-Start addr 0x116d
-End addr 0x1172
-Current 0x116d
-E9 78 0D 00 00		JMP     SUB_1EEA		0x116d
---- new bb ---
-Start addr 0x1eea
-End addr 0x1eea
-skip bb 
+JMP     SUB_1EEA		0x116d
 
 --- new func --- sub_1177
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1177
-End addr 0x117c
-Current 0x1177
-E9 91 10 00 00		JMP     SUB_220D		0x1177
---- new bb ---
-Start addr 0x220d
-End addr 0x220d
-skip bb 
+JMP     SUB_220D		0x1177
 
 --- new func --- j____scrt_initialize_crt
-FlowChart size is  2
 --- new bb ---
-Start addr 0x117c
-End addr 0x1181
-Current 0x117c
-E9 2E 0A 00 00		JMP     ___SCRT_INITIALIZE_CRT		0x117c
---- new bb ---
-Start addr 0x1baf
-End addr 0x1baf
-skip bb 
+JMP     ___SCRT_INITIALIZE_CRT		0x117c
 
 --- new func --- _main
-FlowChart size is  2
 --- new bb ---
-Start addr 0x1195
-End addr 0x119a
-Current 0x1195
-E9 06 03 00 00		JMP     _MAIN_0		0x1195
---- new bb ---
-Start addr 0x14a0
-End addr 0x14a0
-skip bb 
+JMP     _MAIN_0		0x1195
 
 --- new func --- j____scrt_acquire_startup_lock
-FlowChart size is  2
 --- new bb ---
-Start addr 0x119f
-End addr 0x11a4
-Current 0x119f
-E9 D5 08 00 00		JMP     ___SCRT_ACQUIRE_STARTUP_LOCK		0x119f
---- new bb ---
-Start addr 0x1a79
-End addr 0x1a79
-skip bb 
+JMP     ___SCRT_ACQUIRE_STARTUP_LOCK		0x119f
 
 --- new func --- sub_11A4
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11a4
-End addr 0x11a9
-Current 0x11a4
-E9 72 0D 00 00		JMP     SUB_1F1B		0x11a4
---- new bb ---
-Start addr 0x1f1b
-End addr 0x1f1b
-skip bb 
+JMP     SUB_1F1B		0x11a4
 
 --- new func --- sub_11A9
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11a9
-End addr 0x11ae
-Current 0x11a9
-E9 90 0F 00 00		JMP     SUB_213E		0x11a9
---- new bb ---
-Start addr 0x213e
-End addr 0x213e
-skip bb 
+JMP     SUB_213E		0x11a9
 
 --- new func --- sub_11AE
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11ae
-End addr 0x11b3
-Current 0x11ae
-E9 9A 0D 00 00		JMP     SUB_1F4D		0x11ae
---- new bb ---
-Start addr 0x1f4d
-End addr 0x1f4d
-skip bb 
+JMP     SUB_1F4D		0x11ae
 
 --- new func --- j____scrt_unhandled_exception_filter@4
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11b8
-End addr 0x11bd
-Current 0x11b8
-E9 E5 0F 00 00		JMP     ___SCRT_UNHANDLED_EXCEPTION_FILTER@4; __SCRT_UNHANDLED_EXCEPTION_FILTER(X)		0x11b8
---- new bb ---
-Start addr 0x21a2
-End addr 0x21a2
-skip bb 
+JMP     ___SCRT_UNHANDLED_EXCEPTION_FILTER@4; __SCRT_UNHANDLED_EXCEPTION_FILTER(X)		0x11b8
 
 --- new func --- j___initialize_default_precision
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11c2
-End addr 0x11c7
-Current 0x11c2
-E9 57 0D 00 00		JMP     __INITIALIZE_DEFAULT_PRECISION		0x11c2
---- new bb ---
-Start addr 0x1f1e
-End addr 0x1f1e
-skip bb 
+JMP     __INITIALIZE_DEFAULT_PRECISION		0x11c2
 
 --- new func --- sub_11C7
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11c7
-End addr 0x11cc
-Current 0x11c7
-E9 C4 0F 00 00		JMP     SUB_2190		0x11c7
---- new bb ---
-Start addr 0x2190
-End addr 0x2190
-skip bb 
+JMP     SUB_2190		0x11c7
 
 --- new func --- sub_11D1
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11d1
-End addr 0x11d6
-Current 0x11d1
-E9 7D 0D 00 00		JMP     SUB_1F53		0x11d1
---- new bb ---
-Start addr 0x1f53
-End addr 0x1f53
-skip bb 
+JMP     SUB_1F53		0x11d1
 
 --- new func --- j____report_securityfailure
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11d6
-End addr 0x11db
-Current 0x11d6
-E9 1F 17 00 00		JMP     ___REPORT_SECURITYFAILURE		0x11d6
---- new bb ---
-Start addr 0x28fa
-End addr 0x28fa
-skip bb 
+JMP     ___REPORT_SECURITYFAILURE		0x11d6
 
 --- new func --- j_nullsub_3
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11e0
-End addr 0x11e5
-Current 0x11e0
-E9 62 0D 00 00		JMP     NULLSUB_3		0x11e0
---- new bb ---
-Start addr 0x1f47
-End addr 0x1f47
-skip bb 
+JMP     NULLSUB_3		0x11e0
 
 --- new func --- j___filter_x86_sse2_floating_point_exception_default
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11e5
-End addr 0x11ea
-Current 0x11e5
-E9 AA 1A 00 00		JMP     __FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT		0x11e5
---- new bb ---
-Start addr 0x2c94
-End addr 0x2c94
-skip bb 
+JMP     __FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT		0x11e5
 
 --- new func --- j____security_init_cookie
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11ea
-End addr 0x11ef
-Current 0x11ea
-E9 9B 0C 00 00		JMP     ___SECURITY_INIT_COOKIE		0x11ea
---- new bb ---
-Start addr 0x1e8a
-End addr 0x1e8a
-skip bb 
+JMP     ___SECURITY_INIT_COOKIE		0x11ea
 
 --- new func --- sub_11EF
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11ef
-End addr 0x11f4
-Current 0x11ef
-E9 9A 1A 00 00		JMP     SUB_2C8E		0x11ef
---- new bb ---
-Start addr 0x2c8e
-End addr 0x2c8e
-skip bb 
+JMP     SUB_2C8E		0x11ef
 
 --- new func --- j____raise_securityfailure
-FlowChart size is  2
 --- new bb ---
-Start addr 0x11f4
-End addr 0x11f9
-Current 0x11f4
-E9 88 15 00 00		JMP     ___RAISE_SECURITYFAILURE		0x11f4
---- new bb ---
-Start addr 0x2781
-End addr 0x2781
-skip bb 
+JMP     ___RAISE_SECURITYFAILURE		0x11f4
 
 --- new func --- sub_1400
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1400
-End addr 0x140b
-Current 0x1400
-55		PUSH    EBP		0x1400
-Current 0x1401
-8B EC		MOV     EBP, ESP		0x1401
-Current 0x1403
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x1403
-Current 0x1406
-03 45 0C		ADD     EAX, [EBP+ARG_4]		0x1406
-Current 0x1409
-5D		POP     EBP		0x1409
-Current 0x140a
-C3		RETN		0x140a
+PUSH    EBP		0x1400
+MOV     EBP, ESP		0x1401
+MOV     EAX, [EBP+ARG_0]		0x1403
+ADD     EAX, [EBP+ARG_4]		0x1406
+POP     EBP		0x1409
+RETN		0x140a
 
 --- new func --- _main_0
-FlowChart size is  16
 --- new bb ---
-Start addr 0x14a0
-End addr 0x1502
-Current 0x14a0
-56		PUSH    ESI		0x14a0
-Current 0x14a1
-8B 35 10 72 00 00		MOV     ESI, DS:STRNCPY_S		0x14a1
-Current 0x14a7
-6A 02		PUSH    2; MAXCOUNT		0x14a7
-Current 0x14a9
-68 6C 4B 00 00		PUSH    OFFSET STR2; "P1"		0x14a9
-Current 0x14ae
-6A 14		PUSH    14H; SIZEINBYTES		0x14ae
-Current 0x14b0
-68 80 65 00 00		PUSH    OFFSET STR1; DESTINATION		0x14b0
-Current 0x14b5
-C7 05 94 65 00 00 00 00 00 00		MOV     DWORD_6594, 0		0x14b5
-Current 0x14bf
-C7 05 AC 65 00 00 FF FF FF FF		MOV     DWORD_65AC, 0FFFFFFFFH		0x14bf
-Current 0x14c9
-C7 05 C4 65 00 00 E8 03 00 00		MOV     DWORD_65C4, 3E8H		0x14c9
-Current 0x14d3
-FF D6		CALL    ESI ; STRNCPY_S		0x14d3
-Current 0x14d5
-6A 02		PUSH    2; MAXCOUNT		0x14d5
-Current 0x14d7
-68 70 4B 00 00		PUSH    OFFSET AP2; "P2"		0x14d7
-Current 0x14dc
-6A 14		PUSH    14H; SIZEINBYTES		0x14dc
-Current 0x14de
-68 98 65 00 00		PUSH    OFFSET BYTE_6598; DESTINATION		0x14de
-Current 0x14e3
-FF D6		CALL    ESI ; STRNCPY_S		0x14e3
-Current 0x14e5
-6A 02		PUSH    2; MAXCOUNT		0x14e5
-Current 0x14e7
-68 74 4B 00 00		PUSH    OFFSET AP3; "P3"		0x14e7
-Current 0x14ec
-6A 14		PUSH    14H; SIZEINBYTES		0x14ec
-Current 0x14ee
-68 B0 65 00 00		PUSH    OFFSET BYTE_65B0; DESTINATION		0x14ee
-Current 0x14f3
-FF D6		CALL    ESI ; STRNCPY_S		0x14f3
-Current 0x14f5
-A1 94 65 00 00		MOV     EAX, DWORD_6594		0x14f5
-Current 0x14fa
-83 C4 30		ADD     ESP, 30H		0x14fa
-Current 0x14fd
-83 F8 0A		CMP     EAX, 0AH		0x14fd
-Current 0x1500
-7D 75		JGE     SHORT LOC_1577		0x1500
+PUSH    ESI		0x14a0
+MOV     ESI, DS:STRNCPY_S		0x14a1
+PUSH    2; MAXCOUNT		0x14a7
+PUSH    OFFSET STR2; "P1"		0x14a9
+PUSH    14H; SIZEINBYTES		0x14ae
+PUSH    OFFSET STR1; DESTINATION		0x14b0
+MOV     DWORD_6594, 0		0x14b5
+MOV     DWORD_65AC, 0FFFFFFFFH		0x14bf
+MOV     DWORD_65C4, 3E8H		0x14c9
+CALL    ESI ; STRNCPY_S		0x14d3
+PUSH    2; MAXCOUNT		0x14d5
+PUSH    OFFSET AP2; "P2"		0x14d7
+PUSH    14H; SIZEINBYTES		0x14dc
+PUSH    OFFSET BYTE_6598; DESTINATION		0x14de
+CALL    ESI ; STRNCPY_S		0x14e3
+PUSH    2; MAXCOUNT		0x14e5
+PUSH    OFFSET AP3; "P3"		0x14e7
+PUSH    14H; SIZEINBYTES		0x14ec
+PUSH    OFFSET BYTE_65B0; DESTINATION		0x14ee
+CALL    ESI ; STRNCPY_S		0x14f3
+MOV     EAX, DWORD_6594		0x14f5
+ADD     ESP, 30H		0x14fa
+CMP     EAX, 0AH		0x14fd
+JGE     SHORT LOC_1577		0x1500
 --- new bb ---
-Start addr 0x1502
-End addr 0x1510
-Current 0x1502
-53		PUSH    EBX		0x1502
-Current 0x1503
-8B 1D 14 72 00 00		MOV     EBX, DS:STRCPY_S		0x1503
-Current 0x1509
-57		PUSH    EDI		0x1509
-Current 0x150a
-66 0F 1F 44 00 00		NOP     WORD PTR [EAX+EAX+00H]		0x150a
+PUSH    EBX		0x1502
+MOV     EBX, DS:STRCPY_S		0x1503
+PUSH    EDI		0x1509
+NOP     WORD PTR [EAX+EAX+00H]		0x150a
 --- new bb ---
-Start addr 0x1510
-End addr 0x1536
-Current 0x1510
-6A 0A		PUSH    0AH		0x1510
-Current 0x1512
-50		PUSH    EAX		0x1512
-Current 0x1513
-E8 9C FB FF FF		CALL    SUB_10B4		0x1513
-Current 0x1518
-6A 02		PUSH    2; MAXCOUNT		0x1518
-Current 0x151a
-68 6C 4B 00 00		PUSH    OFFSET STR2; "P1"		0x151a
-Current 0x151f
-68 80 65 00 00		PUSH    OFFSET STR1; STR1		0x151f
-Current 0x1524
-A3 94 65 00 00		MOV     DWORD_6594, EAX		0x1524
-Current 0x1529
-FF 15 0C 72 00 00		CALL    DS:STRNCMP		0x1529
-Current 0x152f
-83 C4 14		ADD     ESP, 14H		0x152f
-Current 0x1532
-85 C0		TEST    EAX, EAX		0x1532
-Current 0x1534
-75 35		JNZ     SHORT LOC_156B		0x1534
+PUSH    0AH		0x1510
+PUSH    EAX		0x1512
+CALL    SUB_10B4		0x1513
+PUSH    2; MAXCOUNT		0x1518
+PUSH    OFFSET STR2; "P1"		0x151a
+PUSH    OFFSET STR1; STR1		0x151f
+MOV     DWORD_6594, EAX		0x1524
+CALL    DS:STRNCMP		0x1529
+ADD     ESP, 14H		0x152f
+TEST    EAX, EAX		0x1532
+JNZ     SHORT LOC_156B		0x1534
 --- new bb ---
-Start addr 0x1536
-End addr 0x1545
-Current 0x1536
-6A 0A		PUSH    0AH; SIZE		0x1536
-Current 0x1538
-FF 15 B0 70 00 00		CALL    DS:MALLOC		0x1538
-Current 0x153e
-83 C4 04		ADD     ESP, 4		0x153e
-Current 0x1541
-8B F8		MOV     EDI, EAX		0x1541
-Current 0x1543
-33 F6		XOR     ESI, ESI		0x1543
+PUSH    0AH; SIZE		0x1536
+CALL    DS:MALLOC		0x1538
+ADD     ESP, 4		0x153e
+MOV     EDI, EAX		0x1541
+XOR     ESI, ESI		0x1543
 --- new bb ---
-Start addr 0x1545
-End addr 0x155b
-Current 0x1545
-68 5C 4B 00 00		PUSH    OFFSET SOURCE; "0X90"		0x1545
-Current 0x154a
-8D 0C 37		LEA     ECX, [EDI+ESI]		0x154a
-Current 0x154d
-6A 05		PUSH    5; SIZEINBYTES		0x154d
-Current 0x154f
-51		PUSH    ECX; DESTINATION		0x154f
-Current 0x1550
-FF D3		CALL    EBX ; STRCPY_S		0x1550
-Current 0x1552
-46		INC     ESI		0x1552
-Current 0x1553
-83 C4 0C		ADD     ESP, 0CH		0x1553
-Current 0x1556
-83 FE 09		CMP     ESI, 9		0x1556
-Current 0x1559
-7C EA		JL      SHORT LOC_1545		0x1559
+PUSH    OFFSET SOURCE; "0X90"		0x1545
+LEA     ECX, [EDI+ESI]		0x154a
+PUSH    5; SIZEINBYTES		0x154d
+PUSH    ECX; DESTINATION		0x154f
+CALL    EBX ; STRCPY_S		0x1550
+INC     ESI		0x1552
+ADD     ESP, 0CH		0x1553
+CMP     ESI, 9		0x1556
+JL      SHORT LOC_1545		0x1559
 --- new bb ---
-Start addr 0x155b
-End addr 0x156b
-Current 0x155b
-68 64 4B 00 00		PUSH    OFFSET A0XC3; "0XC3"		0x155b
-Current 0x1560
-8D 47 0A		LEA     EAX, [EDI+0AH]		0x1560
-Current 0x1563
-6A 05		PUSH    5; SIZEINBYTES		0x1563
-Current 0x1565
-50		PUSH    EAX; DESTINATION		0x1565
-Current 0x1566
-FF D3		CALL    EBX ; STRCPY_S		0x1566
-Current 0x1568
-83 C4 0C		ADD     ESP, 0CH		0x1568
+PUSH    OFFSET A0XC3; "0XC3"		0x155b
+LEA     EAX, [EDI+0AH]		0x1560
+PUSH    5; SIZEINBYTES		0x1563
+PUSH    EAX; DESTINATION		0x1565
+CALL    EBX ; STRCPY_S		0x1566
+ADD     ESP, 0CH		0x1568
 --- new bb ---
-Start addr 0x156b
-End addr 0x1575
-Current 0x156b
-A1 94 65 00 00		MOV     EAX, DWORD_6594		0x156b
-Current 0x1570
-83 F8 0A		CMP     EAX, 0AH		0x1570
-Current 0x1573
-7C 9B		JL      SHORT LOC_1510		0x1573
+MOV     EAX, DWORD_6594		0x156b
+CMP     EAX, 0AH		0x1570
+JL      SHORT LOC_1510		0x1573
 --- new bb ---
-Start addr 0x1575
-End addr 0x1577
-Current 0x1575
-5F		POP     EDI		0x1575
-Current 0x1576
-5B		POP     EBX		0x1576
+POP     EDI		0x1575
+POP     EBX		0x1576
 --- new bb ---
-Start addr 0x1577
-End addr 0x1582
-Current 0x1577
-A1 AC 65 00 00		MOV     EAX, DWORD_65AC		0x1577
-Current 0x157c
-5E		POP     ESI		0x157c
-Current 0x157d
-83 F8 FF		CMP     EAX, 0FFFFFFFFH		0x157d
-Current 0x1580
-74 20		JZ      SHORT LOC_15A2		0x1580
+MOV     EAX, DWORD_65AC		0x1577
+POP     ESI		0x157c
+CMP     EAX, 0FFFFFFFFH		0x157d
+JZ      SHORT LOC_15A2		0x1580
 --- new bb ---
-Start addr 0x1582
-End addr 0x1586
-Current 0x1582
-85 C0		TEST    EAX, EAX		0x1582
-Current 0x1584
-74 15		JZ      SHORT LOC_159B		0x1584
+TEST    EAX, EAX		0x1582
+JZ      SHORT LOC_159B		0x1584
 --- new bb ---
-Start addr 0x1586
-End addr 0x158d
-Current 0x1586
-3D E8 03 00 00		CMP     EAX, 3E8H		0x1586
-Current 0x158b
-74 07		JZ      SHORT LOC_1594		0x158b
+CMP     EAX, 3E8H		0x1586
+JZ      SHORT LOC_1594		0x158b
 --- new bb ---
-Start addr 0x158d
-End addr 0x1594
-Current 0x158d
-68 A0 4B 00 00		PUSH    OFFSET ANONEOFTHEABOVE; "NONE OF THE ABOVE"		0x158d
-Current 0x1592
-EB 13		JMP     SHORT LOC_15A7		0x1592
+PUSH    OFFSET ANONEOFTHEABOVE; "NONE OF THE ABOVE"		0x158d
+JMP     SHORT LOC_15A7		0x1592
 --- new bb ---
-Start addr 0x1594
-End addr 0x159b
-Current 0x1594
-68 90 4B 00 00		PUSH    OFFSET AEQUAL1000; "EQUAL 1000"		0x1594
-Current 0x1599
-EB 0C		JMP     SHORT LOC_15A7		0x1599
+PUSH    OFFSET AEQUAL1000; "EQUAL 1000"		0x1594
+JMP     SHORT LOC_15A7		0x1599
 --- new bb ---
-Start addr 0x159b
-End addr 0x15a2
-Current 0x159b
-68 78 4B 00 00		PUSH    OFFSET AEQUAL0; "EQUAL 0"		0x159b
-Current 0x15a0
-EB 05		JMP     SHORT LOC_15A7		0x15a0
+PUSH    OFFSET AEQUAL0; "EQUAL 0"		0x159b
+JMP     SHORT LOC_15A7		0x15a0
 --- new bb ---
-Start addr 0x15a2
-End addr 0x15a7
-Current 0x15a2
-68 84 4B 00 00		PUSH    OFFSET BUFFER; "EQUAL -1"		0x15a2
+PUSH    OFFSET BUFFER; "EQUAL -1"		0x15a2
 --- new bb ---
-Start addr 0x15a7
-End addr 0x15bf
-Current 0x15a7
-FF 15 D4 71 00 00		CALL    DS:PUTS		0x15a7
-Current 0x15ad
-83 C4 04		ADD     ESP, 4		0x15ad
-Current 0x15b0
-6A 14		PUSH    14H		0x15b0
-Current 0x15b2
-6A 0F		PUSH    0FH		0x15b2
-Current 0x15b4
-E8 FB FA FF FF		CALL    SUB_10B4		0x15b4
-Current 0x15b9
-83 C4 08		ADD     ESP, 8		0x15b9
-Current 0x15bc
-33 C0		XOR     EAX, EAX		0x15bc
-Current 0x15be
-C3		RETN		0x15be
+CALL    DS:PUTS		0x15a7
+ADD     ESP, 4		0x15ad
+PUSH    14H		0x15b0
+PUSH    0FH		0x15b2
+CALL    SUB_10B4		0x15b4
+ADD     ESP, 8		0x15b9
+XOR     EAX, EAX		0x15bc
+RETN		0x15be
 
 --- new func --- sub_1670
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1670
-End addr 0x167b
-Current 0x1670
-55		PUSH    EBP		0x1670
-Current 0x1671
-8B EC		MOV     EBP, ESP		0x1671
-Current 0x1673
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x1673
-Current 0x1676
-2B 45 0C		SUB     EAX, [EBP+ARG_4]		0x1676
-Current 0x1679
-5D		POP     EBP		0x1679
-Current 0x167a
-C3		RETN		0x167a
+PUSH    EBP		0x1670
+MOV     EBP, ESP		0x1671
+MOV     EAX, [EBP+ARG_0]		0x1673
+SUB     EAX, [EBP+ARG_4]		0x1676
+POP     EBP		0x1679
+RETN		0x167a
 
 --- new func --- ?pre_c_initialization@@YAHXZ
-FlowChart size is  9
 --- new bb ---
-Start addr 0x167d
-End addr 0x16ad
-Current 0x167d
-56		PUSH    ESI		0x167d
-Current 0x167e
-6A 01		PUSH    1; TYPE		0x167e
-Current 0x1680
-E8 13 15 00 00		CALL    _SET_APP_TYPE		0x1680
-Current 0x1685
-E8 E9 F9 FF FF		CALL    J___GET_STARTUP_FILE_MODE		0x1685
-Current 0x168a
-50		PUSH    EAX; MODE		0x168a
-Current 0x168b
-E8 3E 15 00 00		CALL    _SET_FMODE		0x168b
-Current 0x1690
-E8 F7 F9 FF FF		CALL    SUB_108C		0x1690
-Current 0x1695
-8B F0		MOV     ESI, EAX		0x1695
-Current 0x1697
-E8 62 15 00 00		CALL    __P__COMMODE		0x1697
-Current 0x169c
-6A 01		PUSH    1		0x169c
-Current 0x169e
-89 30		MOV     [EAX], ESI		0x169e
-Current 0x16a0
-E8 FB F9 FF FF		CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES		0x16a0
-Current 0x16a5
-83 C4 0C		ADD     ESP, 0CH		0x16a5
-Current 0x16a8
-5E		POP     ESI		0x16a8
-Current 0x16a9
-84 C0		TEST    AL, AL		0x16a9
-Current 0x16ab
-74 73		JZ      SHORT LOC_1720		0x16ab
+PUSH    ESI		0x167d
+PUSH    1; TYPE		0x167e
+CALL    _SET_APP_TYPE		0x1680
+CALL    J___GET_STARTUP_FILE_MODE		0x1685
+PUSH    EAX; MODE		0x168a
+CALL    _SET_FMODE		0x168b
+CALL    SUB_108C		0x1690
+MOV     ESI, EAX		0x1695
+CALL    __P__COMMODE		0x1697
+PUSH    1		0x169c
+MOV     [EAX], ESI		0x169e
+CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES		0x16a0
+ADD     ESP, 0CH		0x16a5
+POP     ESI		0x16a8
+TEST    AL, AL		0x16a9
+JZ      SHORT LOC_1720		0x16ab
 --- new bb ---
-Start addr 0x16ad
-End addr 0x16cf
-Current 0x16ad
-DB E2		FNCLEX		0x16ad
-Current 0x16af
-E8 51 F9 FF FF		CALL    SUB_1005		0x16af
-Current 0x16b4
-68 CD 10 00 00		PUSH    OFFSET SUB_10CD; VOID (__CDECL *)()		0x16b4
-Current 0x16b9
-E8 32 FA FF FF		CALL    J__ATEXIT		0x16b9
-Current 0x16be
-E8 AA FA FF FF		CALL    SUB_116D		0x16be
-Current 0x16c3
-50		PUSH    EAX; MODE		0x16c3
-Current 0x16c4
-E8 DB 14 00 00		CALL    _CONFIGURE_NARROW_ARGV		0x16c4
-Current 0x16c9
-59		POP     ECX		0x16c9
-Current 0x16ca
-59		POP     ECX		0x16ca
-Current 0x16cb
-85 C0		TEST    EAX, EAX		0x16cb
-Current 0x16cd
-75 51		JNZ     SHORT LOC_1720		0x16cd
+FNCLEX		0x16ad
+CALL    SUB_1005		0x16af
+PUSH    OFFSET SUB_10CD; VOID (__CDECL *)()		0x16b4
+CALL    J__ATEXIT		0x16b9
+CALL    SUB_116D		0x16be
+PUSH    EAX; MODE		0x16c3
+CALL    _CONFIGURE_NARROW_ARGV		0x16c4
+POP     ECX		0x16c9
+POP     ECX		0x16ca
+TEST    EAX, EAX		0x16cb
+JNZ     SHORT LOC_1720		0x16cd
 --- new bb ---
-Start addr 0x16cf
-End addr 0x16dd
-Current 0x16cf
-E8 77 F9 FF FF		CALL    SUB_104B		0x16cf
-Current 0x16d4
-E8 2B FA FF FF		CALL    SUB_1104		0x16d4
-Current 0x16d9
-85 C0		TEST    EAX, EAX		0x16d9
-Current 0x16db
-74 0B		JZ      SHORT LOC_16E8		0x16db
+CALL    SUB_104B		0x16cf
+CALL    SUB_1104		0x16d4
+TEST    EAX, EAX		0x16d9
+JZ      SHORT LOC_16E8		0x16db
 --- new bb ---
-Start addr 0x16dd
-End addr 0x16e8
-Current 0x16dd
-68 7D 10 00 00		PUSH    OFFSET USERMATHERRORFUNCTION; USERMATHERRORFUNCTION		0x16dd
-Current 0x16e2
-E8 B7 14 00 00		CALL    __SETUSERMATHERR		0x16e2
-Current 0x16e7
-59		POP     ECX		0x16e7
+PUSH    OFFSET USERMATHERRORFUNCTION; USERMATHERRORFUNCTION		0x16dd
+CALL    __SETUSERMATHERR		0x16e2
+POP     ECX		0x16e7
 --- new bb ---
-Start addr 0x16e8
-End addr 0x170c
-Current 0x16e8
-E8 F3 FA FF FF		CALL    J_NULLSUB_3		0x16e8
-Current 0x16ed
-E8 31 F9 FF FF		CALL    J_NULLSUB_2		0x16ed
-Current 0x16f2
-E8 CB FA FF FF		CALL    J___INITIALIZE_DEFAULT_PRECISION		0x16f2
-Current 0x16f7
-E8 53 FA FF FF		CALL    SUB_114F		0x16f7
-Current 0x16fc
-50		PUSH    EAX; FLAG		0x16fc
-Current 0x16fd
-E8 F0 14 00 00		CALL    _CONFIGTHREADLOCALE		0x16fd
-Current 0x1702
-59		POP     ECX		0x1702
-Current 0x1703
-E8 9C FA FF FF		CALL    SUB_11A4		0x1703
-Current 0x1708
-84 C0		TEST    AL, AL		0x1708
-Current 0x170a
-74 05		JZ      SHORT LOC_1711		0x170a
+CALL    J_NULLSUB_3		0x16e8
+CALL    J_NULLSUB_2		0x16ed
+CALL    J___INITIALIZE_DEFAULT_PRECISION		0x16f2
+CALL    SUB_114F		0x16f7
+PUSH    EAX; FLAG		0x16fc
+CALL    _CONFIGTHREADLOCALE		0x16fd
+POP     ECX		0x1702
+CALL    SUB_11A4		0x1703
+TEST    AL, AL		0x1708
+JZ      SHORT LOC_1711		0x170a
 --- new bb ---
-Start addr 0x170c
-End addr 0x1711
-Current 0x170c
-E8 99 14 00 00		CALL    _INITIALIZE_NARROW_ENVIRONMENT		0x170c
+CALL    _INITIALIZE_NARROW_ENVIRONMENT		0x170c
 --- new bb ---
-Start addr 0x1711
-End addr 0x171f
-Current 0x1711
-E8 3E FA FF FF		CALL    SUB_1154		0x1711
-Current 0x1716
-E8 F3 F9 FF FF		CALL    SUB_110E		0x1716
-Current 0x171b
-85 C0		TEST    EAX, EAX		0x171b
-Current 0x171d
-75 01		JNZ     SHORT LOC_1720		0x171d
+CALL    SUB_1154		0x1711
+CALL    SUB_110E		0x1716
+TEST    EAX, EAX		0x171b
+JNZ     SHORT LOC_1720		0x171d
 --- new bb ---
-Start addr 0x171f
-End addr 0x1720
-Current 0x171f
-C3		RETN		0x171f
+RETN		0x171f
 --- new bb ---
-Start addr 0x1720
-End addr 0x1727
-Current 0x1720
-6A 07		PUSH    7		0x1720
-Current 0x1722
-E8 BF F9 FF FF		CALL    J____SCRT_FASTFAIL		0x1722
+PUSH    7		0x1720
+CALL    J____SCRT_FASTFAIL		0x1722
 
 --- new func --- sub_1752
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1752
-End addr 0x175a
-Current 0x1752
-E8 62 F9 FF FF		CALL    J____SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS		0x1752
-Current 0x1757
-33 C0		XOR     EAX, EAX		0x1757
-Current 0x1759
-C3		RETN		0x1759
+CALL    J____SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS		0x1752
+XOR     EAX, EAX		0x1757
+RETN		0x1759
 
 --- new func --- sub_175C
-FlowChart size is  1
 --- new bb ---
-Start addr 0x175c
-End addr 0x176e
-Current 0x175c
-E8 66 FA FF FF		CALL    SUB_11C7		0x175c
-Current 0x1761
-E8 44 F9 FF FF		CALL    SUB_10AA		0x1761
-Current 0x1766
-50		PUSH    EAX; NEWMODE		0x1766
-Current 0x1767
-E8 8C 14 00 00		CALL    _SET_NEW_MODE		0x1767
-Current 0x176c
-59		POP     ECX		0x176c
-Current 0x176d
-C3		RETN		0x176d
+CALL    SUB_11C7		0x175c
+CALL    SUB_10AA		0x1761
+PUSH    EAX; NEWMODE		0x1766
+CALL    _SET_NEW_MODE		0x1767
+POP     ECX		0x176c
+RETN		0x176d
 
 --- new func --- ?__scrt_common_main_seh@@YAHXZ
-FlowChart size is  27
 --- new bb ---
-Start addr 0x177e
-End addr 0x179a
-Current 0x177e
-6A 14		PUSH    14H		0x177e
-Current 0x1780
-68 78 57 00 00		PUSH    OFFSET STRU_5778		0x1780
-Current 0x1785
-E8 E4 F8 FF FF		CALL    J___SEH_PROLOG4		0x1785
-Current 0x178a
-6A 01		PUSH    1		0x178a
-Current 0x178c
-E8 EB F9 FF FF		CALL    J____SCRT_INITIALIZE_CRT		0x178c
-Current 0x1791
-59		POP     ECX		0x1791
-Current 0x1792
-84 C0		TEST    AL, AL		0x1792
-Current 0x1794
-0F 84 50 01 00 00		JZ      LOC_18EA		0x1794
+PUSH    14H		0x177e
+PUSH    OFFSET STRU_5778		0x1780
+CALL    J___SEH_PROLOG4		0x1785
+PUSH    1		0x178a
+CALL    J____SCRT_INITIALIZE_CRT		0x178c
+POP     ECX		0x1791
+TEST    AL, AL		0x1792
+JZ      LOC_18EA		0x1794
 --- new bb ---
-Start addr 0x179a
-End addr 0x179f
-Current 0x179a
-32 DB		XOR     BL, BL		0x179a
-Current 0x179c
-88 5D E7		MOV     [EBP+VAR_19], BL		0x179c
+XOR     BL, BL		0x179a
+MOV     [EBP+VAR_19], BL		0x179c
 --- new bb ---
-Start addr 0x179f
-End addr 0x17bb
-Current 0x179f
-83 65 FC 00		AND     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0		0x179f
-Current 0x17a3
-E8 F7 F9 FF FF		CALL    J____SCRT_ACQUIRE_STARTUP_LOCK		0x17a3
-Current 0x17a8
-88 45 DC		MOV     BYTE PTR [EBP+VAR_24], AL		0x17a8
-Current 0x17ab
-A1 40 61 00 00		MOV     EAX, DWORD_6140		0x17ab
-Current 0x17b0
-33 C9		XOR     ECX, ECX		0x17b0
-Current 0x17b2
-41		INC     ECX		0x17b2
-Current 0x17b3
-3B C1		CMP     EAX, ECX		0x17b3
-Current 0x17b5
-0F 84 2F 01 00 00		JZ      LOC_18EA		0x17b5
+AND     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0		0x179f
+CALL    J____SCRT_ACQUIRE_STARTUP_LOCK		0x17a3
+MOV     BYTE PTR [EBP+VAR_24], AL		0x17a8
+MOV     EAX, DWORD_6140		0x17ab
+XOR     ECX, ECX		0x17b0
+INC     ECX		0x17b2
+CMP     EAX, ECX		0x17b3
+JZ      LOC_18EA		0x17b5
 --- new bb ---
-Start addr 0x17bb
-End addr 0x17bf
-Current 0x17bb
-85 C0		TEST    EAX, EAX		0x17bb
-Current 0x17bd
-75 49		JNZ     SHORT LOC_1808		0x17bd
+TEST    EAX, EAX		0x17bb
+JNZ     SHORT LOC_1808		0x17bd
 --- new bb ---
-Start addr 0x17bf
-End addr 0x17da
-Current 0x17bf
-89 0D 40 61 00 00		MOV     DWORD_6140, ECX		0x17bf
-Current 0x17c5
-68 18 46 00 00		PUSH    OFFSET LAST; LAST		0x17c5
-Current 0x17ca
-68 0C 43 00 00		PUSH    OFFSET FIRST; FIRST		0x17ca
-Current 0x17cf
-E8 E8 13 00 00		CALL    _INITTERM_E		0x17cf
-Current 0x17d4
-59		POP     ECX		0x17d4
-Current 0x17d5
-59		POP     ECX		0x17d5
-Current 0x17d6
-85 C0		TEST    EAX, EAX		0x17d6
-Current 0x17d8
-74 11		JZ      SHORT LOC_17EB		0x17d8
+MOV     DWORD_6140, ECX		0x17bf
+PUSH    OFFSET LAST; LAST		0x17c5
+PUSH    OFFSET FIRST; FIRST		0x17ca
+CALL    _INITTERM_E		0x17cf
+POP     ECX		0x17d4
+POP     ECX		0x17d5
+TEST    EAX, EAX		0x17d6
+JZ      SHORT LOC_17EB		0x17d8
 --- new bb ---
-Start addr 0x17da
-End addr 0x17eb
-Current 0x17da
-C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x17da
-Current 0x17e1
-B8 FF 00 00 00		MOV     EAX, 0FFH		0x17e1
-Current 0x17e6
-E9 EF 00 00 00		JMP     LOC_18DA		0x17e6
+MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x17da
+MOV     EAX, 0FFH		0x17e1
+JMP     LOC_18DA		0x17e6
 --- new bb ---
-Start addr 0x17eb
-End addr 0x1808
-Current 0x17eb
-68 08 42 00 00		PUSH    OFFSET DWORD_4208; LAST		0x17eb
-Current 0x17f0
-68 00 40 00 00		PUSH    OFFSET DWORD_4000; FIRST		0x17f0
-Current 0x17f5
-E8 BC 13 00 00		CALL    _INITTERM		0x17f5
-Current 0x17fa
-59		POP     ECX		0x17fa
-Current 0x17fb
-59		POP     ECX		0x17fb
-Current 0x17fc
-C7 05 40 61 00 00 02 00 00 00		MOV     DWORD_6140, 2		0x17fc
-Current 0x1806
-EB 05		JMP     SHORT LOC_180D		0x1806
+PUSH    OFFSET DWORD_4208; LAST		0x17eb
+PUSH    OFFSET DWORD_4000; FIRST		0x17f0
+CALL    _INITTERM		0x17f5
+POP     ECX		0x17fa
+POP     ECX		0x17fb
+MOV     DWORD_6140, 2		0x17fc
+JMP     SHORT LOC_180D		0x1806
 --- new bb ---
-Start addr 0x1808
-End addr 0x180d
-Current 0x1808
-8A D9		MOV     BL, CL		0x1808
-Current 0x180a
-88 5D E7		MOV     [EBP+VAR_19], BL		0x180a
+MOV     BL, CL		0x1808
+MOV     [EBP+VAR_19], BL		0x180a
 --- new bb ---
-Start addr 0x180d
-End addr 0x1823
-Current 0x180d
-FF 75 DC		PUSH    [EBP+VAR_24]		0x180d
-Current 0x1810
-E8 A9 F8 FF FF		CALL    J____SCRT_RELEASE_STARTUP_LOCK		0x1810
-Current 0x1815
-59		POP     ECX		0x1815
-Current 0x1816
-E8 12 F8 FF FF		CALL    SUB_102D		0x1816
-Current 0x181b
-8B F0		MOV     ESI, EAX		0x181b
-Current 0x181d
-33 FF		XOR     EDI, EDI		0x181d
-Current 0x181f
-39 3E		CMP     [ESI], EDI		0x181f
-Current 0x1821
-74 1B		JZ      SHORT LOC_183E		0x1821
+PUSH    [EBP+VAR_24]		0x180d
+CALL    J____SCRT_RELEASE_STARTUP_LOCK		0x1810
+POP     ECX		0x1815
+CALL    SUB_102D		0x1816
+MOV     ESI, EAX		0x181b
+XOR     EDI, EDI		0x181d
+CMP     [ESI], EDI		0x181f
+JZ      SHORT LOC_183E		0x1821
 --- new bb ---
-Start addr 0x1823
-End addr 0x182e
-Current 0x1823
-56		PUSH    ESI		0x1823
-Current 0x1824
-E8 68 F8 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x1824
-Current 0x1829
-59		POP     ECX		0x1829
-Current 0x182a
-84 C0		TEST    AL, AL		0x182a
-Current 0x182c
-74 10		JZ      SHORT LOC_183E		0x182c
+PUSH    ESI		0x1823
+CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x1824
+POP     ECX		0x1829
+TEST    AL, AL		0x182a
+JZ      SHORT LOC_183E		0x182c
 --- new bb ---
-Start addr 0x182e
-End addr 0x183e
-Current 0x182e
-8B 36		MOV     ESI, [ESI]		0x182e
-Current 0x1830
-57		PUSH    EDI		0x1830
-Current 0x1831
-6A 02		PUSH    2		0x1831
-Current 0x1833
-57		PUSH    EDI		0x1833
-Current 0x1834
-8B CE		MOV     ECX, ESI		0x1834
-Current 0x1836
-FF 15 00 80 00 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x1836
-Current 0x183c
-FF D6		CALL    ESI		0x183c
+MOV     ESI, [ESI]		0x182e
+PUSH    EDI		0x1830
+PUSH    2		0x1831
+PUSH    EDI		0x1833
+MOV     ECX, ESI		0x1834
+CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x1836
+CALL    ESI		0x183c
 --- new bb ---
-Start addr 0x183e
-End addr 0x1849
-Current 0x183e
-E8 DB F7 FF FF		CALL    SUB_101E		0x183e
-Current 0x1843
-8B F0		MOV     ESI, EAX		0x1843
-Current 0x1845
-39 3E		CMP     [ESI], EDI		0x1845
-Current 0x1847
-74 13		JZ      SHORT LOC_185C		0x1847
+CALL    SUB_101E		0x183e
+MOV     ESI, EAX		0x1843
+CMP     [ESI], EDI		0x1845
+JZ      SHORT LOC_185C		0x1847
 --- new bb ---
-Start addr 0x1849
-End addr 0x1854
-Current 0x1849
-56		PUSH    ESI		0x1849
-Current 0x184a
-E8 42 F8 FF FF		CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x184a
-Current 0x184f
-59		POP     ECX		0x184f
-Current 0x1850
-84 C0		TEST    AL, AL		0x1850
-Current 0x1852
-74 08		JZ      SHORT LOC_185C		0x1852
+PUSH    ESI		0x1849
+CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x184a
+POP     ECX		0x184f
+TEST    AL, AL		0x1850
+JZ      SHORT LOC_185C		0x1852
 --- new bb ---
-Start addr 0x1854
-End addr 0x185c
-Current 0x1854
-FF 36		PUSH    DWORD PTR [ESI]; CALLBACK		0x1854
-Current 0x1856
-E8 91 13 00 00		CALL    _REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK		0x1856
-Current 0x185b
-59		POP     ECX		0x185b
+PUSH    DWORD PTR [ESI]; CALLBACK		0x1854
+CALL    _REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK		0x1856
+POP     ECX		0x185b
 --- new bb ---
-Start addr 0x185c
-End addr 0x1886
-Current 0x185c
-E8 4F 13 00 00		CALL    _GET_INITIAL_NARROW_ENVIRONMENT		0x185c
-Current 0x1861
-8B F8		MOV     EDI, EAX		0x1861
-Current 0x1863
-E8 72 13 00 00		CALL    __P___ARGV		0x1863
-Current 0x1868
-8B 30		MOV     ESI, [EAX]		0x1868
-Current 0x186a
-E8 65 13 00 00		CALL    __P___ARGC		0x186a
-Current 0x186f
-57		PUSH    EDI; ENVP		0x186f
-Current 0x1870
-56		PUSH    ESI; ARGV		0x1870
-Current 0x1871
-FF 30		PUSH    DWORD PTR [EAX]; ARGC		0x1871
-Current 0x1873
-E8 1D F9 FF FF		CALL    _MAIN		0x1873
-Current 0x1878
-83 C4 0C		ADD     ESP, 0CH		0x1878
-Current 0x187b
-8B F0		MOV     ESI, EAX		0x187b
-Current 0x187d
-E8 27 F9 FF FF		CALL    SUB_11A9		0x187d
-Current 0x1882
-84 C0		TEST    AL, AL		0x1882
-Current 0x1884
-74 6B		JZ      SHORT LOC_18F1		0x1884
+CALL    _GET_INITIAL_NARROW_ENVIRONMENT		0x185c
+MOV     EDI, EAX		0x1861
+CALL    __P___ARGV		0x1863
+MOV     ESI, [EAX]		0x1868
+CALL    __P___ARGC		0x186a
+PUSH    EDI; ENVP		0x186f
+PUSH    ESI; ARGV		0x1870
+PUSH    DWORD PTR [EAX]; ARGC		0x1871
+CALL    _MAIN		0x1873
+ADD     ESP, 0CH		0x1878
+MOV     ESI, EAX		0x187b
+CALL    SUB_11A9		0x187d
+TEST    AL, AL		0x1882
+JZ      SHORT LOC_18F1		0x1884
 --- new bb ---
-Start addr 0x1886
-End addr 0x188a
-Current 0x1886
-84 DB		TEST    BL, BL		0x1886
-Current 0x1888
-75 05		JNZ     SHORT LOC_188F		0x1888
+TEST    BL, BL		0x1886
+JNZ     SHORT LOC_188F		0x1888
 --- new bb ---
-Start addr 0x188a
-End addr 0x188f
-Current 0x188a
-E8 51 13 00 00		CALL    _CEXIT		0x188a
+CALL    _CEXIT		0x188a
 --- new bb ---
-Start addr 0x188f
-End addr 0x18a5
-Current 0x188f
-6A 00		PUSH    0		0x188f
-Current 0x1891
-6A 01		PUSH    1		0x1891
-Current 0x1893
-E8 2B F8 FF FF		CALL    J____SCRT_UNINITIALIZE_CRT		0x1893
-Current 0x1898
-59		POP     ECX		0x1898
-Current 0x1899
-59		POP     ECX		0x1899
-Current 0x189a
-C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x189a
-Current 0x18a1
-8B C6		MOV     EAX, ESI		0x18a1
-Current 0x18a3
-EB 35		JMP     SHORT LOC_18DA		0x18a3
+PUSH    0		0x188f
+PUSH    1		0x1891
+CALL    J____SCRT_UNINITIALIZE_CRT		0x1893
+POP     ECX		0x1898
+POP     ECX		0x1899
+MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x189a
+MOV     EAX, ESI		0x18a1
+JMP     SHORT LOC_18DA		0x18a3
 --- new bb ---
-Start addr 0x18a5
-End addr 0x18b9
-Current 0x18a5
-8B 4D EC		MOV     ECX, [EBP+MS_EXC.EXC_PTR]		0x18a5
-Current 0x18a8
-8B 01		MOV     EAX, [ECX]		0x18a8
-Current 0x18aa
-8B 00		MOV     EAX, [EAX]		0x18aa
-Current 0x18ac
-89 45 E0		MOV     [EBP+CODE], EAX		0x18ac
-Current 0x18af
-51		PUSH    ECX; EXCEPTIONPTR		0x18af
-Current 0x18b0
-50		PUSH    EAX; EXCEPTIONNUM		0x18b0
-Current 0x18b1
-E8 DC 12 00 00		CALL    _SEH_FILTER_EXE		0x18b1
-Current 0x18b6
-59		POP     ECX		0x18b6
-Current 0x18b7
-59		POP     ECX		0x18b7
-Current 0x18b8
-C3		RETN		0x18b8
+MOV     ECX, [EBP+MS_EXC.EXC_PTR]		0x18a5
+MOV     EAX, [ECX]		0x18a8
+MOV     EAX, [EAX]		0x18aa
+MOV     [EBP+CODE], EAX		0x18ac
+PUSH    ECX; EXCEPTIONPTR		0x18af
+PUSH    EAX; EXCEPTIONNUM		0x18b0
+CALL    _SEH_FILTER_EXE		0x18b1
+POP     ECX		0x18b6
+POP     ECX		0x18b7
+RETN		0x18b8
 --- new bb ---
-Start addr 0x18b9
-End addr 0x18c5
-Current 0x18b9
-8B 65 E8		MOV     ESP, [EBP+MS_EXC.OLD_ESP]		0x18b9
-Current 0x18bc
-E8 E8 F8 FF FF		CALL    SUB_11A9		0x18bc
-Current 0x18c1
-84 C0		TEST    AL, AL		0x18c1
-Current 0x18c3
-74 32		JZ      SHORT LOC_18F7		0x18c3
+MOV     ESP, [EBP+MS_EXC.OLD_ESP]		0x18b9
+CALL    SUB_11A9		0x18bc
+TEST    AL, AL		0x18c1
+JZ      SHORT LOC_18F7		0x18c3
 --- new bb ---
-Start addr 0x18c5
-End addr 0x18cb
-Current 0x18c5
-80 7D E7 00		CMP     [EBP+VAR_19], 0		0x18c5
-Current 0x18c9
-75 05		JNZ     SHORT LOC_18D0		0x18c9
+CMP     [EBP+VAR_19], 0		0x18c5
+JNZ     SHORT LOC_18D0		0x18c9
 --- new bb ---
-Start addr 0x18cb
-End addr 0x18d0
-Current 0x18cb
-E8 16 13 00 00		CALL    _C_EXIT		0x18cb
+CALL    _C_EXIT		0x18cb
 --- new bb ---
-Start addr 0x18d0
-End addr 0x18da
-Current 0x18d0
-C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x18d0
-Current 0x18d7
-8B 45 E0		MOV     EAX, [EBP+CODE]		0x18d7
+MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x18d0
+MOV     EAX, [EBP+CODE]		0x18d7
 --- new bb ---
-Start addr 0x18da
-End addr 0x18ea
-Current 0x18da
-8B 4D F0		MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]		0x18da
-Current 0x18dd
-64 89 0D 00 00 00 00		MOV     LARGE FS:0, ECX		0x18dd
-Current 0x18e4
-59		POP     ECX		0x18e4
-Current 0x18e5
-5F		POP     EDI		0x18e5
-Current 0x18e6
-5E		POP     ESI		0x18e6
-Current 0x18e7
-5B		POP     EBX		0x18e7
-Current 0x18e8
-C9		LEAVE		0x18e8
-Current 0x18e9
-C3		RETN		0x18e9
+MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]		0x18da
+MOV     LARGE FS:0, ECX		0x18dd
+POP     ECX		0x18e4
+POP     EDI		0x18e5
+POP     ESI		0x18e6
+POP     EBX		0x18e7
+LEAVE		0x18e8
+RETN		0x18e9
 --- new bb ---
-Start addr 0x18ea
-End addr 0x18f1
-Current 0x18ea
-6A 07		PUSH    7		0x18ea
-Current 0x18ec
-E8 F5 F7 FF FF		CALL    J____SCRT_FASTFAIL		0x18ec
+PUSH    7		0x18ea
+CALL    J____SCRT_FASTFAIL		0x18ec
 --- new bb ---
-Start addr 0x18f1
-End addr 0x18f7
-Current 0x18f1
-56		PUSH    ESI; CODE		0x18f1
-Current 0x18f2
-E8 CB 12 00 00		CALL    EXIT		0x18f2
+PUSH    ESI; CODE		0x18f1
+CALL    EXIT		0x18f2
 --- new bb ---
-Start addr 0x18f7
-End addr 0x18ff
-Current 0x18f7
-FF 75 E0		PUSH    [EBP+CODE]; CODE		0x18f7
-Current 0x18fa
-E8 C9 12 00 00		CALL    _EXIT		0x18fa
+PUSH    [EBP+CODE]; CODE		0x18f7
+CALL    _EXIT		0x18fa
 
 --- new func --- ?invoke_main@@YAHXZ
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1975
-End addr 0x1999
-Current 0x1975
-56		PUSH    ESI		0x1975
-Current 0x1976
-57		PUSH    EDI		0x1976
-Current 0x1977
-E8 34 12 00 00		CALL    _GET_INITIAL_NARROW_ENVIRONMENT		0x1977
-Current 0x197c
-8B F8		MOV     EDI, EAX		0x197c
-Current 0x197e
-E8 57 12 00 00		CALL    __P___ARGV		0x197e
-Current 0x1983
-8B 30		MOV     ESI, [EAX]		0x1983
-Current 0x1985
-E8 4A 12 00 00		CALL    __P___ARGC		0x1985
-Current 0x198a
-57		PUSH    EDI; ENVP		0x198a
-Current 0x198b
-56		PUSH    ESI; ARGV		0x198b
-Current 0x198c
-FF 30		PUSH    DWORD PTR [EAX]; ARGC		0x198c
-Current 0x198e
-E8 02 F8 FF FF		CALL    _MAIN		0x198e
-Current 0x1993
-83 C4 0C		ADD     ESP, 0CH		0x1993
-Current 0x1996
-5F		POP     EDI		0x1996
-Current 0x1997
-5E		POP     ESI		0x1997
-Current 0x1998
-C3		RETN		0x1998
+PUSH    ESI		0x1975
+PUSH    EDI		0x1976
+CALL    _GET_INITIAL_NARROW_ENVIRONMENT		0x1977
+MOV     EDI, EAX		0x197c
+CALL    __P___ARGV		0x197e
+MOV     ESI, [EAX]		0x1983
+CALL    __P___ARGC		0x1985
+PUSH    EDI; ENVP		0x198a
+PUSH    ESI; ARGV		0x198b
+PUSH    DWORD PTR [EAX]; ARGC		0x198c
+CALL    _MAIN		0x198e
+ADD     ESP, 0CH		0x1993
+POP     EDI		0x1996
+POP     ESI		0x1997
+RETN		0x1998
 
 --- new func --- ?set_commode@__scrt_file_policy@@SAXXZ
-FlowChart size is  1
 --- new bb ---
-Start addr 0x19ad
-End addr 0x19be
-Current 0x19ad
-56		PUSH    ESI		0x19ad
-Current 0x19ae
-E8 D9 F6 FF FF		CALL    SUB_108C		0x19ae
-Current 0x19b3
-8B F0		MOV     ESI, EAX		0x19b3
-Current 0x19b5
-E8 44 12 00 00		CALL    __P__COMMODE		0x19b5
-Current 0x19ba
-89 30		MOV     [EAX], ESI		0x19ba
-Current 0x19bc
-5E		POP     ESI		0x19bc
-Current 0x19bd
-C3		RETN		0x19bd
+PUSH    ESI		0x19ad
+CALL    SUB_108C		0x19ae
+MOV     ESI, EAX		0x19b3
+CALL    __P__COMMODE		0x19b5
+MOV     [EAX], ESI		0x19ba
+POP     ESI		0x19bc
+RETN		0x19bd
 
 --- new func --- start_0
-FlowChart size is  2
 --- new bb ---
-Start addr 0x19d2
-End addr 0x19dc
-Current 0x19d2
-E8 13 F8 FF FF		CALL    J____SECURITY_INIT_COOKIE		0x19d2
-Current 0x19d7
-E9 A2 FD FF FF		JMP     ?__SCRT_COMMON_MAIN_SEH@@YAHXZ; __SCRT_COMMON_MAIN_SEH(VOID)		0x19d7
---- new bb ---
-Start addr 0x177e
-End addr 0x177e
-skip bb 
+CALL    J____SECURITY_INIT_COOKIE		0x19d2
+JMP     ?__SCRT_COMMON_MAIN_SEH@@YAHXZ; __SCRT_COMMON_MAIN_SEH(VOID)		0x19d7
 
 --- new func --- ?find_pe_section@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z
-FlowChart size is  8
 --- new bb ---
-Start addr 0x19de
-End addr 0x1a00
-Current 0x19de
-55		PUSH    EBP		0x19de
-Current 0x19df
-8B EC		MOV     EBP, ESP		0x19df
-Current 0x19e1
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x19e1
-Current 0x19e4
-56		PUSH    ESI		0x19e4
-Current 0x19e5
-8B 48 3C		MOV     ECX, [EAX+3CH]		0x19e5
-Current 0x19e8
-03 C8		ADD     ECX, EAX		0x19e8
-Current 0x19ea
-0F B7 41 14		MOVZX   EAX, WORD PTR [ECX+14H]		0x19ea
-Current 0x19ee
-8D 51 18		LEA     EDX, [ECX+18H]		0x19ee
-Current 0x19f1
-03 D0		ADD     EDX, EAX		0x19f1
-Current 0x19f3
-0F B7 41 06		MOVZX   EAX, WORD PTR [ECX+6]		0x19f3
-Current 0x19f7
-6B F0 28		IMUL    ESI, EAX, 28H ; '('		0x19f7
-Current 0x19fa
-03 F2		ADD     ESI, EDX		0x19fa
-Current 0x19fc
-3B D6		CMP     EDX, ESI		0x19fc
-Current 0x19fe
-74 19		JZ      SHORT LOC_1A19		0x19fe
+PUSH    EBP		0x19de
+MOV     EBP, ESP		0x19df
+MOV     EAX, [EBP+ARG_0]		0x19e1
+PUSH    ESI		0x19e4
+MOV     ECX, [EAX+3CH]		0x19e5
+ADD     ECX, EAX		0x19e8
+MOVZX   EAX, WORD PTR [ECX+14H]		0x19ea
+LEA     EDX, [ECX+18H]		0x19ee
+ADD     EDX, EAX		0x19f1
+MOVZX   EAX, WORD PTR [ECX+6]		0x19f3
+IMUL    ESI, EAX, 28H ; '('		0x19f7
+ADD     ESI, EDX		0x19fa
+CMP     EDX, ESI		0x19fc
+JZ      SHORT LOC_1A19		0x19fe
 --- new bb ---
-Start addr 0x1a00
-End addr 0x1a03
-Current 0x1a00
-8B 4D 0C		MOV     ECX, [EBP+ARG_4]		0x1a00
+MOV     ECX, [EBP+ARG_4]		0x1a00
 --- new bb ---
-Start addr 0x1a03
-End addr 0x1a08
-Current 0x1a03
-3B 4A 0C		CMP     ECX, [EDX+0CH]		0x1a03
-Current 0x1a06
-72 0A		JB      SHORT LOC_1A12		0x1a06
+CMP     ECX, [EDX+0CH]		0x1a03
+JB      SHORT LOC_1A12		0x1a06
 --- new bb ---
-Start addr 0x1a08
-End addr 0x1a12
-Current 0x1a08
-8B 42 08		MOV     EAX, [EDX+8]		0x1a08
-Current 0x1a0b
-03 42 0C		ADD     EAX, [EDX+0CH]		0x1a0b
-Current 0x1a0e
-3B C8		CMP     ECX, EAX		0x1a0e
-Current 0x1a10
-72 0C		JB      SHORT LOC_1A1E		0x1a10
+MOV     EAX, [EDX+8]		0x1a08
+ADD     EAX, [EDX+0CH]		0x1a0b
+CMP     ECX, EAX		0x1a0e
+JB      SHORT LOC_1A1E		0x1a10
 --- new bb ---
-Start addr 0x1a12
-End addr 0x1a19
-Current 0x1a12
-83 C2 28		ADD     EDX, 28H ; '('		0x1a12
-Current 0x1a15
-3B D6		CMP     EDX, ESI		0x1a15
-Current 0x1a17
-75 EA		JNZ     SHORT LOC_1A03		0x1a17
+ADD     EDX, 28H ; '('		0x1a12
+CMP     EDX, ESI		0x1a15
+JNZ     SHORT LOC_1A03		0x1a17
 --- new bb ---
-Start addr 0x1a19
-End addr 0x1a1b
-Current 0x1a19
-33 C0		XOR     EAX, EAX		0x1a19
+XOR     EAX, EAX		0x1a19
 --- new bb ---
-Start addr 0x1a1b
-End addr 0x1a1e
-Current 0x1a1b
-5E		POP     ESI		0x1a1b
-Current 0x1a1c
-5D		POP     EBP		0x1a1c
-Current 0x1a1d
-C3		RETN		0x1a1d
+POP     ESI		0x1a1b
+POP     EBP		0x1a1c
+RETN		0x1a1d
 --- new bb ---
-Start addr 0x1a1e
-End addr 0x1a22
-Current 0x1a1e
-8B C2		MOV     EAX, EDX		0x1a1e
-Current 0x1a20
-EB F9		JMP     SHORT LOC_1A1B		0x1a20
+MOV     EAX, EDX		0x1a1e
+JMP     SHORT LOC_1A1B		0x1a20
 
 --- new func --- _NtCurrentTeb
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1a72
-End addr 0x1a79
-Current 0x1a72
-64 A1 18 00 00 00		MOV     EAX, LARGE FS:18H		0x1a72
-Current 0x1a78
-C3		RETN		0x1a78
+MOV     EAX, LARGE FS:18H		0x1a72
+RETN		0x1a78
 
 --- new func --- ___scrt_acquire_startup_lock
-FlowChart size is  6
 --- new bb ---
-Start addr 0x1a79
-End addr 0x1a83
-Current 0x1a79
-56		PUSH    ESI		0x1a79
-Current 0x1a7a
-E8 53 F6 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1a7a
-Current 0x1a7f
-85 C0		TEST    EAX, EAX		0x1a7f
-Current 0x1a81
-74 20		JZ      SHORT LOC_1AA3		0x1a81
+PUSH    ESI		0x1a79
+CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1a7a
+TEST    EAX, EAX		0x1a7f
+JZ      SHORT LOC_1AA3		0x1a81
 --- new bb ---
-Start addr 0x1a83
-End addr 0x1a93
-Current 0x1a83
-64 A1 18 00 00 00		MOV     EAX, LARGE FS:18H		0x1a83
-Current 0x1a89
-BE 44 61 00 00		MOV     ESI, OFFSET UNK_6144		0x1a89
-Current 0x1a8e
-8B 50 04		MOV     EDX, [EAX+4]		0x1a8e
-Current 0x1a91
-EB 04		JMP     SHORT LOC_1A97		0x1a91
+MOV     EAX, LARGE FS:18H		0x1a83
+MOV     ESI, OFFSET UNK_6144		0x1a89
+MOV     EDX, [EAX+4]		0x1a8e
+JMP     SHORT LOC_1A97		0x1a91
 --- new bb ---
-Start addr 0x1a93
-End addr 0x1a97
-Current 0x1a93
-3B D0		CMP     EDX, EAX		0x1a93
-Current 0x1a95
-74 10		JZ      SHORT LOC_1AA7		0x1a95
+CMP     EDX, EAX		0x1a93
+JZ      SHORT LOC_1AA7		0x1a95
 --- new bb ---
-Start addr 0x1a97
-End addr 0x1aa3
-Current 0x1a97
-33 C0		XOR     EAX, EAX		0x1a97
-Current 0x1a99
-8B CA		MOV     ECX, EDX		0x1a99
-Current 0x1a9b
-F0 0F B1 0E		LOCK CMPXCHG [ESI], ECX		0x1a9b
-Current 0x1a9f
-85 C0		TEST    EAX, EAX		0x1a9f
-Current 0x1aa1
-75 F0		JNZ     SHORT LOC_1A93		0x1aa1
+XOR     EAX, EAX		0x1a97
+MOV     ECX, EDX		0x1a99
+LOCK CMPXCHG [ESI], ECX		0x1a9b
+TEST    EAX, EAX		0x1a9f
+JNZ     SHORT LOC_1A93		0x1aa1
 --- new bb ---
-Start addr 0x1aa3
-End addr 0x1aa7
-Current 0x1aa3
-32 C0		XOR     AL, AL		0x1aa3
-Current 0x1aa5
-5E		POP     ESI		0x1aa5
-Current 0x1aa6
-C3		RETN		0x1aa6
+XOR     AL, AL		0x1aa3
+POP     ESI		0x1aa5
+RETN		0x1aa6
 --- new bb ---
-Start addr 0x1aa7
-End addr 0x1aab
-Current 0x1aa7
-B0 01		MOV     AL, 1		0x1aa7
-Current 0x1aa9
-5E		POP     ESI		0x1aa9
-Current 0x1aaa
-C3		RETN		0x1aaa
+MOV     AL, 1		0x1aa7
+POP     ESI		0x1aa9
+RETN		0x1aaa
 
 --- new func --- ___scrt_dllmain_after_initialize_c
-FlowChart size is  6
 --- new bb ---
-Start addr 0x1ab7
-End addr 0x1ac0
-Current 0x1ab7
-E8 16 F6 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1ab7
-Current 0x1abc
-85 C0		TEST    EAX, EAX		0x1abc
-Current 0x1abe
-74 07		JZ      SHORT LOC_1AC7		0x1abe
+CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1ab7
+TEST    EAX, EAX		0x1abc
+JZ      SHORT LOC_1AC7		0x1abe
 --- new bb ---
-Start addr 0x1ac0
-End addr 0x1ac7
-Current 0x1ac0
-E8 12 F6 FF FF		CALL    SUB_10D7		0x1ac0
-Current 0x1ac5
-EB 18		JMP     SHORT LOC_1ADF		0x1ac5
+CALL    SUB_10D7		0x1ac0
+JMP     SHORT LOC_1ADF		0x1ac5
 --- new bb ---
-Start addr 0x1ac7
-End addr 0x1ad7
-Current 0x1ac7
-E8 A1 F6 FF FF		CALL    SUB_116D		0x1ac7
-Current 0x1acc
-50		PUSH    EAX; MODE		0x1acc
-Current 0x1acd
-E8 D2 10 00 00		CALL    _CONFIGURE_NARROW_ARGV		0x1acd
-Current 0x1ad2
-59		POP     ECX		0x1ad2
-Current 0x1ad3
-85 C0		TEST    EAX, EAX		0x1ad3
-Current 0x1ad5
-74 03		JZ      SHORT LOC_1ADA		0x1ad5
+CALL    SUB_116D		0x1ac7
+PUSH    EAX; MODE		0x1acc
+CALL    _CONFIGURE_NARROW_ARGV		0x1acd
+POP     ECX		0x1ad2
+TEST    EAX, EAX		0x1ad3
+JZ      SHORT LOC_1ADA		0x1ad5
 --- new bb ---
-Start addr 0x1ad7
-End addr 0x1ada
-Current 0x1ad7
-32 C0		XOR     AL, AL		0x1ad7
-Current 0x1ad9
-C3		RETN		0x1ad9
+XOR     AL, AL		0x1ad7
+RETN		0x1ad9
 --- new bb ---
-Start addr 0x1ada
-End addr 0x1adf
-Current 0x1ada
-E8 CB 10 00 00		CALL    _INITIALIZE_NARROW_ENVIRONMENT		0x1ada
+CALL    _INITIALIZE_NARROW_ENVIRONMENT		0x1ada
 --- new bb ---
-Start addr 0x1adf
-End addr 0x1ae2
-Current 0x1adf
-B0 01		MOV     AL, 1		0x1adf
-Current 0x1ae1
-C3		RETN		0x1ae1
+MOV     AL, 1		0x1adf
+RETN		0x1ae1
 
 --- new func --- ___scrt_dllmain_before_initialize_c
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1aec
-End addr 0x1afa
-Current 0x1aec
-6A 00		PUSH    0		0x1aec
-Current 0x1aee
-E8 AD F5 FF FF		CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES		0x1aee
-Current 0x1af3
-84 C0		TEST    AL, AL		0x1af3
-Current 0x1af5
-59		POP     ECX		0x1af5
-Current 0x1af6
-0F 95 C0		SETNZ   AL		0x1af6
-Current 0x1af9
-C3		RETN		0x1af9
+PUSH    0		0x1aec
+CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES		0x1aee
+TEST    AL, AL		0x1af3
+POP     ECX		0x1af5
+SETNZ   AL		0x1af6
+RETN		0x1af9
 
 --- new func --- ___scrt_dllmain_exception_filter
-FlowChart size is  4
 --- new bb ---
-Start addr 0x1b33
-End addr 0x1b3f
-Current 0x1b33
-55		PUSH    EBP		0x1b33
-Current 0x1b34
-8B EC		MOV     EBP, ESP		0x1b34
-Current 0x1b36
-E8 97 F5 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1b36
-Current 0x1b3b
-85 C0		TEST    EAX, EAX		0x1b3b
-Current 0x1b3d
-75 19		JNZ     SHORT LOC_1B58		0x1b3d
+PUSH    EBP		0x1b33
+MOV     EBP, ESP		0x1b34
+CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1b36
+TEST    EAX, EAX		0x1b3b
+JNZ     SHORT LOC_1B58		0x1b3d
 --- new bb ---
-Start addr 0x1b3f
-End addr 0x1b45
-Current 0x1b3f
-83 7D 0C 01		CMP     [EBP+ARG_4], 1		0x1b3f
-Current 0x1b43
-75 13		JNZ     SHORT LOC_1B58		0x1b43
+CMP     [EBP+ARG_4], 1		0x1b3f
+JNZ     SHORT LOC_1B58		0x1b43
 --- new bb ---
-Start addr 0x1b45
-End addr 0x1b58
-Current 0x1b45
-FF 75 10		PUSH    [EBP+ARG_8]		0x1b45
-Current 0x1b48
-8B 4D 14		MOV     ECX, [EBP+ARG_C]		0x1b48
-Current 0x1b4b
-50		PUSH    EAX		0x1b4b
-Current 0x1b4c
-FF 75 08		PUSH    [EBP+ARG_0]		0x1b4c
-Current 0x1b4f
-FF 15 00 80 00 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x1b4f
-Current 0x1b55
-FF 55 14		CALL    [EBP+ARG_C]		0x1b55
+PUSH    [EBP+ARG_8]		0x1b45
+MOV     ECX, [EBP+ARG_C]		0x1b48
+PUSH    EAX		0x1b4b
+PUSH    [EBP+ARG_0]		0x1b4c
+CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x1b4f
+CALL    [EBP+ARG_C]		0x1b55
 --- new bb ---
-Start addr 0x1b58
-End addr 0x1b67
-Current 0x1b58
-FF 75 1C		PUSH    [EBP+EXCEPTIONPTR]; EXCEPTIONPTR		0x1b58
-Current 0x1b5b
-FF 75 18		PUSH    [EBP+EXCEPTIONNUM]; EXCEPTIONNUM		0x1b5b
-Current 0x1b5e
-E8 A1 10 00 00		CALL    _SEH_FILTER_DLL		0x1b5e
-Current 0x1b63
-59		POP     ECX		0x1b63
-Current 0x1b64
-59		POP     ECX		0x1b64
-Current 0x1b65
-5D		POP     EBP		0x1b65
-Current 0x1b66
-C3		RETN		0x1b66
+PUSH    [EBP+EXCEPTIONPTR]; EXCEPTIONPTR		0x1b58
+PUSH    [EBP+EXCEPTIONNUM]; EXCEPTIONNUM		0x1b5b
+CALL    _SEH_FILTER_DLL		0x1b5e
+POP     ECX		0x1b63
+POP     ECX		0x1b64
+POP     EBP		0x1b65
+RETN		0x1b66
 
 --- new func --- ___scrt_dllmain_uninitialize_c
-FlowChart size is  5
 --- new bb ---
-Start addr 0x1b74
-End addr 0x1b7d
-Current 0x1b74
-E8 59 F5 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1b74
-Current 0x1b79
-85 C0		TEST    EAX, EAX		0x1b79
-Current 0x1b7b
-74 0C		JZ      SHORT LOC_1B89		0x1b7b
+CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1b74
+TEST    EAX, EAX		0x1b79
+JZ      SHORT LOC_1B89		0x1b7b
 --- new bb ---
-Start addr 0x1b7d
-End addr 0x1b89
-Current 0x1b7d
-68 4C 61 00 00		PUSH    OFFSET TABLE; TABLE		0x1b7d
-Current 0x1b82
-E8 8F 10 00 00		CALL    _EXECUTE_ONEXIT_TABLE		0x1b82
-Current 0x1b87
-59		POP     ECX		0x1b87
-Current 0x1b88
-C3		RETN		0x1b88
+PUSH    OFFSET TABLE; TABLE		0x1b7d
+CALL    _EXECUTE_ONEXIT_TABLE		0x1b82
+POP     ECX		0x1b87
+RETN		0x1b88
 --- new bb ---
-Start addr 0x1b89
-End addr 0x1b96
-Current 0x1b89
-E8 5D F5 FF FF		CALL    SUB_10EB		0x1b89
-Current 0x1b8e
-85 C0		TEST    EAX, EAX		0x1b8e
-Current 0x1b90
-0F 84 4A 10 00 00		JZ      _CEXIT		0x1b90
+CALL    SUB_10EB		0x1b89
+TEST    EAX, EAX		0x1b8e
+JZ      _CEXIT		0x1b90
 --- new bb ---
-Start addr 0x1b96
-End addr 0x1b97
-Current 0x1b96
-C3		RETN		0x1b96
---- new bb ---
-Start addr 0x2be0
-End addr 0x2be0
-skip bb 
+RETN		0x1b96
 
 --- new func --- ___scrt_initialize_crt
-FlowChart size is  7
 --- new bb ---
-Start addr 0x1baf
-End addr 0x1bb8
-Current 0x1baf
-55		PUSH    EBP		0x1baf
-Current 0x1bb0
-8B EC		MOV     EBP, ESP		0x1bb0
-Current 0x1bb2
-83 7D 08 00		CMP     [EBP+ARG_0], 0		0x1bb2
-Current 0x1bb6
-75 07		JNZ     SHORT LOC_1BBF		0x1bb6
+PUSH    EBP		0x1baf
+MOV     EBP, ESP		0x1bb0
+CMP     [EBP+ARG_0], 0		0x1bb2
+JNZ     SHORT LOC_1BBF		0x1bb6
 --- new bb ---
-Start addr 0x1bb8
-End addr 0x1bbf
-Current 0x1bb8
-C6 05 48 61 00 00 01		MOV     BYTE_6148, 1		0x1bb8
+MOV     BYTE_6148, 1		0x1bb8
 --- new bb ---
-Start addr 0x1bbf
-End addr 0x1bcd
-Current 0x1bbf
-E8 13 F5 FF FF		CALL    SUB_10D7		0x1bbf
-Current 0x1bc4
-E8 95 F5 FF FF		CALL    SUB_115E		0x1bc4
-Current 0x1bc9
-84 C0		TEST    AL, AL		0x1bc9
-Current 0x1bcb
-75 04		JNZ     SHORT LOC_1BD1		0x1bcb
+CALL    SUB_10D7		0x1bbf
+CALL    SUB_115E		0x1bc4
+TEST    AL, AL		0x1bc9
+JNZ     SHORT LOC_1BD1		0x1bcb
 --- new bb ---
-Start addr 0x1bcd
-End addr 0x1bd1
-Current 0x1bcd
-32 C0		XOR     AL, AL		0x1bcd
-Current 0x1bcf
-5D		POP     EBP		0x1bcf
-Current 0x1bd0
-C3		RETN		0x1bd0
+XOR     AL, AL		0x1bcd
+POP     EBP		0x1bcf
+RETN		0x1bd0
 --- new bb ---
-Start addr 0x1bd1
-End addr 0x1bda
-Current 0x1bd1
-E8 8D F5 FF FF		CALL    SUB_1163		0x1bd1
-Current 0x1bd6
-84 C0		TEST    AL, AL		0x1bd6
-Current 0x1bd8
-75 0A		JNZ     SHORT LOC_1BE4		0x1bd8
+CALL    SUB_1163		0x1bd1
+TEST    AL, AL		0x1bd6
+JNZ     SHORT LOC_1BE4		0x1bd8
 --- new bb ---
-Start addr 0x1bda
-End addr 0x1be4
-Current 0x1bda
-6A 00		PUSH    0		0x1bda
-Current 0x1bdc
-E8 2E F4 FF FF		CALL    SUB_100F		0x1bdc
-Current 0x1be1
-59		POP     ECX		0x1be1
-Current 0x1be2
-EB E9		JMP     SHORT LOC_1BCD		0x1be2
+PUSH    0		0x1bda
+CALL    SUB_100F		0x1bdc
+POP     ECX		0x1be1
+JMP     SHORT LOC_1BCD		0x1be2
 --- new bb ---
-Start addr 0x1be4
-End addr 0x1be8
-Current 0x1be4
-B0 01		MOV     AL, 1		0x1be4
-Current 0x1be6
-5D		POP     EBP		0x1be6
-Current 0x1be7
-C3		RETN		0x1be7
+MOV     AL, 1		0x1be4
+POP     EBP		0x1be6
+RETN		0x1be7
 
 --- new func --- ___scrt_initialize_onexit_tables
-FlowChart size is  13
 --- new bb ---
-Start addr 0x1bf6
-End addr 0x1c02
-Current 0x1bf6
-55		PUSH    EBP		0x1bf6
-Current 0x1bf7
-8B EC		MOV     EBP, ESP		0x1bf7
-Current 0x1bf9
-80 3D 49 61 00 00 00		CMP     BYTE_6149, 0		0x1bf9
-Current 0x1c00
-74 04		JZ      SHORT LOC_1C06		0x1c00
+PUSH    EBP		0x1bf6
+MOV     EBP, ESP		0x1bf7
+CMP     BYTE_6149, 0		0x1bf9
+JZ      SHORT LOC_1C06		0x1c00
 --- new bb ---
-Start addr 0x1c02
-End addr 0x1c06
-Current 0x1c02
-B0 01		MOV     AL, 1		0x1c02
-Current 0x1c04
-5D		POP     EBP		0x1c04
-Current 0x1c05
-C3		RETN		0x1c05
+MOV     AL, 1		0x1c02
+POP     EBP		0x1c04
+RETN		0x1c05
 --- new bb ---
-Start addr 0x1c06
-End addr 0x1c0e
-Current 0x1c06
-56		PUSH    ESI		0x1c06
-Current 0x1c07
-8B 75 08		MOV     ESI, [EBP+ARG_0]		0x1c07
-Current 0x1c0a
-85 F6		TEST    ESI, ESI		0x1c0a
-Current 0x1c0c
-74 05		JZ      SHORT LOC_1C13		0x1c0c
+PUSH    ESI		0x1c06
+MOV     ESI, [EBP+ARG_0]		0x1c07
+TEST    ESI, ESI		0x1c0a
+JZ      SHORT LOC_1C13		0x1c0c
 --- new bb ---
-Start addr 0x1c0e
-End addr 0x1c13
-Current 0x1c0e
-83 FE 01		CMP     ESI, 1		0x1c0e
-Current 0x1c11
-75 62		JNZ     SHORT LOC_1C75		0x1c11
+CMP     ESI, 1		0x1c0e
+JNZ     SHORT LOC_1C75		0x1c11
 --- new bb ---
-Start addr 0x1c13
-End addr 0x1c1c
-Current 0x1c13
-E8 BA F4 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1c13
-Current 0x1c18
-85 C0		TEST    EAX, EAX		0x1c18
-Current 0x1c1a
-74 26		JZ      SHORT LOC_1C42		0x1c1a
+CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1c13
+TEST    EAX, EAX		0x1c18
+JZ      SHORT LOC_1C42		0x1c1a
 --- new bb ---
-Start addr 0x1c1c
-End addr 0x1c20
-Current 0x1c1c
-85 F6		TEST    ESI, ESI		0x1c1c
-Current 0x1c1e
-75 22		JNZ     SHORT LOC_1C42		0x1c1e
+TEST    ESI, ESI		0x1c1c
+JNZ     SHORT LOC_1C42		0x1c1e
 --- new bb ---
-Start addr 0x1c20
-End addr 0x1c2f
-Current 0x1c20
-68 4C 61 00 00		PUSH    OFFSET TABLE; TABLE		0x1c20
-Current 0x1c25
-E8 E0 0F 00 00		CALL    _INITIALIZE_ONEXIT_TABLE		0x1c25
-Current 0x1c2a
-59		POP     ECX		0x1c2a
-Current 0x1c2b
-85 C0		TEST    EAX, EAX		0x1c2b
-Current 0x1c2d
-75 0F		JNZ     SHORT LOC_1C3E		0x1c2d
+PUSH    OFFSET TABLE; TABLE		0x1c20
+CALL    _INITIALIZE_ONEXIT_TABLE		0x1c25
+POP     ECX		0x1c2a
+TEST    EAX, EAX		0x1c2b
+JNZ     SHORT LOC_1C3E		0x1c2d
 --- new bb ---
-Start addr 0x1c2f
-End addr 0x1c3e
-Current 0x1c2f
-68 58 61 00 00		PUSH    OFFSET STRU_6158; TABLE		0x1c2f
-Current 0x1c34
-E8 D1 0F 00 00		CALL    _INITIALIZE_ONEXIT_TABLE		0x1c34
-Current 0x1c39
-59		POP     ECX		0x1c39
-Current 0x1c3a
-85 C0		TEST    EAX, EAX		0x1c3a
-Current 0x1c3c
-74 2B		JZ      SHORT LOC_1C69		0x1c3c
+PUSH    OFFSET STRU_6158; TABLE		0x1c2f
+CALL    _INITIALIZE_ONEXIT_TABLE		0x1c34
+POP     ECX		0x1c39
+TEST    EAX, EAX		0x1c3a
+JZ      SHORT LOC_1C69		0x1c3c
 --- new bb ---
-Start addr 0x1c3e
-End addr 0x1c42
-Current 0x1c3e
-32 C0		XOR     AL, AL		0x1c3e
-Current 0x1c40
-EB 30		JMP     SHORT LOC_1C72		0x1c40
+XOR     AL, AL		0x1c3e
+JMP     SHORT LOC_1C72		0x1c40
 --- new bb ---
-Start addr 0x1c42
-End addr 0x1c69
-Current 0x1c42
-83 C9 FF		OR      ECX, 0FFFFFFFFH		0x1c42
-Current 0x1c45
-89 0D 4C 61 00 00		MOV     TABLE._FIRST, ECX		0x1c45
-Current 0x1c4b
-89 0D 50 61 00 00		MOV     TABLE._LAST, ECX		0x1c4b
-Current 0x1c51
-89 0D 54 61 00 00		MOV     TABLE._END, ECX		0x1c51
-Current 0x1c57
-89 0D 58 61 00 00		MOV     STRU_6158._FIRST, ECX		0x1c57
-Current 0x1c5d
-89 0D 5C 61 00 00		MOV     STRU_6158._LAST, ECX		0x1c5d
-Current 0x1c63
-89 0D 60 61 00 00		MOV     STRU_6158._END, ECX		0x1c63
+OR      ECX, 0FFFFFFFFH		0x1c42
+MOV     TABLE._FIRST, ECX		0x1c45
+MOV     TABLE._LAST, ECX		0x1c4b
+MOV     TABLE._END, ECX		0x1c51
+MOV     STRU_6158._FIRST, ECX		0x1c57
+MOV     STRU_6158._LAST, ECX		0x1c5d
+MOV     STRU_6158._END, ECX		0x1c63
 --- new bb ---
-Start addr 0x1c69
-End addr 0x1c72
-Current 0x1c69
-C6 05 49 61 00 00 01		MOV     BYTE_6149, 1		0x1c69
-Current 0x1c70
-B0 01		MOV     AL, 1		0x1c70
+MOV     BYTE_6149, 1		0x1c69
+MOV     AL, 1		0x1c70
 --- new bb ---
-Start addr 0x1c72
-End addr 0x1c75
-Current 0x1c72
-5E		POP     ESI		0x1c72
-Current 0x1c73
-5D		POP     EBP		0x1c73
-Current 0x1c74
-C3		RETN		0x1c74
+POP     ESI		0x1c72
+POP     EBP		0x1c73
+RETN		0x1c74
 --- new bb ---
-Start addr 0x1c75
-End addr 0x1c7c
-Current 0x1c75
-6A 05		PUSH    5		0x1c75
-Current 0x1c77
-E8 6A F4 FF FF		CALL    J____SCRT_FASTFAIL		0x1c77
+PUSH    5		0x1c75
+CALL    J____SCRT_FASTFAIL		0x1c77
 
 --- new func --- ___scrt_is_nonwritable_in_current_image
-FlowChart size is  11
 --- new bb ---
-Start addr 0x1c9e
-End addr 0x1caa
-Current 0x1c9e
-6A 08		PUSH    8		0x1c9e
-Current 0x1ca0
-68 98 57 00 00		PUSH    OFFSET STRU_5798		0x1ca0
-Current 0x1ca5
-E8 C4 F3 FF FF		CALL    J___SEH_PROLOG4		0x1ca5
+PUSH    8		0x1c9e
+PUSH    OFFSET STRU_5798		0x1ca0
+CALL    J___SEH_PROLOG4		0x1ca5
 --- new bb ---
-Start addr 0x1caa
-End addr 0x1cbc
-Current 0x1caa
-83 65 FC 00		AND     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0		0x1caa
-Current 0x1cae
-B8 4D 5A 00 00		MOV     EAX, 5A4DH		0x1cae
-Current 0x1cb3
-66 39 05 00 00 40 00		CMP     DS:400000H, AX		0x1cb3
-Current 0x1cba
-75 5D		JNZ     SHORT LOC_1D19		0x1cba
+AND     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0		0x1caa
+MOV     EAX, 5A4DH		0x1cae
+CMP     DS:400000H, AX		0x1cb3
+JNZ     SHORT LOC_1D19		0x1cba
 --- new bb ---
-Start addr 0x1cbc
-End addr 0x1ccd
-Current 0x1cbc
-A1 3C 00 40 00		MOV     EAX, DS:40003CH		0x1cbc
-Current 0x1cc1
-81 B8 00 00 40 00 50 45 00 00		CMP     DWORD PTR [EAX+400000H], 4550H		0x1cc1
-Current 0x1ccb
-75 4C		JNZ     SHORT LOC_1D19		0x1ccb
+MOV     EAX, DS:40003CH		0x1cbc
+CMP     DWORD PTR [EAX+400000H], 4550H		0x1cc1
+JNZ     SHORT LOC_1D19		0x1ccb
 --- new bb ---
-Start addr 0x1ccd
-End addr 0x1cdb
-Current 0x1ccd
-B9 0B 01 00 00		MOV     ECX, 10BH		0x1ccd
-Current 0x1cd2
-66 39 88 18 00 40 00		CMP     [EAX+400018H], CX		0x1cd2
-Current 0x1cd9
-75 3E		JNZ     SHORT LOC_1D19		0x1cd9
+MOV     ECX, 10BH		0x1ccd
+CMP     [EAX+400018H], CX		0x1cd2
+JNZ     SHORT LOC_1D19		0x1cd9
 --- new bb ---
-Start addr 0x1cdb
-End addr 0x1cf2
-Current 0x1cdb
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x1cdb
-Current 0x1cde
-B9 00 00 40 00		MOV     ECX, 400000H		0x1cde
-Current 0x1ce3
-2B C1		SUB     EAX, ECX		0x1ce3
-Current 0x1ce5
-50		PUSH    EAX; UNSIGNED INT		0x1ce5
-Current 0x1ce6
-51		PUSH    ECX; UNSIGNED __INT8 *		0x1ce6
-Current 0x1ce7
-E8 F2 FC FF FF		CALL    ?FIND_PE_SECTION@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z; FIND_PE_SECTION(UCHAR * CONST,UINT)		0x1ce7
-Current 0x1cec
-59		POP     ECX		0x1cec
-Current 0x1ced
-59		POP     ECX		0x1ced
-Current 0x1cee
-85 C0		TEST    EAX, EAX		0x1cee
-Current 0x1cf0
-74 27		JZ      SHORT LOC_1D19		0x1cf0
+MOV     EAX, [EBP+ARG_0]		0x1cdb
+MOV     ECX, 400000H		0x1cde
+SUB     EAX, ECX		0x1ce3
+PUSH    EAX; UNSIGNED INT		0x1ce5
+PUSH    ECX; UNSIGNED __INT8 *		0x1ce6
+CALL    ?FIND_PE_SECTION@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z; FIND_PE_SECTION(UCHAR * CONST,UINT)		0x1ce7
+POP     ECX		0x1cec
+POP     ECX		0x1ced
+TEST    EAX, EAX		0x1cee
+JZ      SHORT LOC_1D19		0x1cf0
 --- new bb ---
-Start addr 0x1cf2
-End addr 0x1cf8
-Current 0x1cf2
-83 78 24 00		CMP     DWORD PTR [EAX+24H], 0		0x1cf2
-Current 0x1cf6
-7C 21		JL      SHORT LOC_1D19		0x1cf6
+CMP     DWORD PTR [EAX+24H], 0		0x1cf2
+JL      SHORT LOC_1D19		0x1cf6
 --- new bb ---
-Start addr 0x1cf8
-End addr 0x1d03
-Current 0x1cf8
-C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x1cf8
-Current 0x1cff
-B0 01		MOV     AL, 1		0x1cff
-Current 0x1d01
-EB 1F		JMP     SHORT LOC_1D22		0x1d01
+MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x1cf8
+MOV     AL, 1		0x1cff
+JMP     SHORT LOC_1D22		0x1d01
 --- new bb ---
-Start addr 0x1d03
-End addr 0x1d16
-Current 0x1d03
-8B 45 EC		MOV     EAX, [EBP+MS_EXC.EXC_PTR]		0x1d03
-Current 0x1d06
-8B 00		MOV     EAX, [EAX]		0x1d06
-Current 0x1d08
-33 C9		XOR     ECX, ECX		0x1d08
-Current 0x1d0a
-81 38 05 00 00 C0		CMP     DWORD PTR [EAX], 0C0000005H		0x1d0a
-Current 0x1d10
-0F 94 C1		SETZ    CL		0x1d10
-Current 0x1d13
-8B C1		MOV     EAX, ECX		0x1d13
-Current 0x1d15
-C3		RETN		0x1d15
+MOV     EAX, [EBP+MS_EXC.EXC_PTR]		0x1d03
+MOV     EAX, [EAX]		0x1d06
+XOR     ECX, ECX		0x1d08
+CMP     DWORD PTR [EAX], 0C0000005H		0x1d0a
+SETZ    CL		0x1d10
+MOV     EAX, ECX		0x1d13
+RETN		0x1d15
 --- new bb ---
-Start addr 0x1d16
-End addr 0x1d19
-Current 0x1d16
-8B 65 E8		MOV     ESP, [EBP+MS_EXC.OLD_ESP]		0x1d16
+MOV     ESP, [EBP+MS_EXC.OLD_ESP]		0x1d16
 --- new bb ---
-Start addr 0x1d19
-End addr 0x1d22
-Current 0x1d19
-C7 45 FC FE FF FF FF		MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x1d19
-Current 0x1d20
-32 C0		XOR     AL, AL		0x1d20
+MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x1d19
+XOR     AL, AL		0x1d20
 --- new bb ---
-Start addr 0x1d22
-End addr 0x1d32
-Current 0x1d22
-8B 4D F0		MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]		0x1d22
-Current 0x1d25
-64 89 0D 00 00 00 00		MOV     LARGE FS:0, ECX		0x1d25
-Current 0x1d2c
-59		POP     ECX		0x1d2c
-Current 0x1d2d
-5F		POP     EDI		0x1d2d
-Current 0x1d2e
-5E		POP     ESI		0x1d2e
-Current 0x1d2f
-5B		POP     EBX		0x1d2f
-Current 0x1d30
-C9		LEAVE		0x1d30
-Current 0x1d31
-C3		RETN		0x1d31
+MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]		0x1d22
+MOV     LARGE FS:0, ECX		0x1d25
+POP     ECX		0x1d2c
+POP     EDI		0x1d2d
+POP     ESI		0x1d2e
+POP     EBX		0x1d2f
+LEAVE		0x1d30
+RETN		0x1d31
 
 --- new func --- ___scrt_release_startup_lock
-FlowChart size is  4
 --- new bb ---
-Start addr 0x1d57
-End addr 0x1d63
-Current 0x1d57
-55		PUSH    EBP		0x1d57
-Current 0x1d58
-8B EC		MOV     EBP, ESP		0x1d58
-Current 0x1d5a
-E8 73 F3 FF FF		CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1d5a
-Current 0x1d5f
-85 C0		TEST    EAX, EAX		0x1d5f
-Current 0x1d61
-74 0F		JZ      SHORT LOC_1D72		0x1d61
+PUSH    EBP		0x1d57
+MOV     EBP, ESP		0x1d58
+CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1d5a
+TEST    EAX, EAX		0x1d5f
+JZ      SHORT LOC_1D72		0x1d61
 --- new bb ---
-Start addr 0x1d63
-End addr 0x1d69
-Current 0x1d63
-80 7D 08 00		CMP     [EBP+ARG_0], 0		0x1d63
-Current 0x1d67
-75 09		JNZ     SHORT LOC_1D72		0x1d67
+CMP     [EBP+ARG_0], 0		0x1d63
+JNZ     SHORT LOC_1D72		0x1d67
 --- new bb ---
-Start addr 0x1d69
-End addr 0x1d72
-Current 0x1d69
-33 C0		XOR     EAX, EAX		0x1d69
-Current 0x1d6b
-B9 44 61 00 00		MOV     ECX, OFFSET UNK_6144		0x1d6b
-Current 0x1d70
-87 01		XCHG    EAX, [ECX]		0x1d70
+XOR     EAX, EAX		0x1d69
+MOV     ECX, OFFSET UNK_6144		0x1d6b
+XCHG    EAX, [ECX]		0x1d70
 --- new bb ---
-Start addr 0x1d72
-End addr 0x1d74
-Current 0x1d72
-5D		POP     EBP		0x1d72
-Current 0x1d73
-C3		RETN		0x1d73
+POP     EBP		0x1d72
+RETN		0x1d73
 
 --- new func --- ___scrt_uninitialize_crt
-FlowChart size is  4
 --- new bb ---
-Start addr 0x1d7b
-End addr 0x1d87
-Current 0x1d7b
-55		PUSH    EBP		0x1d7b
-Current 0x1d7c
-8B EC		MOV     EBP, ESP		0x1d7c
-Current 0x1d7e
-80 3D 48 61 00 00 00		CMP     BYTE_6148, 0		0x1d7e
-Current 0x1d85
-74 06		JZ      SHORT LOC_1D8D		0x1d85
+PUSH    EBP		0x1d7b
+MOV     EBP, ESP		0x1d7c
+CMP     BYTE_6148, 0		0x1d7e
+JZ      SHORT LOC_1D8D		0x1d85
 --- new bb ---
-Start addr 0x1d87
-End addr 0x1d8d
-Current 0x1d87
-80 7D 0C 00		CMP     [EBP+ARG_4], 0		0x1d87
-Current 0x1d8b
-75 12		JNZ     SHORT LOC_1D9F		0x1d8b
+CMP     [EBP+ARG_4], 0		0x1d87
+JNZ     SHORT LOC_1D9F		0x1d8b
 --- new bb ---
-Start addr 0x1d8d
-End addr 0x1d9f
-Current 0x1d8d
-FF 75 08		PUSH    [EBP+ARG_0]		0x1d8d
-Current 0x1d90
-E8 01 F3 FF FF		CALL    SUB_1096		0x1d90
-Current 0x1d95
-FF 75 08		PUSH    [EBP+ARG_0]		0x1d95
-Current 0x1d98
-E8 72 F2 FF FF		CALL    SUB_100F		0x1d98
-Current 0x1d9d
-59		POP     ECX		0x1d9d
-Current 0x1d9e
-59		POP     ECX		0x1d9e
+PUSH    [EBP+ARG_0]		0x1d8d
+CALL    SUB_1096		0x1d90
+PUSH    [EBP+ARG_0]		0x1d95
+CALL    SUB_100F		0x1d98
+POP     ECX		0x1d9d
+POP     ECX		0x1d9e
 --- new bb ---
-Start addr 0x1d9f
-End addr 0x1da3
-Current 0x1d9f
-B0 01		MOV     AL, 1		0x1d9f
-Current 0x1da1
-5D		POP     EBP		0x1da1
-Current 0x1da2
-C3		RETN		0x1da2
+MOV     AL, 1		0x1d9f
+POP     EBP		0x1da1
+RETN		0x1da2
 
 --- new func --- __onexit
-FlowChart size is  4
 --- new bb ---
-Start addr 0x1dad
-End addr 0x1dbc
-Current 0x1dad
-55		PUSH    EBP		0x1dad
-Current 0x1dae
-8B EC		MOV     EBP, ESP		0x1dae
-Current 0x1db0
-83 3D 4C 61 00 00 FF		CMP     TABLE._FIRST, 0FFFFFFFFH		0x1db0
-Current 0x1db7
-FF 75 08		PUSH    [EBP+FUNCTION]; FUNCTION		0x1db7
-Current 0x1dba
-75 07		JNZ     SHORT LOC_1DC3		0x1dba
+PUSH    EBP		0x1dad
+MOV     EBP, ESP		0x1dae
+CMP     TABLE._FIRST, 0FFFFFFFFH		0x1db0
+PUSH    [EBP+FUNCTION]; FUNCTION		0x1db7
+JNZ     SHORT LOC_1DC3		0x1dba
 --- new bb ---
-Start addr 0x1dbc
-End addr 0x1dc3
-Current 0x1dbc
-E8 5B 0E 00 00		CALL    _CRT_ATEXIT		0x1dbc
-Current 0x1dc1
-EB 0B		JMP     SHORT LOC_1DCE		0x1dc1
+CALL    _CRT_ATEXIT		0x1dbc
+JMP     SHORT LOC_1DCE		0x1dc1
 --- new bb ---
-Start addr 0x1dc3
-End addr 0x1dce
-Current 0x1dc3
-68 4C 61 00 00		PUSH    OFFSET TABLE; TABLE		0x1dc3
-Current 0x1dc8
-E8 43 0E 00 00		CALL    _REGISTER_ONEXIT_FUNCTION		0x1dc8
-Current 0x1dcd
-59		POP     ECX		0x1dcd
+PUSH    OFFSET TABLE; TABLE		0x1dc3
+CALL    _REGISTER_ONEXIT_FUNCTION		0x1dc8
+POP     ECX		0x1dcd
 --- new bb ---
-Start addr 0x1dce
-End addr 0x1dda
-Current 0x1dce
-F7 D8		NEG     EAX		0x1dce
-Current 0x1dd0
-59		POP     ECX		0x1dd0
-Current 0x1dd1
-1B C0		SBB     EAX, EAX		0x1dd1
-Current 0x1dd3
-F7 D0		NOT     EAX		0x1dd3
-Current 0x1dd5
-23 45 08		AND     EAX, [EBP+FUNCTION]		0x1dd5
-Current 0x1dd8
-5D		POP     EBP		0x1dd8
-Current 0x1dd9
-C3		RETN		0x1dd9
+NEG     EAX		0x1dce
+POP     ECX		0x1dd0
+SBB     EAX, EAX		0x1dd1
+NOT     EAX		0x1dd3
+AND     EAX, [EBP+FUNCTION]		0x1dd5
+POP     EBP		0x1dd8
+RETN		0x1dd9
 
 --- new func --- _at_quick_exit
-FlowChart size is  4
 --- new bb ---
-Start addr 0x1de5
-End addr 0x1df1
-Current 0x1de5
-55		PUSH    EBP		0x1de5
-Current 0x1de6
-8B EC		MOV     EBP, ESP		0x1de6
-Current 0x1de8
-83 3D 58 61 00 00 FF		CMP     STRU_6158._FIRST, 0FFFFFFFFH		0x1de8
-Current 0x1def
-75 06		JNZ     SHORT LOC_1DF7		0x1def
+PUSH    EBP		0x1de5
+MOV     EBP, ESP		0x1de6
+CMP     STRU_6158._FIRST, 0FFFFFFFFH		0x1de8
+JNZ     SHORT LOC_1DF7		0x1def
 --- new bb ---
-Start addr 0x1df1
-End addr 0x1df7
-Current 0x1df1
-5D		POP     EBP		0x1df1
-Current 0x1df2
-E9 2B 0E 00 00		JMP     _CRT_AT_QUICK_EXIT		0x1df2
+POP     EBP		0x1df1
+JMP     _CRT_AT_QUICK_EXIT		0x1df2
 --- new bb ---
-Start addr 0x1df7
-End addr 0x1e08
-Current 0x1df7
-FF 75 08		PUSH    [EBP+FUNCTION]; FUNCTION		0x1df7
-Current 0x1dfa
-68 58 61 00 00		PUSH    OFFSET STRU_6158; TABLE		0x1dfa
-Current 0x1dff
-E8 0C 0E 00 00		CALL    _REGISTER_ONEXIT_FUNCTION		0x1dff
-Current 0x1e04
-59		POP     ECX		0x1e04
-Current 0x1e05
-59		POP     ECX		0x1e05
-Current 0x1e06
-5D		POP     EBP		0x1e06
-Current 0x1e07
-C3		RETN		0x1e07
---- new bb ---
-Start addr 0x2c22
-End addr 0x2c22
-skip bb 
+PUSH    [EBP+FUNCTION]; FUNCTION		0x1df7
+PUSH    OFFSET STRU_6158; TABLE		0x1dfa
+CALL    _REGISTER_ONEXIT_FUNCTION		0x1dff
+POP     ECX		0x1e04
+POP     ECX		0x1e05
+POP     EBP		0x1e06
+RETN		0x1e07
 
 --- new func --- _atexit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1e10
-End addr 0x1e25
-Current 0x1e10
-55		PUSH    EBP		0x1e10
-Current 0x1e11
-8B EC		MOV     EBP, ESP		0x1e11
-Current 0x1e13
-FF 75 08		PUSH    [EBP+FUNC]; FUNC		0x1e13
-Current 0x1e16
-E8 EE F2 FF FF		CALL    J___ONEXIT		0x1e16
-Current 0x1e1b
-F7 D8		NEG     EAX		0x1e1b
-Current 0x1e1d
-59		POP     ECX		0x1e1d
-Current 0x1e1e
-1B C0		SBB     EAX, EAX		0x1e1e
-Current 0x1e20
-F7 D8		NEG     EAX		0x1e20
-Current 0x1e22
-48		DEC     EAX		0x1e22
-Current 0x1e23
-5D		POP     EBP		0x1e23
-Current 0x1e24
-C3		RETN		0x1e24
+PUSH    EBP		0x1e10
+MOV     EBP, ESP		0x1e11
+PUSH    [EBP+FUNC]; FUNC		0x1e13
+CALL    J___ONEXIT		0x1e16
+NEG     EAX		0x1e1b
+POP     ECX		0x1e1d
+SBB     EAX, EAX		0x1e1e
+NEG     EAX		0x1e20
+DEC     EAX		0x1e22
+POP     EBP		0x1e23
+RETN		0x1e24
 
 --- new func --- ___get_entropy
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1e2a
-End addr 0x1e77
-Current 0x1e2a
-55		PUSH    EBP		0x1e2a
-Current 0x1e2b
-8B EC		MOV     EBP, ESP		0x1e2b
-Current 0x1e2d
-83 EC 14		SUB     ESP, 14H		0x1e2d
-Current 0x1e30
-83 65 F4 00		AND     [EBP+SYSTEMTIMEASFILETIME.DWLOWDATETIME], 0		0x1e30
-Current 0x1e34
-8D 45 F4		LEA     EAX, [EBP+SYSTEMTIMEASFILETIME]		0x1e34
-Current 0x1e37
-83 65 F8 00		AND     [EBP+SYSTEMTIMEASFILETIME.DWHIGHDATETIME], 0		0x1e37
-Current 0x1e3b
-50		PUSH    EAX; LPSYSTEMTIMEASFILETIME		0x1e3b
-Current 0x1e3c
-FF 15 0C 70 00 00		CALL    DS:GETSYSTEMTIMEASFILETIME		0x1e3c
-Current 0x1e42
-8B 45 F8		MOV     EAX, [EBP+SYSTEMTIMEASFILETIME.DWHIGHDATETIME]		0x1e42
-Current 0x1e45
-33 45 F4		XOR     EAX, [EBP+SYSTEMTIMEASFILETIME.DWLOWDATETIME]		0x1e45
-Current 0x1e48
-89 45 FC		MOV     [EBP+VAR_4], EAX		0x1e48
-Current 0x1e4b
-FF 15 08 70 00 00		CALL    DS:GETCURRENTTHREADID		0x1e4b
-Current 0x1e51
-31 45 FC		XOR     [EBP+VAR_4], EAX		0x1e51
-Current 0x1e54
-FF 15 04 70 00 00		CALL    DS:GETCURRENTPROCESSID		0x1e54
-Current 0x1e5a
-31 45 FC		XOR     [EBP+VAR_4], EAX		0x1e5a
-Current 0x1e5d
-8D 45 EC		LEA     EAX, [EBP+PERFORMANCECOUNT]		0x1e5d
-Current 0x1e60
-50		PUSH    EAX; LPPERFORMANCECOUNT		0x1e60
-Current 0x1e61
-FF 15 24 70 00 00		CALL    DS:QUERYPERFORMANCECOUNTER		0x1e61
-Current 0x1e67
-8B 45 F0		MOV     EAX, DWORD PTR [EBP+PERFORMANCECOUNT+4]		0x1e67
-Current 0x1e6a
-8D 4D FC		LEA     ECX, [EBP+VAR_4]		0x1e6a
-Current 0x1e6d
-33 45 EC		XOR     EAX, DWORD PTR [EBP+PERFORMANCECOUNT]		0x1e6d
-Current 0x1e70
-33 45 FC		XOR     EAX, [EBP+VAR_4]		0x1e70
-Current 0x1e73
-33 C1		XOR     EAX, ECX		0x1e73
-Current 0x1e75
-C9		LEAVE		0x1e75
-Current 0x1e76
-C3		RETN		0x1e76
+PUSH    EBP		0x1e2a
+MOV     EBP, ESP		0x1e2b
+SUB     ESP, 14H		0x1e2d
+AND     [EBP+SYSTEMTIMEASFILETIME.DWLOWDATETIME], 0		0x1e30
+LEA     EAX, [EBP+SYSTEMTIMEASFILETIME]		0x1e34
+AND     [EBP+SYSTEMTIMEASFILETIME.DWHIGHDATETIME], 0		0x1e37
+PUSH    EAX; LPSYSTEMTIMEASFILETIME		0x1e3b
+CALL    DS:GETSYSTEMTIMEASFILETIME		0x1e3c
+MOV     EAX, [EBP+SYSTEMTIMEASFILETIME.DWHIGHDATETIME]		0x1e42
+XOR     EAX, [EBP+SYSTEMTIMEASFILETIME.DWLOWDATETIME]		0x1e45
+MOV     [EBP+VAR_4], EAX		0x1e48
+CALL    DS:GETCURRENTTHREADID		0x1e4b
+XOR     [EBP+VAR_4], EAX		0x1e51
+CALL    DS:GETCURRENTPROCESSID		0x1e54
+XOR     [EBP+VAR_4], EAX		0x1e5a
+LEA     EAX, [EBP+PERFORMANCECOUNT]		0x1e5d
+PUSH    EAX; LPPERFORMANCECOUNT		0x1e60
+CALL    DS:QUERYPERFORMANCECOUNTER		0x1e61
+MOV     EAX, DWORD PTR [EBP+PERFORMANCECOUNT+4]		0x1e67
+LEA     ECX, [EBP+VAR_4]		0x1e6a
+XOR     EAX, DWORD PTR [EBP+PERFORMANCECOUNT]		0x1e6d
+XOR     EAX, [EBP+VAR_4]		0x1e70
+XOR     EAX, ECX		0x1e73
+LEAVE		0x1e75
+RETN		0x1e76
 
 --- new func --- ___security_init_cookie
-FlowChart size is  8
 --- new bb ---
-Start addr 0x1e8a
-End addr 0x1ea0
-Current 0x1e8a
-8B 0D 14 60 00 00		MOV     ECX, ___SECURITY_COOKIE		0x1e8a
-Current 0x1e90
-56		PUSH    ESI		0x1e90
-Current 0x1e91
-57		PUSH    EDI		0x1e91
-Current 0x1e92
-BF 4E E6 40 BB		MOV     EDI, 0BB40E64EH		0x1e92
-Current 0x1e97
-BE 00 00 FF FF		MOV     ESI, 0FFFF0000H		0x1e97
-Current 0x1e9c
-3B CF		CMP     ECX, EDI		0x1e9c
-Current 0x1e9e
-74 04		JZ      SHORT LOC_1EA4		0x1e9e
+MOV     ECX, ___SECURITY_COOKIE		0x1e8a
+PUSH    ESI		0x1e90
+PUSH    EDI		0x1e91
+MOV     EDI, 0BB40E64EH		0x1e92
+MOV     ESI, 0FFFF0000H		0x1e97
+CMP     ECX, EDI		0x1e9c
+JZ      SHORT LOC_1EA4		0x1e9e
 --- new bb ---
-Start addr 0x1ea0
-End addr 0x1ea4
-Current 0x1ea0
-85 CE		TEST    ESI, ECX		0x1ea0
-Current 0x1ea2
-75 26		JNZ     SHORT LOC_1ECA		0x1ea2
+TEST    ESI, ECX		0x1ea0
+JNZ     SHORT LOC_1ECA		0x1ea2
 --- new bb ---
-Start addr 0x1ea4
-End addr 0x1eaf
-Current 0x1ea4
-E8 81 FF FF FF		CALL    ___GET_ENTROPY		0x1ea4
-Current 0x1ea9
-8B C8		MOV     ECX, EAX		0x1ea9
-Current 0x1eab
-3B CF		CMP     ECX, EDI		0x1eab
-Current 0x1ead
-75 07		JNZ     SHORT LOC_1EB6		0x1ead
+CALL    ___GET_ENTROPY		0x1ea4
+MOV     ECX, EAX		0x1ea9
+CMP     ECX, EDI		0x1eab
+JNZ     SHORT LOC_1EB6		0x1ead
 --- new bb ---
-Start addr 0x1eaf
-End addr 0x1eb6
-Current 0x1eaf
-B9 4F E6 40 BB		MOV     ECX, 0BB40E64FH		0x1eaf
-Current 0x1eb4
-EB 0E		JMP     SHORT LOC_1EC4		0x1eb4
+MOV     ECX, 0BB40E64FH		0x1eaf
+JMP     SHORT LOC_1EC4		0x1eb4
 --- new bb ---
-Start addr 0x1eb6
-End addr 0x1eba
-Current 0x1eb6
-85 CE		TEST    ESI, ECX		0x1eb6
-Current 0x1eb8
-75 0A		JNZ     SHORT LOC_1EC4		0x1eb8
+TEST    ESI, ECX		0x1eb6
+JNZ     SHORT LOC_1EC4		0x1eb8
 --- new bb ---
-Start addr 0x1eba
-End addr 0x1ec4
-Current 0x1eba
-0D 11 47 00 00		OR      EAX, 4711H		0x1eba
-Current 0x1ebf
-C1 E0 10		SHL     EAX, 10H		0x1ebf
-Current 0x1ec2
-0B C8		OR      ECX, EAX		0x1ec2
+OR      EAX, 4711H		0x1eba
+SHL     EAX, 10H		0x1ebf
+OR      ECX, EAX		0x1ec2
 --- new bb ---
-Start addr 0x1ec4
-End addr 0x1eca
-Current 0x1ec4
-89 0D 14 60 00 00		MOV     ___SECURITY_COOKIE, ECX		0x1ec4
+MOV     ___SECURITY_COOKIE, ECX		0x1ec4
 --- new bb ---
-Start addr 0x1eca
-End addr 0x1ed5
-Current 0x1eca
-F7 D1		NOT     ECX		0x1eca
-Current 0x1ecc
-5F		POP     EDI		0x1ecc
-Current 0x1ecd
-89 0D 18 60 00 00		MOV     DWORD_6018, ECX		0x1ecd
-Current 0x1ed3
-5E		POP     ESI		0x1ed3
-Current 0x1ed4
-C3		RETN		0x1ed4
+NOT     ECX		0x1eca
+POP     EDI		0x1ecc
+MOV     DWORD_6018, ECX		0x1ecd
+POP     ESI		0x1ed3
+RETN		0x1ed4
 
 --- new func --- UserMathErrorFunction_0
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1ee7
-End addr 0x1eea
-Current 0x1ee7
-33 C0		XOR     EAX, EAX		0x1ee7
-Current 0x1ee9
-C3		RETN		0x1ee9
+XOR     EAX, EAX		0x1ee7
+RETN		0x1ee9
 
 --- new func --- sub_1EEA
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1eea
-End addr 0x1eee
-Current 0x1eea
-33 C0		XOR     EAX, EAX		0x1eea
-Current 0x1eec
-40		INC     EAX		0x1eec
-Current 0x1eed
-C3		RETN		0x1eed
+XOR     EAX, EAX		0x1eea
+INC     EAX		0x1eec
+RETN		0x1eed
 
 --- new func --- sub_1EEE
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1eee
-End addr 0x1ef1
-Current 0x1eee
-33 C0		XOR     EAX, EAX		0x1eee
-Current 0x1ef0
-C3		RETN		0x1ef0
+XOR     EAX, EAX		0x1eee
+RETN		0x1ef0
 
 --- new func --- __get_startup_file_mode
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1ef1
-End addr 0x1ef7
-Current 0x1ef1
-B8 00 40 00 00		MOV     EAX, 4000H		0x1ef1
-Current 0x1ef6
-C3		RETN		0x1ef6
+MOV     EAX, 4000H		0x1ef1
+RETN		0x1ef6
 
 --- new func --- sub_1EF7
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1ef7
-End addr 0x1efa
-Current 0x1ef7
-33 C0		XOR     EAX, EAX		0x1ef7
-Current 0x1ef9
-C3		RETN		0x1ef9
+XOR     EAX, EAX		0x1ef7
+RETN		0x1ef9
 
 --- new func --- sub_1EFA
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1efa
-End addr 0x1efd
-Current 0x1efa
-33 C0		XOR     EAX, EAX		0x1efa
-Current 0x1efc
-C3		RETN		0x1efc
+XOR     EAX, EAX		0x1efa
+RETN		0x1efc
 
 --- new func --- sub_1EFD
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1efd
-End addr 0x1f09
-Current 0x1efd
-68 70 61 00 00		PUSH    OFFSET LISTHEAD; LISTHEAD		0x1efd
-Current 0x1f02
-FF 15 10 70 00 00		CALL    DS:INITIALIZESLISTHEAD		0x1f02
-Current 0x1f08
-C3		RETN		0x1f08
+PUSH    OFFSET LISTHEAD; LISTHEAD		0x1efd
+CALL    DS:INITIALIZESLISTHEAD		0x1f02
+RETN		0x1f08
 
 --- new func --- sub_1F1B
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f1b
-End addr 0x1f1e
-Current 0x1f1b
-B0 01		MOV     AL, 1		0x1f1b
-Current 0x1f1d
-C3		RETN		0x1f1d
+MOV     AL, 1		0x1f1b
+RETN		0x1f1d
 
 --- new func --- __initialize_default_precision
-FlowChart size is  3
 --- new bb ---
-Start addr 0x1f1e
-End addr 0x1f36
-Current 0x1f1e
-68 00 00 03 00		PUSH    30000H; MASK		0x1f1e
-Current 0x1f23
-68 00 00 01 00		PUSH    10000H; NEWVALUE		0x1f23
-Current 0x1f28
-6A 00		PUSH    0; CURRENTSTATE		0x1f28
-Current 0x1f2a
-E8 F9 0C 00 00		CALL    _CONTROLFP_S		0x1f2a
-Current 0x1f2f
-83 C4 0C		ADD     ESP, 0CH		0x1f2f
-Current 0x1f32
-85 C0		TEST    EAX, EAX		0x1f32
-Current 0x1f34
-75 01		JNZ     SHORT LOC_1F37		0x1f34
+PUSH    30000H; MASK		0x1f1e
+PUSH    10000H; NEWVALUE		0x1f23
+PUSH    0; CURRENTSTATE		0x1f28
+CALL    _CONTROLFP_S		0x1f2a
+ADD     ESP, 0CH		0x1f2f
+TEST    EAX, EAX		0x1f32
+JNZ     SHORT LOC_1F37		0x1f34
 --- new bb ---
-Start addr 0x1f36
-End addr 0x1f37
-Current 0x1f36
-C3		RETN		0x1f36
+RETN		0x1f36
 --- new bb ---
-Start addr 0x1f37
-End addr 0x1f3e
-Current 0x1f37
-6A 07		PUSH    7		0x1f37
-Current 0x1f39
-E8 A8 F1 FF FF		CALL    J____SCRT_FASTFAIL		0x1f39
+PUSH    7		0x1f37
+CALL    J____SCRT_FASTFAIL		0x1f39
 
 --- new func --- nullsub_3
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f47
-End addr 0x1f4a
-Current 0x1f47
-C2 00 00		RETN    0		0x1f47
+RETN    0		0x1f47
 
 --- new func --- nullsub_2
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f4a
-End addr 0x1f4d
-Current 0x1f4a
-C2 00 00		RETN    0		0x1f4a
+RETN    0		0x1f4a
 
 --- new func --- sub_1F4D
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f4d
-End addr 0x1f53
-Current 0x1f4d
-B8 80 61 00 00		MOV     EAX, OFFSET UNK_6180		0x1f4d
-Current 0x1f52
-C3		RETN		0x1f52
+MOV     EAX, OFFSET UNK_6180		0x1f4d
+RETN		0x1f52
 
 --- new func --- sub_1F53
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f53
-End addr 0x1f59
-Current 0x1f53
-B8 90 61 00 00		MOV     EAX, OFFSET UNK_6190		0x1f53
-Current 0x1f58
-C3		RETN		0x1f58
+MOV     EAX, OFFSET UNK_6190		0x1f53
+RETN		0x1f58
 
 --- new func --- ___scrt_initialize_default_local_stdio_options
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f59
-End addr 0x1f76
-Current 0x1f59
-E8 50 F2 FF FF		CALL    SUB_11AE		0x1f59
-Current 0x1f5e
-8B 48 04		MOV     ECX, [EAX+4]		0x1f5e
-Current 0x1f61
-83 08 24		OR      DWORD PTR [EAX], 24H		0x1f61
-Current 0x1f64
-89 48 04		MOV     [EAX+4], ECX		0x1f64
-Current 0x1f67
-E8 65 F2 FF FF		CALL    SUB_11D1		0x1f67
-Current 0x1f6c
-8B 48 04		MOV     ECX, [EAX+4]		0x1f6c
-Current 0x1f6f
-83 08 02		OR      DWORD PTR [EAX], 2		0x1f6f
-Current 0x1f72
-89 48 04		MOV     [EAX+4], ECX		0x1f72
-Current 0x1f75
-C3		RETN		0x1f75
+CALL    SUB_11AE		0x1f59
+MOV     ECX, [EAX+4]		0x1f5e
+OR      DWORD PTR [EAX], 24H		0x1f61
+MOV     [EAX+4], ECX		0x1f64
+CALL    SUB_11D1		0x1f67
+MOV     ECX, [EAX+4]		0x1f6c
+OR      DWORD PTR [EAX], 2		0x1f6f
+MOV     [EAX+4], ECX		0x1f72
+RETN		0x1f75
 
 --- new func --- sub_1F7D
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f7d
-End addr 0x1f89
-Current 0x1f7d
-33 C0		XOR     EAX, EAX		0x1f7d
-Current 0x1f7f
-39 05 04 60 00 00		CMP     DWORD_6004, EAX		0x1f7f
-Current 0x1f85
-0F 94 C0		SETZ    AL		0x1f85
-Current 0x1f88
-C3		RETN		0x1f88
+XOR     EAX, EAX		0x1f7d
+CMP     DWORD_6004, EAX		0x1f7f
+SETZ    AL		0x1f85
+RETN		0x1f88
 
 --- new func --- sub_1F8C
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f8c
-End addr 0x1f92
-Current 0x1f8c
-B8 EC 65 00 00		MOV     EAX, OFFSET UNK_65EC		0x1f8c
-Current 0x1f91
-C3		RETN		0x1f91
+MOV     EAX, OFFSET UNK_65EC		0x1f8c
+RETN		0x1f91
 
 --- new func --- sub_1F92
-FlowChart size is  1
 --- new bb ---
-Start addr 0x1f92
-End addr 0x1f98
-Current 0x1f92
-B8 E0 65 00 00		MOV     EAX, OFFSET UNK_65E0		0x1f92
-Current 0x1f97
-C3		RETN		0x1f97
+MOV     EAX, OFFSET UNK_65E0		0x1f92
+RETN		0x1f97
 
 --- new func --- ___scrt_fastfail
-FlowChart size is  6
 --- new bb ---
-Start addr 0x1f98
-End addr 0x1fae
-Current 0x1f98
-55		PUSH    EBP		0x1f98
-Current 0x1f99
-8B EC		MOV     EBP, ESP		0x1f99
-Current 0x1f9b
-81 EC 24 03 00 00		SUB     ESP, 324H		0x1f9b
-Current 0x1fa1
-53		PUSH    EBX		0x1fa1
-Current 0x1fa2
-6A 17		PUSH    17H; PROCESSORFEATURE		0x1fa2
-Current 0x1fa4
-FF 15 20 70 00 00		CALL    DS:ISPROCESSORFEATUREPRESENT		0x1fa4
-Current 0x1faa
-85 C0		TEST    EAX, EAX		0x1faa
-Current 0x1fac
-74 05		JZ      SHORT LOC_1FB3		0x1fac
+PUSH    EBP		0x1f98
+MOV     EBP, ESP		0x1f99
+SUB     ESP, 324H		0x1f9b
+PUSH    EBX		0x1fa1
+PUSH    17H; PROCESSORFEATURE		0x1fa2
+CALL    DS:ISPROCESSORFEATUREPRESENT		0x1fa4
+TEST    EAX, EAX		0x1faa
+JZ      SHORT LOC_1FB3		0x1fac
 --- new bb ---
-Start addr 0x1fae
-End addr 0x1fb3
-Current 0x1fae
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x1fae
-Current 0x1fb1
-CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)		0x1fb1
+MOV     ECX, [EBP+ARG_0]		0x1fae
+INT     29H; WIN8: RTLFAILFAST(ECX)		0x1fb1
 --- new bb ---
-Start addr 0x1fb3
-End addr 0x20a4
-Current 0x1fb3
-6A 03		PUSH    3		0x1fb3
-Current 0x1fb5
-E8 BD F1 FF FF		CALL    SUB_1177		0x1fb5
-Current 0x1fba
-C7 04 24 CC 02 00 00		MOV     [ESP+32CH+SIZE], 2CCH; SIZE		0x1fba
-Current 0x1fc1
-8D 85 DC FC FF FF		LEA     EAX, [EBP+VAR_324]		0x1fc1
-Current 0x1fc7
-6A 00		PUSH    0; VAL		0x1fc7
-Current 0x1fc9
-50		PUSH    EAX; VOID *		0x1fc9
-Current 0x1fca
-E8 99 0B 00 00		CALL    MEMSET		0x1fca
-Current 0x1fcf
-83 C4 0C		ADD     ESP, 0CH		0x1fcf
-Current 0x1fd2
-89 85 8C FD FF FF		MOV     [EBP+VAR_274], EAX		0x1fd2
-Current 0x1fd8
-89 8D 88 FD FF FF		MOV     [EBP+VAR_278], ECX		0x1fd8
-Current 0x1fde
-89 95 84 FD FF FF		MOV     [EBP+VAR_27C], EDX		0x1fde
-Current 0x1fe4
-89 9D 80 FD FF FF		MOV     [EBP+VAR_280], EBX		0x1fe4
-Current 0x1fea
-89 B5 7C FD FF FF		MOV     [EBP+VAR_284], ESI		0x1fea
-Current 0x1ff0
-89 BD 78 FD FF FF		MOV     [EBP+VAR_288], EDI		0x1ff0
-Current 0x1ff6
-66 8C 95 A4 FD FF FF		MOV     [EBP+VAR_25C], SS		0x1ff6
-Current 0x1ffd
-66 8C 8D 98 FD FF FF		MOV     [EBP+VAR_268], CS		0x1ffd
-Current 0x2004
-66 8C 9D 74 FD FF FF		MOV     [EBP+VAR_28C], DS		0x2004
-Current 0x200b
-66 8C 85 70 FD FF FF		MOV     [EBP+VAR_290], ES		0x200b
-Current 0x2012
-66 8C A5 6C FD FF FF		MOV     [EBP+VAR_294], FS		0x2012
-Current 0x2019
-66 8C AD 68 FD FF FF		MOV     [EBP+VAR_298], GS		0x2019
-Current 0x2020
-9C		PUSHF		0x2020
-Current 0x2021
-8F 85 9C FD FF FF		POP     [EBP+VAR_264]		0x2021
-Current 0x2027
-8B 45 04		MOV     EAX, [EBP+4]		0x2027
-Current 0x202a
-89 85 94 FD FF FF		MOV     [EBP+VAR_26C], EAX		0x202a
-Current 0x2030
-8D 45 04		LEA     EAX, [EBP+4]		0x2030
-Current 0x2033
-89 85 A0 FD FF FF		MOV     [EBP+VAR_260], EAX		0x2033
-Current 0x2039
-C7 85 DC FC FF FF 01 00 01 00		MOV     [EBP+VAR_324], 10001H		0x2039
-Current 0x2043
-8B 40 FC		MOV     EAX, [EAX-4]		0x2043
-Current 0x2046
-6A 50		PUSH    50H ; 'P'; SIZE		0x2046
-Current 0x2048
-89 85 90 FD FF FF		MOV     [EBP+VAR_270], EAX		0x2048
-Current 0x204e
-8D 45 A8		LEA     EAX, [EBP+VAR_58]		0x204e
-Current 0x2051
-6A 00		PUSH    0; VAL		0x2051
-Current 0x2053
-50		PUSH    EAX; VOID *		0x2053
-Current 0x2054
-E8 0F 0B 00 00		CALL    MEMSET		0x2054
-Current 0x2059
-8B 45 04		MOV     EAX, [EBP+4]		0x2059
-Current 0x205c
-83 C4 0C		ADD     ESP, 0CH		0x205c
-Current 0x205f
-C7 45 A8 15 00 00 40		MOV     [EBP+VAR_58], 40000015H		0x205f
-Current 0x2066
-C7 45 AC 01 00 00 00		MOV     [EBP+VAR_54], 1		0x2066
-Current 0x206d
-89 45 B4		MOV     [EBP+VAR_4C], EAX		0x206d
-Current 0x2070
-FF 15 30 70 00 00		CALL    DS:ISDEBUGGERPRESENT		0x2070
-Current 0x2076
-6A 00		PUSH    0; LPTOPLEVELEXCEPTIONFILTER		0x2076
-Current 0x2078
-8D 58 FF		LEA     EBX, [EAX-1]		0x2078
-Current 0x207b
-F7 DB		NEG     EBX		0x207b
-Current 0x207d
-8D 45 A8		LEA     EAX, [EBP+VAR_58]		0x207d
-Current 0x2080
-89 45 F8		MOV     [EBP+EXCEPTIONINFO.EXCEPTIONRECORD], EAX		0x2080
-Current 0x2083
-8D 85 DC FC FF FF		LEA     EAX, [EBP+VAR_324]		0x2083
-Current 0x2089
-1A DB		SBB     BL, BL		0x2089
-Current 0x208b
-89 45 FC		MOV     [EBP+EXCEPTIONINFO.CONTEXTRECORD], EAX		0x208b
-Current 0x208e
-FE C3		INC     BL		0x208e
-Current 0x2090
-FF 15 28 70 00 00		CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2090
-Current 0x2096
-8D 45 F8		LEA     EAX, [EBP+EXCEPTIONINFO]		0x2096
-Current 0x2099
-50		PUSH    EAX; EXCEPTIONINFO		0x2099
-Current 0x209a
-FF 15 2C 70 00 00		CALL    DS:UNHANDLEDEXCEPTIONFILTER		0x209a
-Current 0x20a0
-85 C0		TEST    EAX, EAX		0x20a0
-Current 0x20a2
-75 0C		JNZ     SHORT LOC_20B0		0x20a2
+PUSH    3		0x1fb3
+CALL    SUB_1177		0x1fb5
+MOV     [ESP+32CH+SIZE], 2CCH; SIZE		0x1fba
+LEA     EAX, [EBP+VAR_324]		0x1fc1
+PUSH    0; VAL		0x1fc7
+PUSH    EAX; VOID *		0x1fc9
+CALL    MEMSET		0x1fca
+ADD     ESP, 0CH		0x1fcf
+MOV     [EBP+VAR_274], EAX		0x1fd2
+MOV     [EBP+VAR_278], ECX		0x1fd8
+MOV     [EBP+VAR_27C], EDX		0x1fde
+MOV     [EBP+VAR_280], EBX		0x1fe4
+MOV     [EBP+VAR_284], ESI		0x1fea
+MOV     [EBP+VAR_288], EDI		0x1ff0
+MOV     [EBP+VAR_25C], SS		0x1ff6
+MOV     [EBP+VAR_268], CS		0x1ffd
+MOV     [EBP+VAR_28C], DS		0x2004
+MOV     [EBP+VAR_290], ES		0x200b
+MOV     [EBP+VAR_294], FS		0x2012
+MOV     [EBP+VAR_298], GS		0x2019
+PUSHF		0x2020
+POP     [EBP+VAR_264]		0x2021
+MOV     EAX, [EBP+4]		0x2027
+MOV     [EBP+VAR_26C], EAX		0x202a
+LEA     EAX, [EBP+4]		0x2030
+MOV     [EBP+VAR_260], EAX		0x2033
+MOV     [EBP+VAR_324], 10001H		0x2039
+MOV     EAX, [EAX-4]		0x2043
+PUSH    50H ; 'P'; SIZE		0x2046
+MOV     [EBP+VAR_270], EAX		0x2048
+LEA     EAX, [EBP+VAR_58]		0x204e
+PUSH    0; VAL		0x2051
+PUSH    EAX; VOID *		0x2053
+CALL    MEMSET		0x2054
+MOV     EAX, [EBP+4]		0x2059
+ADD     ESP, 0CH		0x205c
+MOV     [EBP+VAR_58], 40000015H		0x205f
+MOV     [EBP+VAR_54], 1		0x2066
+MOV     [EBP+VAR_4C], EAX		0x206d
+CALL    DS:ISDEBUGGERPRESENT		0x2070
+PUSH    0; LPTOPLEVELEXCEPTIONFILTER		0x2076
+LEA     EBX, [EAX-1]		0x2078
+NEG     EBX		0x207b
+LEA     EAX, [EBP+VAR_58]		0x207d
+MOV     [EBP+EXCEPTIONINFO.EXCEPTIONRECORD], EAX		0x2080
+LEA     EAX, [EBP+VAR_324]		0x2083
+SBB     BL, BL		0x2089
+MOV     [EBP+EXCEPTIONINFO.CONTEXTRECORD], EAX		0x208b
+INC     BL		0x208e
+CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2090
+LEA     EAX, [EBP+EXCEPTIONINFO]		0x2096
+PUSH    EAX; EXCEPTIONINFO		0x2099
+CALL    DS:UNHANDLEDEXCEPTIONFILTER		0x209a
+TEST    EAX, EAX		0x20a0
+JNZ     SHORT LOC_20B0		0x20a2
 --- new bb ---
-Start addr 0x20a4
-End addr 0x20a8
-Current 0x20a4
-84 DB		TEST    BL, BL		0x20a4
-Current 0x20a6
-75 08		JNZ     SHORT LOC_20B0		0x20a6
+TEST    BL, BL		0x20a4
+JNZ     SHORT LOC_20B0		0x20a6
 --- new bb ---
-Start addr 0x20a8
-End addr 0x20b0
-Current 0x20a8
-6A 03		PUSH    3		0x20a8
-Current 0x20aa
-E8 C8 F0 FF FF		CALL    SUB_1177		0x20aa
-Current 0x20af
-59		POP     ECX		0x20af
+PUSH    3		0x20a8
+CALL    SUB_1177		0x20aa
+POP     ECX		0x20af
 --- new bb ---
-Start addr 0x20b0
-End addr 0x20b3
-Current 0x20b0
-5B		POP     EBX		0x20b0
-Current 0x20b1
-C9		LEAVE		0x20b1
-Current 0x20b2
-C3		RETN		0x20b2
+POP     EBX		0x20b0
+LEAVE		0x20b1
+RETN		0x20b2
 
 --- new func --- ___scrt_get_show_window_mode
-FlowChart size is  3
 --- new bb ---
-Start addr 0x20f9
-End addr 0x211f
-Current 0x20f9
-55		PUSH    EBP		0x20f9
-Current 0x20fa
-8B EC		MOV     EBP, ESP		0x20fa
-Current 0x20fc
-83 EC 44		SUB     ESP, 44H		0x20fc
-Current 0x20ff
-6A 44		PUSH    44H ; 'D'; SIZE		0x20ff
-Current 0x2101
-8D 45 BC		LEA     EAX, [EBP+STARTUPINFO]		0x2101
-Current 0x2104
-6A 00		PUSH    0; VAL		0x2104
-Current 0x2106
-50		PUSH    EAX; VOID *		0x2106
-Current 0x2107
-E8 5C 0A 00 00		CALL    MEMSET		0x2107
-Current 0x210c
-83 C4 0C		ADD     ESP, 0CH		0x210c
-Current 0x210f
-8D 45 BC		LEA     EAX, [EBP+STARTUPINFO]		0x210f
-Current 0x2112
-50		PUSH    EAX; LPSTARTUPINFO		0x2112
-Current 0x2113
-FF 15 00 70 00 00		CALL    DS:GETSTARTUPINFOW		0x2113
-Current 0x2119
-F6 45 E8 01		TEST    BYTE PTR [EBP+STARTUPINFO.DWFLAGS], 1		0x2119
-Current 0x211d
-74 06		JZ      SHORT LOC_2125		0x211d
+PUSH    EBP		0x20f9
+MOV     EBP, ESP		0x20fa
+SUB     ESP, 44H		0x20fc
+PUSH    44H ; 'D'; SIZE		0x20ff
+LEA     EAX, [EBP+STARTUPINFO]		0x2101
+PUSH    0; VAL		0x2104
+PUSH    EAX; VOID *		0x2106
+CALL    MEMSET		0x2107
+ADD     ESP, 0CH		0x210c
+LEA     EAX, [EBP+STARTUPINFO]		0x210f
+PUSH    EAX; LPSTARTUPINFO		0x2112
+CALL    DS:GETSTARTUPINFOW		0x2113
+TEST    BYTE PTR [EBP+STARTUPINFO.DWFLAGS], 1		0x2119
+JZ      SHORT LOC_2125		0x211d
 --- new bb ---
-Start addr 0x211f
-End addr 0x2125
-Current 0x211f
-0F B7 45 EC		MOVZX   EAX, [EBP+STARTUPINFO.WSHOWWINDOW]		0x211f
-Current 0x2123
-C9		LEAVE		0x2123
-Current 0x2124
-C3		RETN		0x2124
+MOVZX   EAX, [EBP+STARTUPINFO.WSHOWWINDOW]		0x211f
+LEAVE		0x2123
+RETN		0x2124
 --- new bb ---
-Start addr 0x2125
-End addr 0x212a
-Current 0x2125
-6A 0A		PUSH    0AH		0x2125
-Current 0x2127
-58		POP     EAX		0x2127
-Current 0x2128
-C9		LEAVE		0x2128
-Current 0x2129
-C3		RETN		0x2129
+PUSH    0AH		0x2125
+POP     EAX		0x2127
+LEAVE		0x2128
+RETN		0x2129
 
 --- new func --- sub_2136
-FlowChart size is  2
 --- new bb ---
-Start addr 0x2136
-End addr 0x213b
-Current 0x2136
-E9 FC EE FF FF		JMP     SUB_1037		0x2136
---- new bb ---
-Start addr 0x1037
-End addr 0x1037
-skip bb 
+JMP     SUB_1037		0x2136
 
 --- new func --- sub_213B
-FlowChart size is  1
 --- new bb ---
-Start addr 0x213b
-End addr 0x213e
-Current 0x213b
-33 C0		XOR     EAX, EAX		0x213b
-Current 0x213d
-C3		RETN		0x213d
+XOR     EAX, EAX		0x213b
+RETN		0x213d
 
 --- new func --- sub_213E
-FlowChart size is  7
 --- new bb ---
-Start addr 0x213e
-End addr 0x214a
-Current 0x213e
-6A 00		PUSH    0; LPMODULENAME		0x213e
-Current 0x2140
-FF 15 1C 70 00 00		CALL    DS:GETMODULEHANDLEW		0x2140
-Current 0x2146
-85 C0		TEST    EAX, EAX		0x2146
-Current 0x2148
-74 33		JZ      SHORT LOC_217D		0x2148
+PUSH    0; LPMODULENAME		0x213e
+CALL    DS:GETMODULEHANDLEW		0x2140
+TEST    EAX, EAX		0x2146
+JZ      SHORT LOC_217D		0x2148
 --- new bb ---
-Start addr 0x214a
-End addr 0x2154
-Current 0x214a
-B9 4D 5A 00 00		MOV     ECX, 5A4DH		0x214a
-Current 0x214f
-66 39 08		CMP     [EAX], CX		0x214f
-Current 0x2152
-75 29		JNZ     SHORT LOC_217D		0x2152
+MOV     ECX, 5A4DH		0x214a
+CMP     [EAX], CX		0x214f
+JNZ     SHORT LOC_217D		0x2152
 --- new bb ---
-Start addr 0x2154
-End addr 0x2161
-Current 0x2154
-8B 48 3C		MOV     ECX, [EAX+3CH]		0x2154
-Current 0x2157
-03 C8		ADD     ECX, EAX		0x2157
-Current 0x2159
-81 39 50 45 00 00		CMP     DWORD PTR [ECX], 4550H		0x2159
-Current 0x215f
-75 1C		JNZ     SHORT LOC_217D		0x215f
+MOV     ECX, [EAX+3CH]		0x2154
+ADD     ECX, EAX		0x2157
+CMP     DWORD PTR [ECX], 4550H		0x2159
+JNZ     SHORT LOC_217D		0x215f
 --- new bb ---
-Start addr 0x2161
-End addr 0x216c
-Current 0x2161
-B8 0B 01 00 00		MOV     EAX, 10BH		0x2161
-Current 0x2166
-66 39 41 18		CMP     [ECX+18H], AX		0x2166
-Current 0x216a
-75 11		JNZ     SHORT LOC_217D		0x216a
+MOV     EAX, 10BH		0x2161
+CMP     [ECX+18H], AX		0x2166
+JNZ     SHORT LOC_217D		0x216a
 --- new bb ---
-Start addr 0x216c
-End addr 0x2172
-Current 0x216c
-83 79 74 0E		CMP     DWORD PTR [ECX+74H], 0EH		0x216c
-Current 0x2170
-76 0B		JBE     SHORT LOC_217D		0x2170
+CMP     DWORD PTR [ECX+74H], 0EH		0x216c
+JBE     SHORT LOC_217D		0x2170
 --- new bb ---
-Start addr 0x2172
-End addr 0x217d
-Current 0x2172
-83 B9 E8 00 00 00 00		CMP     DWORD PTR [ECX+0E8H], 0		0x2172
-Current 0x2179
-0F 95 C0		SETNZ   AL		0x2179
-Current 0x217c
-C3		RETN		0x217c
+CMP     DWORD PTR [ECX+0E8H], 0		0x2172
+SETNZ   AL		0x2179
+RETN		0x217c
 --- new bb ---
-Start addr 0x217d
-End addr 0x2180
-Current 0x217d
-32 C0		XOR     AL, AL		0x217d
-Current 0x217f
-C3		RETN		0x217f
+XOR     AL, AL		0x217d
+RETN		0x217f
 
 --- new func --- sub_2190
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2190
-End addr 0x219c
-Current 0x2190
-68 B8 11 00 00		PUSH    OFFSET J____SCRT_UNHANDLED_EXCEPTION_FILTER@4; LPTOPLEVELEXCEPTIONFILTER		0x2190
-Current 0x2195
-FF 15 28 70 00 00		CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2195
-Current 0x219b
-C3		RETN		0x219b
+PUSH    OFFSET J____SCRT_UNHANDLED_EXCEPTION_FILTER@4; LPTOPLEVELEXCEPTIONFILTER		0x2190
+CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2195
+RETN		0x219b
 
 --- new func --- sub_219F
-FlowChart size is  1
 --- new bb ---
-Start addr 0x219f
-End addr 0x21a2
-Current 0x219f
-33 C0		XOR     EAX, EAX		0x219f
-Current 0x21a1
-C3		RETN		0x21a1
+XOR     EAX, EAX		0x219f
+RETN		0x21a1
 
 --- new func --- ___scrt_unhandled_exception_filter@4
-FlowChart size is  8
 --- new bb ---
-Start addr 0x21a2
-End addr 0x21b4
-Current 0x21a2
-55		PUSH    EBP		0x21a2
-Current 0x21a3
-8B EC		MOV     EBP, ESP		0x21a3
-Current 0x21a5
-56		PUSH    ESI		0x21a5
-Current 0x21a6
-57		PUSH    EDI		0x21a6
-Current 0x21a7
-8B 7D 08		MOV     EDI, [EBP+ARG_0]		0x21a7
-Current 0x21aa
-8B 37		MOV     ESI, [EDI]		0x21aa
-Current 0x21ac
-81 3E 63 73 6D E0		CMP     DWORD PTR [ESI], 0E06D7363H		0x21ac
-Current 0x21b2
-75 25		JNZ     SHORT LOC_21D9		0x21b2
+PUSH    EBP		0x21a2
+MOV     EBP, ESP		0x21a3
+PUSH    ESI		0x21a5
+PUSH    EDI		0x21a6
+MOV     EDI, [EBP+ARG_0]		0x21a7
+MOV     ESI, [EDI]		0x21aa
+CMP     DWORD PTR [ESI], 0E06D7363H		0x21ac
+JNZ     SHORT LOC_21D9		0x21b2
 --- new bb ---
-Start addr 0x21b4
-End addr 0x21ba
-Current 0x21b4
-83 7E 10 03		CMP     DWORD PTR [ESI+10H], 3		0x21b4
-Current 0x21b8
-75 1F		JNZ     SHORT LOC_21D9		0x21b8
+CMP     DWORD PTR [ESI+10H], 3		0x21b4
+JNZ     SHORT LOC_21D9		0x21b8
 --- new bb ---
-Start addr 0x21ba
-End addr 0x21c4
-Current 0x21ba
-8B 46 14		MOV     EAX, [ESI+14H]		0x21ba
-Current 0x21bd
-3D 20 05 93 19		CMP     EAX, 19930520H		0x21bd
-Current 0x21c2
-74 1D		JZ      SHORT LOC_21E1		0x21c2
+MOV     EAX, [ESI+14H]		0x21ba
+CMP     EAX, 19930520H		0x21bd
+JZ      SHORT LOC_21E1		0x21c2
 --- new bb ---
-Start addr 0x21c4
-End addr 0x21cb
-Current 0x21c4
-3D 21 05 93 19		CMP     EAX, 19930521H		0x21c4
-Current 0x21c9
-74 16		JZ      SHORT LOC_21E1		0x21c9
+CMP     EAX, 19930521H		0x21c4
+JZ      SHORT LOC_21E1		0x21c9
 --- new bb ---
-Start addr 0x21cb
-End addr 0x21d2
-Current 0x21cb
-3D 22 05 93 19		CMP     EAX, 19930522H		0x21cb
-Current 0x21d0
-74 0F		JZ      SHORT LOC_21E1		0x21d0
+CMP     EAX, 19930522H		0x21cb
+JZ      SHORT LOC_21E1		0x21d0
 --- new bb ---
-Start addr 0x21d2
-End addr 0x21d9
-Current 0x21d2
-3D 00 40 99 01		CMP     EAX, 1994000H		0x21d2
-Current 0x21d7
-74 08		JZ      SHORT LOC_21E1		0x21d7
+CMP     EAX, 1994000H		0x21d2
+JZ      SHORT LOC_21E1		0x21d7
 --- new bb ---
-Start addr 0x21d9
-End addr 0x21e1
-Current 0x21d9
-5F		POP     EDI		0x21d9
-Current 0x21da
-33 C0		XOR     EAX, EAX		0x21da
-Current 0x21dc
-5E		POP     ESI		0x21dc
-Current 0x21dd
-5D		POP     EBP		0x21dd
-Current 0x21de
-C2 04 00		RETN    4		0x21de
+POP     EDI		0x21d9
+XOR     EAX, EAX		0x21da
+POP     ESI		0x21dc
+POP     EBP		0x21dd
+RETN    4		0x21de
 --- new bb ---
-Start addr 0x21e1
-End addr 0x21f7
-Current 0x21e1
-E8 76 09 00 00		CALL    __CURRENT_EXCEPTION		0x21e1
-Current 0x21e6
-89 30		MOV     [EAX], ESI		0x21e6
-Current 0x21e8
-8B 77 04		MOV     ESI, [EDI+4]		0x21e8
-Current 0x21eb
-E8 72 09 00 00		CALL    __CURRENT_EXCEPTION_CONTEXT		0x21eb
-Current 0x21f0
-89 30		MOV     [EAX], ESI		0x21f0
-Current 0x21f2
-E8 37 0A 00 00		CALL    TERMINATE		0x21f2
+CALL    __CURRENT_EXCEPTION		0x21e1
+MOV     [EAX], ESI		0x21e6
+MOV     ESI, [EDI+4]		0x21e8
+CALL    __CURRENT_EXCEPTION_CONTEXT		0x21eb
+MOV     [EAX], ESI		0x21f0
+CALL    TERMINATE		0x21f2
 
 --- new func --- sub_220D
-FlowChart size is  1
 --- new bb ---
-Start addr 0x220d
-End addr 0x2215
-Current 0x220d
-83 25 9C 61 00 00 00		AND     DWORD_619C, 0		0x220d
-Current 0x2214
-C3		RETN		0x2214
+AND     DWORD_619C, 0		0x220d
+RETN		0x2214
 
 --- new func --- sub_2217
-FlowChart size is  7
 --- new bb ---
-Start addr 0x2217
-End addr 0x2227
-Current 0x2217
-53		PUSH    EBX		0x2217
-Current 0x2218
-56		PUSH    ESI		0x2218
-Current 0x2219
-BE 68 53 00 00		MOV     ESI, OFFSET UNK_5368		0x2219
-Current 0x221e
-BB 68 54 00 00		MOV     EBX, OFFSET UNK_5468		0x221e
-Current 0x2223
-3B F3		CMP     ESI, EBX		0x2223
-Current 0x2225
-73 19		JNB     SHORT LOC_2240		0x2225
+PUSH    EBX		0x2217
+PUSH    ESI		0x2218
+MOV     ESI, OFFSET UNK_5368		0x2219
+MOV     EBX, OFFSET UNK_5468		0x221e
+CMP     ESI, EBX		0x2223
+JNB     SHORT LOC_2240		0x2225
 --- new bb ---
-Start addr 0x2227
-End addr 0x2228
-Current 0x2227
-57		PUSH    EDI		0x2227
+PUSH    EDI		0x2227
 --- new bb ---
-Start addr 0x2228
-End addr 0x222e
-Current 0x2228
-8B 3E		MOV     EDI, [ESI]		0x2228
-Current 0x222a
-85 FF		TEST    EDI, EDI		0x222a
-Current 0x222c
-74 0A		JZ      SHORT LOC_2238		0x222c
+MOV     EDI, [ESI]		0x2228
+TEST    EDI, EDI		0x222a
+JZ      SHORT LOC_2238		0x222c
 --- new bb ---
-Start addr 0x222e
-End addr 0x2238
-Current 0x222e
-8B CF		MOV     ECX, EDI		0x222e
-Current 0x2230
-FF 15 00 80 00 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x2230
-Current 0x2236
-FF D7		CALL    EDI		0x2236
+MOV     ECX, EDI		0x222e
+CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x2230
+CALL    EDI		0x2236
 --- new bb ---
-Start addr 0x2238
-End addr 0x223f
-Current 0x2238
-83 C6 04		ADD     ESI, 4		0x2238
-Current 0x223b
-3B F3		CMP     ESI, EBX		0x223b
-Current 0x223d
-72 E9		JB      SHORT LOC_2228		0x223d
+ADD     ESI, 4		0x2238
+CMP     ESI, EBX		0x223b
+JB      SHORT LOC_2228		0x223d
 --- new bb ---
-Start addr 0x223f
-End addr 0x2240
-Current 0x223f
-5F		POP     EDI		0x223f
+POP     EDI		0x223f
 --- new bb ---
-Start addr 0x2240
-End addr 0x2243
-Current 0x2240
-5E		POP     ESI		0x2240
-Current 0x2241
-5B		POP     EBX		0x2241
-Current 0x2242
-C3		RETN		0x2242
+POP     ESI		0x2240
+POP     EBX		0x2241
+RETN		0x2242
 
 --- new func --- sub_224E
-FlowChart size is  7
 --- new bb ---
-Start addr 0x224e
-End addr 0x225e
-Current 0x224e
-53		PUSH    EBX		0x224e
-Current 0x224f
-56		PUSH    ESI		0x224f
-Current 0x2250
-BE 70 55 00 00		MOV     ESI, OFFSET UNK_5570		0x2250
-Current 0x2255
-BB 70 56 00 00		MOV     EBX, OFFSET UNK_5670		0x2255
-Current 0x225a
-3B F3		CMP     ESI, EBX		0x225a
-Current 0x225c
-73 19		JNB     SHORT LOC_2277		0x225c
+PUSH    EBX		0x224e
+PUSH    ESI		0x224f
+MOV     ESI, OFFSET UNK_5570		0x2250
+MOV     EBX, OFFSET UNK_5670		0x2255
+CMP     ESI, EBX		0x225a
+JNB     SHORT LOC_2277		0x225c
 --- new bb ---
-Start addr 0x225e
-End addr 0x225f
-Current 0x225e
-57		PUSH    EDI		0x225e
+PUSH    EDI		0x225e
 --- new bb ---
-Start addr 0x225f
-End addr 0x2265
-Current 0x225f
-8B 3E		MOV     EDI, [ESI]		0x225f
-Current 0x2261
-85 FF		TEST    EDI, EDI		0x2261
-Current 0x2263
-74 0A		JZ      SHORT LOC_226F		0x2263
+MOV     EDI, [ESI]		0x225f
+TEST    EDI, EDI		0x2261
+JZ      SHORT LOC_226F		0x2263
 --- new bb ---
-Start addr 0x2265
-End addr 0x226f
-Current 0x2265
-8B CF		MOV     ECX, EDI		0x2265
-Current 0x2267
-FF 15 00 80 00 00		CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x2267
-Current 0x226d
-FF D7		CALL    EDI		0x226d
+MOV     ECX, EDI		0x2265
+CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x2267
+CALL    EDI		0x226d
 --- new bb ---
-Start addr 0x226f
-End addr 0x2276
-Current 0x226f
-83 C6 04		ADD     ESI, 4		0x226f
-Current 0x2272
-3B F3		CMP     ESI, EBX		0x2272
-Current 0x2274
-72 E9		JB      SHORT LOC_225F		0x2274
+ADD     ESI, 4		0x226f
+CMP     ESI, EBX		0x2272
+JB      SHORT LOC_225F		0x2274
 --- new bb ---
-Start addr 0x2276
-End addr 0x2277
-Current 0x2276
-5F		POP     EDI		0x2276
+POP     EDI		0x2276
 --- new bb ---
-Start addr 0x2277
-End addr 0x227a
-Current 0x2277
-5E		POP     ESI		0x2277
-Current 0x2278
-5B		POP     EBX		0x2278
-Current 0x2279
-C3		RETN		0x2279
+POP     ESI		0x2277
+POP     EBX		0x2278
+RETN		0x2279
 
 --- new func --- __SEH_prolog4
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2290
-End addr 0x22d5
-Current 0x2290
-68 09 23 00 00		PUSH    OFFSET __EXCEPT_HANDLER4		0x2290
-Current 0x2295
-64 FF 35 00 00 00 00		PUSH    LARGE DWORD PTR FS:0		0x2295
-Current 0x229c
-8B 44 24 10		MOV     EAX, [ESP+8+ARG_4]		0x229c
-Current 0x22a0
-89 6C 24 10		MOV     [ESP+8+ARG_4], EBP		0x22a0
-Current 0x22a4
-8D 6C 24 10		LEA     EBP, [ESP+8+ARG_4]		0x22a4
-Current 0x22a8
-2B E0		SUB     ESP, EAX		0x22a8
-Current 0x22aa
-53		PUSH    EBX		0x22aa
-Current 0x22ab
-56		PUSH    ESI		0x22ab
-Current 0x22ac
-57		PUSH    EDI		0x22ac
-Current 0x22ad
-A1 14 60 00 00		MOV     EAX, ___SECURITY_COOKIE		0x22ad
-Current 0x22b2
-31 45 FC		XOR     [EBP-4], EAX		0x22b2
-Current 0x22b5
-33 C5		XOR     EAX, EBP		0x22b5
-Current 0x22b7
-50		PUSH    EAX		0x22b7
-Current 0x22b8
-89 65 E8		MOV     [EBP-18H], ESP		0x22b8
-Current 0x22bb
-FF 75 F8		PUSH    DWORD PTR [EBP-8]		0x22bb
-Current 0x22be
-8B 45 FC		MOV     EAX, [EBP-4]		0x22be
-Current 0x22c1
-C7 45 FC FE FF FF FF		MOV     DWORD PTR [EBP-4], 0FFFFFFFEH		0x22c1
-Current 0x22c8
-89 45 F8		MOV     [EBP-8], EAX		0x22c8
-Current 0x22cb
-8D 45 F0		LEA     EAX, [EBP-10H]		0x22cb
-Current 0x22ce
-64 A3 00 00 00 00		MOV     LARGE FS:0, EAX		0x22ce
-Current 0x22d4
-C3		RETN		0x22d4
+PUSH    OFFSET __EXCEPT_HANDLER4		0x2290
+PUSH    LARGE DWORD PTR FS:0		0x2295
+MOV     EAX, [ESP+8+ARG_4]		0x229c
+MOV     [ESP+8+ARG_4], EBP		0x22a0
+LEA     EBP, [ESP+8+ARG_4]		0x22a4
+SUB     ESP, EAX		0x22a8
+PUSH    EBX		0x22aa
+PUSH    ESI		0x22ab
+PUSH    EDI		0x22ac
+MOV     EAX, ___SECURITY_COOKIE		0x22ad
+XOR     [EBP-4], EAX		0x22b2
+XOR     EAX, EBP		0x22b5
+PUSH    EAX		0x22b7
+MOV     [EBP-18H], ESP		0x22b8
+PUSH    DWORD PTR [EBP-8]		0x22bb
+MOV     EAX, [EBP-4]		0x22be
+MOV     DWORD PTR [EBP-4], 0FFFFFFFEH		0x22c1
+MOV     [EBP-8], EAX		0x22c8
+LEA     EAX, [EBP-10H]		0x22cb
+MOV     LARGE FS:0, EAX		0x22ce
+RETN		0x22d4
 
 --- new func --- __SEH_epilog4
-FlowChart size is  1
 --- new bb ---
-Start addr 0x22f0
-End addr 0x2304
-Current 0x22f0
-8B 4D F0		MOV     ECX, [EBP-10H]		0x22f0
-Current 0x22f3
-64 89 0D 00 00 00 00		MOV     LARGE FS:0, ECX		0x22f3
-Current 0x22fa
-59		POP     ECX		0x22fa
-Current 0x22fb
-5F		POP     EDI		0x22fb
-Current 0x22fc
-5F		POP     EDI		0x22fc
-Current 0x22fd
-5E		POP     ESI		0x22fd
-Current 0x22fe
-5B		POP     EBX		0x22fe
-Current 0x22ff
-8B E5		MOV     ESP, EBP		0x22ff
-Current 0x2301
-5D		POP     EBP		0x2301
-Current 0x2302
-51		PUSH    ECX		0x2302
-Current 0x2303
-C3		RETN		0x2303
+MOV     ECX, [EBP-10H]		0x22f0
+MOV     LARGE FS:0, ECX		0x22f3
+POP     ECX		0x22fa
+POP     EDI		0x22fb
+POP     EDI		0x22fc
+POP     ESI		0x22fd
+POP     EBX		0x22fe
+MOV     ESP, EBP		0x22ff
+POP     EBP		0x2301
+PUSH    ECX		0x2302
+RETN		0x2303
 
 --- new func --- __except_handler4
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2309
-End addr 0x2338
-Current 0x2309
-55		PUSH    EBP		0x2309
-Current 0x230a
-8B EC		MOV     EBP, ESP		0x230a
-Current 0x230c
-56		PUSH    ESI		0x230c
-Current 0x230d
-8B 75 08		MOV     ESI, [EBP+ARG_0]		0x230d
-Current 0x2310
-FF 36		PUSH    DWORD PTR [ESI]		0x2310
-Current 0x2312
-E8 CE EE FF FF		CALL    J___FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT		0x2312
-Current 0x2317
-FF 75 14		PUSH    [EBP+ARG_C]		0x2317
-Current 0x231a
-89 06		MOV     [ESI], EAX		0x231a
-Current 0x231c
-FF 75 10		PUSH    [EBP+ARG_8]		0x231c
-Current 0x231f
-FF 75 0C		PUSH    [EBP+ARG_4]		0x231f
-Current 0x2322
-56		PUSH    ESI		0x2322
-Current 0x2323
-68 AF 10 00 00		PUSH    OFFSET LOC_10AF		0x2323
-Current 0x2328
-68 14 60 00 00		PUSH    OFFSET ___SECURITY_COOKIE		0x2328
-Current 0x232d
-E8 3C 08 00 00		CALL    _EXCEPT_HANDLER4_COMMON		0x232d
-Current 0x2332
-83 C4 1C		ADD     ESP, 1CH		0x2332
-Current 0x2335
-5E		POP     ESI		0x2335
-Current 0x2336
-5D		POP     EBP		0x2336
-Current 0x2337
-C3		RETN		0x2337
+PUSH    EBP		0x2309
+MOV     EBP, ESP		0x230a
+PUSH    ESI		0x230c
+MOV     ESI, [EBP+ARG_0]		0x230d
+PUSH    DWORD PTR [ESI]		0x2310
+CALL    J___FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT		0x2312
+PUSH    [EBP+ARG_C]		0x2317
+MOV     [ESI], EAX		0x231a
+PUSH    [EBP+ARG_8]		0x231c
+PUSH    [EBP+ARG_4]		0x231f
+PUSH    ESI		0x2322
+PUSH    OFFSET LOC_10AF		0x2323
+PUSH    OFFSET ___SECURITY_COOKIE		0x2328
+CALL    _EXCEPT_HANDLER4_COMMON		0x232d
+ADD     ESP, 1CH		0x2332
+POP     ESI		0x2335
+POP     EBP		0x2336
+RETN		0x2337
 
 --- new func --- nullsub_1
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2343
-End addr 0x2346
-Current 0x2343
-C2 00 00		RETN    0		0x2343
+RETN    0		0x2343
 
 --- new func --- unknown_libname_1
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2346
-End addr 0x2350
-Current 0x2346
-55		PUSH    EBP		0x2346
-Current 0x2347
-8B EC		MOV     EBP, ESP		0x2347
-Current 0x2349
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x2349
-Current 0x234c
-8B 00		MOV     EAX, [EAX]		0x234c
-Current 0x234e
-5D		POP     EBP		0x234e
-Current 0x234f
-C3		RETN		0x234f
+PUSH    EBP		0x2346
+MOV     EBP, ESP		0x2347
+MOV     EAX, [EBP+ARG_0]		0x2349
+MOV     EAX, [EAX]		0x234c
+POP     EBP		0x234e
+RETN		0x234f
 
 --- new func --- unknown_libname_2
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2352
-End addr 0x235c
-Current 0x2352
-55		PUSH    EBP		0x2352
-Current 0x2353
-8B EC		MOV     EBP, ESP		0x2353
-Current 0x2355
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x2355
-Current 0x2358
-8B 00		MOV     EAX, [EAX]		0x2358
-Current 0x235a
-5D		POP     EBP		0x235a
-Current 0x235b
-C3		RETN		0x235b
+PUSH    EBP		0x2352
+MOV     EBP, ESP		0x2353
+MOV     EAX, [EBP+ARG_0]		0x2355
+MOV     EAX, [EAX]		0x2358
+POP     EBP		0x235a
+RETN		0x235b
 
 --- new func --- ___castguard_check_failure_debugbreak
-FlowChart size is  3
 --- new bb ---
-Start addr 0x235e
-End addr 0x2376
-Current 0x235e
-55		PUSH    EBP		0x235e
-Current 0x235f
-8B EC		MOV     EBP, ESP		0x235f
-Current 0x2361
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x2361
-Current 0x2364
-BA 40 4E 00 00		MOV     EDX, OFFSET UNK_4E40		0x2364
-Current 0x2369
-B9 80 4F 00 00		MOV     ECX, OFFSET UNK_4F80		0x2369
-Current 0x236e
-2B C2		SUB     EAX, EDX		0x236e
-Current 0x2370
-2B CA		SUB     ECX, EDX		0x2370
-Current 0x2372
-3B C1		CMP     EAX, ECX		0x2372
-Current 0x2374
-77 01		JA      SHORT LOC_2377		0x2374
+PUSH    EBP		0x235e
+MOV     EBP, ESP		0x235f
+MOV     EAX, [EBP+ARG_0]		0x2361
+MOV     EDX, OFFSET UNK_4E40		0x2364
+MOV     ECX, OFFSET UNK_4F80		0x2369
+SUB     EAX, EDX		0x236e
+SUB     ECX, EDX		0x2370
+CMP     EAX, ECX		0x2372
+JA      SHORT LOC_2377		0x2374
 --- new bb ---
-Start addr 0x2376
-End addr 0x2377
-Current 0x2376
-CC		INT     3; TRAP TO DEBUGGER		0x2376
+INT     3; TRAP TO DEBUGGER		0x2376
 --- new bb ---
-Start addr 0x2377
-End addr 0x2379
-Current 0x2377
-5D		POP     EBP		0x2377
-Current 0x2378
-C3		RETN		0x2378
+POP     EBP		0x2377
+RETN		0x2378
 
 --- new func --- ___castguard_check_failure_fastfail
-FlowChart size is  3
 --- new bb ---
-Start addr 0x237f
-End addr 0x2397
-Current 0x237f
-55		PUSH    EBP		0x237f
-Current 0x2380
-8B EC		MOV     EBP, ESP		0x2380
-Current 0x2382
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x2382
-Current 0x2385
-BA 40 4E 00 00		MOV     EDX, OFFSET UNK_4E40		0x2385
-Current 0x238a
-B9 80 4F 00 00		MOV     ECX, OFFSET UNK_4F80		0x238a
-Current 0x238f
-2B C2		SUB     EAX, EDX		0x238f
-Current 0x2391
-2B CA		SUB     ECX, EDX		0x2391
-Current 0x2393
-3B C1		CMP     EAX, ECX		0x2393
-Current 0x2395
-77 05		JA      SHORT LOC_239C		0x2395
+PUSH    EBP		0x237f
+MOV     EBP, ESP		0x2380
+MOV     EAX, [EBP+ARG_0]		0x2382
+MOV     EDX, OFFSET UNK_4E40		0x2385
+MOV     ECX, OFFSET UNK_4F80		0x238a
+SUB     EAX, EDX		0x238f
+SUB     ECX, EDX		0x2391
+CMP     EAX, ECX		0x2393
+JA      SHORT LOC_239C		0x2395
 --- new bb ---
-Start addr 0x2397
-End addr 0x239c
-Current 0x2397
-6A 41		PUSH    41H ; 'A'		0x2397
-Current 0x2399
-59		POP     ECX		0x2399
-Current 0x239a
-CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)		0x239a
+PUSH    41H ; 'A'		0x2397
+POP     ECX		0x2399
+INT     29H; WIN8: RTLFAILFAST(ECX)		0x239a
 --- new bb ---
-Start addr 0x239c
-End addr 0x239e
-Current 0x239c
-5D		POP     EBP		0x239c
-Current 0x239d
-C3		RETN		0x239d
+POP     EBP		0x239c
+RETN		0x239d
 
 --- new func --- ___castguard_compat_check
-FlowChart size is  1
 --- new bb ---
-Start addr 0x23f8
-End addr 0x2413
-Current 0x23f8
-55		PUSH    EBP		0x23f8
-Current 0x23f9
-8B EC		MOV     EBP, ESP		0x23f9
-Current 0x23fb
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x23fb
-Current 0x23fe
-BA 40 4E 00 00		MOV     EDX, OFFSET UNK_4E40		0x23fe
-Current 0x2403
-B9 80 4F 00 00		MOV     ECX, OFFSET UNK_4F80		0x2403
-Current 0x2408
-2B C2		SUB     EAX, EDX		0x2408
-Current 0x240a
-2B CA		SUB     ECX, EDX		0x240a
-Current 0x240c
-3B C8		CMP     ECX, EAX		0x240c
-Current 0x240e
-1B C0		SBB     EAX, EAX		0x240e
-Current 0x2410
-40		INC     EAX		0x2410
-Current 0x2411
-5D		POP     EBP		0x2411
-Current 0x2412
-C3		RETN		0x2412
+PUSH    EBP		0x23f8
+MOV     EBP, ESP		0x23f9
+MOV     EAX, [EBP+ARG_0]		0x23fb
+MOV     EDX, OFFSET UNK_4E40		0x23fe
+MOV     ECX, OFFSET UNK_4F80		0x2403
+SUB     EAX, EDX		0x2408
+SUB     ECX, EDX		0x240a
+CMP     ECX, EAX		0x240c
+SBB     EAX, EAX		0x240e
+INC     EAX		0x2410
+POP     EBP		0x2411
+RETN		0x2412
 
 --- new func --- ___castguard_slow_path_check_debugbreak
-FlowChart size is  4
 --- new bb ---
-Start addr 0x2419
-End addr 0x2431
-Current 0x2419
-55		PUSH    EBP		0x2419
-Current 0x241a
-8B EC		MOV     EBP, ESP		0x241a
-Current 0x241c
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x241c
-Current 0x241f
-8B C1		MOV     EAX, ECX		0x241f
-Current 0x2421
-2B 45 0C		SUB     EAX, [EBP+ARG_4]		0x2421
-Current 0x2424
-2D 00 4E 00 00		SUB     EAX, OFFSET UNK_4E00		0x2424
-Current 0x2429
-83 E8 40		SUB     EAX, 40H ; '@'		0x2429
-Current 0x242c
-3B 45 10		CMP     EAX, [EBP+ARG_8]		0x242c
-Current 0x242f
-76 13		JBE     SHORT LOC_2444		0x242f
+PUSH    EBP		0x2419
+MOV     EBP, ESP		0x241a
+MOV     ECX, [EBP+ARG_0]		0x241c
+MOV     EAX, ECX		0x241f
+SUB     EAX, [EBP+ARG_4]		0x2421
+SUB     EAX, OFFSET UNK_4E00		0x2424
+SUB     EAX, 40H ; '@'		0x2429
+CMP     EAX, [EBP+ARG_8]		0x242c
+JBE     SHORT LOC_2444		0x242f
 --- new bb ---
-Start addr 0x2431
-End addr 0x2443
-Current 0x2431
-BA 40 4E 00 00		MOV     EDX, OFFSET UNK_4E40		0x2431
-Current 0x2436
-B8 80 4F 00 00		MOV     EAX, OFFSET UNK_4F80		0x2436
-Current 0x243b
-2B CA		SUB     ECX, EDX		0x243b
-Current 0x243d
-2B C2		SUB     EAX, EDX		0x243d
-Current 0x243f
-3B C8		CMP     ECX, EAX		0x243f
-Current 0x2441
-77 01		JA      SHORT LOC_2444		0x2441
+MOV     EDX, OFFSET UNK_4E40		0x2431
+MOV     EAX, OFFSET UNK_4F80		0x2436
+SUB     ECX, EDX		0x243b
+SUB     EAX, EDX		0x243d
+CMP     ECX, EAX		0x243f
+JA      SHORT LOC_2444		0x2441
 --- new bb ---
-Start addr 0x2443
-End addr 0x2444
-Current 0x2443
-CC		INT     3; TRAP TO DEBUGGER		0x2443
+INT     3; TRAP TO DEBUGGER		0x2443
 --- new bb ---
-Start addr 0x2444
-End addr 0x2446
-Current 0x2444
-5D		POP     EBP		0x2444
-Current 0x2445
-C3		RETN		0x2445
+POP     EBP		0x2444
+RETN		0x2445
 
 --- new func --- ___castguard_slow_path_check_fastfail
-FlowChart size is  4
 --- new bb ---
-Start addr 0x2451
-End addr 0x2469
-Current 0x2451
-55		PUSH    EBP		0x2451
-Current 0x2452
-8B EC		MOV     EBP, ESP		0x2452
-Current 0x2454
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x2454
-Current 0x2457
-8B C1		MOV     EAX, ECX		0x2457
-Current 0x2459
-2B 45 0C		SUB     EAX, [EBP+ARG_4]		0x2459
-Current 0x245c
-2D 00 4E 00 00		SUB     EAX, OFFSET UNK_4E00		0x245c
-Current 0x2461
-83 E8 40		SUB     EAX, 40H ; '@'		0x2461
-Current 0x2464
-3B 45 10		CMP     EAX, [EBP+ARG_8]		0x2464
-Current 0x2467
-76 17		JBE     SHORT LOC_2480		0x2467
+PUSH    EBP		0x2451
+MOV     EBP, ESP		0x2452
+MOV     ECX, [EBP+ARG_0]		0x2454
+MOV     EAX, ECX		0x2457
+SUB     EAX, [EBP+ARG_4]		0x2459
+SUB     EAX, OFFSET UNK_4E00		0x245c
+SUB     EAX, 40H ; '@'		0x2461
+CMP     EAX, [EBP+ARG_8]		0x2464
+JBE     SHORT LOC_2480		0x2467
 --- new bb ---
-Start addr 0x2469
-End addr 0x247b
-Current 0x2469
-BA 40 4E 00 00		MOV     EDX, OFFSET UNK_4E40		0x2469
-Current 0x246e
-B8 80 4F 00 00		MOV     EAX, OFFSET UNK_4F80		0x246e
-Current 0x2473
-2B CA		SUB     ECX, EDX		0x2473
-Current 0x2475
-2B C2		SUB     EAX, EDX		0x2475
-Current 0x2477
-3B C8		CMP     ECX, EAX		0x2477
-Current 0x2479
-77 05		JA      SHORT LOC_2480		0x2479
+MOV     EDX, OFFSET UNK_4E40		0x2469
+MOV     EAX, OFFSET UNK_4F80		0x246e
+SUB     ECX, EDX		0x2473
+SUB     EAX, EDX		0x2475
+CMP     ECX, EAX		0x2477
+JA      SHORT LOC_2480		0x2479
 --- new bb ---
-Start addr 0x247b
-End addr 0x2480
-Current 0x247b
-6A 41		PUSH    41H ; 'A'		0x247b
-Current 0x247d
-59		POP     ECX		0x247d
-Current 0x247e
-CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)		0x247e
+PUSH    41H ; 'A'		0x247b
+POP     ECX		0x247d
+INT     29H; WIN8: RTLFAILFAST(ECX)		0x247e
 --- new bb ---
-Start addr 0x2480
-End addr 0x2482
-Current 0x2480
-5D		POP     EBP		0x2480
-Current 0x2481
-C3		RETN		0x2481
+POP     EBP		0x2480
+RETN		0x2481
 
 --- new func --- ___castguard_slow_path_compat_check
-FlowChart size is  1
 --- new bb ---
-Start addr 0x24e2
-End addr 0x24fc
-Current 0x24e2
-55		PUSH    EBP		0x24e2
-Current 0x24e3
-8B EC		MOV     EBP, ESP		0x24e3
-Current 0x24e5
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x24e5
-Current 0x24e8
-2B 45 0C		SUB     EAX, [EBP+ARG_4]		0x24e8
-Current 0x24eb
-2D 00 4E 00 00		SUB     EAX, OFFSET UNK_4E00		0x24eb
-Current 0x24f0
-83 E8 40		SUB     EAX, 40H ; '@'		0x24f0
-Current 0x24f3
-39 45 10		CMP     [EBP+ARG_8], EAX		0x24f3
-Current 0x24f6
-1B C0		SBB     EAX, EAX		0x24f6
-Current 0x24f8
-F7 D8		NEG     EAX		0x24f8
-Current 0x24fa
-5D		POP     EBP		0x24fa
-Current 0x24fb
-C3		RETN		0x24fb
+PUSH    EBP		0x24e2
+MOV     EBP, ESP		0x24e3
+MOV     EAX, [EBP+ARG_0]		0x24e5
+SUB     EAX, [EBP+ARG_4]		0x24e8
+SUB     EAX, OFFSET UNK_4E00		0x24eb
+SUB     EAX, 40H ; '@'		0x24f0
+CMP     [EBP+ARG_8], EAX		0x24f3
+SBB     EAX, EAX		0x24f6
+NEG     EAX		0x24f8
+POP     EBP		0x24fa
+RETN		0x24fb
 
 --- new func --- __guard_icall_checks_enforced
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2502
-End addr 0x2514
-Current 0x2502
-8B 0D 00 80 00 00		MOV     ECX, DS:___GUARD_CHECK_ICALL_FPTR		0x2502
-Current 0x2508
-33 C0		XOR     EAX, EAX		0x2508
-Current 0x250a
-81 F9 45 11 00 00		CMP     ECX, OFFSET J_NULLSUB_1		0x250a
-Current 0x2510
-0F 95 C0		SETNZ   AL		0x2510
-Current 0x2513
-C3		RETN		0x2513
+MOV     ECX, DS:___GUARD_CHECK_ICALL_FPTR		0x2502
+XOR     EAX, EAX		0x2508
+CMP     ECX, OFFSET J_NULLSUB_1		0x250a
+SETNZ   AL		0x2510
+RETN		0x2513
 
 --- new func --- sub_2518
-FlowChart size is  24
 --- new bb ---
-Start addr 0x2518
-End addr 0x253c
-Current 0x2518
-55		PUSH    EBP		0x2518
-Current 0x2519
-8B EC		MOV     EBP, ESP		0x2519
-Current 0x251b
-83 25 A0 61 00 00 00		AND     DWORD_61A0, 0		0x251b
-Current 0x2522
-83 EC 24		SUB     ESP, 24H		0x2522
-Current 0x2525
-83 0D 10 60 00 00 01		OR      DWORD_6010, 1		0x2525
-Current 0x252c
-6A 0A		PUSH    0AH; PROCESSORFEATURE		0x252c
-Current 0x252e
-FF 15 20 70 00 00		CALL    DS:ISPROCESSORFEATUREPRESENT		0x252e
-Current 0x2534
-85 C0		TEST    EAX, EAX		0x2534
-Current 0x2536
-0F 84 AC 01 00 00		JZ      LOC_26E8		0x2536
+PUSH    EBP		0x2518
+MOV     EBP, ESP		0x2519
+AND     DWORD_61A0, 0		0x251b
+SUB     ESP, 24H		0x2522
+OR      DWORD_6010, 1		0x2525
+PUSH    0AH; PROCESSORFEATURE		0x252c
+CALL    DS:ISPROCESSORFEATUREPRESENT		0x252e
+TEST    EAX, EAX		0x2534
+JZ      LOC_26E8		0x2536
 --- new bb ---
-Start addr 0x253c
-End addr 0x25a5
-Current 0x253c
-83 65 F0 00		AND     [EBP+VAR_10], 0		0x253c
-Current 0x2540
-33 C0		XOR     EAX, EAX		0x2540
-Current 0x2542
-53		PUSH    EBX		0x2542
-Current 0x2543
-56		PUSH    ESI		0x2543
-Current 0x2544
-57		PUSH    EDI		0x2544
-Current 0x2545
-33 C9		XOR     ECX, ECX		0x2545
-Current 0x2547
-8D 7D DC		LEA     EDI, [EBP+VAR_24]		0x2547
-Current 0x254a
-53		PUSH    EBX		0x254a
-Current 0x254b
-0F A2		CPUID		0x254b
-Current 0x254d
-8B F3		MOV     ESI, EBX		0x254d
-Current 0x254f
-5B		POP     EBX		0x254f
-Current 0x2550
-90		NOP		0x2550
-Current 0x2551
-89 07		MOV     [EDI], EAX		0x2551
-Current 0x2553
-89 77 04		MOV     [EDI+4], ESI		0x2553
-Current 0x2556
-89 4F 08		MOV     [EDI+8], ECX		0x2556
-Current 0x2559
-33 C9		XOR     ECX, ECX		0x2559
-Current 0x255b
-89 57 0C		MOV     [EDI+0CH], EDX		0x255b
-Current 0x255e
-8B 45 DC		MOV     EAX, [EBP+VAR_24]		0x255e
-Current 0x2561
-8B 7D E0		MOV     EDI, [EBP+VAR_20]		0x2561
-Current 0x2564
-89 45 F4		MOV     [EBP+VAR_C], EAX		0x2564
-Current 0x2567
-81 F7 47 65 6E 75		XOR     EDI, 756E6547H		0x2567
-Current 0x256d
-8B 45 E8		MOV     EAX, [EBP+VAR_18]		0x256d
-Current 0x2570
-35 69 6E 65 49		XOR     EAX, 49656E69H		0x2570
-Current 0x2575
-89 45 FC		MOV     [EBP+VAR_4], EAX		0x2575
-Current 0x2578
-8B 45 E4		MOV     EAX, [EBP+VAR_1C]		0x2578
-Current 0x257b
-35 6E 74 65 6C		XOR     EAX, 6C65746EH		0x257b
-Current 0x2580
-89 45 F8		MOV     [EBP+VAR_8], EAX		0x2580
-Current 0x2583
-33 C0		XOR     EAX, EAX		0x2583
-Current 0x2585
-40		INC     EAX		0x2585
-Current 0x2586
-53		PUSH    EBX		0x2586
-Current 0x2587
-0F A2		CPUID		0x2587
-Current 0x2589
-8B F3		MOV     ESI, EBX		0x2589
-Current 0x258b
-5B		POP     EBX		0x258b
-Current 0x258c
-90		NOP		0x258c
-Current 0x258d
-8D 5D DC		LEA     EBX, [EBP+VAR_24]		0x258d
-Current 0x2590
-89 03		MOV     [EBX], EAX		0x2590
-Current 0x2592
-8B 45 FC		MOV     EAX, [EBP+VAR_4]		0x2592
-Current 0x2595
-0B 45 F8		OR      EAX, [EBP+VAR_8]		0x2595
-Current 0x2598
-0B C7		OR      EAX, EDI		0x2598
-Current 0x259a
-89 73 04		MOV     [EBX+4], ESI		0x259a
-Current 0x259d
-89 4B 08		MOV     [EBX+8], ECX		0x259d
-Current 0x25a0
-89 53 0C		MOV     [EBX+0CH], EDX		0x25a0
-Current 0x25a3
-75 43		JNZ     SHORT LOC_25E8		0x25a3
+AND     [EBP+VAR_10], 0		0x253c
+XOR     EAX, EAX		0x2540
+PUSH    EBX		0x2542
+PUSH    ESI		0x2543
+PUSH    EDI		0x2544
+XOR     ECX, ECX		0x2545
+LEA     EDI, [EBP+VAR_24]		0x2547
+PUSH    EBX		0x254a
+CPUID		0x254b
+MOV     ESI, EBX		0x254d
+POP     EBX		0x254f
+NOP		0x2550
+MOV     [EDI], EAX		0x2551
+MOV     [EDI+4], ESI		0x2553
+MOV     [EDI+8], ECX		0x2556
+XOR     ECX, ECX		0x2559
+MOV     [EDI+0CH], EDX		0x255b
+MOV     EAX, [EBP+VAR_24]		0x255e
+MOV     EDI, [EBP+VAR_20]		0x2561
+MOV     [EBP+VAR_C], EAX		0x2564
+XOR     EDI, 756E6547H		0x2567
+MOV     EAX, [EBP+VAR_18]		0x256d
+XOR     EAX, 49656E69H		0x2570
+MOV     [EBP+VAR_4], EAX		0x2575
+MOV     EAX, [EBP+VAR_1C]		0x2578
+XOR     EAX, 6C65746EH		0x257b
+MOV     [EBP+VAR_8], EAX		0x2580
+XOR     EAX, EAX		0x2583
+INC     EAX		0x2585
+PUSH    EBX		0x2586
+CPUID		0x2587
+MOV     ESI, EBX		0x2589
+POP     EBX		0x258b
+NOP		0x258c
+LEA     EBX, [EBP+VAR_24]		0x258d
+MOV     [EBX], EAX		0x2590
+MOV     EAX, [EBP+VAR_4]		0x2592
+OR      EAX, [EBP+VAR_8]		0x2595
+OR      EAX, EDI		0x2598
+MOV     [EBX+4], ESI		0x259a
+MOV     [EBX+8], ECX		0x259d
+MOV     [EBX+0CH], EDX		0x25a0
+JNZ     SHORT LOC_25E8		0x25a3
 --- new bb ---
-Start addr 0x25a5
-End addr 0x25b4
-Current 0x25a5
-8B 45 DC		MOV     EAX, [EBP+VAR_24]		0x25a5
-Current 0x25a8
-25 F0 3F FF 0F		AND     EAX, 0FFF3FF0H		0x25a8
-Current 0x25ad
-3D C0 06 01 00		CMP     EAX, 106C0H		0x25ad
-Current 0x25b2
-74 23		JZ      SHORT LOC_25D7		0x25b2
+MOV     EAX, [EBP+VAR_24]		0x25a5
+AND     EAX, 0FFF3FF0H		0x25a8
+CMP     EAX, 106C0H		0x25ad
+JZ      SHORT LOC_25D7		0x25b2
 --- new bb ---
-Start addr 0x25b4
-End addr 0x25bb
-Current 0x25b4
-3D 60 06 02 00		CMP     EAX, 20660H		0x25b4
-Current 0x25b9
-74 1C		JZ      SHORT LOC_25D7		0x25b9
+CMP     EAX, 20660H		0x25b4
+JZ      SHORT LOC_25D7		0x25b9
 --- new bb ---
-Start addr 0x25bb
-End addr 0x25c2
-Current 0x25bb
-3D 70 06 02 00		CMP     EAX, 20670H		0x25bb
-Current 0x25c0
-74 15		JZ      SHORT LOC_25D7		0x25c0
+CMP     EAX, 20670H		0x25bb
+JZ      SHORT LOC_25D7		0x25c0
 --- new bb ---
-Start addr 0x25c2
-End addr 0x25c9
-Current 0x25c2
-3D 50 06 03 00		CMP     EAX, 30650H		0x25c2
-Current 0x25c7
-74 0E		JZ      SHORT LOC_25D7		0x25c7
+CMP     EAX, 30650H		0x25c2
+JZ      SHORT LOC_25D7		0x25c7
 --- new bb ---
-Start addr 0x25c9
-End addr 0x25d0
-Current 0x25c9
-3D 60 06 03 00		CMP     EAX, 30660H		0x25c9
-Current 0x25ce
-74 07		JZ      SHORT LOC_25D7		0x25ce
+CMP     EAX, 30660H		0x25c9
+JZ      SHORT LOC_25D7		0x25ce
 --- new bb ---
-Start addr 0x25d0
-End addr 0x25d7
-Current 0x25d0
-3D 70 06 03 00		CMP     EAX, 30670H		0x25d0
-Current 0x25d5
-75 11		JNZ     SHORT LOC_25E8		0x25d5
+CMP     EAX, 30670H		0x25d0
+JNZ     SHORT LOC_25E8		0x25d5
 --- new bb ---
-Start addr 0x25d7
-End addr 0x25e8
-Current 0x25d7
-8B 3D A4 61 00 00		MOV     EDI, DWORD_61A4		0x25d7
-Current 0x25dd
-83 CF 01		OR      EDI, 1		0x25dd
-Current 0x25e0
-89 3D A4 61 00 00		MOV     DWORD_61A4, EDI		0x25e0
-Current 0x25e6
-EB 06		JMP     SHORT LOC_25EE		0x25e6
+MOV     EDI, DWORD_61A4		0x25d7
+OR      EDI, 1		0x25dd
+MOV     DWORD_61A4, EDI		0x25e0
+JMP     SHORT LOC_25EE		0x25e6
 --- new bb ---
-Start addr 0x25e8
-End addr 0x25ee
-Current 0x25e8
-8B 3D A4 61 00 00		MOV     EDI, DWORD_61A4		0x25e8
+MOV     EDI, DWORD_61A4		0x25e8
 --- new bb ---
-Start addr 0x25ee
-End addr 0x25fc
-Current 0x25ee
-8B 4D E4		MOV     ECX, [EBP+VAR_1C]		0x25ee
-Current 0x25f1
-6A 07		PUSH    7		0x25f1
-Current 0x25f3
-58		POP     EAX		0x25f3
-Current 0x25f4
-89 4D FC		MOV     [EBP+VAR_4], ECX		0x25f4
-Current 0x25f7
-39 45 F4		CMP     [EBP+VAR_C], EAX		0x25f7
-Current 0x25fa
-7C 30		JL      SHORT LOC_262C		0x25fa
+MOV     ECX, [EBP+VAR_1C]		0x25ee
+PUSH    7		0x25f1
+POP     EAX		0x25f3
+MOV     [EBP+VAR_4], ECX		0x25f4
+CMP     [EBP+VAR_C], EAX		0x25f7
+JL      SHORT LOC_262C		0x25fa
 --- new bb ---
-Start addr 0x25fc
-End addr 0x2621
-Current 0x25fc
-33 C9		XOR     ECX, ECX		0x25fc
-Current 0x25fe
-53		PUSH    EBX		0x25fe
-Current 0x25ff
-0F A2		CPUID		0x25ff
-Current 0x2601
-8B F3		MOV     ESI, EBX		0x2601
-Current 0x2603
-5B		POP     EBX		0x2603
-Current 0x2604
-90		NOP		0x2604
-Current 0x2605
-8D 5D DC		LEA     EBX, [EBP+VAR_24]		0x2605
-Current 0x2608
-89 03		MOV     [EBX], EAX		0x2608
-Current 0x260a
-89 73 04		MOV     [EBX+4], ESI		0x260a
-Current 0x260d
-89 4B 08		MOV     [EBX+8], ECX		0x260d
-Current 0x2610
-8B 4D FC		MOV     ECX, [EBP+VAR_4]		0x2610
-Current 0x2613
-89 53 0C		MOV     [EBX+0CH], EDX		0x2613
-Current 0x2616
-8B 5D E0		MOV     EBX, [EBP+VAR_20]		0x2616
-Current 0x2619
-F7 C3 00 02 00 00		TEST    EBX, 200H		0x2619
-Current 0x261f
-74 0E		JZ      SHORT LOC_262F		0x261f
+XOR     ECX, ECX		0x25fc
+PUSH    EBX		0x25fe
+CPUID		0x25ff
+MOV     ESI, EBX		0x2601
+POP     EBX		0x2603
+NOP		0x2604
+LEA     EBX, [EBP+VAR_24]		0x2605
+MOV     [EBX], EAX		0x2608
+MOV     [EBX+4], ESI		0x260a
+MOV     [EBX+8], ECX		0x260d
+MOV     ECX, [EBP+VAR_4]		0x2610
+MOV     [EBX+0CH], EDX		0x2613
+MOV     EBX, [EBP+VAR_20]		0x2616
+TEST    EBX, 200H		0x2619
+JZ      SHORT LOC_262F		0x261f
 --- new bb ---
-Start addr 0x2621
-End addr 0x262c
-Current 0x2621
-83 CF 02		OR      EDI, 2		0x2621
-Current 0x2624
-89 3D A4 61 00 00		MOV     DWORD_61A4, EDI		0x2624
-Current 0x262a
-EB 03		JMP     SHORT LOC_262F		0x262a
+OR      EDI, 2		0x2621
+MOV     DWORD_61A4, EDI		0x2624
+JMP     SHORT LOC_262F		0x262a
 --- new bb ---
-Start addr 0x262c
-End addr 0x262f
-Current 0x262c
-8B 5D F0		MOV     EBX, [EBP+VAR_10]		0x262c
+MOV     EBX, [EBP+VAR_10]		0x262c
 --- new bb ---
-Start addr 0x262f
-End addr 0x2652
-Current 0x262f
-A1 10 60 00 00		MOV     EAX, DWORD_6010		0x262f
-Current 0x2634
-83 C8 02		OR      EAX, 2		0x2634
-Current 0x2637
-C7 05 A0 61 00 00 01 00 00 00		MOV     DWORD_61A0, 1		0x2637
-Current 0x2641
-A3 10 60 00 00		MOV     DWORD_6010, EAX		0x2641
-Current 0x2646
-F7 C1 00 00 10 00		TEST    ECX, 100000H		0x2646
-Current 0x264c
-0F 84 93 00 00 00		JZ      LOC_26E5		0x264c
+MOV     EAX, DWORD_6010		0x262f
+OR      EAX, 2		0x2634
+MOV     DWORD_61A0, 1		0x2637
+MOV     DWORD_6010, EAX		0x2641
+TEST    ECX, 100000H		0x2646
+JZ      LOC_26E5		0x264c
 --- new bb ---
-Start addr 0x2652
-End addr 0x266c
-Current 0x2652
-83 C8 04		OR      EAX, 4		0x2652
-Current 0x2655
-C7 05 A0 61 00 00 02 00 00 00		MOV     DWORD_61A0, 2		0x2655
-Current 0x265f
-A3 10 60 00 00		MOV     DWORD_6010, EAX		0x265f
-Current 0x2664
-F7 C1 00 00 00 08		TEST    ECX, 8000000H		0x2664
-Current 0x266a
-74 79		JZ      SHORT LOC_26E5		0x266a
+OR      EAX, 4		0x2652
+MOV     DWORD_61A0, 2		0x2655
+MOV     DWORD_6010, EAX		0x265f
+TEST    ECX, 8000000H		0x2664
+JZ      SHORT LOC_26E5		0x266a
 --- new bb ---
-Start addr 0x266c
-End addr 0x2674
-Current 0x266c
-F7 C1 00 00 00 10		TEST    ECX, 10000000H		0x266c
-Current 0x2672
-74 71		JZ      SHORT LOC_26E5		0x2672
+TEST    ECX, 10000000H		0x266c
+JZ      SHORT LOC_26E5		0x2672
 --- new bb ---
-Start addr 0x2674
-End addr 0x268e
-Current 0x2674
-33 C9		XOR     ECX, ECX		0x2674
-Current 0x2676
-0F 01 D0		XGETBV		0x2676
-Current 0x2679
-89 45 EC		MOV     [EBP+VAR_14], EAX		0x2679
-Current 0x267c
-89 55 F0		MOV     [EBP+VAR_10], EDX		0x267c
-Current 0x267f
-8B 45 EC		MOV     EAX, [EBP+VAR_14]		0x267f
-Current 0x2682
-8B 4D F0		MOV     ECX, [EBP+VAR_10]		0x2682
-Current 0x2685
-6A 06		PUSH    6		0x2685
-Current 0x2687
-5E		POP     ESI		0x2687
-Current 0x2688
-23 C6		AND     EAX, ESI		0x2688
-Current 0x268a
-3B C6		CMP     EAX, ESI		0x268a
-Current 0x268c
-75 57		JNZ     SHORT LOC_26E5		0x268c
+XOR     ECX, ECX		0x2674
+XGETBV		0x2676
+MOV     [EBP+VAR_14], EAX		0x2679
+MOV     [EBP+VAR_10], EDX		0x267c
+MOV     EAX, [EBP+VAR_14]		0x267f
+MOV     ECX, [EBP+VAR_10]		0x2682
+PUSH    6		0x2685
+POP     ESI		0x2687
+AND     EAX, ESI		0x2688
+CMP     EAX, ESI		0x268a
+JNZ     SHORT LOC_26E5		0x268c
 --- new bb ---
-Start addr 0x268e
-End addr 0x26aa
-Current 0x268e
-A1 10 60 00 00		MOV     EAX, DWORD_6010		0x268e
-Current 0x2693
-83 C8 08		OR      EAX, 8		0x2693
-Current 0x2696
-C7 05 A0 61 00 00 03 00 00 00		MOV     DWORD_61A0, 3		0x2696
-Current 0x26a0
-A3 10 60 00 00		MOV     DWORD_6010, EAX		0x26a0
-Current 0x26a5
-F6 C3 20		TEST    BL, 20H		0x26a5
-Current 0x26a8
-74 3B		JZ      SHORT LOC_26E5		0x26a8
+MOV     EAX, DWORD_6010		0x268e
+OR      EAX, 8		0x2693
+MOV     DWORD_61A0, 3		0x2696
+MOV     DWORD_6010, EAX		0x26a0
+TEST    BL, 20H		0x26a5
+JZ      SHORT LOC_26E5		0x26a8
 --- new bb ---
-Start addr 0x26aa
-End addr 0x26c7
-Current 0x26aa
-83 C8 20		OR      EAX, 20H		0x26aa
-Current 0x26ad
-C7 05 A0 61 00 00 05 00 00 00		MOV     DWORD_61A0, 5		0x26ad
-Current 0x26b7
-A3 10 60 00 00		MOV     DWORD_6010, EAX		0x26b7
-Current 0x26bc
-B8 00 00 03 D0		MOV     EAX, 0D0030000H		0x26bc
-Current 0x26c1
-23 D8		AND     EBX, EAX		0x26c1
-Current 0x26c3
-3B D8		CMP     EBX, EAX		0x26c3
-Current 0x26c5
-75 1E		JNZ     SHORT LOC_26E5		0x26c5
+OR      EAX, 20H		0x26aa
+MOV     DWORD_61A0, 5		0x26ad
+MOV     DWORD_6010, EAX		0x26b7
+MOV     EAX, 0D0030000H		0x26bc
+AND     EBX, EAX		0x26c1
+CMP     EBX, EAX		0x26c3
+JNZ     SHORT LOC_26E5		0x26c5
 --- new bb ---
-Start addr 0x26c7
-End addr 0x26d8
-Current 0x26c7
-8B 45 EC		MOV     EAX, [EBP+VAR_14]		0x26c7
-Current 0x26ca
-BA E0 00 00 00		MOV     EDX, 0E0H		0x26ca
-Current 0x26cf
-8B 4D F0		MOV     ECX, [EBP+VAR_10]		0x26cf
-Current 0x26d2
-23 C2		AND     EAX, EDX		0x26d2
-Current 0x26d4
-3B C2		CMP     EAX, EDX		0x26d4
-Current 0x26d6
-75 0D		JNZ     SHORT LOC_26E5		0x26d6
+MOV     EAX, [EBP+VAR_14]		0x26c7
+MOV     EDX, 0E0H		0x26ca
+MOV     ECX, [EBP+VAR_10]		0x26cf
+AND     EAX, EDX		0x26d2
+CMP     EAX, EDX		0x26d4
+JNZ     SHORT LOC_26E5		0x26d6
 --- new bb ---
-Start addr 0x26d8
-End addr 0x26e5
-Current 0x26d8
-83 0D 10 60 00 00 40		OR      DWORD_6010, 40H		0x26d8
-Current 0x26df
-89 35 A0 61 00 00		MOV     DWORD_61A0, ESI		0x26df
+OR      DWORD_6010, 40H		0x26d8
+MOV     DWORD_61A0, ESI		0x26df
 --- new bb ---
-Start addr 0x26e5
-End addr 0x26e8
-Current 0x26e5
-5F		POP     EDI		0x26e5
-Current 0x26e6
-5E		POP     ESI		0x26e6
-Current 0x26e7
-5B		POP     EBX		0x26e7
+POP     EDI		0x26e5
+POP     ESI		0x26e6
+POP     EBX		0x26e7
 --- new bb ---
-Start addr 0x26e8
-End addr 0x26ec
-Current 0x26e8
-33 C0		XOR     EAX, EAX		0x26e8
-Current 0x26ea
-C9		LEAVE		0x26ea
-Current 0x26eb
-C3		RETN		0x26eb
+XOR     EAX, EAX		0x26e8
+LEAVE		0x26ea
+RETN		0x26eb
 
 --- new func --- ___scrt_is_ucrt_dll_in_use
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2761
-End addr 0x276d
-Current 0x2761
-33 C0		XOR     EAX, EAX		0x2761
-Current 0x2763
-39 05 20 60 00 00		CMP     DWORD_6020, EAX		0x2763
-Current 0x2769
-0F 95 C0		SETNZ   AL		0x2769
-Current 0x276c
-C3		RETN		0x276c
+XOR     EAX, EAX		0x2761
+CMP     DWORD_6020, EAX		0x2763
+SETNZ   AL		0x2769
+RETN		0x276c
 
 --- new func --- ___raise_securityfailure
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2781
-End addr 0x27a9
-Current 0x2781
-55		PUSH    EBP		0x2781
-Current 0x2782
-8B EC		MOV     EBP, ESP		0x2782
-Current 0x2784
-6A 00		PUSH    0; LPTOPLEVELEXCEPTIONFILTER		0x2784
-Current 0x2786
-FF 15 28 70 00 00		CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2786
-Current 0x278c
-FF 75 08		PUSH    [EBP+EXCEPTIONINFO]; EXCEPTIONINFO		0x278c
-Current 0x278f
-FF 15 2C 70 00 00		CALL    DS:UNHANDLEDEXCEPTIONFILTER		0x278f
-Current 0x2795
-68 09 04 00 C0		PUSH    0C0000409H; UEXITCODE		0x2795
-Current 0x279a
-FF 15 18 70 00 00		CALL    DS:GETCURRENTPROCESS		0x279a
-Current 0x27a0
-50		PUSH    EAX; HPROCESS		0x27a0
-Current 0x27a1
-FF 15 14 70 00 00		CALL    DS:TERMINATEPROCESS		0x27a1
-Current 0x27a7
-5D		POP     EBP		0x27a7
-Current 0x27a8
-C3		RETN		0x27a8
+PUSH    EBP		0x2781
+MOV     EBP, ESP		0x2782
+PUSH    0; LPTOPLEVELEXCEPTIONFILTER		0x2784
+CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2786
+PUSH    [EBP+EXCEPTIONINFO]; EXCEPTIONINFO		0x278c
+CALL    DS:UNHANDLEDEXCEPTIONFILTER		0x278f
+PUSH    0C0000409H; UEXITCODE		0x2795
+CALL    DS:GETCURRENTPROCESS		0x279a
+PUSH    EAX; HPROCESS		0x27a0
+CALL    DS:TERMINATEPROCESS		0x27a1
+POP     EBP		0x27a7
+RETN		0x27a8
 
 --- new func --- ___report_gsfailure
-FlowChart size is  3
 --- new bb ---
-Start addr 0x27b3
-End addr 0x27c8
-Current 0x27b3
-55		PUSH    EBP		0x27b3
-Current 0x27b4
-8B EC		MOV     EBP, ESP		0x27b4
-Current 0x27b6
-81 EC 24 03 00 00		SUB     ESP, 324H		0x27b6
-Current 0x27bc
-6A 17		PUSH    17H; PROCESSORFEATURE		0x27bc
-Current 0x27be
-FF 15 20 70 00 00		CALL    DS:ISPROCESSORFEATUREPRESENT		0x27be
-Current 0x27c4
-85 C0		TEST    EAX, EAX		0x27c4
-Current 0x27c6
-74 05		JZ      SHORT LOC_27CD		0x27c6
+PUSH    EBP		0x27b3
+MOV     EBP, ESP		0x27b4
+SUB     ESP, 324H		0x27b6
+PUSH    17H; PROCESSORFEATURE		0x27bc
+CALL    DS:ISPROCESSORFEATUREPRESENT		0x27be
+TEST    EAX, EAX		0x27c4
+JZ      SHORT LOC_27CD		0x27c6
 --- new bb ---
-Start addr 0x27c8
-End addr 0x27cd
-Current 0x27c8
-6A 02		PUSH    2		0x27c8
-Current 0x27ca
-59		POP     ECX		0x27ca
-Current 0x27cb
-CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)		0x27cb
+PUSH    2		0x27c8
+POP     ECX		0x27ca
+INT     29H; WIN8: RTLFAILFAST(ECX)		0x27cb
 --- new bb ---
-Start addr 0x27cd
-End addr 0x28ad
-Current 0x27cd
-A3 B0 62 00 00		MOV     DWORD_62B0, EAX		0x27cd
-Current 0x27d2
-89 0D AC 62 00 00		MOV     DWORD_62AC, ECX		0x27d2
-Current 0x27d8
-89 15 A8 62 00 00		MOV     DWORD_62A8, EDX		0x27d8
-Current 0x27de
-89 1D A4 62 00 00		MOV     DWORD_62A4, EBX		0x27de
-Current 0x27e4
-89 35 A0 62 00 00		MOV     DWORD_62A0, ESI		0x27e4
-Current 0x27ea
-89 3D 9C 62 00 00		MOV     DWORD_629C, EDI		0x27ea
-Current 0x27f0
-66 8C 15 C8 62 00 00		MOV     WORD_62C8, SS		0x27f0
-Current 0x27f7
-66 8C 0D BC 62 00 00		MOV     WORD_62BC, CS		0x27f7
-Current 0x27fe
-66 8C 1D 98 62 00 00		MOV     WORD_6298, DS		0x27fe
-Current 0x2805
-66 8C 05 94 62 00 00		MOV     WORD_6294, ES		0x2805
-Current 0x280c
-66 8C 25 90 62 00 00		MOV     WORD_6290, FS		0x280c
-Current 0x2813
-66 8C 2D 8C 62 00 00		MOV     WORD_628C, GS		0x2813
-Current 0x281a
-9C		PUSHF		0x281a
-Current 0x281b
-8F 05 C0 62 00 00		POP     DWORD_62C0		0x281b
-Current 0x2821
-8B 45 00		MOV     EAX, [EBP+VAR_S0]		0x2821
-Current 0x2824
-A3 B4 62 00 00		MOV     DWORD_62B4, EAX		0x2824
-Current 0x2829
-8B 45 04		MOV     EAX, [EBP+4]		0x2829
-Current 0x282c
-A3 B8 62 00 00		MOV     DWORD_62B8, EAX		0x282c
-Current 0x2831
-8D 45 08		LEA     EAX, [EBP+ARG_0]		0x2831
-Current 0x2834
-A3 C4 62 00 00		MOV     DWORD_62C4, EAX		0x2834
-Current 0x2839
-8B 85 DC FC FF FF		MOV     EAX, [EBP+VAR_324]		0x2839
-Current 0x283f
-C7 05 00 62 00 00 01 00 01 00		MOV     DWORD_6200, 10001H		0x283f
-Current 0x2849
-A1 B8 62 00 00		MOV     EAX, DWORD_62B8		0x2849
-Current 0x284e
-A3 BC 61 00 00		MOV     DWORD_61BC, EAX		0x284e
-Current 0x2853
-C7 05 B0 61 00 00 09 04 00 C0		MOV     DWORD_61B0, 0C0000409H		0x2853
-Current 0x285d
-C7 05 B4 61 00 00 01 00 00 00		MOV     DWORD_61B4, 1		0x285d
-Current 0x2867
-C7 05 C0 61 00 00 01 00 00 00		MOV     DWORD_61C0, 1		0x2867
-Current 0x2871
-6A 04		PUSH    4		0x2871
-Current 0x2873
-58		POP     EAX		0x2873
-Current 0x2874
-6B C0 00		IMUL    EAX, 0		0x2874
-Current 0x2877
-C7 80 C4 61 00 00 02 00 00 00		MOV     DWORD_61C4[EAX], 2		0x2877
-Current 0x2881
-6A 04		PUSH    4		0x2881
-Current 0x2883
-58		POP     EAX		0x2883
-Current 0x2884
-6B C0 00		IMUL    EAX, 0		0x2884
-Current 0x2887
-8B 0D 14 60 00 00		MOV     ECX, ___SECURITY_COOKIE		0x2887
-Current 0x288d
-89 4C 05 F8		MOV     [EBP+EAX+VAR_8], ECX		0x288d
-Current 0x2891
-6A 04		PUSH    4		0x2891
-Current 0x2893
-58		POP     EAX		0x2893
-Current 0x2894
-C1 E0 00		SHL     EAX, 0		0x2894
-Current 0x2897
-8B 0D 18 60 00 00		MOV     ECX, DWORD_6018		0x2897
-Current 0x289d
-89 4C 05 F8		MOV     [EBP+EAX+VAR_8], ECX		0x289d
-Current 0x28a1
-68 B8 4B 00 00		PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x28a1
-Current 0x28a6
-E8 49 E9 FF FF		CALL    J____RAISE_SECURITYFAILURE		0x28a6
-Current 0x28ab
-C9		LEAVE		0x28ab
-Current 0x28ac
-C3		RETN		0x28ac
+MOV     DWORD_62B0, EAX		0x27cd
+MOV     DWORD_62AC, ECX		0x27d2
+MOV     DWORD_62A8, EDX		0x27d8
+MOV     DWORD_62A4, EBX		0x27de
+MOV     DWORD_62A0, ESI		0x27e4
+MOV     DWORD_629C, EDI		0x27ea
+MOV     WORD_62C8, SS		0x27f0
+MOV     WORD_62BC, CS		0x27f7
+MOV     WORD_6298, DS		0x27fe
+MOV     WORD_6294, ES		0x2805
+MOV     WORD_6290, FS		0x280c
+MOV     WORD_628C, GS		0x2813
+PUSHF		0x281a
+POP     DWORD_62C0		0x281b
+MOV     EAX, [EBP+VAR_S0]		0x2821
+MOV     DWORD_62B4, EAX		0x2824
+MOV     EAX, [EBP+4]		0x2829
+MOV     DWORD_62B8, EAX		0x282c
+LEA     EAX, [EBP+ARG_0]		0x2831
+MOV     DWORD_62C4, EAX		0x2834
+MOV     EAX, [EBP+VAR_324]		0x2839
+MOV     DWORD_6200, 10001H		0x283f
+MOV     EAX, DWORD_62B8		0x2849
+MOV     DWORD_61BC, EAX		0x284e
+MOV     DWORD_61B0, 0C0000409H		0x2853
+MOV     DWORD_61B4, 1		0x285d
+MOV     DWORD_61C0, 1		0x2867
+PUSH    4		0x2871
+POP     EAX		0x2873
+IMUL    EAX, 0		0x2874
+MOV     DWORD_61C4[EAX], 2		0x2877
+PUSH    4		0x2881
+POP     EAX		0x2883
+IMUL    EAX, 0		0x2884
+MOV     ECX, ___SECURITY_COOKIE		0x2887
+MOV     [EBP+EAX+VAR_8], ECX		0x288d
+PUSH    4		0x2891
+POP     EAX		0x2893
+SHL     EAX, 0		0x2894
+MOV     ECX, DWORD_6018		0x2897
+MOV     [EBP+EAX+VAR_8], ECX		0x289d
+PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x28a1
+CALL    J____RAISE_SECURITYFAILURE		0x28a6
+LEAVE		0x28ab
+RETN		0x28ac
 
 --- new func --- ___report_rangecheckfailure
-FlowChart size is  1
 --- new bb ---
-Start addr 0x28eb
-End addr 0x28f7
-Current 0x28eb
-55		PUSH    EBP		0x28eb
-Current 0x28ec
-8B EC		MOV     EBP, ESP		0x28ec
-Current 0x28ee
-6A 08		PUSH    8		0x28ee
-Current 0x28f0
-E8 E1 E8 FF FF		CALL    J____REPORT_SECURITYFAILURE		0x28f0
-Current 0x28f5
-5D		POP     EBP		0x28f5
-Current 0x28f6
-C3		RETN		0x28f6
+PUSH    EBP		0x28eb
+MOV     EBP, ESP		0x28ec
+PUSH    8		0x28ee
+CALL    J____REPORT_SECURITYFAILURE		0x28f0
+POP     EBP		0x28f5
+RETN		0x28f6
 
 --- new func --- ___report_securityfailure
-FlowChart size is  3
 --- new bb ---
-Start addr 0x28fa
-End addr 0x290f
-Current 0x28fa
-55		PUSH    EBP		0x28fa
-Current 0x28fb
-8B EC		MOV     EBP, ESP		0x28fb
-Current 0x28fd
-81 EC 1C 03 00 00		SUB     ESP, 31CH		0x28fd
-Current 0x2903
-6A 17		PUSH    17H; PROCESSORFEATURE		0x2903
-Current 0x2905
-FF 15 20 70 00 00		CALL    DS:ISPROCESSORFEATUREPRESENT		0x2905
-Current 0x290b
-85 C0		TEST    EAX, EAX		0x290b
-Current 0x290d
-74 05		JZ      SHORT LOC_2914		0x290d
+PUSH    EBP		0x28fa
+MOV     EBP, ESP		0x28fb
+SUB     ESP, 31CH		0x28fd
+PUSH    17H; PROCESSORFEATURE		0x2903
+CALL    DS:ISPROCESSORFEATUREPRESENT		0x2905
+TEST    EAX, EAX		0x290b
+JZ      SHORT LOC_2914		0x290d
 --- new bb ---
-Start addr 0x290f
-End addr 0x2914
-Current 0x290f
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x290f
-Current 0x2912
-CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)		0x2912
+MOV     ECX, [EBP+ARG_0]		0x290f
+INT     29H; WIN8: RTLFAILFAST(ECX)		0x2912
 --- new bb ---
-Start addr 0x2914
-End addr 0x29c9
-Current 0x2914
-A3 B0 62 00 00		MOV     DWORD_62B0, EAX		0x2914
-Current 0x2919
-89 0D AC 62 00 00		MOV     DWORD_62AC, ECX		0x2919
-Current 0x291f
-89 15 A8 62 00 00		MOV     DWORD_62A8, EDX		0x291f
-Current 0x2925
-89 1D A4 62 00 00		MOV     DWORD_62A4, EBX		0x2925
-Current 0x292b
-89 35 A0 62 00 00		MOV     DWORD_62A0, ESI		0x292b
-Current 0x2931
-89 3D 9C 62 00 00		MOV     DWORD_629C, EDI		0x2931
-Current 0x2937
-66 8C 15 C8 62 00 00		MOV     WORD_62C8, SS		0x2937
-Current 0x293e
-66 8C 0D BC 62 00 00		MOV     WORD_62BC, CS		0x293e
-Current 0x2945
-66 8C 1D 98 62 00 00		MOV     WORD_6298, DS		0x2945
-Current 0x294c
-66 8C 05 94 62 00 00		MOV     WORD_6294, ES		0x294c
-Current 0x2953
-66 8C 25 90 62 00 00		MOV     WORD_6290, FS		0x2953
-Current 0x295a
-66 8C 2D 8C 62 00 00		MOV     WORD_628C, GS		0x295a
-Current 0x2961
-9C		PUSHF		0x2961
-Current 0x2962
-8F 05 C0 62 00 00		POP     DWORD_62C0		0x2962
-Current 0x2968
-8B 45 00		MOV     EAX, [EBP+VAR_S0]		0x2968
-Current 0x296b
-A3 B4 62 00 00		MOV     DWORD_62B4, EAX		0x296b
-Current 0x2970
-8B 45 04		MOV     EAX, [EBP+4]		0x2970
-Current 0x2973
-A3 B8 62 00 00		MOV     DWORD_62B8, EAX		0x2973
-Current 0x2978
-8D 45 08		LEA     EAX, [EBP+ARG_0]		0x2978
-Current 0x297b
-A3 C4 62 00 00		MOV     DWORD_62C4, EAX		0x297b
-Current 0x2980
-8B 85 E4 FC FF FF		MOV     EAX, [EBP+VAR_31C]		0x2980
-Current 0x2986
-A1 B8 62 00 00		MOV     EAX, DWORD_62B8		0x2986
-Current 0x298b
-A3 BC 61 00 00		MOV     DWORD_61BC, EAX		0x298b
-Current 0x2990
-C7 05 B0 61 00 00 09 04 00 C0		MOV     DWORD_61B0, 0C0000409H		0x2990
-Current 0x299a
-C7 05 B4 61 00 00 01 00 00 00		MOV     DWORD_61B4, 1		0x299a
-Current 0x29a4
-C7 05 C0 61 00 00 01 00 00 00		MOV     DWORD_61C0, 1		0x29a4
-Current 0x29ae
-6A 04		PUSH    4		0x29ae
-Current 0x29b0
-58		POP     EAX		0x29b0
-Current 0x29b1
-6B C0 00		IMUL    EAX, 0		0x29b1
-Current 0x29b4
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x29b4
-Current 0x29b7
-89 88 C4 61 00 00		MOV     DWORD_61C4[EAX], ECX		0x29b7
-Current 0x29bd
-68 B8 4B 00 00		PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x29bd
-Current 0x29c2
-E8 2D E8 FF FF		CALL    J____RAISE_SECURITYFAILURE		0x29c2
-Current 0x29c7
-C9		LEAVE		0x29c7
-Current 0x29c8
-C3		RETN		0x29c8
+MOV     DWORD_62B0, EAX		0x2914
+MOV     DWORD_62AC, ECX		0x2919
+MOV     DWORD_62A8, EDX		0x291f
+MOV     DWORD_62A4, EBX		0x2925
+MOV     DWORD_62A0, ESI		0x292b
+MOV     DWORD_629C, EDI		0x2931
+MOV     WORD_62C8, SS		0x2937
+MOV     WORD_62BC, CS		0x293e
+MOV     WORD_6298, DS		0x2945
+MOV     WORD_6294, ES		0x294c
+MOV     WORD_6290, FS		0x2953
+MOV     WORD_628C, GS		0x295a
+PUSHF		0x2961
+POP     DWORD_62C0		0x2962
+MOV     EAX, [EBP+VAR_S0]		0x2968
+MOV     DWORD_62B4, EAX		0x296b
+MOV     EAX, [EBP+4]		0x2970
+MOV     DWORD_62B8, EAX		0x2973
+LEA     EAX, [EBP+ARG_0]		0x2978
+MOV     DWORD_62C4, EAX		0x297b
+MOV     EAX, [EBP+VAR_31C]		0x2980
+MOV     EAX, DWORD_62B8		0x2986
+MOV     DWORD_61BC, EAX		0x298b
+MOV     DWORD_61B0, 0C0000409H		0x2990
+MOV     DWORD_61B4, 1		0x299a
+MOV     DWORD_61C0, 1		0x29a4
+PUSH    4		0x29ae
+POP     EAX		0x29b0
+IMUL    EAX, 0		0x29b1
+MOV     ECX, [EBP+ARG_0]		0x29b4
+MOV     DWORD_61C4[EAX], ECX		0x29b7
+PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x29bd
+CALL    J____RAISE_SECURITYFAILURE		0x29c2
+LEAVE		0x29c7
+RETN		0x29c8
 
 --- new func --- ___report_securityfailureEx
-FlowChart size is  12
 --- new bb ---
-Start addr 0x29fc
-End addr 0x2a11
-Current 0x29fc
-55		PUSH    EBP		0x29fc
-Current 0x29fd
-8B EC		MOV     EBP, ESP		0x29fd
-Current 0x29ff
-81 EC 20 03 00 00		SUB     ESP, 320H		0x29ff
-Current 0x2a05
-6A 17		PUSH    17H; PROCESSORFEATURE		0x2a05
-Current 0x2a07
-FF 15 20 70 00 00		CALL    DS:ISPROCESSORFEATUREPRESENT		0x2a07
-Current 0x2a0d
-85 C0		TEST    EAX, EAX		0x2a0d
-Current 0x2a0f
-74 05		JZ      SHORT LOC_2A16		0x2a0f
+PUSH    EBP		0x29fc
+MOV     EBP, ESP		0x29fd
+SUB     ESP, 320H		0x29ff
+PUSH    17H; PROCESSORFEATURE		0x2a05
+CALL    DS:ISPROCESSORFEATUREPRESENT		0x2a07
+TEST    EAX, EAX		0x2a0d
+JZ      SHORT LOC_2A16		0x2a0f
 --- new bb ---
-Start addr 0x2a11
-End addr 0x2a16
-Current 0x2a11
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x2a11
-Current 0x2a14
-CD 29		INT     29H; WIN8: RTLFAILFAST(ECX)		0x2a14
+MOV     ECX, [EBP+ARG_0]		0x2a11
+INT     29H; WIN8: RTLFAILFAST(ECX)		0x2a14
 --- new bb ---
-Start addr 0x2a16
-End addr 0x2aac
-Current 0x2a16
-A3 B0 62 00 00		MOV     DWORD_62B0, EAX		0x2a16
-Current 0x2a1b
-89 0D AC 62 00 00		MOV     DWORD_62AC, ECX		0x2a1b
-Current 0x2a21
-89 15 A8 62 00 00		MOV     DWORD_62A8, EDX		0x2a21
-Current 0x2a27
-89 1D A4 62 00 00		MOV     DWORD_62A4, EBX		0x2a27
-Current 0x2a2d
-89 35 A0 62 00 00		MOV     DWORD_62A0, ESI		0x2a2d
-Current 0x2a33
-89 3D 9C 62 00 00		MOV     DWORD_629C, EDI		0x2a33
-Current 0x2a39
-66 8C 15 C8 62 00 00		MOV     WORD_62C8, SS		0x2a39
-Current 0x2a40
-66 8C 0D BC 62 00 00		MOV     WORD_62BC, CS		0x2a40
-Current 0x2a47
-66 8C 1D 98 62 00 00		MOV     WORD_6298, DS		0x2a47
-Current 0x2a4e
-66 8C 05 94 62 00 00		MOV     WORD_6294, ES		0x2a4e
-Current 0x2a55
-66 8C 25 90 62 00 00		MOV     WORD_6290, FS		0x2a55
-Current 0x2a5c
-66 8C 2D 8C 62 00 00		MOV     WORD_628C, GS		0x2a5c
-Current 0x2a63
-9C		PUSHF		0x2a63
-Current 0x2a64
-8F 05 C0 62 00 00		POP     DWORD_62C0		0x2a64
-Current 0x2a6a
-8B 45 00		MOV     EAX, [EBP+VAR_S0]		0x2a6a
-Current 0x2a6d
-A3 B4 62 00 00		MOV     DWORD_62B4, EAX		0x2a6d
-Current 0x2a72
-8B 45 04		MOV     EAX, [EBP+4]		0x2a72
-Current 0x2a75
-A3 B8 62 00 00		MOV     DWORD_62B8, EAX		0x2a75
-Current 0x2a7a
-8D 45 08		LEA     EAX, [EBP+ARG_0]		0x2a7a
-Current 0x2a7d
-A3 C4 62 00 00		MOV     DWORD_62C4, EAX		0x2a7d
-Current 0x2a82
-8B 85 E0 FC FF FF		MOV     EAX, [EBP+VAR_320]		0x2a82
-Current 0x2a88
-A1 B8 62 00 00		MOV     EAX, DWORD_62B8		0x2a88
-Current 0x2a8d
-A3 BC 61 00 00		MOV     DWORD_61BC, EAX		0x2a8d
-Current 0x2a92
-C7 05 B0 61 00 00 09 04 00 C0		MOV     DWORD_61B0, 0C0000409H		0x2a92
-Current 0x2a9c
-C7 05 B4 61 00 00 01 00 00 00		MOV     DWORD_61B4, 1		0x2a9c
-Current 0x2aa6
-83 7D 0C 00		CMP     [EBP+ARG_4], 0		0x2aa6
-Current 0x2aaa
-76 0A		JBE     SHORT LOC_2AB6		0x2aaa
+MOV     DWORD_62B0, EAX		0x2a16
+MOV     DWORD_62AC, ECX		0x2a1b
+MOV     DWORD_62A8, EDX		0x2a21
+MOV     DWORD_62A4, EBX		0x2a27
+MOV     DWORD_62A0, ESI		0x2a2d
+MOV     DWORD_629C, EDI		0x2a33
+MOV     WORD_62C8, SS		0x2a39
+MOV     WORD_62BC, CS		0x2a40
+MOV     WORD_6298, DS		0x2a47
+MOV     WORD_6294, ES		0x2a4e
+MOV     WORD_6290, FS		0x2a55
+MOV     WORD_628C, GS		0x2a5c
+PUSHF		0x2a63
+POP     DWORD_62C0		0x2a64
+MOV     EAX, [EBP+VAR_S0]		0x2a6a
+MOV     DWORD_62B4, EAX		0x2a6d
+MOV     EAX, [EBP+4]		0x2a72
+MOV     DWORD_62B8, EAX		0x2a75
+LEA     EAX, [EBP+ARG_0]		0x2a7a
+MOV     DWORD_62C4, EAX		0x2a7d
+MOV     EAX, [EBP+VAR_320]		0x2a82
+MOV     EAX, DWORD_62B8		0x2a88
+MOV     DWORD_61BC, EAX		0x2a8d
+MOV     DWORD_61B0, 0C0000409H		0x2a92
+MOV     DWORD_61B4, 1		0x2a9c
+CMP     [EBP+ARG_4], 0		0x2aa6
+JBE     SHORT LOC_2AB6		0x2aaa
 --- new bb ---
-Start addr 0x2aac
-End addr 0x2ab2
-Current 0x2aac
-83 7D 10 00		CMP     [EBP+ARG_8], 0		0x2aac
-Current 0x2ab0
-75 04		JNZ     SHORT LOC_2AB6		0x2ab0
+CMP     [EBP+ARG_8], 0		0x2aac
+JNZ     SHORT LOC_2AB6		0x2ab0
 --- new bb ---
-Start addr 0x2ab2
-End addr 0x2ab6
-Current 0x2ab2
-83 65 0C 00		AND     [EBP+ARG_4], 0		0x2ab2
+AND     [EBP+ARG_4], 0		0x2ab2
 --- new bb ---
-Start addr 0x2ab6
-End addr 0x2abc
-Current 0x2ab6
-83 7D 0C 0E		CMP     [EBP+ARG_4], 0EH		0x2ab6
-Current 0x2aba
-76 07		JBE     SHORT LOC_2AC3		0x2aba
+CMP     [EBP+ARG_4], 0EH		0x2ab6
+JBE     SHORT LOC_2AC3		0x2aba
 --- new bb ---
-Start addr 0x2abc
-End addr 0x2ac3
-Current 0x2abc
-8B 45 0C		MOV     EAX, [EBP+ARG_4]		0x2abc
-Current 0x2abf
-48		DEC     EAX		0x2abf
-Current 0x2ac0
-89 45 0C		MOV     [EBP+ARG_4], EAX		0x2ac0
+MOV     EAX, [EBP+ARG_4]		0x2abc
+DEC     EAX		0x2abf
+MOV     [EBP+ARG_4], EAX		0x2ac0
 --- new bb ---
-Start addr 0x2ac3
-End addr 0x2ae1
-Current 0x2ac3
-8B 45 0C		MOV     EAX, [EBP+ARG_4]		0x2ac3
-Current 0x2ac6
-40		INC     EAX		0x2ac6
-Current 0x2ac7
-A3 C0 61 00 00		MOV     DWORD_61C0, EAX		0x2ac7
-Current 0x2acc
-6A 04		PUSH    4		0x2acc
-Current 0x2ace
-58		POP     EAX		0x2ace
-Current 0x2acf
-6B C0 00		IMUL    EAX, 0		0x2acf
-Current 0x2ad2
-8B 4D 08		MOV     ECX, [EBP+ARG_0]		0x2ad2
-Current 0x2ad5
-89 88 C4 61 00 00		MOV     DWORD_61C4[EAX], ECX		0x2ad5
-Current 0x2adb
-83 65 FC 00		AND     [EBP+VAR_4], 0		0x2adb
-Current 0x2adf
-EB 07		JMP     SHORT LOC_2AE8		0x2adf
+MOV     EAX, [EBP+ARG_4]		0x2ac3
+INC     EAX		0x2ac6
+MOV     DWORD_61C0, EAX		0x2ac7
+PUSH    4		0x2acc
+POP     EAX		0x2ace
+IMUL    EAX, 0		0x2acf
+MOV     ECX, [EBP+ARG_0]		0x2ad2
+MOV     DWORD_61C4[EAX], ECX		0x2ad5
+AND     [EBP+VAR_4], 0		0x2adb
+JMP     SHORT LOC_2AE8		0x2adf
 --- new bb ---
-Start addr 0x2ae1
-End addr 0x2ae8
-Current 0x2ae1
-8B 45 FC		MOV     EAX, [EBP+VAR_4]		0x2ae1
-Current 0x2ae4
-40		INC     EAX		0x2ae4
-Current 0x2ae5
-89 45 FC		MOV     [EBP+VAR_4], EAX		0x2ae5
+MOV     EAX, [EBP+VAR_4]		0x2ae1
+INC     EAX		0x2ae4
+MOV     [EBP+VAR_4], EAX		0x2ae5
 --- new bb ---
-Start addr 0x2ae8
-End addr 0x2af0
-Current 0x2ae8
-8B 45 FC		MOV     EAX, [EBP+VAR_4]		0x2ae8
-Current 0x2aeb
-3B 45 0C		CMP     EAX, [EBP+ARG_4]		0x2aeb
-Current 0x2aee
-73 15		JNB     SHORT LOC_2B05		0x2aee
+MOV     EAX, [EBP+VAR_4]		0x2ae8
+CMP     EAX, [EBP+ARG_4]		0x2aeb
+JNB     SHORT LOC_2B05		0x2aee
 --- new bb ---
-Start addr 0x2af0
-End addr 0x2b05
-Current 0x2af0
-8B 45 FC		MOV     EAX, [EBP+VAR_4]		0x2af0
-Current 0x2af3
-8B 4D FC		MOV     ECX, [EBP+VAR_4]		0x2af3
-Current 0x2af6
-8B 55 10		MOV     EDX, [EBP+ARG_8]		0x2af6
-Current 0x2af9
-8B 0C 8A		MOV     ECX, [EDX+ECX*4]		0x2af9
-Current 0x2afc
-89 0C 85 C8 61 00 00		MOV     DWORD_61C8[EAX*4], ECX		0x2afc
-Current 0x2b03
-EB DC		JMP     SHORT LOC_2AE1		0x2b03
+MOV     EAX, [EBP+VAR_4]		0x2af0
+MOV     ECX, [EBP+VAR_4]		0x2af3
+MOV     EDX, [EBP+ARG_8]		0x2af6
+MOV     ECX, [EDX+ECX*4]		0x2af9
+MOV     DWORD_61C8[EAX*4], ECX		0x2afc
+JMP     SHORT LOC_2AE1		0x2b03
 --- new bb ---
-Start addr 0x2b05
-End addr 0x2b11
-Current 0x2b05
-68 B8 4B 00 00		PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x2b05
-Current 0x2b0a
-E8 E5 E6 FF FF		CALL    J____RAISE_SECURITYFAILURE		0x2b0a
-Current 0x2b0f
-C9		LEAVE		0x2b0f
-Current 0x2b10
-C3		RETN		0x2b10
+PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x2b05
+CALL    J____RAISE_SECURITYFAILURE		0x2b0a
+LEAVE		0x2b0f
+RETN		0x2b10
 
 --- new func --- __std_type_info_destroy_list
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b56
-End addr 0x2b5c
-Current 0x2b56
-FF 25 78 70 00 00		JMP     DS:__IMP___STD_TYPE_INFO_DESTROY_LIST		0x2b56
+JMP     DS:__IMP___STD_TYPE_INFO_DESTROY_LIST		0x2b56
 
 --- new func --- __current_exception
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b5c
-End addr 0x2b62
-Current 0x2b5c
-FF 25 6C 70 00 00		JMP     DS:__IMP___CURRENT_EXCEPTION		0x2b5c
+JMP     DS:__IMP___CURRENT_EXCEPTION		0x2b5c
 
 --- new func --- __current_exception_context
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b62
-End addr 0x2b68
-Current 0x2b62
-FF 25 68 70 00 00		JMP     DS:__IMP___CURRENT_EXCEPTION_CONTEXT		0x2b62
+JMP     DS:__IMP___CURRENT_EXCEPTION_CONTEXT		0x2b62
 
 --- new func --- memset
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b68
-End addr 0x2b6e
-Current 0x2b68
-FF 25 70 70 00 00		JMP     DS:__IMP_MEMSET		0x2b68
+JMP     DS:__IMP_MEMSET		0x2b68
 
 --- new func --- _except_handler4_common
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b6e
-End addr 0x2b74
-Current 0x2b6e
-FF 25 74 70 00 00		JMP     DS:__IMP__EXCEPT_HANDLER4_COMMON		0x2b6e
+JMP     DS:__IMP__EXCEPT_HANDLER4_COMMON		0x2b6e
 
 --- new func --- _seh_filter_exe
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b92
-End addr 0x2b98
-Current 0x2b92
-FF 25 70 71 00 00		JMP     DS:__IMP__SEH_FILTER_EXE		0x2b92
+JMP     DS:__IMP__SEH_FILTER_EXE		0x2b92
 
 --- new func --- _set_app_type
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b98
-End addr 0x2b9e
-Current 0x2b98
-FF 25 6C 71 00 00		JMP     DS:__IMP__SET_APP_TYPE		0x2b98
+JMP     DS:__IMP__SET_APP_TYPE		0x2b98
 
 --- new func --- __setusermatherr
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2b9e
-End addr 0x2ba4
-Current 0x2b9e
-FF 25 10 71 00 00		JMP     DS:__IMP___SETUSERMATHERR		0x2b9e
+JMP     DS:__IMP___SETUSERMATHERR		0x2b9e
 
 --- new func --- _configure_narrow_argv
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2ba4
-End addr 0x2baa
-Current 0x2ba4
-FF 25 90 71 00 00		JMP     DS:__IMP__CONFIGURE_NARROW_ARGV		0x2ba4
+JMP     DS:__IMP__CONFIGURE_NARROW_ARGV		0x2ba4
 
 --- new func --- _initialize_narrow_environment
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2baa
-End addr 0x2bb0
-Current 0x2baa
-FF 25 8C 71 00 00		JMP     DS:__IMP__INITIALIZE_NARROW_ENVIRONMENT		0x2baa
+JMP     DS:__IMP__INITIALIZE_NARROW_ENVIRONMENT		0x2baa
 
 --- new func --- _get_initial_narrow_environment
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bb0
-End addr 0x2bb6
-Current 0x2bb0
-FF 25 88 71 00 00		JMP     DS:__IMP__GET_INITIAL_NARROW_ENVIRONMENT		0x2bb0
+JMP     DS:__IMP__GET_INITIAL_NARROW_ENVIRONMENT		0x2bb0
 
 --- new func --- _initterm
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bb6
-End addr 0x2bbc
-Current 0x2bb6
-FF 25 84 71 00 00		JMP     DS:__IMP__INITTERM		0x2bb6
+JMP     DS:__IMP__INITTERM		0x2bb6
 
 --- new func --- _initterm_e
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bbc
-End addr 0x2bc2
-Current 0x2bbc
-FF 25 48 71 00 00		JMP     DS:__IMP__INITTERM_E		0x2bbc
+JMP     DS:__IMP__INITTERM_E		0x2bbc
 
 --- new func --- exit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bc2
-End addr 0x2bc8
-Current 0x2bc2
-FF 25 94 71 00 00		JMP     DS:__IMP_EXIT		0x2bc2
+JMP     DS:__IMP_EXIT		0x2bc2
 
 --- new func --- _exit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bc8
-End addr 0x2bce
-Current 0x2bc8
-FF 25 74 71 00 00		JMP     DS:__IMP__EXIT		0x2bc8
+JMP     DS:__IMP__EXIT		0x2bc8
 
 --- new func --- _set_fmode
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bce
-End addr 0x2bd4
-Current 0x2bce
-FF 25 D8 71 00 00		JMP     DS:__IMP__SET_FMODE		0x2bce
+JMP     DS:__IMP__SET_FMODE		0x2bce
 
 --- new func --- __p___argc
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bd4
-End addr 0x2bda
-Current 0x2bd4
-FF 25 50 71 00 00		JMP     DS:__IMP___P___ARGC		0x2bd4
+JMP     DS:__IMP___P___ARGC		0x2bd4
 
 --- new func --- __p___argv
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bda
-End addr 0x2be0
-Current 0x2bda
-FF 25 44 71 00 00		JMP     DS:__IMP___P___ARGV		0x2bda
+JMP     DS:__IMP___P___ARGV		0x2bda
 
 --- new func --- _cexit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2be0
-End addr 0x2be6
-Current 0x2be0
-FF 25 40 71 00 00		JMP     DS:__IMP__CEXIT		0x2be0
+JMP     DS:__IMP__CEXIT		0x2be0
 
 --- new func --- _c_exit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2be6
-End addr 0x2bec
-Current 0x2be6
-FF 25 7C 71 00 00		JMP     DS:__IMP__C_EXIT		0x2be6
+JMP     DS:__IMP__C_EXIT		0x2be6
 
 --- new func --- _register_thread_local_exe_atexit_callback
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bec
-End addr 0x2bf2
-Current 0x2bec
-FF 25 58 71 00 00		JMP     DS:__IMP__REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK		0x2bec
+JMP     DS:__IMP__REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK		0x2bec
 
 --- new func --- _configthreadlocale
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bf2
-End addr 0x2bf8
-Current 0x2bf2
-FF 25 E0 70 00 00		JMP     DS:__IMP__CONFIGTHREADLOCALE		0x2bf2
+JMP     DS:__IMP__CONFIGTHREADLOCALE		0x2bf2
 
 --- new func --- _set_new_mode
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bf8
-End addr 0x2bfe
-Current 0x2bf8
-FF 25 AC 70 00 00		JMP     DS:__IMP__SET_NEW_MODE		0x2bf8
+JMP     DS:__IMP__SET_NEW_MODE		0x2bf8
 
 --- new func --- __p__commode
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2bfe
-End addr 0x2c04
-Current 0x2bfe
-FF 25 DC 71 00 00		JMP     DS:__IMP___P__COMMODE		0x2bfe
+JMP     DS:__IMP___P__COMMODE		0x2bfe
 
 --- new func --- _seh_filter_dll
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c04
-End addr 0x2c0a
-Current 0x2c04
-FF 25 4C 71 00 00		JMP     DS:__IMP__SEH_FILTER_DLL		0x2c04
+JMP     DS:__IMP__SEH_FILTER_DLL		0x2c04
 
 --- new func --- _initialize_onexit_table
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c0a
-End addr 0x2c10
-Current 0x2c0a
-FF 25 80 71 00 00		JMP     DS:__IMP__INITIALIZE_ONEXIT_TABLE		0x2c0a
+JMP     DS:__IMP__INITIALIZE_ONEXIT_TABLE		0x2c0a
 
 --- new func --- _register_onexit_function
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c10
-End addr 0x2c16
-Current 0x2c10
-FF 25 54 71 00 00		JMP     DS:__IMP__REGISTER_ONEXIT_FUNCTION		0x2c10
+JMP     DS:__IMP__REGISTER_ONEXIT_FUNCTION		0x2c10
 
 --- new func --- _execute_onexit_table
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c16
-End addr 0x2c1c
-Current 0x2c16
-FF 25 78 71 00 00		JMP     DS:__IMP__EXECUTE_ONEXIT_TABLE		0x2c16
+JMP     DS:__IMP__EXECUTE_ONEXIT_TABLE		0x2c16
 
 --- new func --- _crt_atexit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c1c
-End addr 0x2c22
-Current 0x2c1c
-FF 25 5C 71 00 00		JMP     DS:__IMP__CRT_ATEXIT		0x2c1c
+JMP     DS:__IMP__CRT_ATEXIT		0x2c1c
 
 --- new func --- _crt_at_quick_exit
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c22
-End addr 0x2c28
-Current 0x2c22
-FF 25 60 71 00 00		JMP     DS:__IMP__CRT_AT_QUICK_EXIT		0x2c22
+JMP     DS:__IMP__CRT_AT_QUICK_EXIT		0x2c22
 
 --- new func --- _controlfp_s
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c28
-End addr 0x2c2e
-Current 0x2c28
-FF 25 64 71 00 00		JMP     DS:__IMP__CONTROLFP_S		0x2c28
+JMP     DS:__IMP__CONTROLFP_S		0x2c28
 
 --- new func --- terminate
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c2e
-End addr 0x2c34
-Current 0x2c2e
-FF 25 68 71 00 00		JMP     DS:__IMP_TERMINATE		0x2c2e
+JMP     DS:__IMP_TERMINATE		0x2c2e
 
 --- new func --- sub_2C82
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c82
-End addr 0x2c85
-Current 0x2c82
-B0 01		MOV     AL, 1		0x2c82
-Current 0x2c84
-C3		RETN		0x2c84
+MOV     AL, 1		0x2c82
+RETN		0x2c84
 
 --- new func --- sub_2C85
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c85
-End addr 0x2c88
-Current 0x2c85
-B0 01		MOV     AL, 1		0x2c85
-Current 0x2c87
-C3		RETN		0x2c87
+MOV     AL, 1		0x2c85
+RETN		0x2c87
 
 --- new func --- sub_2C88
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c88
-End addr 0x2c8b
-Current 0x2c88
-B0 01		MOV     AL, 1		0x2c88
-Current 0x2c8a
-C3		RETN		0x2c8a
+MOV     AL, 1		0x2c88
+RETN		0x2c8a
 
 --- new func --- sub_2C8B
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c8b
-End addr 0x2c8e
-Current 0x2c8b
-B0 01		MOV     AL, 1		0x2c8b
-Current 0x2c8d
-C3		RETN		0x2c8d
+MOV     AL, 1		0x2c8b
+RETN		0x2c8d
 
 --- new func --- sub_2C8E
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c8e
-End addr 0x2c91
-Current 0x2c8e
-B0 01		MOV     AL, 1		0x2c8e
-Current 0x2c90
-C3		RETN		0x2c90
+MOV     AL, 1		0x2c8e
+RETN		0x2c90
 
 --- new func --- sub_2C91
-FlowChart size is  1
 --- new bb ---
-Start addr 0x2c91
-End addr 0x2c94
-Current 0x2c91
-33 C0		XOR     EAX, EAX		0x2c91
-Current 0x2c93
-C3		RETN		0x2c93
+XOR     EAX, EAX		0x2c91
+RETN		0x2c93
 
 --- new func --- __filter_x86_sse2_floating_point_exception_default
-FlowChart size is  15
 --- new bb ---
-Start addr 0x2c94
-End addr 0x2ca1
-Current 0x2c94
-55		PUSH    EBP		0x2c94
-Current 0x2c95
-8B EC		MOV     EBP, ESP		0x2c95
-Current 0x2c97
-51		PUSH    ECX		0x2c97
-Current 0x2c98
-83 3D A0 61 00 00 01		CMP     DWORD_61A0, 1		0x2c98
-Current 0x2c9f
-7C 66		JL      SHORT LOC_2D07		0x2c9f
+PUSH    EBP		0x2c94
+MOV     EBP, ESP		0x2c95
+PUSH    ECX		0x2c97
+CMP     DWORD_61A0, 1		0x2c98
+JL      SHORT LOC_2D07		0x2c9f
 --- new bb ---
-Start addr 0x2ca1
-End addr 0x2caa
-Current 0x2ca1
-81 7D 08 B4 02 00 C0		CMP     [EBP+ARG_0], 0C00002B4H		0x2ca1
-Current 0x2ca8
-74 09		JZ      SHORT LOC_2CB3		0x2ca8
+CMP     [EBP+ARG_0], 0C00002B4H		0x2ca1
+JZ      SHORT LOC_2CB3		0x2ca8
 --- new bb ---
-Start addr 0x2caa
-End addr 0x2cb3
-Current 0x2caa
-81 7D 08 B5 02 00 C0		CMP     [EBP+ARG_0], 0C00002B5H		0x2caa
-Current 0x2cb1
-75 54		JNZ     SHORT LOC_2D07		0x2cb1
+CMP     [EBP+ARG_0], 0C00002B5H		0x2caa
+JNZ     SHORT LOC_2D07		0x2cb1
 --- new bb ---
-Start addr 0x2cb3
-End addr 0x2cc1
-Current 0x2cb3
-0F AE 5D FC		STMXCSR [EBP+VAR_4]		0x2cb3
-Current 0x2cb7
-8B 45 FC		MOV     EAX, [EBP+VAR_4]		0x2cb7
-Current 0x2cba
-83 F0 3F		XOR     EAX, 3FH		0x2cba
-Current 0x2cbd
-A8 81		TEST    AL, 81H		0x2cbd
-Current 0x2cbf
-74 3F		JZ      SHORT LOC_2D00		0x2cbf
+STMXCSR [EBP+VAR_4]		0x2cb3
+MOV     EAX, [EBP+VAR_4]		0x2cb7
+XOR     EAX, 3FH		0x2cba
+TEST    AL, 81H		0x2cbd
+JZ      SHORT LOC_2D00		0x2cbf
 --- new bb ---
-Start addr 0x2cc1
-End addr 0x2cc8
-Current 0x2cc1
-A9 04 02 00 00		TEST    EAX, 204H		0x2cc1
-Current 0x2cc6
-75 07		JNZ     SHORT LOC_2CCF		0x2cc6
+TEST    EAX, 204H		0x2cc1
+JNZ     SHORT LOC_2CCF		0x2cc6
 --- new bb ---
-Start addr 0x2cc8
-End addr 0x2ccf
-Current 0x2cc8
-B8 8E 00 00 C0		MOV     EAX, 0C000008EH		0x2cc8
-Current 0x2ccd
-C9		LEAVE		0x2ccd
-Current 0x2cce
-C3		RETN		0x2cce
+MOV     EAX, 0C000008EH		0x2cc8
+LEAVE		0x2ccd
+RETN		0x2cce
 --- new bb ---
-Start addr 0x2ccf
-End addr 0x2cd6
-Current 0x2ccf
-A9 02 01 00 00		TEST    EAX, 102H		0x2ccf
-Current 0x2cd4
-74 2A		JZ      SHORT LOC_2D00		0x2cd4
+TEST    EAX, 102H		0x2ccf
+JZ      SHORT LOC_2D00		0x2cd4
 --- new bb ---
-Start addr 0x2cd6
-End addr 0x2cdd
-Current 0x2cd6
-A9 08 04 00 00		TEST    EAX, 408H		0x2cd6
-Current 0x2cdb
-75 07		JNZ     SHORT LOC_2CE4		0x2cdb
+TEST    EAX, 408H		0x2cd6
+JNZ     SHORT LOC_2CE4		0x2cdb
 --- new bb ---
-Start addr 0x2cdd
-End addr 0x2ce4
-Current 0x2cdd
-B8 91 00 00 C0		MOV     EAX, 0C0000091H		0x2cdd
-Current 0x2ce2
-C9		LEAVE		0x2ce2
-Current 0x2ce3
-C3		RETN		0x2ce3
+MOV     EAX, 0C0000091H		0x2cdd
+LEAVE		0x2ce2
+RETN		0x2ce3
 --- new bb ---
-Start addr 0x2ce4
-End addr 0x2ceb
-Current 0x2ce4
-A9 10 08 00 00		TEST    EAX, 810H		0x2ce4
-Current 0x2ce9
-75 07		JNZ     SHORT LOC_2CF2		0x2ce9
+TEST    EAX, 810H		0x2ce4
+JNZ     SHORT LOC_2CF2		0x2ce9
 --- new bb ---
-Start addr 0x2ceb
-End addr 0x2cf2
-Current 0x2ceb
-B8 93 00 00 C0		MOV     EAX, 0C0000093H		0x2ceb
-Current 0x2cf0
-C9		LEAVE		0x2cf0
-Current 0x2cf1
-C3		RETN		0x2cf1
+MOV     EAX, 0C0000093H		0x2ceb
+LEAVE		0x2cf0
+RETN		0x2cf1
 --- new bb ---
-Start addr 0x2cf2
-End addr 0x2cf9
-Current 0x2cf2
-A9 20 10 00 00		TEST    EAX, 1020H		0x2cf2
-Current 0x2cf7
-75 0E		JNZ     SHORT LOC_2D07		0x2cf7
+TEST    EAX, 1020H		0x2cf2
+JNZ     SHORT LOC_2D07		0x2cf7
 --- new bb ---
-Start addr 0x2cf9
-End addr 0x2d00
-Current 0x2cf9
-B8 8F 00 00 C0		MOV     EAX, 0C000008FH		0x2cf9
-Current 0x2cfe
-C9		LEAVE		0x2cfe
-Current 0x2cff
-C3		RETN		0x2cff
+MOV     EAX, 0C000008FH		0x2cf9
+LEAVE		0x2cfe
+RETN		0x2cff
 --- new bb ---
-Start addr 0x2d00
-End addr 0x2d07
-Current 0x2d00
-B8 90 00 00 C0		MOV     EAX, 0C0000090H		0x2d00
-Current 0x2d05
-C9		LEAVE		0x2d05
-Current 0x2d06
-C3		RETN		0x2d06
+MOV     EAX, 0C0000090H		0x2d00
+LEAVE		0x2d05
+RETN		0x2d06
 --- new bb ---
-Start addr 0x2d07
-End addr 0x2d0c
-Current 0x2d07
-8B 45 08		MOV     EAX, [EBP+ARG_0]		0x2d07
-Current 0x2d0a
-C9		LEAVE		0x2d0a
-Current 0x2d0b
-C3		RETN		0x2d0b
+MOV     EAX, [EBP+ARG_0]		0x2d07
+LEAVE		0x2d0a
+RETN		0x2d0b

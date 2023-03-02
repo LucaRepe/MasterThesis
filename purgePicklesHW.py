@@ -20,8 +20,9 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/HelloWorld/ida.p", "rb"))
         
-    base_address = 0xa40000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/mainMGW.bbl').read()
+    # base_address = 0xa40000 # MGW
+    base_address = 0xc80000 # VS
+    bbl_string = open('/home/luca/Scrivania/MasterThesis/mainVSJMC.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
     for addr in bbl_list:
@@ -50,7 +51,6 @@ def run():
 
     radare_purged = purge(radare_purged, int_max, int_min)
     
-
     angr_purged = angr.copy()
     set_addr_angr = set()
     for node in angr:
@@ -120,8 +120,6 @@ def run():
         if ida_purged.nodes[node].get('edges') is not None:
             set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
     
-    # print(pin_trace-set_addr_angr_purged)
-    # print('\n')
     print(f'{"--- Jaccard similarity check on purged addresses ---"}')
     print('\n')
     print(f'{"Ghidra"} {jaccard(pin_trace, set_addr_ghidra_purged)}')

@@ -144,7 +144,6 @@ def run():
                 else:
                     indir_call = True
                     list_edges.append("UnresolvableCallTarget")
-                
                 list_edge_attr.append("Call")
             if 'RET' in instr.toString() or 'RETN' in instr.toString():
                 has_return = True

@@ -53,10 +53,6 @@ def run():
     nodes_set = set()
 
     for func in idautils.Functions():
-        flags = idc.get_func_flags(func)
-
-        if flags & idc.FUNC_LIB:
-            continue
 
         # log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
         

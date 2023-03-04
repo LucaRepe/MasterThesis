@@ -1,4 +1,3 @@
-import re
 import pickle
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -7,8 +6,8 @@ from matplotlib.lines import Line2D
 def purge(graph, max_addr, min_addr):
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
-            continue
-        if int(node,16) < min_addr or int(node,16) > max_addr:
+            graph.remove_node(node)
+        elif int(node,16) < min_addr or int(node,16) > max_addr:
             graph.remove_node(node)
     return graph
 
@@ -56,7 +55,12 @@ def run():
     plt.show()
 
     colors = nx.get_edge_attributes(angr_purged, 'color').values()
-    nx.draw_networkx(angr, edge_color=colors, arrows=True)
+    nx.draw_networkx(angr_purged, edge_color=colors, arrows=True)
+    plt.legend(handles=legend_elements, loc='upper right')
+    plt.show()
+
+    colors = nx.get_edge_attributes(ida_purged, 'color').values()
+    nx.draw_networkx(ida_purged, edge_color=colors, arrows=True)
     plt.legend(handles=legend_elements, loc='upper right')
     plt.show()
 

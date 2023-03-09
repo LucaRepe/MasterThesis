@@ -21,6 +21,7 @@ int subtraction(int num1, int num2)
     return sub;
 }
 
+/*
 int conditional_jumps_with_same_target(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
@@ -33,9 +34,26 @@ int conditional_jumps_with_same_target(int var1, int var2)
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
+*/
+
+int conditional_jump_with_constant_condition(int var1, int var2)
+{
+    int resAdd = addition(var1, var2);
+    puts("Conditional jump with constant condition");
+    __asm {
+        push eax
+        xor eax, eax
+        jz $ + 7
+        __emit 0xe8
+        pop eax
+    }
+    int resSub = subtraction(resAdd, var2);
+    return resAdd;
+}
 
 int incrementAge(int age) {
-    int ageIncr = conditional_jumps_with_same_target(age, 10);
+    //int ageIncr = conditional_jumps_with_same_target(age, 10);
+    int ageIncr = conditional_jump_with_constant_condition(age, 10);
     return ageIncr;
 }
 
@@ -88,6 +106,7 @@ int main()
     }
     int resAdd = addition(var1, var2);
     int resSub = subtraction(var1, var2);
-    conditional_jumps_with_same_target(var1, var2);
+    //conditional_jumps_with_same_target(var1, var2);
+    conditional_jump_with_constant_condition(var1, var2);
     return 0;
 }

@@ -1,13 +1,13 @@
 import idaapi
 import idautils
 import idc
+import ida_funcs
+import ida_ua
 import sys
 import networkx as nx
 import pickle
 import xxhash
 from typing import List
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 
 
 def unoverflow(x):
@@ -45,19 +45,27 @@ def run():
     log = f.write
 
     idc.auto_wait()
-    idaapi.rebase_program(-1*idaapi.get_imagebase(), 0)
-    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
-     'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
-     'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
-    g = nx.DiGraph()
+    idaapi.rebase_program(-1 * idaapi.get_imagebase(), idc.MSF_FIXONCE)
 
+    segm = idaapi.get_segm_by_name(".text")
+    start = segm.start_ea
+    end = segm.end_ea
+    while start < end:
+        start = idaapi.find_not_func(start, 1)
+        log(hex(start) + '\n')
+        ida_funcs.add_func(start)
+
+    cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
+                              'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP',
+                              'JPE', \
+                              'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
+    
+    g = nx.DiGraph()
+    idc.auto_wait()
     for func in idautils.Functions():
 
-        log('\n' + '--- new func --- ' + idc.get_func_name(idc.get_func_attr(func, idc.FUNCATTR_START)) + '\n')
-        
-        flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT)#  and idaapi.FC_CALL_ENDS)
+        flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT)  # or idaapi.FC_CALL_ENDS)
         for bb in flowchart:
-            # log('--- new bb ---\n\n')
 
             list_bytes = list()
             list_instr = list()
@@ -81,27 +89,28 @@ def run():
 
             if bb.start_ea == idc.get_func_attr(func, idc.FUNCATTR_START):
                 func_beg = True
-            
+
             while cur_addr <= end:
                 skip_adding = False
-                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\n')
+                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\n')
                 mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 norm_instr = idc.GetDisasm(cur_addr).upper()
                 if mnemonic in cond_jump_instructions:
-                    norm_instr = 'JZ ' + hex(idc.get_operand_value(cur_addr,0))
+                    norm_instr = 'JZ ' + hex(idc.get_operand_value(cur_addr, 0))
                 elif 'RETN' in mnemonic:
                     norm_instr = 'RET'
                 list_instr.append(idc.GetDisasm(cur_addr).upper())
                 list_instr_norm.append(norm_instr)
                 x.update(bytes(norm_instr.split(' ')[0].upper().strip(), 'UTF-8'))
-                list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
+                list_bytes.append(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in
+                                            idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper())
                 list_addr.append(hex(cur_addr))
 
                 if mnemonic in cond_jump_instructions:
                     conditional_jump = True
-                    arg_addr = idc.get_operand_value(cur_addr,0)
+                    arg_addr = idc.get_operand_value(cur_addr, 0)
                     if idc.get_operand_type(cur_addr, 0) == idc.o_far or \
-                        idc.get_operand_type(cur_addr, 0) == idc.o_near:
+                            idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_jump = True
                         list_edges.append(hex(arg_addr))
                     else:
@@ -110,9 +119,9 @@ def run():
                     list_edge_attr.append("Jump")
                 if 'JMP' in mnemonic:
                     conditional_jump = False
-                    arg_addr = idc.get_operand_value(cur_addr,0)
+                    arg_addr = idc.get_operand_value(cur_addr, 0)
                     if idc.get_operand_type(cur_addr, 0) == idc.o_far or \
-                        idc.get_operand_type(cur_addr, 0) == idc.o_near:
+                            idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_jump = True
                         list_edges.append(hex(arg_addr))
                     else:
@@ -121,9 +130,9 @@ def run():
                     list_edge_attr.append("Jump")
                 if 'CALL' in mnemonic:
                     split_bb = True
-                    arg_addr = idc.get_operand_value(cur_addr,0)
+                    arg_addr = idc.get_operand_value(cur_addr, 0)
                     if idc.get_operand_type(cur_addr, 0) == idc.o_far or \
-                        idc.get_operand_type(cur_addr, 0) == idc.o_near:
+                            idc.get_operand_type(cur_addr, 0) == idc.o_near:
                         dir_call = True
                         list_edges.append(hex(arg_addr))
                     else:
@@ -158,7 +167,8 @@ def run():
                     bb.has_return = has_return_copy
                     bb.unique_hash_identifier = x.intdigest()
                     if len(list_instr) != 0:
-                        g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm, bytes=bb.list_bytes, addr=bb.list_addr,
+                        g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm,
+                                   bytes=bb.list_bytes, addr=bb.list_addr,
                                    edges=bb.list_edges, edge_attr=bb.list_edge_attr, func_beg=bb.function_beginning,
                                    dir_call=bb.direct_fun_call, indir_call=bb.indirect_fun_call,
                                    cond_jump=bb.conditional_jump, dir_jump=bb.direct_jump,
@@ -203,15 +213,16 @@ def run():
                 bb_not_splitted.has_return = has_return
                 bb_not_splitted.unique_hash_identifier = x.intdigest()
                 if len(list_instr) != 0:
-                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr, instr_norm=bb_not_splitted.list_instr_norm,
-                                bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr, edges=bb_not_splitted.list_edges, 
-                                edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning, 
-                                dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
-                                cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
-                                indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
-                                unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
+                    g.add_node(bb_not_splitted.start_addr, instr=bb_not_splitted.list_instr,
+                               instr_norm=bb_not_splitted.list_instr_norm,
+                               bytes=bb_not_splitted.list_bytes, addr=bb_not_splitted.list_addr,
+                               edges=bb_not_splitted.list_edges,
+                               edge_attr=bb_not_splitted.list_edge_attr, func_beg=bb_not_splitted.function_beginning,
+                               dir_call=bb_not_splitted.direct_fun_call, indir_call=bb_not_splitted.indirect_fun_call,
+                               cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
+                               indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
+                               unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
                 skip_adding = False
-
 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):
@@ -257,9 +268,9 @@ def run():
                         g.add_edge(node, edge, color='b')
 
     # legend_elements = [
-        # Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
-        # Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
-        # Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
+    # Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
+    # Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
+    # Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
     # ]
 
     # colors = nx.get_edge_attributes(g, 'color').values()
@@ -271,7 +282,7 @@ def run():
     if f != sys.stdout:
         f.close()
         idc.qexit(0)
-    
+
 
 if __name__ == "__main__":
     run()

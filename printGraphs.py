@@ -1,5 +1,4 @@
 import pickle
-import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
@@ -18,8 +17,8 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
     
-    int_min = 0x1410
-    int_max = 0x1463
+    int_min = 0x117c0
+    int_max = 0x11839
 
     ghidra_purged = ghidra.copy()
     ghidra_purged = purge(ghidra_purged, int_max, int_min)
@@ -38,31 +37,31 @@ def run():
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_purged.p", "wb"))
 
-    legend_elements = [
-        Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
-        Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
-        Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
-    ]
+    # legend_elements = [
+        # Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
+        # Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
+        # Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
+    # ]
 
-    colors = nx.get_edge_attributes(ghidra_purged, 'color').values()
-    nx.draw_networkx(ghidra_purged, edge_color=colors, arrows=True)
-    plt.legend(handles=legend_elements, loc='upper right')
-    plt.show()
+    # colors = nx.get_edge_attributes(ghidra_purged, 'color').values()
+    # nx.draw_networkx(ghidra_purged, edge_color=colors, arrows=True)
+    # plt.legend(handles=legend_elements, loc='upper right')
+    # plt.show()
 
-    colors = nx.get_edge_attributes(radare_purged, 'color').values()
-    nx.draw_networkx(radare_purged, edge_color=colors, arrows=True)
-    plt.legend(handles=legend_elements, loc='upper right')
-    plt.show()
+    # colors = nx.get_edge_attributes(radare_purged, 'color').values()
+    # nx.draw_networkx(radare_purged, edge_color=colors, arrows=True)
+    # plt.legend(handles=legend_elements, loc='upper right')
+    # plt.show()
 
-    colors = nx.get_edge_attributes(angr_purged, 'color').values()
-    nx.draw_networkx(angr_purged, edge_color=colors, arrows=True)
-    plt.legend(handles=legend_elements, loc='upper right')
-    plt.show()
+    # colors = nx.get_edge_attributes(angr_purged, 'color').values()
+    # nx.draw_networkx(angr_purged, edge_color=colors, arrows=True)
+    # plt.legend(handles=legend_elements, loc='upper right')
+    # plt.show()
 
-    colors = nx.get_edge_attributes(ida_purged, 'color').values()
-    nx.draw_networkx(ida_purged, edge_color=colors, arrows=True)
-    plt.legend(handles=legend_elements, loc='upper right')
-    plt.show()
+    # colors = nx.get_edge_attributes(ida_purged, 'color').values()
+    # nx.draw_networkx(ida_purged, edge_color=colors, arrows=True)
+    # plt.legend(handles=legend_elements, loc='upper right')
+    # plt.show()
 
 
 if __name__ == '__main__':

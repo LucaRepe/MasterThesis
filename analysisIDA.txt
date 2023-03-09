@@ -1,2264 +1,1583 @@
+0x100a
+0x1019
+0x1028
+0x1032
+0x103c
+0x1041
+0x1046
+0x1050
+0x1055
+0x105a
+0x105f
+0x1064
+0x1069
+0x1078
+0x1082
+0x109b
+0x10a5
+0x10af
+0x10dc
+0x10e1
+0x10f5
+0x10fa
+0x10ff
+0x1113
+0x1118
+0x111d
+0x1122
+0x112c
+0x1131
+0x1136
+0x113b
+0x1168
+0x1172
+0x1181
+0x1186
+0x118b
+0x1190
+0x119a
+0x11b3
+0x11bd
+0x11cc
+0x11db
+0x11f9
+0x1410
+0x1411
+0x1413
+0x1416
+0x1417
+0x1418
+0x1419
+0x141c
+0x141d
+0x1420
+0x1421
+0x1426
+0x1429
+0x142c
+0x1431
+0x1437
+0x143a
+0x1440
+0x1446
+0x1480
+0x1610
+0x1772
+0x1960
+0x1970
+0x19a2
+0x19c2
+0x1a33
+0x1afd
+0x1b23
+0x1b9f
+0x1f0c
+0x23a5
+0x23a8
+0x23dd
+0x248e
+0x2491
+0x2770
+0x2b74
+0x2b7a
+0x2b80
+0x2b86
+0x2b8c
+0x2c34
+0x2c3a
+0x2c40
+0x2c46
+0x2c4c
+0x2c52
+0x2c58
+0x2c5e
+0x2c64
+0x2c6a
+0x2c70
+0x2c76
+0x2c7c
+0xffffffffffffffff
 
 --- new func --- sub_1005
 --- new bb ---
-JMP     SUB_2217		0x1005
+
+
+--- new func --- j_?set_commode@__scrt_file_policy@@SAXXZ
+--- new bb ---
+
 
 --- new func --- sub_100F
 --- new bb ---
-JMP     SUB_2C8B		0x100f
+
 
 --- new func --- start
 --- new bb ---
-JMP     START_0		0x1014
+
+
+--- new func --- j____report_gsfailure
+--- new bb ---
+
 
 --- new func --- sub_101E
 --- new bb ---
-JMP     SUB_1F92		0x101e
+
 
 --- new func --- j_nullsub_2
 --- new bb ---
-JMP     NULLSUB_2		0x1023
+
+
+--- new func --- j____report_rangecheckfailure
+--- new bb ---
+
 
 --- new func --- sub_102D
 --- new bb ---
-JMP     SUB_1F8C		0x102d
+
+
+--- new func --- j___guard_icall_checks_enforced
+--- new bb ---
+
 
 --- new func --- sub_1037
 --- new bb ---
-JMP     SUB_219F		0x1037
+
+
+--- new func --- sub_103C
+--- new bb ---
+
+
+--- new func --- sub_1041
+--- new bb ---
+
+
+--- new func --- j_nullsub_4
+--- new bb ---
+
 
 --- new func --- sub_104B
 --- new bb ---
-JMP     SUB_1EFD		0x104b
+
+
+--- new func --- j_unknown_libname_2
+--- new bb ---
+
+
+--- new func --- sub_1055
+--- new bb ---
+
+
+--- new func --- sub_105A
+--- new bb ---
+
+
+--- new func --- j____scrt_dllmain_before_initialize_c
+--- new bb ---
+
+
+--- new func --- j____scrt_get_show_window_mode
+--- new bb ---
+
+
+--- new func --- j___SEH_epilog4
+--- new bb ---
+
 
 --- new func --- j___SEH_prolog4
 --- new bb ---
-JMP     __SEH_PROLOG4		0x106e
+
 
 --- new func --- j___get_startup_file_mode
 --- new bb ---
-JMP     __GET_STARTUP_FILE_MODE		0x1073
+
+
+--- new func --- j____scrt_dllmain_exception_filter
+--- new bb ---
+
 
 --- new func --- UserMathErrorFunction
 --- new bb ---
-JMP     USERMATHERRORFUNCTION_0		0x107d
+
+
+--- new func --- j____scrt_dllmain_uninitialize_c
+--- new bb ---
+
 
 --- new func --- sub_1087
 --- new bb ---
-JMP     SUB_2C88		0x1087
+
 
 --- new func --- sub_108C
 --- new bb ---
-JMP     SUB_1EEE		0x108c
+
 
 --- new func --- j____scrt_is_nonwritable_in_current_image
 --- new bb ---
-JMP     ___SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x1091
+
 
 --- new func --- sub_1096
 --- new bb ---
-JMP     SUB_2C8B		0x1096
+
+
+--- new func --- j_j__initialize_narrow_environment
+--- new bb ---
+
 
 --- new func --- j____scrt_initialize_onexit_tables
 --- new bb ---
-JMP     ___SCRT_INITIALIZE_ONEXIT_TABLES		0x10a0
+
+
+--- new func --- j____scrt_dllmain_after_initialize_c
+--- new bb ---
+
 
 --- new func --- sub_10AA
 --- new bb ---
-JMP     SUB_1EF7		0x10aa
+
+
+--- new func --- sub_10AF
+--- new bb ---
+
 
 --- new func --- sub_10B4
 --- new bb ---
-JMP     LOC_1410		0x10b4
+
 
 --- new func --- j____scrt_initialize_default_local_stdio_options
 --- new bb ---
-JMP     ___SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS		0x10b9
+
 
 --- new func --- j____scrt_release_startup_lock
 --- new bb ---
-JMP     ___SCRT_RELEASE_STARTUP_LOCK		0x10be
+
 
 --- new func --- j____scrt_uninitialize_crt
 --- new bb ---
-JMP     ___SCRT_UNINITIALIZE_CRT		0x10c3
+
 
 --- new func --- sub_10C8
 --- new bb ---
-JMP     SUB_2C88		0x10c8
+
 
 --- new func --- sub_10CD
 --- new bb ---
-JMP     SUB_224E		0x10cd
+
 
 --- new func --- j____scrt_is_ucrt_dll_in_use
 --- new bb ---
-JMP     ___SCRT_IS_UCRT_DLL_IN_USE		0x10d2
+
 
 --- new func --- sub_10D7
 --- new bb ---
-JMP     SUB_2518		0x10d7
+
+
+--- new func --- sub_10DC
+--- new bb ---
+
+
+--- new func --- j____report_securityfailureEx
+--- new bb ---
+
 
 --- new func --- j____scrt_fastfail
 --- new bb ---
-JMP     ___SCRT_FASTFAIL		0x10e6
+
 
 --- new func --- sub_10EB
 --- new bb ---
-JMP     SUB_2C91		0x10eb
+
 
 --- new func --- j__atexit
 --- new bb ---
-JMP     _ATEXIT		0x10f0
+
+
+--- new func --- j____castguard_check_failure_fastfail
+--- new bb ---
+
+
+--- new func --- sub_10FA
+--- new bb ---
+
+
+--- new func --- sub_10FF
+--- new bb ---
+
 
 --- new func --- sub_1104
 --- new bb ---
-JMP     SUB_1F7D		0x1104
+
 
 --- new func --- j___onexit
 --- new bb ---
-JMP     __ONEXIT		0x1109
+
 
 --- new func --- sub_110E
 --- new bb ---
-JMP     SUB_2136		0x110e
+
+
+--- new func --- j__at_quick_exit
+--- new bb ---
+
+
+--- new func --- sub_1118
+--- new bb ---
+
+
+--- new func --- sub_111D
+--- new bb ---
+
+
+--- new func --- j___filter_x86_sse2_floating_point_exception_default_0
+--- new bb ---
+
 
 --- new func --- sub_1127
 --- new bb ---
-JMP     SUB_2C85		0x1127
+
+
+--- new func --- sub_112C
+--- new bb ---
+
+
+--- new func --- sub_1131
+--- new bb ---
+
+
+--- new func --- sub_1136
+--- new bb ---
+
+
+--- new func --- sub_113B
+--- new bb ---
+
 
 --- new func --- sub_1140
 --- new bb ---
-JMP     SUB_2C85		0x1140
+
 
 --- new func --- j_nullsub_1
 --- new bb ---
-JMP     NULLSUB_1		0x1145
+
 
 --- new func --- sub_114A
 --- new bb ---
-JMP     SUB_1670		0x114a
+
 
 --- new func --- sub_114F
 --- new bb ---
-JMP     SUB_1EFA		0x114f
+
 
 --- new func --- sub_1154
 --- new bb ---
-JMP     SUB_213B		0x1154
+
 
 --- new func --- sub_1159
 --- new bb ---
-JMP     SUB_1400		0x1159
+
 
 --- new func --- sub_115E
 --- new bb ---
-JMP     SUB_2C82		0x115e
+
 
 --- new func --- sub_1163
 --- new bb ---
-JMP     SUB_2C82		0x1163
+
+
+--- new func --- j_nullsub_5
+--- new bb ---
+
 
 --- new func --- sub_116D
 --- new bb ---
-JMP     SUB_1EEA		0x116d
+
+
+--- new func --- j____castguard_check_failure_debugbreak
+--- new bb ---
+
 
 --- new func --- sub_1177
 --- new bb ---
-JMP     SUB_220D		0x1177
+
 
 --- new func --- j____scrt_initialize_crt
 --- new bb ---
-JMP     ___SCRT_INITIALIZE_CRT		0x117c
+
+
+--- new func --- j____castguard_slow_path_check_debugbreak
+--- new bb ---
+
+
+--- new func --- sub_1186
+--- new bb ---
+
+
+--- new func --- j____castguard_slow_path_check_fastfail
+--- new bb ---
+
+
+--- new func --- sub_1190
+--- new bb ---
+
 
 --- new func --- _main
 --- new bb ---
-JMP     _MAIN_0		0x1195
+
+
+--- new func --- sub_119A
+--- new bb ---
+
 
 --- new func --- j____scrt_acquire_startup_lock
 --- new bb ---
-JMP     ___SCRT_ACQUIRE_STARTUP_LOCK		0x119f
+
 
 --- new func --- sub_11A4
 --- new bb ---
-JMP     SUB_1F1B		0x11a4
+
 
 --- new func --- sub_11A9
 --- new bb ---
-JMP     SUB_213E		0x11a9
+
 
 --- new func --- sub_11AE
 --- new bb ---
-JMP     SUB_1F4D		0x11ae
+
+
+--- new func --- sub_11B3
+--- new bb ---
+
 
 --- new func --- j____scrt_unhandled_exception_filter@4
 --- new bb ---
-JMP     ___SCRT_UNHANDLED_EXCEPTION_FILTER@4; __SCRT_UNHANDLED_EXCEPTION_FILTER(X)		0x11b8
+
+
+--- new func --- j_unknown_libname_1
+--- new bb ---
+
 
 --- new func --- j___initialize_default_precision
 --- new bb ---
-JMP     __INITIALIZE_DEFAULT_PRECISION		0x11c2
+
 
 --- new func --- sub_11C7
 --- new bb ---
-JMP     SUB_2190		0x11c7
+
+
+--- new func --- sub_11CC
+--- new bb ---
+
 
 --- new func --- sub_11D1
 --- new bb ---
-JMP     SUB_1F53		0x11d1
+
 
 --- new func --- j____report_securityfailure
 --- new bb ---
-JMP     ___REPORT_SECURITYFAILURE		0x11d6
+
+
+--- new func --- j__NtCurrentTeb
+--- new bb ---
+
 
 --- new func --- j_nullsub_3
 --- new bb ---
-JMP     NULLSUB_3		0x11e0
+
 
 --- new func --- j___filter_x86_sse2_floating_point_exception_default
 --- new bb ---
-JMP     __FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT		0x11e5
+
 
 --- new func --- j____security_init_cookie
 --- new bb ---
-JMP     ___SECURITY_INIT_COOKIE		0x11ea
+
 
 --- new func --- sub_11EF
 --- new bb ---
-JMP     SUB_2C8E		0x11ef
+
 
 --- new func --- j____raise_securityfailure
 --- new bb ---
-JMP     ___RAISE_SECURITYFAILURE		0x11f4
+
+
+--- new func --- sub_11F9
+--- new bb ---
+
 
 --- new func --- sub_1400
 --- new bb ---
-PUSH    EBP		0x1400
-MOV     EBP, ESP		0x1401
-MOV     EAX, [EBP+ARG_0]		0x1403
-ADD     EAX, [EBP+ARG_4]		0x1406
-POP     EBP		0x1409
-RETN		0x140a
+
+
+--- new func --- sub_1410
+--- new bb ---
+
+--- new bb ---
+
+
+--- new func --- sub_1446
+--- new bb ---
+
+
+--- new func --- sub_1480
+--- new bb ---
+
 
 --- new func --- _main_0
 --- new bb ---
-PUSH    ESI		0x14a0
-MOV     ESI, DS:STRNCPY_S		0x14a1
-PUSH    2; MAXCOUNT		0x14a7
-PUSH    OFFSET STR2; "P1"		0x14a9
-PUSH    14H; SIZEINBYTES		0x14ae
-PUSH    OFFSET STR1; DESTINATION		0x14b0
-MOV     DWORD_6594, 0		0x14b5
-MOV     DWORD_65AC, 0FFFFFFFFH		0x14bf
-MOV     DWORD_65C4, 3E8H		0x14c9
-CALL    ESI ; STRNCPY_S		0x14d3
-PUSH    2; MAXCOUNT		0x14d5
-PUSH    OFFSET AP2; "P2"		0x14d7
-PUSH    14H; SIZEINBYTES		0x14dc
-PUSH    OFFSET BYTE_6598; DESTINATION		0x14de
-CALL    ESI ; STRNCPY_S		0x14e3
-PUSH    2; MAXCOUNT		0x14e5
-PUSH    OFFSET AP3; "P3"		0x14e7
-PUSH    14H; SIZEINBYTES		0x14ec
-PUSH    OFFSET BYTE_65B0; DESTINATION		0x14ee
-CALL    ESI ; STRNCPY_S		0x14f3
-MOV     EAX, DWORD_6594		0x14f5
-ADD     ESP, 30H		0x14fa
-CMP     EAX, 0AH		0x14fd
-JGE     SHORT LOC_1577		0x1500
+
 --- new bb ---
-PUSH    EBX		0x1502
-MOV     EBX, DS:STRCPY_S		0x1503
-PUSH    EDI		0x1509
-NOP     WORD PTR [EAX+EAX+00H]		0x150a
+
 --- new bb ---
-PUSH    0AH		0x1510
-PUSH    EAX		0x1512
-CALL    SUB_10B4		0x1513
-PUSH    2; MAXCOUNT		0x1518
-PUSH    OFFSET STR2; "P1"		0x151a
-PUSH    OFFSET STR1; STR1		0x151f
-MOV     DWORD_6594, EAX		0x1524
-CALL    DS:STRNCMP		0x1529
-ADD     ESP, 14H		0x152f
-TEST    EAX, EAX		0x1532
-JNZ     SHORT LOC_156B		0x1534
+
 --- new bb ---
-PUSH    0AH; SIZE		0x1536
-CALL    DS:MALLOC		0x1538
-ADD     ESP, 4		0x153e
-MOV     EDI, EAX		0x1541
-XOR     ESI, ESI		0x1543
+
 --- new bb ---
-PUSH    OFFSET SOURCE; "0X90"		0x1545
-LEA     ECX, [EDI+ESI]		0x154a
-PUSH    5; SIZEINBYTES		0x154d
-PUSH    ECX; DESTINATION		0x154f
-CALL    EBX ; STRCPY_S		0x1550
-INC     ESI		0x1552
-ADD     ESP, 0CH		0x1553
-CMP     ESI, 9		0x1556
-JL      SHORT LOC_1545		0x1559
+
 --- new bb ---
-PUSH    OFFSET A0XC3; "0XC3"		0x155b
-LEA     EAX, [EDI+0AH]		0x1560
-PUSH    5; SIZEINBYTES		0x1563
-PUSH    EAX; DESTINATION		0x1565
-CALL    EBX ; STRCPY_S		0x1566
-ADD     ESP, 0CH		0x1568
+
 --- new bb ---
-MOV     EAX, DWORD_6594		0x156b
-CMP     EAX, 0AH		0x1570
-JL      SHORT LOC_1510		0x1573
+
 --- new bb ---
-POP     EDI		0x1575
-POP     EBX		0x1576
+
 --- new bb ---
-MOV     EAX, DWORD_65AC		0x1577
-POP     ESI		0x157c
-CMP     EAX, 0FFFFFFFFH		0x157d
-JZ      SHORT LOC_15A2		0x1580
+
 --- new bb ---
-TEST    EAX, EAX		0x1582
-JZ      SHORT LOC_159B		0x1584
+
 --- new bb ---
-CMP     EAX, 3E8H		0x1586
-JZ      SHORT LOC_1594		0x158b
+
 --- new bb ---
-PUSH    OFFSET ANONEOFTHEABOVE; "NONE OF THE ABOVE"		0x158d
-JMP     SHORT LOC_15A7		0x1592
+
 --- new bb ---
-PUSH    OFFSET AEQUAL1000; "EQUAL 1000"		0x1594
-JMP     SHORT LOC_15A7		0x1599
+
 --- new bb ---
-PUSH    OFFSET AEQUAL0; "EQUAL 0"		0x159b
-JMP     SHORT LOC_15A7		0x15a0
+
 --- new bb ---
-PUSH    OFFSET BUFFER; "EQUAL -1"		0x15a2
+
 --- new bb ---
-CALL    DS:PUTS		0x15a7
-ADD     ESP, 4		0x15ad
-PUSH    14H		0x15b0
-PUSH    0FH		0x15b2
-CALL    SUB_10B4		0x15b4
-ADD     ESP, 8		0x15b9
-XOR     EAX, EAX		0x15bc
-RETN		0x15be
+
+
+--- new func --- sub_1610
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
 
 --- new func --- sub_1670
 --- new bb ---
-PUSH    EBP		0x1670
-MOV     EBP, ESP		0x1671
-MOV     EAX, [EBP+ARG_0]		0x1673
-SUB     EAX, [EBP+ARG_4]		0x1676
-POP     EBP		0x1679
-RETN		0x167a
+
 
 --- new func --- ?pre_c_initialization@@YAHXZ
 --- new bb ---
-PUSH    ESI		0x167d
-PUSH    1; TYPE		0x167e
-CALL    _SET_APP_TYPE		0x1680
-CALL    J___GET_STARTUP_FILE_MODE		0x1685
-PUSH    EAX; MODE		0x168a
-CALL    _SET_FMODE		0x168b
-CALL    SUB_108C		0x1690
-MOV     ESI, EAX		0x1695
-CALL    __P__COMMODE		0x1697
-PUSH    1		0x169c
-MOV     [EAX], ESI		0x169e
-CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES		0x16a0
-ADD     ESP, 0CH		0x16a5
-POP     ESI		0x16a8
-TEST    AL, AL		0x16a9
-JZ      SHORT LOC_1720		0x16ab
+
 --- new bb ---
-FNCLEX		0x16ad
-CALL    SUB_1005		0x16af
-PUSH    OFFSET SUB_10CD; VOID (__CDECL *)()		0x16b4
-CALL    J__ATEXIT		0x16b9
-CALL    SUB_116D		0x16be
-PUSH    EAX; MODE		0x16c3
-CALL    _CONFIGURE_NARROW_ARGV		0x16c4
-POP     ECX		0x16c9
-POP     ECX		0x16ca
-TEST    EAX, EAX		0x16cb
-JNZ     SHORT LOC_1720		0x16cd
+
 --- new bb ---
-CALL    SUB_104B		0x16cf
-CALL    SUB_1104		0x16d4
-TEST    EAX, EAX		0x16d9
-JZ      SHORT LOC_16E8		0x16db
+
 --- new bb ---
-PUSH    OFFSET USERMATHERRORFUNCTION; USERMATHERRORFUNCTION		0x16dd
-CALL    __SETUSERMATHERR		0x16e2
-POP     ECX		0x16e7
+
 --- new bb ---
-CALL    J_NULLSUB_3		0x16e8
-CALL    J_NULLSUB_2		0x16ed
-CALL    J___INITIALIZE_DEFAULT_PRECISION		0x16f2
-CALL    SUB_114F		0x16f7
-PUSH    EAX; FLAG		0x16fc
-CALL    _CONFIGTHREADLOCALE		0x16fd
-POP     ECX		0x1702
-CALL    SUB_11A4		0x1703
-TEST    AL, AL		0x1708
-JZ      SHORT LOC_1711		0x170a
+
 --- new bb ---
-CALL    _INITIALIZE_NARROW_ENVIRONMENT		0x170c
+
 --- new bb ---
-CALL    SUB_1154		0x1711
-CALL    SUB_110E		0x1716
-TEST    EAX, EAX		0x171b
-JNZ     SHORT LOC_1720		0x171d
+
 --- new bb ---
-RETN		0x171f
+
 --- new bb ---
-PUSH    7		0x1720
-CALL    J____SCRT_FASTFAIL		0x1722
+
 
 --- new func --- sub_1752
 --- new bb ---
-CALL    J____SCRT_INITIALIZE_DEFAULT_LOCAL_STDIO_OPTIONS		0x1752
-XOR     EAX, EAX		0x1757
-RETN		0x1759
+
 
 --- new func --- sub_175C
 --- new bb ---
-CALL    SUB_11C7		0x175c
-CALL    SUB_10AA		0x1761
-PUSH    EAX; NEWMODE		0x1766
-CALL    _SET_NEW_MODE		0x1767
-POP     ECX		0x176c
-RETN		0x176d
+
+
+--- new func --- sub_1772
+--- new bb ---
+
 
 --- new func --- ?__scrt_common_main_seh@@YAHXZ
 --- new bb ---
-PUSH    14H		0x177e
-PUSH    OFFSET STRU_5778		0x1780
-CALL    J___SEH_PROLOG4		0x1785
-PUSH    1		0x178a
-CALL    J____SCRT_INITIALIZE_CRT		0x178c
-POP     ECX		0x1791
-TEST    AL, AL		0x1792
-JZ      LOC_18EA		0x1794
+
 --- new bb ---
-XOR     BL, BL		0x179a
-MOV     [EBP+VAR_19], BL		0x179c
+
 --- new bb ---
-AND     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0		0x179f
-CALL    J____SCRT_ACQUIRE_STARTUP_LOCK		0x17a3
-MOV     BYTE PTR [EBP+VAR_24], AL		0x17a8
-MOV     EAX, DWORD_6140		0x17ab
-XOR     ECX, ECX		0x17b0
-INC     ECX		0x17b2
-CMP     EAX, ECX		0x17b3
-JZ      LOC_18EA		0x17b5
+
 --- new bb ---
-TEST    EAX, EAX		0x17bb
-JNZ     SHORT LOC_1808		0x17bd
+
 --- new bb ---
-MOV     DWORD_6140, ECX		0x17bf
-PUSH    OFFSET LAST; LAST		0x17c5
-PUSH    OFFSET FIRST; FIRST		0x17ca
-CALL    _INITTERM_E		0x17cf
-POP     ECX		0x17d4
-POP     ECX		0x17d5
-TEST    EAX, EAX		0x17d6
-JZ      SHORT LOC_17EB		0x17d8
+
 --- new bb ---
-MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x17da
-MOV     EAX, 0FFH		0x17e1
-JMP     LOC_18DA		0x17e6
+
 --- new bb ---
-PUSH    OFFSET DWORD_4208; LAST		0x17eb
-PUSH    OFFSET DWORD_4000; FIRST		0x17f0
-CALL    _INITTERM		0x17f5
-POP     ECX		0x17fa
-POP     ECX		0x17fb
-MOV     DWORD_6140, 2		0x17fc
-JMP     SHORT LOC_180D		0x1806
+
 --- new bb ---
-MOV     BL, CL		0x1808
-MOV     [EBP+VAR_19], BL		0x180a
+
 --- new bb ---
-PUSH    [EBP+VAR_24]		0x180d
-CALL    J____SCRT_RELEASE_STARTUP_LOCK		0x1810
-POP     ECX		0x1815
-CALL    SUB_102D		0x1816
-MOV     ESI, EAX		0x181b
-XOR     EDI, EDI		0x181d
-CMP     [ESI], EDI		0x181f
-JZ      SHORT LOC_183E		0x1821
+
 --- new bb ---
-PUSH    ESI		0x1823
-CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x1824
-POP     ECX		0x1829
-TEST    AL, AL		0x182a
-JZ      SHORT LOC_183E		0x182c
+
 --- new bb ---
-MOV     ESI, [ESI]		0x182e
-PUSH    EDI		0x1830
-PUSH    2		0x1831
-PUSH    EDI		0x1833
-MOV     ECX, ESI		0x1834
-CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x1836
-CALL    ESI		0x183c
+
 --- new bb ---
-CALL    SUB_101E		0x183e
-MOV     ESI, EAX		0x1843
-CMP     [ESI], EDI		0x1845
-JZ      SHORT LOC_185C		0x1847
+
 --- new bb ---
-PUSH    ESI		0x1849
-CALL    J____SCRT_IS_NONWRITABLE_IN_CURRENT_IMAGE		0x184a
-POP     ECX		0x184f
-TEST    AL, AL		0x1850
-JZ      SHORT LOC_185C		0x1852
+
 --- new bb ---
-PUSH    DWORD PTR [ESI]; CALLBACK		0x1854
-CALL    _REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK		0x1856
-POP     ECX		0x185b
+
 --- new bb ---
-CALL    _GET_INITIAL_NARROW_ENVIRONMENT		0x185c
-MOV     EDI, EAX		0x1861
-CALL    __P___ARGV		0x1863
-MOV     ESI, [EAX]		0x1868
-CALL    __P___ARGC		0x186a
-PUSH    EDI; ENVP		0x186f
-PUSH    ESI; ARGV		0x1870
-PUSH    DWORD PTR [EAX]; ARGC		0x1871
-CALL    _MAIN		0x1873
-ADD     ESP, 0CH		0x1878
-MOV     ESI, EAX		0x187b
-CALL    SUB_11A9		0x187d
-TEST    AL, AL		0x1882
-JZ      SHORT LOC_18F1		0x1884
+
 --- new bb ---
-TEST    BL, BL		0x1886
-JNZ     SHORT LOC_188F		0x1888
+
 --- new bb ---
-CALL    _CEXIT		0x188a
+
 --- new bb ---
-PUSH    0		0x188f
-PUSH    1		0x1891
-CALL    J____SCRT_UNINITIALIZE_CRT		0x1893
-POP     ECX		0x1898
-POP     ECX		0x1899
-MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x189a
-MOV     EAX, ESI		0x18a1
-JMP     SHORT LOC_18DA		0x18a3
+
 --- new bb ---
-MOV     ECX, [EBP+MS_EXC.EXC_PTR]		0x18a5
-MOV     EAX, [ECX]		0x18a8
-MOV     EAX, [EAX]		0x18aa
-MOV     [EBP+CODE], EAX		0x18ac
-PUSH    ECX; EXCEPTIONPTR		0x18af
-PUSH    EAX; EXCEPTIONNUM		0x18b0
-CALL    _SEH_FILTER_EXE		0x18b1
-POP     ECX		0x18b6
-POP     ECX		0x18b7
-RETN		0x18b8
+
 --- new bb ---
-MOV     ESP, [EBP+MS_EXC.OLD_ESP]		0x18b9
-CALL    SUB_11A9		0x18bc
-TEST    AL, AL		0x18c1
-JZ      SHORT LOC_18F7		0x18c3
+
 --- new bb ---
-CMP     [EBP+VAR_19], 0		0x18c5
-JNZ     SHORT LOC_18D0		0x18c9
+
 --- new bb ---
-CALL    _C_EXIT		0x18cb
+
 --- new bb ---
-MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x18d0
-MOV     EAX, [EBP+CODE]		0x18d7
+
 --- new bb ---
-MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]		0x18da
-MOV     LARGE FS:0, ECX		0x18dd
-POP     ECX		0x18e4
-POP     EDI		0x18e5
-POP     ESI		0x18e6
-POP     EBX		0x18e7
-LEAVE		0x18e8
-RETN		0x18e9
+
 --- new bb ---
-PUSH    7		0x18ea
-CALL    J____SCRT_FASTFAIL		0x18ec
+
 --- new bb ---
-PUSH    ESI; CODE		0x18f1
-CALL    EXIT		0x18f2
+
 --- new bb ---
-PUSH    [EBP+CODE]; CODE		0x18f7
-CALL    _EXIT		0x18fa
+
+
+--- new func --- sub_1960
+--- new bb ---
+
+
+--- new func --- j__initialize_narrow_environment
+--- new bb ---
+
 
 --- new func --- ?invoke_main@@YAHXZ
 --- new bb ---
-PUSH    ESI		0x1975
-PUSH    EDI		0x1976
-CALL    _GET_INITIAL_NARROW_ENVIRONMENT		0x1977
-MOV     EDI, EAX		0x197c
-CALL    __P___ARGV		0x197e
-MOV     ESI, [EAX]		0x1983
-CALL    __P___ARGC		0x1985
-PUSH    EDI; ENVP		0x198a
-PUSH    ESI; ARGV		0x198b
-PUSH    DWORD PTR [EAX]; ARGC		0x198c
-CALL    _MAIN		0x198e
-ADD     ESP, 0CH		0x1993
-POP     EDI		0x1996
-POP     ESI		0x1997
-RETN		0x1998
+
+
+--- new func --- sub_19A2
+--- new bb ---
+
 
 --- new func --- ?set_commode@__scrt_file_policy@@SAXXZ
 --- new bb ---
-PUSH    ESI		0x19ad
-CALL    SUB_108C		0x19ae
-MOV     ESI, EAX		0x19b3
-CALL    __P__COMMODE		0x19b5
-MOV     [EAX], ESI		0x19ba
-POP     ESI		0x19bc
-RETN		0x19bd
+
+
+--- new func --- sub_19C2
+--- new bb ---
+
 
 --- new func --- start_0
 --- new bb ---
-CALL    J____SECURITY_INIT_COOKIE		0x19d2
-JMP     ?__SCRT_COMMON_MAIN_SEH@@YAHXZ; __SCRT_COMMON_MAIN_SEH(VOID)		0x19d7
+
 
 --- new func --- ?find_pe_section@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z
 --- new bb ---
-PUSH    EBP		0x19de
-MOV     EBP, ESP		0x19df
-MOV     EAX, [EBP+ARG_0]		0x19e1
-PUSH    ESI		0x19e4
-MOV     ECX, [EAX+3CH]		0x19e5
-ADD     ECX, EAX		0x19e8
-MOVZX   EAX, WORD PTR [ECX+14H]		0x19ea
-LEA     EDX, [ECX+18H]		0x19ee
-ADD     EDX, EAX		0x19f1
-MOVZX   EAX, WORD PTR [ECX+6]		0x19f3
-IMUL    ESI, EAX, 28H ; '('		0x19f7
-ADD     ESI, EDX		0x19fa
-CMP     EDX, ESI		0x19fc
-JZ      SHORT LOC_1A19		0x19fe
+
 --- new bb ---
-MOV     ECX, [EBP+ARG_4]		0x1a00
+
 --- new bb ---
-CMP     ECX, [EDX+0CH]		0x1a03
-JB      SHORT LOC_1A12		0x1a06
+
 --- new bb ---
-MOV     EAX, [EDX+8]		0x1a08
-ADD     EAX, [EDX+0CH]		0x1a0b
-CMP     ECX, EAX		0x1a0e
-JB      SHORT LOC_1A1E		0x1a10
+
 --- new bb ---
-ADD     EDX, 28H ; '('		0x1a12
-CMP     EDX, ESI		0x1a15
-JNZ     SHORT LOC_1A03		0x1a17
+
 --- new bb ---
-XOR     EAX, EAX		0x1a19
+
 --- new bb ---
-POP     ESI		0x1a1b
-POP     EBP		0x1a1c
-RETN		0x1a1d
+
 --- new bb ---
-MOV     EAX, EDX		0x1a1e
-JMP     SHORT LOC_1A1B		0x1a20
+
+
+--- new func --- sub_1A33
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
 
 --- new func --- _NtCurrentTeb
 --- new bb ---
-MOV     EAX, LARGE FS:18H		0x1a72
-RETN		0x1a78
+
 
 --- new func --- ___scrt_acquire_startup_lock
 --- new bb ---
-PUSH    ESI		0x1a79
-CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1a7a
-TEST    EAX, EAX		0x1a7f
-JZ      SHORT LOC_1AA3		0x1a81
+
 --- new bb ---
-MOV     EAX, LARGE FS:18H		0x1a83
-MOV     ESI, OFFSET UNK_6144		0x1a89
-MOV     EDX, [EAX+4]		0x1a8e
-JMP     SHORT LOC_1A97		0x1a91
+
 --- new bb ---
-CMP     EDX, EAX		0x1a93
-JZ      SHORT LOC_1AA7		0x1a95
+
 --- new bb ---
-XOR     EAX, EAX		0x1a97
-MOV     ECX, EDX		0x1a99
-LOCK CMPXCHG [ESI], ECX		0x1a9b
-TEST    EAX, EAX		0x1a9f
-JNZ     SHORT LOC_1A93		0x1aa1
+
 --- new bb ---
-XOR     AL, AL		0x1aa3
-POP     ESI		0x1aa5
-RETN		0x1aa6
+
 --- new bb ---
-MOV     AL, 1		0x1aa7
-POP     ESI		0x1aa9
-RETN		0x1aaa
+
 
 --- new func --- ___scrt_dllmain_after_initialize_c
 --- new bb ---
-CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1ab7
-TEST    EAX, EAX		0x1abc
-JZ      SHORT LOC_1AC7		0x1abe
+
 --- new bb ---
-CALL    SUB_10D7		0x1ac0
-JMP     SHORT LOC_1ADF		0x1ac5
+
 --- new bb ---
-CALL    SUB_116D		0x1ac7
-PUSH    EAX; MODE		0x1acc
-CALL    _CONFIGURE_NARROW_ARGV		0x1acd
-POP     ECX		0x1ad2
-TEST    EAX, EAX		0x1ad3
-JZ      SHORT LOC_1ADA		0x1ad5
+
 --- new bb ---
-XOR     AL, AL		0x1ad7
-RETN		0x1ad9
+
 --- new bb ---
-CALL    _INITIALIZE_NARROW_ENVIRONMENT		0x1ada
+
 --- new bb ---
-MOV     AL, 1		0x1adf
-RETN		0x1ae1
+
 
 --- new func --- ___scrt_dllmain_before_initialize_c
 --- new bb ---
-PUSH    0		0x1aec
-CALL    J____SCRT_INITIALIZE_ONEXIT_TABLES		0x1aee
-TEST    AL, AL		0x1af3
-POP     ECX		0x1af5
-SETNZ   AL		0x1af6
-RETN		0x1af9
+
+
+--- new func --- sub_1AFD
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+
+--- new func --- sub_1B23
+--- new bb ---
+
 
 --- new func --- ___scrt_dllmain_exception_filter
 --- new bb ---
-PUSH    EBP		0x1b33
-MOV     EBP, ESP		0x1b34
-CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1b36
-TEST    EAX, EAX		0x1b3b
-JNZ     SHORT LOC_1B58		0x1b3d
+
 --- new bb ---
-CMP     [EBP+ARG_4], 1		0x1b3f
-JNZ     SHORT LOC_1B58		0x1b43
+
 --- new bb ---
-PUSH    [EBP+ARG_8]		0x1b45
-MOV     ECX, [EBP+ARG_C]		0x1b48
-PUSH    EAX		0x1b4b
-PUSH    [EBP+ARG_0]		0x1b4c
-CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x1b4f
-CALL    [EBP+ARG_C]		0x1b55
+
 --- new bb ---
-PUSH    [EBP+EXCEPTIONPTR]; EXCEPTIONPTR		0x1b58
-PUSH    [EBP+EXCEPTIONNUM]; EXCEPTIONNUM		0x1b5b
-CALL    _SEH_FILTER_DLL		0x1b5e
-POP     ECX		0x1b63
-POP     ECX		0x1b64
-POP     EBP		0x1b65
-RETN		0x1b66
+
 
 --- new func --- ___scrt_dllmain_uninitialize_c
 --- new bb ---
-CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1b74
-TEST    EAX, EAX		0x1b79
-JZ      SHORT LOC_1B89		0x1b7b
+
 --- new bb ---
-PUSH    OFFSET TABLE; TABLE		0x1b7d
-CALL    _EXECUTE_ONEXIT_TABLE		0x1b82
-POP     ECX		0x1b87
-RETN		0x1b88
+
 --- new bb ---
-CALL    SUB_10EB		0x1b89
-TEST    EAX, EAX		0x1b8e
-JZ      _CEXIT		0x1b90
+
 --- new bb ---
-RETN		0x1b96
+
+
+--- new func --- sub_1B9F
+--- new bb ---
+
 
 --- new func --- ___scrt_initialize_crt
 --- new bb ---
-PUSH    EBP		0x1baf
-MOV     EBP, ESP		0x1bb0
-CMP     [EBP+ARG_0], 0		0x1bb2
-JNZ     SHORT LOC_1BBF		0x1bb6
+
 --- new bb ---
-MOV     BYTE_6148, 1		0x1bb8
+
 --- new bb ---
-CALL    SUB_10D7		0x1bbf
-CALL    SUB_115E		0x1bc4
-TEST    AL, AL		0x1bc9
-JNZ     SHORT LOC_1BD1		0x1bcb
+
 --- new bb ---
-XOR     AL, AL		0x1bcd
-POP     EBP		0x1bcf
-RETN		0x1bd0
+
 --- new bb ---
-CALL    SUB_1163		0x1bd1
-TEST    AL, AL		0x1bd6
-JNZ     SHORT LOC_1BE4		0x1bd8
+
 --- new bb ---
-PUSH    0		0x1bda
-CALL    SUB_100F		0x1bdc
-POP     ECX		0x1be1
-JMP     SHORT LOC_1BCD		0x1be2
+
 --- new bb ---
-MOV     AL, 1		0x1be4
-POP     EBP		0x1be6
-RETN		0x1be7
+
 
 --- new func --- ___scrt_initialize_onexit_tables
 --- new bb ---
-PUSH    EBP		0x1bf6
-MOV     EBP, ESP		0x1bf7
-CMP     BYTE_6149, 0		0x1bf9
-JZ      SHORT LOC_1C06		0x1c00
+
 --- new bb ---
-MOV     AL, 1		0x1c02
-POP     EBP		0x1c04
-RETN		0x1c05
+
 --- new bb ---
-PUSH    ESI		0x1c06
-MOV     ESI, [EBP+ARG_0]		0x1c07
-TEST    ESI, ESI		0x1c0a
-JZ      SHORT LOC_1C13		0x1c0c
+
 --- new bb ---
-CMP     ESI, 1		0x1c0e
-JNZ     SHORT LOC_1C75		0x1c11
+
 --- new bb ---
-CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1c13
-TEST    EAX, EAX		0x1c18
-JZ      SHORT LOC_1C42		0x1c1a
+
 --- new bb ---
-TEST    ESI, ESI		0x1c1c
-JNZ     SHORT LOC_1C42		0x1c1e
+
 --- new bb ---
-PUSH    OFFSET TABLE; TABLE		0x1c20
-CALL    _INITIALIZE_ONEXIT_TABLE		0x1c25
-POP     ECX		0x1c2a
-TEST    EAX, EAX		0x1c2b
-JNZ     SHORT LOC_1C3E		0x1c2d
+
 --- new bb ---
-PUSH    OFFSET STRU_6158; TABLE		0x1c2f
-CALL    _INITIALIZE_ONEXIT_TABLE		0x1c34
-POP     ECX		0x1c39
-TEST    EAX, EAX		0x1c3a
-JZ      SHORT LOC_1C69		0x1c3c
+
 --- new bb ---
-XOR     AL, AL		0x1c3e
-JMP     SHORT LOC_1C72		0x1c40
+
 --- new bb ---
-OR      ECX, 0FFFFFFFFH		0x1c42
-MOV     TABLE._FIRST, ECX		0x1c45
-MOV     TABLE._LAST, ECX		0x1c4b
-MOV     TABLE._END, ECX		0x1c51
-MOV     STRU_6158._FIRST, ECX		0x1c57
-MOV     STRU_6158._LAST, ECX		0x1c5d
-MOV     STRU_6158._END, ECX		0x1c63
+
 --- new bb ---
-MOV     BYTE_6149, 1		0x1c69
-MOV     AL, 1		0x1c70
+
 --- new bb ---
-POP     ESI		0x1c72
-POP     EBP		0x1c73
-RETN		0x1c74
+
 --- new bb ---
-PUSH    5		0x1c75
-CALL    J____SCRT_FASTFAIL		0x1c77
+
 
 --- new func --- ___scrt_is_nonwritable_in_current_image
 --- new bb ---
-PUSH    8		0x1c9e
-PUSH    OFFSET STRU_5798		0x1ca0
-CALL    J___SEH_PROLOG4		0x1ca5
+
 --- new bb ---
-AND     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0		0x1caa
-MOV     EAX, 5A4DH		0x1cae
-CMP     DS:400000H, AX		0x1cb3
-JNZ     SHORT LOC_1D19		0x1cba
+
 --- new bb ---
-MOV     EAX, DS:40003CH		0x1cbc
-CMP     DWORD PTR [EAX+400000H], 4550H		0x1cc1
-JNZ     SHORT LOC_1D19		0x1ccb
+
 --- new bb ---
-MOV     ECX, 10BH		0x1ccd
-CMP     [EAX+400018H], CX		0x1cd2
-JNZ     SHORT LOC_1D19		0x1cd9
+
 --- new bb ---
-MOV     EAX, [EBP+ARG_0]		0x1cdb
-MOV     ECX, 400000H		0x1cde
-SUB     EAX, ECX		0x1ce3
-PUSH    EAX; UNSIGNED INT		0x1ce5
-PUSH    ECX; UNSIGNED __INT8 *		0x1ce6
-CALL    ?FIND_PE_SECTION@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z; FIND_PE_SECTION(UCHAR * CONST,UINT)		0x1ce7
-POP     ECX		0x1cec
-POP     ECX		0x1ced
-TEST    EAX, EAX		0x1cee
-JZ      SHORT LOC_1D19		0x1cf0
+
 --- new bb ---
-CMP     DWORD PTR [EAX+24H], 0		0x1cf2
-JL      SHORT LOC_1D19		0x1cf6
+
 --- new bb ---
-MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x1cf8
-MOV     AL, 1		0x1cff
-JMP     SHORT LOC_1D22		0x1d01
+
 --- new bb ---
-MOV     EAX, [EBP+MS_EXC.EXC_PTR]		0x1d03
-MOV     EAX, [EAX]		0x1d06
-XOR     ECX, ECX		0x1d08
-CMP     DWORD PTR [EAX], 0C0000005H		0x1d0a
-SETZ    CL		0x1d10
-MOV     EAX, ECX		0x1d13
-RETN		0x1d15
+
 --- new bb ---
-MOV     ESP, [EBP+MS_EXC.OLD_ESP]		0x1d16
+
 --- new bb ---
-MOV     [EBP+MS_EXC.REGISTRATION.TRYLEVEL], 0FFFFFFFEH		0x1d19
-XOR     AL, AL		0x1d20
+
 --- new bb ---
-MOV     ECX, [EBP+MS_EXC.REGISTRATION.NEXT]		0x1d22
-MOV     LARGE FS:0, ECX		0x1d25
-POP     ECX		0x1d2c
-POP     EDI		0x1d2d
-POP     ESI		0x1d2e
-POP     EBX		0x1d2f
-LEAVE		0x1d30
-RETN		0x1d31
+
 
 --- new func --- ___scrt_release_startup_lock
 --- new bb ---
-PUSH    EBP		0x1d57
-MOV     EBP, ESP		0x1d58
-CALL    J____SCRT_IS_UCRT_DLL_IN_USE		0x1d5a
-TEST    EAX, EAX		0x1d5f
-JZ      SHORT LOC_1D72		0x1d61
+
 --- new bb ---
-CMP     [EBP+ARG_0], 0		0x1d63
-JNZ     SHORT LOC_1D72		0x1d67
+
 --- new bb ---
-XOR     EAX, EAX		0x1d69
-MOV     ECX, OFFSET UNK_6144		0x1d6b
-XCHG    EAX, [ECX]		0x1d70
+
 --- new bb ---
-POP     EBP		0x1d72
-RETN		0x1d73
+
 
 --- new func --- ___scrt_uninitialize_crt
 --- new bb ---
-PUSH    EBP		0x1d7b
-MOV     EBP, ESP		0x1d7c
-CMP     BYTE_6148, 0		0x1d7e
-JZ      SHORT LOC_1D8D		0x1d85
+
 --- new bb ---
-CMP     [EBP+ARG_4], 0		0x1d87
-JNZ     SHORT LOC_1D9F		0x1d8b
+
 --- new bb ---
-PUSH    [EBP+ARG_0]		0x1d8d
-CALL    SUB_1096		0x1d90
-PUSH    [EBP+ARG_0]		0x1d95
-CALL    SUB_100F		0x1d98
-POP     ECX		0x1d9d
-POP     ECX		0x1d9e
+
 --- new bb ---
-MOV     AL, 1		0x1d9f
-POP     EBP		0x1da1
-RETN		0x1da2
+
 
 --- new func --- __onexit
 --- new bb ---
-PUSH    EBP		0x1dad
-MOV     EBP, ESP		0x1dae
-CMP     TABLE._FIRST, 0FFFFFFFFH		0x1db0
-PUSH    [EBP+FUNCTION]; FUNCTION		0x1db7
-JNZ     SHORT LOC_1DC3		0x1dba
+
 --- new bb ---
-CALL    _CRT_ATEXIT		0x1dbc
-JMP     SHORT LOC_1DCE		0x1dc1
+
 --- new bb ---
-PUSH    OFFSET TABLE; TABLE		0x1dc3
-CALL    _REGISTER_ONEXIT_FUNCTION		0x1dc8
-POP     ECX		0x1dcd
+
 --- new bb ---
-NEG     EAX		0x1dce
-POP     ECX		0x1dd0
-SBB     EAX, EAX		0x1dd1
-NOT     EAX		0x1dd3
-AND     EAX, [EBP+FUNCTION]		0x1dd5
-POP     EBP		0x1dd8
-RETN		0x1dd9
+
 
 --- new func --- _at_quick_exit
 --- new bb ---
-PUSH    EBP		0x1de5
-MOV     EBP, ESP		0x1de6
-CMP     STRU_6158._FIRST, 0FFFFFFFFH		0x1de8
-JNZ     SHORT LOC_1DF7		0x1def
+
 --- new bb ---
-POP     EBP		0x1df1
-JMP     _CRT_AT_QUICK_EXIT		0x1df2
+
 --- new bb ---
-PUSH    [EBP+FUNCTION]; FUNCTION		0x1df7
-PUSH    OFFSET STRU_6158; TABLE		0x1dfa
-CALL    _REGISTER_ONEXIT_FUNCTION		0x1dff
-POP     ECX		0x1e04
-POP     ECX		0x1e05
-POP     EBP		0x1e06
-RETN		0x1e07
+
 
 --- new func --- _atexit
 --- new bb ---
-PUSH    EBP		0x1e10
-MOV     EBP, ESP		0x1e11
-PUSH    [EBP+FUNC]; FUNC		0x1e13
-CALL    J___ONEXIT		0x1e16
-NEG     EAX		0x1e1b
-POP     ECX		0x1e1d
-SBB     EAX, EAX		0x1e1e
-NEG     EAX		0x1e20
-DEC     EAX		0x1e22
-POP     EBP		0x1e23
-RETN		0x1e24
+
 
 --- new func --- ___get_entropy
 --- new bb ---
-PUSH    EBP		0x1e2a
-MOV     EBP, ESP		0x1e2b
-SUB     ESP, 14H		0x1e2d
-AND     [EBP+SYSTEMTIMEASFILETIME.DWLOWDATETIME], 0		0x1e30
-LEA     EAX, [EBP+SYSTEMTIMEASFILETIME]		0x1e34
-AND     [EBP+SYSTEMTIMEASFILETIME.DWHIGHDATETIME], 0		0x1e37
-PUSH    EAX; LPSYSTEMTIMEASFILETIME		0x1e3b
-CALL    DS:GETSYSTEMTIMEASFILETIME		0x1e3c
-MOV     EAX, [EBP+SYSTEMTIMEASFILETIME.DWHIGHDATETIME]		0x1e42
-XOR     EAX, [EBP+SYSTEMTIMEASFILETIME.DWLOWDATETIME]		0x1e45
-MOV     [EBP+VAR_4], EAX		0x1e48
-CALL    DS:GETCURRENTTHREADID		0x1e4b
-XOR     [EBP+VAR_4], EAX		0x1e51
-CALL    DS:GETCURRENTPROCESSID		0x1e54
-XOR     [EBP+VAR_4], EAX		0x1e5a
-LEA     EAX, [EBP+PERFORMANCECOUNT]		0x1e5d
-PUSH    EAX; LPPERFORMANCECOUNT		0x1e60
-CALL    DS:QUERYPERFORMANCECOUNTER		0x1e61
-MOV     EAX, DWORD PTR [EBP+PERFORMANCECOUNT+4]		0x1e67
-LEA     ECX, [EBP+VAR_4]		0x1e6a
-XOR     EAX, DWORD PTR [EBP+PERFORMANCECOUNT]		0x1e6d
-XOR     EAX, [EBP+VAR_4]		0x1e70
-XOR     EAX, ECX		0x1e73
-LEAVE		0x1e75
-RETN		0x1e76
+
 
 --- new func --- ___security_init_cookie
 --- new bb ---
-MOV     ECX, ___SECURITY_COOKIE		0x1e8a
-PUSH    ESI		0x1e90
-PUSH    EDI		0x1e91
-MOV     EDI, 0BB40E64EH		0x1e92
-MOV     ESI, 0FFFF0000H		0x1e97
-CMP     ECX, EDI		0x1e9c
-JZ      SHORT LOC_1EA4		0x1e9e
+
 --- new bb ---
-TEST    ESI, ECX		0x1ea0
-JNZ     SHORT LOC_1ECA		0x1ea2
+
 --- new bb ---
-CALL    ___GET_ENTROPY		0x1ea4
-MOV     ECX, EAX		0x1ea9
-CMP     ECX, EDI		0x1eab
-JNZ     SHORT LOC_1EB6		0x1ead
+
 --- new bb ---
-MOV     ECX, 0BB40E64FH		0x1eaf
-JMP     SHORT LOC_1EC4		0x1eb4
+
 --- new bb ---
-TEST    ESI, ECX		0x1eb6
-JNZ     SHORT LOC_1EC4		0x1eb8
+
 --- new bb ---
-OR      EAX, 4711H		0x1eba
-SHL     EAX, 10H		0x1ebf
-OR      ECX, EAX		0x1ec2
+
 --- new bb ---
-MOV     ___SECURITY_COOKIE, ECX		0x1ec4
+
 --- new bb ---
-NOT     ECX		0x1eca
-POP     EDI		0x1ecc
-MOV     DWORD_6018, ECX		0x1ecd
-POP     ESI		0x1ed3
-RETN		0x1ed4
+
 
 --- new func --- UserMathErrorFunction_0
 --- new bb ---
-XOR     EAX, EAX		0x1ee7
-RETN		0x1ee9
+
 
 --- new func --- sub_1EEA
 --- new bb ---
-XOR     EAX, EAX		0x1eea
-INC     EAX		0x1eec
-RETN		0x1eed
+
 
 --- new func --- sub_1EEE
 --- new bb ---
-XOR     EAX, EAX		0x1eee
-RETN		0x1ef0
+
 
 --- new func --- __get_startup_file_mode
 --- new bb ---
-MOV     EAX, 4000H		0x1ef1
-RETN		0x1ef6
+
 
 --- new func --- sub_1EF7
 --- new bb ---
-XOR     EAX, EAX		0x1ef7
-RETN		0x1ef9
+
 
 --- new func --- sub_1EFA
 --- new bb ---
-XOR     EAX, EAX		0x1efa
-RETN		0x1efc
+
 
 --- new func --- sub_1EFD
 --- new bb ---
-PUSH    OFFSET LISTHEAD; LISTHEAD		0x1efd
-CALL    DS:INITIALIZESLISTHEAD		0x1f02
-RETN		0x1f08
+
+
+--- new func --- sub_1F0C
+--- new bb ---
+
 
 --- new func --- sub_1F1B
 --- new bb ---
-MOV     AL, 1		0x1f1b
-RETN		0x1f1d
+
 
 --- new func --- __initialize_default_precision
 --- new bb ---
-PUSH    30000H; MASK		0x1f1e
-PUSH    10000H; NEWVALUE		0x1f23
-PUSH    0; CURRENTSTATE		0x1f28
-CALL    _CONTROLFP_S		0x1f2a
-ADD     ESP, 0CH		0x1f2f
-TEST    EAX, EAX		0x1f32
-JNZ     SHORT LOC_1F37		0x1f34
+
 --- new bb ---
-RETN		0x1f36
+
 --- new bb ---
-PUSH    7		0x1f37
-CALL    J____SCRT_FASTFAIL		0x1f39
+
 
 --- new func --- nullsub_3
 --- new bb ---
-RETN    0		0x1f47
+
 
 --- new func --- nullsub_2
 --- new bb ---
-RETN    0		0x1f4a
+
 
 --- new func --- sub_1F4D
 --- new bb ---
-MOV     EAX, OFFSET UNK_6180		0x1f4d
-RETN		0x1f52
+
 
 --- new func --- sub_1F53
 --- new bb ---
-MOV     EAX, OFFSET UNK_6190		0x1f53
-RETN		0x1f58
+
 
 --- new func --- ___scrt_initialize_default_local_stdio_options
 --- new bb ---
-CALL    SUB_11AE		0x1f59
-MOV     ECX, [EAX+4]		0x1f5e
-OR      DWORD PTR [EAX], 24H		0x1f61
-MOV     [EAX+4], ECX		0x1f64
-CALL    SUB_11D1		0x1f67
-MOV     ECX, [EAX+4]		0x1f6c
-OR      DWORD PTR [EAX], 2		0x1f6f
-MOV     [EAX+4], ECX		0x1f72
-RETN		0x1f75
+
 
 --- new func --- sub_1F7D
 --- new bb ---
-XOR     EAX, EAX		0x1f7d
-CMP     DWORD_6004, EAX		0x1f7f
-SETZ    AL		0x1f85
-RETN		0x1f88
+
 
 --- new func --- sub_1F8C
 --- new bb ---
-MOV     EAX, OFFSET UNK_65EC		0x1f8c
-RETN		0x1f91
+
 
 --- new func --- sub_1F92
 --- new bb ---
-MOV     EAX, OFFSET UNK_65E0		0x1f92
-RETN		0x1f97
+
 
 --- new func --- ___scrt_fastfail
 --- new bb ---
-PUSH    EBP		0x1f98
-MOV     EBP, ESP		0x1f99
-SUB     ESP, 324H		0x1f9b
-PUSH    EBX		0x1fa1
-PUSH    17H; PROCESSORFEATURE		0x1fa2
-CALL    DS:ISPROCESSORFEATUREPRESENT		0x1fa4
-TEST    EAX, EAX		0x1faa
-JZ      SHORT LOC_1FB3		0x1fac
+
 --- new bb ---
-MOV     ECX, [EBP+ARG_0]		0x1fae
-INT     29H; WIN8: RTLFAILFAST(ECX)		0x1fb1
+
 --- new bb ---
-PUSH    3		0x1fb3
-CALL    SUB_1177		0x1fb5
-MOV     [ESP+32CH+SIZE], 2CCH; SIZE		0x1fba
-LEA     EAX, [EBP+VAR_324]		0x1fc1
-PUSH    0; VAL		0x1fc7
-PUSH    EAX; VOID *		0x1fc9
-CALL    MEMSET		0x1fca
-ADD     ESP, 0CH		0x1fcf
-MOV     [EBP+VAR_274], EAX		0x1fd2
-MOV     [EBP+VAR_278], ECX		0x1fd8
-MOV     [EBP+VAR_27C], EDX		0x1fde
-MOV     [EBP+VAR_280], EBX		0x1fe4
-MOV     [EBP+VAR_284], ESI		0x1fea
-MOV     [EBP+VAR_288], EDI		0x1ff0
-MOV     [EBP+VAR_25C], SS		0x1ff6
-MOV     [EBP+VAR_268], CS		0x1ffd
-MOV     [EBP+VAR_28C], DS		0x2004
-MOV     [EBP+VAR_290], ES		0x200b
-MOV     [EBP+VAR_294], FS		0x2012
-MOV     [EBP+VAR_298], GS		0x2019
-PUSHF		0x2020
-POP     [EBP+VAR_264]		0x2021
-MOV     EAX, [EBP+4]		0x2027
-MOV     [EBP+VAR_26C], EAX		0x202a
-LEA     EAX, [EBP+4]		0x2030
-MOV     [EBP+VAR_260], EAX		0x2033
-MOV     [EBP+VAR_324], 10001H		0x2039
-MOV     EAX, [EAX-4]		0x2043
-PUSH    50H ; 'P'; SIZE		0x2046
-MOV     [EBP+VAR_270], EAX		0x2048
-LEA     EAX, [EBP+VAR_58]		0x204e
-PUSH    0; VAL		0x2051
-PUSH    EAX; VOID *		0x2053
-CALL    MEMSET		0x2054
-MOV     EAX, [EBP+4]		0x2059
-ADD     ESP, 0CH		0x205c
-MOV     [EBP+VAR_58], 40000015H		0x205f
-MOV     [EBP+VAR_54], 1		0x2066
-MOV     [EBP+VAR_4C], EAX		0x206d
-CALL    DS:ISDEBUGGERPRESENT		0x2070
-PUSH    0; LPTOPLEVELEXCEPTIONFILTER		0x2076
-LEA     EBX, [EAX-1]		0x2078
-NEG     EBX		0x207b
-LEA     EAX, [EBP+VAR_58]		0x207d
-MOV     [EBP+EXCEPTIONINFO.EXCEPTIONRECORD], EAX		0x2080
-LEA     EAX, [EBP+VAR_324]		0x2083
-SBB     BL, BL		0x2089
-MOV     [EBP+EXCEPTIONINFO.CONTEXTRECORD], EAX		0x208b
-INC     BL		0x208e
-CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2090
-LEA     EAX, [EBP+EXCEPTIONINFO]		0x2096
-PUSH    EAX; EXCEPTIONINFO		0x2099
-CALL    DS:UNHANDLEDEXCEPTIONFILTER		0x209a
-TEST    EAX, EAX		0x20a0
-JNZ     SHORT LOC_20B0		0x20a2
+
 --- new bb ---
-TEST    BL, BL		0x20a4
-JNZ     SHORT LOC_20B0		0x20a6
+
 --- new bb ---
-PUSH    3		0x20a8
-CALL    SUB_1177		0x20aa
-POP     ECX		0x20af
+
 --- new bb ---
-POP     EBX		0x20b0
-LEAVE		0x20b1
-RETN		0x20b2
+
 
 --- new func --- ___scrt_get_show_window_mode
 --- new bb ---
-PUSH    EBP		0x20f9
-MOV     EBP, ESP		0x20fa
-SUB     ESP, 44H		0x20fc
-PUSH    44H ; 'D'; SIZE		0x20ff
-LEA     EAX, [EBP+STARTUPINFO]		0x2101
-PUSH    0; VAL		0x2104
-PUSH    EAX; VOID *		0x2106
-CALL    MEMSET		0x2107
-ADD     ESP, 0CH		0x210c
-LEA     EAX, [EBP+STARTUPINFO]		0x210f
-PUSH    EAX; LPSTARTUPINFO		0x2112
-CALL    DS:GETSTARTUPINFOW		0x2113
-TEST    BYTE PTR [EBP+STARTUPINFO.DWFLAGS], 1		0x2119
-JZ      SHORT LOC_2125		0x211d
+
 --- new bb ---
-MOVZX   EAX, [EBP+STARTUPINFO.WSHOWWINDOW]		0x211f
-LEAVE		0x2123
-RETN		0x2124
+
 --- new bb ---
-PUSH    0AH		0x2125
-POP     EAX		0x2127
-LEAVE		0x2128
-RETN		0x2129
+
 
 --- new func --- sub_2136
 --- new bb ---
-JMP     SUB_1037		0x2136
+
 
 --- new func --- sub_213B
 --- new bb ---
-XOR     EAX, EAX		0x213b
-RETN		0x213d
+
 
 --- new func --- sub_213E
 --- new bb ---
-PUSH    0; LPMODULENAME		0x213e
-CALL    DS:GETMODULEHANDLEW		0x2140
-TEST    EAX, EAX		0x2146
-JZ      SHORT LOC_217D		0x2148
+
 --- new bb ---
-MOV     ECX, 5A4DH		0x214a
-CMP     [EAX], CX		0x214f
-JNZ     SHORT LOC_217D		0x2152
+
 --- new bb ---
-MOV     ECX, [EAX+3CH]		0x2154
-ADD     ECX, EAX		0x2157
-CMP     DWORD PTR [ECX], 4550H		0x2159
-JNZ     SHORT LOC_217D		0x215f
+
 --- new bb ---
-MOV     EAX, 10BH		0x2161
-CMP     [ECX+18H], AX		0x2166
-JNZ     SHORT LOC_217D		0x216a
+
 --- new bb ---
-CMP     DWORD PTR [ECX+74H], 0EH		0x216c
-JBE     SHORT LOC_217D		0x2170
+
 --- new bb ---
-CMP     DWORD PTR [ECX+0E8H], 0		0x2172
-SETNZ   AL		0x2179
-RETN		0x217c
+
 --- new bb ---
-XOR     AL, AL		0x217d
-RETN		0x217f
+
 
 --- new func --- sub_2190
 --- new bb ---
-PUSH    OFFSET J____SCRT_UNHANDLED_EXCEPTION_FILTER@4; LPTOPLEVELEXCEPTIONFILTER		0x2190
-CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2195
-RETN		0x219b
+
 
 --- new func --- sub_219F
 --- new bb ---
-XOR     EAX, EAX		0x219f
-RETN		0x21a1
+
 
 --- new func --- ___scrt_unhandled_exception_filter@4
 --- new bb ---
-PUSH    EBP		0x21a2
-MOV     EBP, ESP		0x21a3
-PUSH    ESI		0x21a5
-PUSH    EDI		0x21a6
-MOV     EDI, [EBP+ARG_0]		0x21a7
-MOV     ESI, [EDI]		0x21aa
-CMP     DWORD PTR [ESI], 0E06D7363H		0x21ac
-JNZ     SHORT LOC_21D9		0x21b2
+
 --- new bb ---
-CMP     DWORD PTR [ESI+10H], 3		0x21b4
-JNZ     SHORT LOC_21D9		0x21b8
+
 --- new bb ---
-MOV     EAX, [ESI+14H]		0x21ba
-CMP     EAX, 19930520H		0x21bd
-JZ      SHORT LOC_21E1		0x21c2
+
 --- new bb ---
-CMP     EAX, 19930521H		0x21c4
-JZ      SHORT LOC_21E1		0x21c9
+
 --- new bb ---
-CMP     EAX, 19930522H		0x21cb
-JZ      SHORT LOC_21E1		0x21d0
+
 --- new bb ---
-CMP     EAX, 1994000H		0x21d2
-JZ      SHORT LOC_21E1		0x21d7
+
 --- new bb ---
-POP     EDI		0x21d9
-XOR     EAX, EAX		0x21da
-POP     ESI		0x21dc
-POP     EBP		0x21dd
-RETN    4		0x21de
+
 --- new bb ---
-CALL    __CURRENT_EXCEPTION		0x21e1
-MOV     [EAX], ESI		0x21e6
-MOV     ESI, [EDI+4]		0x21e8
-CALL    __CURRENT_EXCEPTION_CONTEXT		0x21eb
-MOV     [EAX], ESI		0x21f0
-CALL    TERMINATE		0x21f2
+
 
 --- new func --- sub_220D
 --- new bb ---
-AND     DWORD_619C, 0		0x220d
-RETN		0x2214
+
 
 --- new func --- sub_2217
 --- new bb ---
-PUSH    EBX		0x2217
-PUSH    ESI		0x2218
-MOV     ESI, OFFSET UNK_5368		0x2219
-MOV     EBX, OFFSET UNK_5468		0x221e
-CMP     ESI, EBX		0x2223
-JNB     SHORT LOC_2240		0x2225
+
 --- new bb ---
-PUSH    EDI		0x2227
+
 --- new bb ---
-MOV     EDI, [ESI]		0x2228
-TEST    EDI, EDI		0x222a
-JZ      SHORT LOC_2238		0x222c
+
 --- new bb ---
-MOV     ECX, EDI		0x222e
-CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x2230
-CALL    EDI		0x2236
+
 --- new bb ---
-ADD     ESI, 4		0x2238
-CMP     ESI, EBX		0x223b
-JB      SHORT LOC_2228		0x223d
+
 --- new bb ---
-POP     EDI		0x223f
+
 --- new bb ---
-POP     ESI		0x2240
-POP     EBX		0x2241
-RETN		0x2242
+
 
 --- new func --- sub_224E
 --- new bb ---
-PUSH    EBX		0x224e
-PUSH    ESI		0x224f
-MOV     ESI, OFFSET UNK_5570		0x2250
-MOV     EBX, OFFSET UNK_5670		0x2255
-CMP     ESI, EBX		0x225a
-JNB     SHORT LOC_2277		0x225c
+
 --- new bb ---
-PUSH    EDI		0x225e
+
 --- new bb ---
-MOV     EDI, [ESI]		0x225f
-TEST    EDI, EDI		0x2261
-JZ      SHORT LOC_226F		0x2263
+
 --- new bb ---
-MOV     ECX, EDI		0x2265
-CALL    DS:___GUARD_CHECK_ICALL_FPTR		0x2267
-CALL    EDI		0x226d
+
 --- new bb ---
-ADD     ESI, 4		0x226f
-CMP     ESI, EBX		0x2272
-JB      SHORT LOC_225F		0x2274
+
 --- new bb ---
-POP     EDI		0x2276
+
 --- new bb ---
-POP     ESI		0x2277
-POP     EBX		0x2278
-RETN		0x2279
+
 
 --- new func --- __SEH_prolog4
 --- new bb ---
-PUSH    OFFSET __EXCEPT_HANDLER4		0x2290
-PUSH    LARGE DWORD PTR FS:0		0x2295
-MOV     EAX, [ESP+8+ARG_4]		0x229c
-MOV     [ESP+8+ARG_4], EBP		0x22a0
-LEA     EBP, [ESP+8+ARG_4]		0x22a4
-SUB     ESP, EAX		0x22a8
-PUSH    EBX		0x22aa
-PUSH    ESI		0x22ab
-PUSH    EDI		0x22ac
-MOV     EAX, ___SECURITY_COOKIE		0x22ad
-XOR     [EBP-4], EAX		0x22b2
-XOR     EAX, EBP		0x22b5
-PUSH    EAX		0x22b7
-MOV     [EBP-18H], ESP		0x22b8
-PUSH    DWORD PTR [EBP-8]		0x22bb
-MOV     EAX, [EBP-4]		0x22be
-MOV     DWORD PTR [EBP-4], 0FFFFFFFEH		0x22c1
-MOV     [EBP-8], EAX		0x22c8
-LEA     EAX, [EBP-10H]		0x22cb
-MOV     LARGE FS:0, EAX		0x22ce
-RETN		0x22d4
+
 
 --- new func --- __SEH_epilog4
 --- new bb ---
-MOV     ECX, [EBP-10H]		0x22f0
-MOV     LARGE FS:0, ECX		0x22f3
-POP     ECX		0x22fa
-POP     EDI		0x22fb
-POP     EDI		0x22fc
-POP     ESI		0x22fd
-POP     EBX		0x22fe
-MOV     ESP, EBP		0x22ff
-POP     EBP		0x2301
-PUSH    ECX		0x2302
-RETN		0x2303
+
 
 --- new func --- __except_handler4
 --- new bb ---
-PUSH    EBP		0x2309
-MOV     EBP, ESP		0x230a
-PUSH    ESI		0x230c
-MOV     ESI, [EBP+ARG_0]		0x230d
-PUSH    DWORD PTR [ESI]		0x2310
-CALL    J___FILTER_X86_SSE2_FLOATING_POINT_EXCEPTION_DEFAULT		0x2312
-PUSH    [EBP+ARG_C]		0x2317
-MOV     [ESI], EAX		0x231a
-PUSH    [EBP+ARG_8]		0x231c
-PUSH    [EBP+ARG_4]		0x231f
-PUSH    ESI		0x2322
-PUSH    OFFSET LOC_10AF		0x2323
-PUSH    OFFSET ___SECURITY_COOKIE		0x2328
-CALL    _EXCEPT_HANDLER4_COMMON		0x232d
-ADD     ESP, 1CH		0x2332
-POP     ESI		0x2335
-POP     EBP		0x2336
-RETN		0x2337
+
 
 --- new func --- nullsub_1
 --- new bb ---
-RETN    0		0x2343
+
 
 --- new func --- unknown_libname_1
 --- new bb ---
-PUSH    EBP		0x2346
-MOV     EBP, ESP		0x2347
-MOV     EAX, [EBP+ARG_0]		0x2349
-MOV     EAX, [EAX]		0x234c
-POP     EBP		0x234e
-RETN		0x234f
+
 
 --- new func --- unknown_libname_2
 --- new bb ---
-PUSH    EBP		0x2352
-MOV     EBP, ESP		0x2353
-MOV     EAX, [EBP+ARG_0]		0x2355
-MOV     EAX, [EAX]		0x2358
-POP     EBP		0x235a
-RETN		0x235b
+
 
 --- new func --- ___castguard_check_failure_debugbreak
 --- new bb ---
-PUSH    EBP		0x235e
-MOV     EBP, ESP		0x235f
-MOV     EAX, [EBP+ARG_0]		0x2361
-MOV     EDX, OFFSET UNK_4E40		0x2364
-MOV     ECX, OFFSET UNK_4F80		0x2369
-SUB     EAX, EDX		0x236e
-SUB     ECX, EDX		0x2370
-CMP     EAX, ECX		0x2372
-JA      SHORT LOC_2377		0x2374
+
 --- new bb ---
-INT     3; TRAP TO DEBUGGER		0x2376
+
 --- new bb ---
-POP     EBP		0x2377
-RETN		0x2378
+
 
 --- new func --- ___castguard_check_failure_fastfail
 --- new bb ---
-PUSH    EBP		0x237f
-MOV     EBP, ESP		0x2380
-MOV     EAX, [EBP+ARG_0]		0x2382
-MOV     EDX, OFFSET UNK_4E40		0x2385
-MOV     ECX, OFFSET UNK_4F80		0x238a
-SUB     EAX, EDX		0x238f
-SUB     ECX, EDX		0x2391
-CMP     EAX, ECX		0x2393
-JA      SHORT LOC_239C		0x2395
+
 --- new bb ---
-PUSH    41H ; 'A'		0x2397
-POP     ECX		0x2399
-INT     29H; WIN8: RTLFAILFAST(ECX)		0x239a
+
 --- new bb ---
-POP     EBP		0x239c
-RETN		0x239d
+
+
+--- new func --- nullsub_4
+--- new bb ---
+
+
+--- new func --- sub_23A8
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+
+--- new func --- sub_23DD
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
 
 --- new func --- ___castguard_compat_check
 --- new bb ---
-PUSH    EBP		0x23f8
-MOV     EBP, ESP		0x23f9
-MOV     EAX, [EBP+ARG_0]		0x23fb
-MOV     EDX, OFFSET UNK_4E40		0x23fe
-MOV     ECX, OFFSET UNK_4F80		0x2403
-SUB     EAX, EDX		0x2408
-SUB     ECX, EDX		0x240a
-CMP     ECX, EAX		0x240c
-SBB     EAX, EAX		0x240e
-INC     EAX		0x2410
-POP     EBP		0x2411
-RETN		0x2412
+
 
 --- new func --- ___castguard_slow_path_check_debugbreak
 --- new bb ---
-PUSH    EBP		0x2419
-MOV     EBP, ESP		0x241a
-MOV     ECX, [EBP+ARG_0]		0x241c
-MOV     EAX, ECX		0x241f
-SUB     EAX, [EBP+ARG_4]		0x2421
-SUB     EAX, OFFSET UNK_4E00		0x2424
-SUB     EAX, 40H ; '@'		0x2429
-CMP     EAX, [EBP+ARG_8]		0x242c
-JBE     SHORT LOC_2444		0x242f
+
 --- new bb ---
-MOV     EDX, OFFSET UNK_4E40		0x2431
-MOV     EAX, OFFSET UNK_4F80		0x2436
-SUB     ECX, EDX		0x243b
-SUB     EAX, EDX		0x243d
-CMP     ECX, EAX		0x243f
-JA      SHORT LOC_2444		0x2441
+
 --- new bb ---
-INT     3; TRAP TO DEBUGGER		0x2443
+
 --- new bb ---
-POP     EBP		0x2444
-RETN		0x2445
+
 
 --- new func --- ___castguard_slow_path_check_fastfail
 --- new bb ---
-PUSH    EBP		0x2451
-MOV     EBP, ESP		0x2452
-MOV     ECX, [EBP+ARG_0]		0x2454
-MOV     EAX, ECX		0x2457
-SUB     EAX, [EBP+ARG_4]		0x2459
-SUB     EAX, OFFSET UNK_4E00		0x245c
-SUB     EAX, 40H ; '@'		0x2461
-CMP     EAX, [EBP+ARG_8]		0x2464
-JBE     SHORT LOC_2480		0x2467
+
 --- new bb ---
-MOV     EDX, OFFSET UNK_4E40		0x2469
-MOV     EAX, OFFSET UNK_4F80		0x246e
-SUB     ECX, EDX		0x2473
-SUB     EAX, EDX		0x2475
-CMP     ECX, EAX		0x2477
-JA      SHORT LOC_2480		0x2479
+
 --- new bb ---
-PUSH    41H ; 'A'		0x247b
-POP     ECX		0x247d
-INT     29H; WIN8: RTLFAILFAST(ECX)		0x247e
+
 --- new bb ---
-POP     EBP		0x2480
-RETN		0x2481
+
+
+--- new func --- nullsub_5
+--- new bb ---
+
+
+--- new func --- sub_2491
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
 
 --- new func --- ___castguard_slow_path_compat_check
 --- new bb ---
-PUSH    EBP		0x24e2
-MOV     EBP, ESP		0x24e3
-MOV     EAX, [EBP+ARG_0]		0x24e5
-SUB     EAX, [EBP+ARG_4]		0x24e8
-SUB     EAX, OFFSET UNK_4E00		0x24eb
-SUB     EAX, 40H ; '@'		0x24f0
-CMP     [EBP+ARG_8], EAX		0x24f3
-SBB     EAX, EAX		0x24f6
-NEG     EAX		0x24f8
-POP     EBP		0x24fa
-RETN		0x24fb
+
 
 --- new func --- __guard_icall_checks_enforced
 --- new bb ---
-MOV     ECX, DS:___GUARD_CHECK_ICALL_FPTR		0x2502
-XOR     EAX, EAX		0x2508
-CMP     ECX, OFFSET J_NULLSUB_1		0x250a
-SETNZ   AL		0x2510
-RETN		0x2513
+
 
 --- new func --- sub_2518
 --- new bb ---
-PUSH    EBP		0x2518
-MOV     EBP, ESP		0x2519
-AND     DWORD_61A0, 0		0x251b
-SUB     ESP, 24H		0x2522
-OR      DWORD_6010, 1		0x2525
-PUSH    0AH; PROCESSORFEATURE		0x252c
-CALL    DS:ISPROCESSORFEATUREPRESENT		0x252e
-TEST    EAX, EAX		0x2534
-JZ      LOC_26E8		0x2536
+
 --- new bb ---
-AND     [EBP+VAR_10], 0		0x253c
-XOR     EAX, EAX		0x2540
-PUSH    EBX		0x2542
-PUSH    ESI		0x2543
-PUSH    EDI		0x2544
-XOR     ECX, ECX		0x2545
-LEA     EDI, [EBP+VAR_24]		0x2547
-PUSH    EBX		0x254a
-CPUID		0x254b
-MOV     ESI, EBX		0x254d
-POP     EBX		0x254f
-NOP		0x2550
-MOV     [EDI], EAX		0x2551
-MOV     [EDI+4], ESI		0x2553
-MOV     [EDI+8], ECX		0x2556
-XOR     ECX, ECX		0x2559
-MOV     [EDI+0CH], EDX		0x255b
-MOV     EAX, [EBP+VAR_24]		0x255e
-MOV     EDI, [EBP+VAR_20]		0x2561
-MOV     [EBP+VAR_C], EAX		0x2564
-XOR     EDI, 756E6547H		0x2567
-MOV     EAX, [EBP+VAR_18]		0x256d
-XOR     EAX, 49656E69H		0x2570
-MOV     [EBP+VAR_4], EAX		0x2575
-MOV     EAX, [EBP+VAR_1C]		0x2578
-XOR     EAX, 6C65746EH		0x257b
-MOV     [EBP+VAR_8], EAX		0x2580
-XOR     EAX, EAX		0x2583
-INC     EAX		0x2585
-PUSH    EBX		0x2586
-CPUID		0x2587
-MOV     ESI, EBX		0x2589
-POP     EBX		0x258b
-NOP		0x258c
-LEA     EBX, [EBP+VAR_24]		0x258d
-MOV     [EBX], EAX		0x2590
-MOV     EAX, [EBP+VAR_4]		0x2592
-OR      EAX, [EBP+VAR_8]		0x2595
-OR      EAX, EDI		0x2598
-MOV     [EBX+4], ESI		0x259a
-MOV     [EBX+8], ECX		0x259d
-MOV     [EBX+0CH], EDX		0x25a0
-JNZ     SHORT LOC_25E8		0x25a3
+
 --- new bb ---
-MOV     EAX, [EBP+VAR_24]		0x25a5
-AND     EAX, 0FFF3FF0H		0x25a8
-CMP     EAX, 106C0H		0x25ad
-JZ      SHORT LOC_25D7		0x25b2
+
 --- new bb ---
-CMP     EAX, 20660H		0x25b4
-JZ      SHORT LOC_25D7		0x25b9
+
 --- new bb ---
-CMP     EAX, 20670H		0x25bb
-JZ      SHORT LOC_25D7		0x25c0
+
 --- new bb ---
-CMP     EAX, 30650H		0x25c2
-JZ      SHORT LOC_25D7		0x25c7
+
 --- new bb ---
-CMP     EAX, 30660H		0x25c9
-JZ      SHORT LOC_25D7		0x25ce
+
 --- new bb ---
-CMP     EAX, 30670H		0x25d0
-JNZ     SHORT LOC_25E8		0x25d5
+
 --- new bb ---
-MOV     EDI, DWORD_61A4		0x25d7
-OR      EDI, 1		0x25dd
-MOV     DWORD_61A4, EDI		0x25e0
-JMP     SHORT LOC_25EE		0x25e6
+
 --- new bb ---
-MOV     EDI, DWORD_61A4		0x25e8
+
 --- new bb ---
-MOV     ECX, [EBP+VAR_1C]		0x25ee
-PUSH    7		0x25f1
-POP     EAX		0x25f3
-MOV     [EBP+VAR_4], ECX		0x25f4
-CMP     [EBP+VAR_C], EAX		0x25f7
-JL      SHORT LOC_262C		0x25fa
+
 --- new bb ---
-XOR     ECX, ECX		0x25fc
-PUSH    EBX		0x25fe
-CPUID		0x25ff
-MOV     ESI, EBX		0x2601
-POP     EBX		0x2603
-NOP		0x2604
-LEA     EBX, [EBP+VAR_24]		0x2605
-MOV     [EBX], EAX		0x2608
-MOV     [EBX+4], ESI		0x260a
-MOV     [EBX+8], ECX		0x260d
-MOV     ECX, [EBP+VAR_4]		0x2610
-MOV     [EBX+0CH], EDX		0x2613
-MOV     EBX, [EBP+VAR_20]		0x2616
-TEST    EBX, 200H		0x2619
-JZ      SHORT LOC_262F		0x261f
+
 --- new bb ---
-OR      EDI, 2		0x2621
-MOV     DWORD_61A4, EDI		0x2624
-JMP     SHORT LOC_262F		0x262a
+
 --- new bb ---
-MOV     EBX, [EBP+VAR_10]		0x262c
+
 --- new bb ---
-MOV     EAX, DWORD_6010		0x262f
-OR      EAX, 2		0x2634
-MOV     DWORD_61A0, 1		0x2637
-MOV     DWORD_6010, EAX		0x2641
-TEST    ECX, 100000H		0x2646
-JZ      LOC_26E5		0x264c
+
 --- new bb ---
-OR      EAX, 4		0x2652
-MOV     DWORD_61A0, 2		0x2655
-MOV     DWORD_6010, EAX		0x265f
-TEST    ECX, 8000000H		0x2664
-JZ      SHORT LOC_26E5		0x266a
+
 --- new bb ---
-TEST    ECX, 10000000H		0x266c
-JZ      SHORT LOC_26E5		0x2672
+
 --- new bb ---
-XOR     ECX, ECX		0x2674
-XGETBV		0x2676
-MOV     [EBP+VAR_14], EAX		0x2679
-MOV     [EBP+VAR_10], EDX		0x267c
-MOV     EAX, [EBP+VAR_14]		0x267f
-MOV     ECX, [EBP+VAR_10]		0x2682
-PUSH    6		0x2685
-POP     ESI		0x2687
-AND     EAX, ESI		0x2688
-CMP     EAX, ESI		0x268a
-JNZ     SHORT LOC_26E5		0x268c
+
 --- new bb ---
-MOV     EAX, DWORD_6010		0x268e
-OR      EAX, 8		0x2693
-MOV     DWORD_61A0, 3		0x2696
-MOV     DWORD_6010, EAX		0x26a0
-TEST    BL, 20H		0x26a5
-JZ      SHORT LOC_26E5		0x26a8
+
 --- new bb ---
-OR      EAX, 20H		0x26aa
-MOV     DWORD_61A0, 5		0x26ad
-MOV     DWORD_6010, EAX		0x26b7
-MOV     EAX, 0D0030000H		0x26bc
-AND     EBX, EAX		0x26c1
-CMP     EBX, EAX		0x26c3
-JNZ     SHORT LOC_26E5		0x26c5
+
 --- new bb ---
-MOV     EAX, [EBP+VAR_14]		0x26c7
-MOV     EDX, 0E0H		0x26ca
-MOV     ECX, [EBP+VAR_10]		0x26cf
-AND     EAX, EDX		0x26d2
-CMP     EAX, EDX		0x26d4
-JNZ     SHORT LOC_26E5		0x26d6
+
 --- new bb ---
-OR      DWORD_6010, 40H		0x26d8
-MOV     DWORD_61A0, ESI		0x26df
+
 --- new bb ---
-POP     EDI		0x26e5
-POP     ESI		0x26e6
-POP     EBX		0x26e7
+
 --- new bb ---
-XOR     EAX, EAX		0x26e8
-LEAVE		0x26ea
-RETN		0x26eb
+
 
 --- new func --- ___scrt_is_ucrt_dll_in_use
 --- new bb ---
-XOR     EAX, EAX		0x2761
-CMP     DWORD_6020, EAX		0x2763
-SETNZ   AL		0x2769
-RETN		0x276c
+
+
+--- new func --- sub_2770
+--- new bb ---
+
+--- new bb ---
+
+--- new bb ---
+
 
 --- new func --- ___raise_securityfailure
 --- new bb ---
-PUSH    EBP		0x2781
-MOV     EBP, ESP		0x2782
-PUSH    0; LPTOPLEVELEXCEPTIONFILTER		0x2784
-CALL    DS:SETUNHANDLEDEXCEPTIONFILTER		0x2786
-PUSH    [EBP+EXCEPTIONINFO]; EXCEPTIONINFO		0x278c
-CALL    DS:UNHANDLEDEXCEPTIONFILTER		0x278f
-PUSH    0C0000409H; UEXITCODE		0x2795
-CALL    DS:GETCURRENTPROCESS		0x279a
-PUSH    EAX; HPROCESS		0x27a0
-CALL    DS:TERMINATEPROCESS		0x27a1
-POP     EBP		0x27a7
-RETN		0x27a8
+
 
 --- new func --- ___report_gsfailure
 --- new bb ---
-PUSH    EBP		0x27b3
-MOV     EBP, ESP		0x27b4
-SUB     ESP, 324H		0x27b6
-PUSH    17H; PROCESSORFEATURE		0x27bc
-CALL    DS:ISPROCESSORFEATUREPRESENT		0x27be
-TEST    EAX, EAX		0x27c4
-JZ      SHORT LOC_27CD		0x27c6
+
 --- new bb ---
-PUSH    2		0x27c8
-POP     ECX		0x27ca
-INT     29H; WIN8: RTLFAILFAST(ECX)		0x27cb
+
 --- new bb ---
-MOV     DWORD_62B0, EAX		0x27cd
-MOV     DWORD_62AC, ECX		0x27d2
-MOV     DWORD_62A8, EDX		0x27d8
-MOV     DWORD_62A4, EBX		0x27de
-MOV     DWORD_62A0, ESI		0x27e4
-MOV     DWORD_629C, EDI		0x27ea
-MOV     WORD_62C8, SS		0x27f0
-MOV     WORD_62BC, CS		0x27f7
-MOV     WORD_6298, DS		0x27fe
-MOV     WORD_6294, ES		0x2805
-MOV     WORD_6290, FS		0x280c
-MOV     WORD_628C, GS		0x2813
-PUSHF		0x281a
-POP     DWORD_62C0		0x281b
-MOV     EAX, [EBP+VAR_S0]		0x2821
-MOV     DWORD_62B4, EAX		0x2824
-MOV     EAX, [EBP+4]		0x2829
-MOV     DWORD_62B8, EAX		0x282c
-LEA     EAX, [EBP+ARG_0]		0x2831
-MOV     DWORD_62C4, EAX		0x2834
-MOV     EAX, [EBP+VAR_324]		0x2839
-MOV     DWORD_6200, 10001H		0x283f
-MOV     EAX, DWORD_62B8		0x2849
-MOV     DWORD_61BC, EAX		0x284e
-MOV     DWORD_61B0, 0C0000409H		0x2853
-MOV     DWORD_61B4, 1		0x285d
-MOV     DWORD_61C0, 1		0x2867
-PUSH    4		0x2871
-POP     EAX		0x2873
-IMUL    EAX, 0		0x2874
-MOV     DWORD_61C4[EAX], 2		0x2877
-PUSH    4		0x2881
-POP     EAX		0x2883
-IMUL    EAX, 0		0x2884
-MOV     ECX, ___SECURITY_COOKIE		0x2887
-MOV     [EBP+EAX+VAR_8], ECX		0x288d
-PUSH    4		0x2891
-POP     EAX		0x2893
-SHL     EAX, 0		0x2894
-MOV     ECX, DWORD_6018		0x2897
-MOV     [EBP+EAX+VAR_8], ECX		0x289d
-PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x28a1
-CALL    J____RAISE_SECURITYFAILURE		0x28a6
-LEAVE		0x28ab
-RETN		0x28ac
+
 
 --- new func --- ___report_rangecheckfailure
 --- new bb ---
-PUSH    EBP		0x28eb
-MOV     EBP, ESP		0x28ec
-PUSH    8		0x28ee
-CALL    J____REPORT_SECURITYFAILURE		0x28f0
-POP     EBP		0x28f5
-RETN		0x28f6
+
 
 --- new func --- ___report_securityfailure
 --- new bb ---
-PUSH    EBP		0x28fa
-MOV     EBP, ESP		0x28fb
-SUB     ESP, 31CH		0x28fd
-PUSH    17H; PROCESSORFEATURE		0x2903
-CALL    DS:ISPROCESSORFEATUREPRESENT		0x2905
-TEST    EAX, EAX		0x290b
-JZ      SHORT LOC_2914		0x290d
+
 --- new bb ---
-MOV     ECX, [EBP+ARG_0]		0x290f
-INT     29H; WIN8: RTLFAILFAST(ECX)		0x2912
+
 --- new bb ---
-MOV     DWORD_62B0, EAX		0x2914
-MOV     DWORD_62AC, ECX		0x2919
-MOV     DWORD_62A8, EDX		0x291f
-MOV     DWORD_62A4, EBX		0x2925
-MOV     DWORD_62A0, ESI		0x292b
-MOV     DWORD_629C, EDI		0x2931
-MOV     WORD_62C8, SS		0x2937
-MOV     WORD_62BC, CS		0x293e
-MOV     WORD_6298, DS		0x2945
-MOV     WORD_6294, ES		0x294c
-MOV     WORD_6290, FS		0x2953
-MOV     WORD_628C, GS		0x295a
-PUSHF		0x2961
-POP     DWORD_62C0		0x2962
-MOV     EAX, [EBP+VAR_S0]		0x2968
-MOV     DWORD_62B4, EAX		0x296b
-MOV     EAX, [EBP+4]		0x2970
-MOV     DWORD_62B8, EAX		0x2973
-LEA     EAX, [EBP+ARG_0]		0x2978
-MOV     DWORD_62C4, EAX		0x297b
-MOV     EAX, [EBP+VAR_31C]		0x2980
-MOV     EAX, DWORD_62B8		0x2986
-MOV     DWORD_61BC, EAX		0x298b
-MOV     DWORD_61B0, 0C0000409H		0x2990
-MOV     DWORD_61B4, 1		0x299a
-MOV     DWORD_61C0, 1		0x29a4
-PUSH    4		0x29ae
-POP     EAX		0x29b0
-IMUL    EAX, 0		0x29b1
-MOV     ECX, [EBP+ARG_0]		0x29b4
-MOV     DWORD_61C4[EAX], ECX		0x29b7
-PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x29bd
-CALL    J____RAISE_SECURITYFAILURE		0x29c2
-LEAVE		0x29c7
-RETN		0x29c8
+
 
 --- new func --- ___report_securityfailureEx
 --- new bb ---
-PUSH    EBP		0x29fc
-MOV     EBP, ESP		0x29fd
-SUB     ESP, 320H		0x29ff
-PUSH    17H; PROCESSORFEATURE		0x2a05
-CALL    DS:ISPROCESSORFEATUREPRESENT		0x2a07
-TEST    EAX, EAX		0x2a0d
-JZ      SHORT LOC_2A16		0x2a0f
+
 --- new bb ---
-MOV     ECX, [EBP+ARG_0]		0x2a11
-INT     29H; WIN8: RTLFAILFAST(ECX)		0x2a14
+
 --- new bb ---
-MOV     DWORD_62B0, EAX		0x2a16
-MOV     DWORD_62AC, ECX		0x2a1b
-MOV     DWORD_62A8, EDX		0x2a21
-MOV     DWORD_62A4, EBX		0x2a27
-MOV     DWORD_62A0, ESI		0x2a2d
-MOV     DWORD_629C, EDI		0x2a33
-MOV     WORD_62C8, SS		0x2a39
-MOV     WORD_62BC, CS		0x2a40
-MOV     WORD_6298, DS		0x2a47
-MOV     WORD_6294, ES		0x2a4e
-MOV     WORD_6290, FS		0x2a55
-MOV     WORD_628C, GS		0x2a5c
-PUSHF		0x2a63
-POP     DWORD_62C0		0x2a64
-MOV     EAX, [EBP+VAR_S0]		0x2a6a
-MOV     DWORD_62B4, EAX		0x2a6d
-MOV     EAX, [EBP+4]		0x2a72
-MOV     DWORD_62B8, EAX		0x2a75
-LEA     EAX, [EBP+ARG_0]		0x2a7a
-MOV     DWORD_62C4, EAX		0x2a7d
-MOV     EAX, [EBP+VAR_320]		0x2a82
-MOV     EAX, DWORD_62B8		0x2a88
-MOV     DWORD_61BC, EAX		0x2a8d
-MOV     DWORD_61B0, 0C0000409H		0x2a92
-MOV     DWORD_61B4, 1		0x2a9c
-CMP     [EBP+ARG_4], 0		0x2aa6
-JBE     SHORT LOC_2AB6		0x2aaa
+
 --- new bb ---
-CMP     [EBP+ARG_8], 0		0x2aac
-JNZ     SHORT LOC_2AB6		0x2ab0
+
 --- new bb ---
-AND     [EBP+ARG_4], 0		0x2ab2
+
 --- new bb ---
-CMP     [EBP+ARG_4], 0EH		0x2ab6
-JBE     SHORT LOC_2AC3		0x2aba
+
 --- new bb ---
-MOV     EAX, [EBP+ARG_4]		0x2abc
-DEC     EAX		0x2abf
-MOV     [EBP+ARG_4], EAX		0x2ac0
+
 --- new bb ---
-MOV     EAX, [EBP+ARG_4]		0x2ac3
-INC     EAX		0x2ac6
-MOV     DWORD_61C0, EAX		0x2ac7
-PUSH    4		0x2acc
-POP     EAX		0x2ace
-IMUL    EAX, 0		0x2acf
-MOV     ECX, [EBP+ARG_0]		0x2ad2
-MOV     DWORD_61C4[EAX], ECX		0x2ad5
-AND     [EBP+VAR_4], 0		0x2adb
-JMP     SHORT LOC_2AE8		0x2adf
+
 --- new bb ---
-MOV     EAX, [EBP+VAR_4]		0x2ae1
-INC     EAX		0x2ae4
-MOV     [EBP+VAR_4], EAX		0x2ae5
+
 --- new bb ---
-MOV     EAX, [EBP+VAR_4]		0x2ae8
-CMP     EAX, [EBP+ARG_4]		0x2aeb
-JNB     SHORT LOC_2B05		0x2aee
+
 --- new bb ---
-MOV     EAX, [EBP+VAR_4]		0x2af0
-MOV     ECX, [EBP+VAR_4]		0x2af3
-MOV     EDX, [EBP+ARG_8]		0x2af6
-MOV     ECX, [EDX+ECX*4]		0x2af9
-MOV     DWORD_61C8[EAX*4], ECX		0x2afc
-JMP     SHORT LOC_2AE1		0x2b03
+
 --- new bb ---
-PUSH    OFFSET EXCEPTIONINFO; EXCEPTIONINFO		0x2b05
-CALL    J____RAISE_SECURITYFAILURE		0x2b0a
-LEAVE		0x2b0f
-RETN		0x2b10
+
 
 --- new func --- __std_type_info_destroy_list
 --- new bb ---
-JMP     DS:__IMP___STD_TYPE_INFO_DESTROY_LIST		0x2b56
+
 
 --- new func --- __current_exception
 --- new bb ---
-JMP     DS:__IMP___CURRENT_EXCEPTION		0x2b5c
+
 
 --- new func --- __current_exception_context
 --- new bb ---
-JMP     DS:__IMP___CURRENT_EXCEPTION_CONTEXT		0x2b62
+
 
 --- new func --- memset
 --- new bb ---
-JMP     DS:__IMP_MEMSET		0x2b68
+
 
 --- new func --- _except_handler4_common
 --- new bb ---
-JMP     DS:__IMP__EXCEPT_HANDLER4_COMMON		0x2b6e
+
+
+--- new func --- puts
+--- new bb ---
+
+
+--- new func --- malloc
+--- new bb ---
+
+
+--- new func --- strcpy_s
+--- new bb ---
+
+
+--- new func --- strncpy_s
+--- new bb ---
+
+
+--- new func --- strncmp
+--- new bb ---
+
 
 --- new func --- _seh_filter_exe
 --- new bb ---
-JMP     DS:__IMP__SEH_FILTER_EXE		0x2b92
+
 
 --- new func --- _set_app_type
 --- new bb ---
-JMP     DS:__IMP__SET_APP_TYPE		0x2b98
+
 
 --- new func --- __setusermatherr
 --- new bb ---
-JMP     DS:__IMP___SETUSERMATHERR		0x2b9e
+
 
 --- new func --- _configure_narrow_argv
 --- new bb ---
-JMP     DS:__IMP__CONFIGURE_NARROW_ARGV		0x2ba4
+
 
 --- new func --- _initialize_narrow_environment
 --- new bb ---
-JMP     DS:__IMP__INITIALIZE_NARROW_ENVIRONMENT		0x2baa
+
 
 --- new func --- _get_initial_narrow_environment
 --- new bb ---
-JMP     DS:__IMP__GET_INITIAL_NARROW_ENVIRONMENT		0x2bb0
+
 
 --- new func --- _initterm
 --- new bb ---
-JMP     DS:__IMP__INITTERM		0x2bb6
+
 
 --- new func --- _initterm_e
 --- new bb ---
-JMP     DS:__IMP__INITTERM_E		0x2bbc
+
 
 --- new func --- exit
 --- new bb ---
-JMP     DS:__IMP_EXIT		0x2bc2
+
 
 --- new func --- _exit
 --- new bb ---
-JMP     DS:__IMP__EXIT		0x2bc8
+
 
 --- new func --- _set_fmode
 --- new bb ---
-JMP     DS:__IMP__SET_FMODE		0x2bce
+
 
 --- new func --- __p___argc
 --- new bb ---
-JMP     DS:__IMP___P___ARGC		0x2bd4
+
 
 --- new func --- __p___argv
 --- new bb ---
-JMP     DS:__IMP___P___ARGV		0x2bda
+
 
 --- new func --- _cexit
 --- new bb ---
-JMP     DS:__IMP__CEXIT		0x2be0
+
 
 --- new func --- _c_exit
 --- new bb ---
-JMP     DS:__IMP__C_EXIT		0x2be6
+
 
 --- new func --- _register_thread_local_exe_atexit_callback
 --- new bb ---
-JMP     DS:__IMP__REGISTER_THREAD_LOCAL_EXE_ATEXIT_CALLBACK		0x2bec
+
 
 --- new func --- _configthreadlocale
 --- new bb ---
-JMP     DS:__IMP__CONFIGTHREADLOCALE		0x2bf2
+
 
 --- new func --- _set_new_mode
 --- new bb ---
-JMP     DS:__IMP__SET_NEW_MODE		0x2bf8
+
 
 --- new func --- __p__commode
 --- new bb ---
-JMP     DS:__IMP___P__COMMODE		0x2bfe
+
 
 --- new func --- _seh_filter_dll
 --- new bb ---
-JMP     DS:__IMP__SEH_FILTER_DLL		0x2c04
+
 
 --- new func --- _initialize_onexit_table
 --- new bb ---
-JMP     DS:__IMP__INITIALIZE_ONEXIT_TABLE		0x2c0a
+
 
 --- new func --- _register_onexit_function
 --- new bb ---
-JMP     DS:__IMP__REGISTER_ONEXIT_FUNCTION		0x2c10
+
 
 --- new func --- _execute_onexit_table
 --- new bb ---
-JMP     DS:__IMP__EXECUTE_ONEXIT_TABLE		0x2c16
+
 
 --- new func --- _crt_atexit
 --- new bb ---
-JMP     DS:__IMP__CRT_ATEXIT		0x2c1c
+
 
 --- new func --- _crt_at_quick_exit
 --- new bb ---
-JMP     DS:__IMP__CRT_AT_QUICK_EXIT		0x2c22
+
 
 --- new func --- _controlfp_s
 --- new bb ---
-JMP     DS:__IMP__CONTROLFP_S		0x2c28
+
 
 --- new func --- terminate
 --- new bb ---
-JMP     DS:__IMP_TERMINATE		0x2c2e
+
+
+--- new func --- QueryPerformanceCounter
+--- new bb ---
+
+
+--- new func --- GetCurrentProcessId
+--- new bb ---
+
+
+--- new func --- GetCurrentThreadId
+--- new bb ---
+
+
+--- new func --- GetSystemTimeAsFileTime
+--- new bb ---
+
+
+--- new func --- InitializeSListHead
+--- new bb ---
+
+
+--- new func --- IsDebuggerPresent
+--- new bb ---
+
+
+--- new func --- UnhandledExceptionFilter
+--- new bb ---
+
+
+--- new func --- SetUnhandledExceptionFilter
+--- new bb ---
+
+
+--- new func --- GetStartupInfoW
+--- new bb ---
+
+
+--- new func --- IsProcessorFeaturePresent
+--- new bb ---
+
+
+--- new func --- GetModuleHandleW
+--- new bb ---
+
+
+--- new func --- GetCurrentProcess
+--- new bb ---
+
+
+--- new func --- TerminateProcess
+--- new bb ---
+
 
 --- new func --- sub_2C82
 --- new bb ---
-MOV     AL, 1		0x2c82
-RETN		0x2c84
+
 
 --- new func --- sub_2C85
 --- new bb ---
-MOV     AL, 1		0x2c85
-RETN		0x2c87
+
 
 --- new func --- sub_2C88
 --- new bb ---
-MOV     AL, 1		0x2c88
-RETN		0x2c8a
+
 
 --- new func --- sub_2C8B
 --- new bb ---
-MOV     AL, 1		0x2c8b
-RETN		0x2c8d
+
 
 --- new func --- sub_2C8E
 --- new bb ---
-MOV     AL, 1		0x2c8e
-RETN		0x2c90
+
 
 --- new func --- sub_2C91
 --- new bb ---
-XOR     EAX, EAX		0x2c91
-RETN		0x2c93
+
 
 --- new func --- __filter_x86_sse2_floating_point_exception_default
 --- new bb ---
-PUSH    EBP		0x2c94
-MOV     EBP, ESP		0x2c95
-PUSH    ECX		0x2c97
-CMP     DWORD_61A0, 1		0x2c98
-JL      SHORT LOC_2D07		0x2c9f
+
 --- new bb ---
-CMP     [EBP+ARG_0], 0C00002B4H		0x2ca1
-JZ      SHORT LOC_2CB3		0x2ca8
+
 --- new bb ---
-CMP     [EBP+ARG_0], 0C00002B5H		0x2caa
-JNZ     SHORT LOC_2D07		0x2cb1
+
 --- new bb ---
-STMXCSR [EBP+VAR_4]		0x2cb3
-MOV     EAX, [EBP+VAR_4]		0x2cb7
-XOR     EAX, 3FH		0x2cba
-TEST    AL, 81H		0x2cbd
-JZ      SHORT LOC_2D00		0x2cbf
+
 --- new bb ---
-TEST    EAX, 204H		0x2cc1
-JNZ     SHORT LOC_2CCF		0x2cc6
+
 --- new bb ---
-MOV     EAX, 0C000008EH		0x2cc8
-LEAVE		0x2ccd
-RETN		0x2cce
+
 --- new bb ---
-TEST    EAX, 102H		0x2ccf
-JZ      SHORT LOC_2D00		0x2cd4
+
 --- new bb ---
-TEST    EAX, 408H		0x2cd6
-JNZ     SHORT LOC_2CE4		0x2cdb
+
 --- new bb ---
-MOV     EAX, 0C0000091H		0x2cdd
-LEAVE		0x2ce2
-RETN		0x2ce3
+
 --- new bb ---
-TEST    EAX, 810H		0x2ce4
-JNZ     SHORT LOC_2CF2		0x2ce9
+
 --- new bb ---
-MOV     EAX, 0C0000093H		0x2ceb
-LEAVE		0x2cf0
-RETN		0x2cf1
+
 --- new bb ---
-TEST    EAX, 1020H		0x2cf2
-JNZ     SHORT LOC_2D07		0x2cf7
+
 --- new bb ---
-MOV     EAX, 0C000008FH		0x2cf9
-LEAVE		0x2cfe
-RETN		0x2cff
+
 --- new bb ---
-MOV     EAX, 0C0000090H		0x2d00
-LEAVE		0x2d05
-RETN		0x2d06
+
 --- new bb ---
-MOV     EAX, [EBP+ARG_0]		0x2d07
-LEAVE		0x2d0a
-RETN		0x2d0b
+

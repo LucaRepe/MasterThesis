@@ -2,7 +2,6 @@ import pickle
 import networkx as nx
 
 def return_eq(node1, node2):
-    # print(f"{node1.get('unique_hash_identifier')} {node2.get('unique_hash_identifier')}")
     return node1.get('unique_hash_identifier')==node2.get('unique_hash_identifier')
 
 def run():

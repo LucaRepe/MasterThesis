@@ -1,7 +1,15 @@
-### Functions not recognized by Ghidra
+### Conditional jumps with same target
 
-___gcc_register_frame at 0x14F0
+Radare has one additional edge
+IDA counts two function beginnings
 
-__gcc_deregister_frame at 0x15A0
+### Conditional jump with constant condition
 
-_register_frame_ctor at 0x2600
+Radare has one additional edge
+IDA counts two function beginnings
+
+### Impossible disassembly
+
+Radare's script breaks when reading the FF opcode
+IDA doesn't get any BB regarding the technique
+Ghidra recognizes until 0x153a, as soon as it reads the FF opcode finds nothing until 0x15be 

@@ -36,6 +36,7 @@ int conditional_jumps_with_same_target(int var1, int var2)
 }
 */
 
+/*
 int conditional_jump_with_constant_condition(int var1, int var2)
 {
     int resAdd = addition(var1, var2);
@@ -50,10 +51,25 @@ int conditional_jump_with_constant_condition(int var1, int var2)
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
+*/
+
+int impossible_disassembly(int var1, int var2){
+    int resAdd = addition(var1, var2);
+    puts("Impossible disassembly");
+    __asm {
+        __emit 0xeb
+        __emit 0xff
+        __emit 0xc0
+        __emit 0x48
+    }
+    int resSub = subtraction(resAdd, var2);
+    return resAdd;
+}
 
 int incrementAge(int age) {
     //int ageIncr = conditional_jumps_with_same_target(age, 10);
-    int ageIncr = conditional_jump_with_constant_condition(age, 10);
+    //int ageIncr = conditional_jump_with_constant_condition(age, 10);
+    int ageIncr = impossible_disassembly(age, 10);
     return ageIncr;
 }
 
@@ -107,6 +123,7 @@ int main()
     int resAdd = addition(var1, var2);
     int resSub = subtraction(var1, var2);
     //conditional_jumps_with_same_target(var1, var2);
-    conditional_jump_with_constant_condition(var1, var2);
+    //conditional_jump_with_constant_condition(var1, var2);
+    impossible_disassembly(var1,var2);
     return 0;
 }

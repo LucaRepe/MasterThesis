@@ -7,23 +7,23 @@ struct person {
     int age;
 };
 
-int addition(int num1, int num2)
-{
+
+int addition(int num1, int num2) {
     int sum;
     sum = num1 + num2;
     return sum;
 }
 
-int subtraction(int num1, int num2)
-{
+
+int subtraction(int num1, int num2) {
     int sub;
     sub = num1 - num2;
     return sub;
 }
 
+
 /*
-int conditional_jumps_with_same_target(int var1, int var2)
-{
+int conditional_jumps_with_same_target(int var1, int var2) {
     int resAdd = addition(var1, var2);
     puts("Conditional jumps with same target");
     __asm {
@@ -37,8 +37,7 @@ int conditional_jumps_with_same_target(int var1, int var2)
 */
 
 /*
-int conditional_jump_with_constant_condition(int var1, int var2)
-{
+int conditional_jump_with_constant_condition(int var1, int var2) {
     int resAdd = addition(var1, var2);
     puts("Conditional jump with constant condition");
     __asm {
@@ -53,7 +52,8 @@ int conditional_jump_with_constant_condition(int var1, int var2)
 }
 */
 
-int impossible_disassembly(int var1, int var2){
+/*
+int impossible_disassembly(int var1, int var2) {
     int resAdd = addition(var1, var2);
     puts("Impossible disassembly");
     __asm {
@@ -65,32 +65,52 @@ int impossible_disassembly(int var1, int var2){
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
+*/
+
+int register_reassignment(int var1, int var2) {
+    int resAdd = addition(var1, var2);
+    puts("Register reassignment");
+    __asm {
+        mov eax, 0
+        mov ebx, 0
+        add eax, 1
+        add ebx, 2
+        mov ebx, eax
+        mov eax, ebx
+        add eax, 1
+        add ebx, 2
+        ret
+    }
+    int resSub = subtraction(resAdd, var2);
+    return resAdd;
+}
+
 
 int incrementAge(int age) {
     //int ageIncr = conditional_jumps_with_same_target(age, 10);
     //int ageIncr = conditional_jump_with_constant_condition(age, 10);
-    int ageIncr = impossible_disassembly(age, 10);
+    //int ageIncr = impossible_disassembly(age, 10);
+    int ageIncr = register_reassignment(age, 10);
     return ageIncr;
 }
 
+
 char* memAlloc() {
     int size = 10, i;
-
     char* my_array = (char*)malloc(size * sizeof(char));
-
     int len = strlen("0x90");
     for (i = 0; i < size - 1; i++) {
-        strcpy_s(&my_array[i], len+1, "0x90");
+        strcpy_s(&my_array[i], len + 1, "0x90");
     }
-    strcpy_s(&my_array[size], len+1, "0xc3");
+    strcpy_s(&my_array[size], len + 1, "0xc3");
     char* array_ptr = &my_array[5];
     return array_ptr;
 }
 
+
 struct person persons[3];
 
-int main()
-{
+int main() {
     persons[0].age = 0;
     persons[1].age = -1;
     persons[2].age = 1000;
@@ -105,8 +125,8 @@ int main()
             char* ptr = memAlloc();
         }
     }
-    switch (persons[1].age)
-    {
+
+    switch (persons[1].age) {
     case 0:
         puts("Equal 0");
         break;
@@ -124,6 +144,7 @@ int main()
     int resSub = subtraction(var1, var2);
     //conditional_jumps_with_same_target(var1, var2);
     //conditional_jump_with_constant_condition(var1, var2);
-    impossible_disassembly(var1,var2);
+    //impossible_disassembly(var1, var2);
+    register_reassignment(var1, var2);
     return 0;
 }

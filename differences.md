@@ -18,4 +18,6 @@ Ghidra recognizes until 0x153a, as soon as it reads the FF opcode finds nothing 
 
 All the tools agree
 
+### Disassembly desynchronization
 
+All the tools agree

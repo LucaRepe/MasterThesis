@@ -34,8 +34,8 @@ def run():
     # max_pin_addr = max(pin_trace)
     # int_min = int(min_pin_addr,16)
     # int_max = int(max_pin_addr,16)
-    int_min = 0x1660
-    int_max = 0x168c
+    int_min = 0x1440
+    int_max = 0x146e
     ghidra_purged = ghidra.copy()
     set_addr_ghidra = set()
     for node in ghidra:

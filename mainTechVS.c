@@ -120,9 +120,8 @@ int dynamically_computed_target_address(int var1, int var2) {
     *(unsigned long long *)target = (unsigned long long)dynamically_computed_target_address + 0x00000004;
 
     __asm { 
-        mov eax, [%0]
+        mov eax, target
         call eax
-        :: r (target) : eax
     }
     int resSub = subtraction(resAdd, var2);
     return resAdd;

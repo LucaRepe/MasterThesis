@@ -21,3 +21,7 @@ All the tools agree
 ### Disassembly desynchronization
 
 All the tools agree
+
+### Dynamically computed target address
+
+All the tools agree

@@ -258,7 +258,6 @@ def run(filepath):
                                cond_jump=bb_not_splitted.conditional_jump, dir_jump=bb_not_splitted.direct_jump,
                                indir_jump=bb_not_splitted.indirect_jump, has_return=bb_not_splitted.has_return,
                                unique_hash_identifier=bb_not_splitted.unique_hash_identifier)
-                skip_adding = False
                 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):

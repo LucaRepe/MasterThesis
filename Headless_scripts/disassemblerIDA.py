@@ -63,10 +63,8 @@ def run():
     idc.auto_wait()
     for func in idautils.Functions():
 
-        flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT | idaapi.FC_CALL_ENDS)  # or idaapi.FC_CALL_ENDS)
+        flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT | idaapi.FC_CALL_ENDS)
         for bb in flowchart:
-
-            log('--- new bb --- \n')
 
             list_bytes = list()
             list_instr = list()

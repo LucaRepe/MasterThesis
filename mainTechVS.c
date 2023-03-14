@@ -130,6 +130,7 @@ int dynamically_computed_target_address(int var1, int var2) {
 }
 */
 
+/*
 int return_pointer_abuse(int var1, int var2) {
     int resAdd = addition(var1, var2);
     puts("Return pointer abuse");
@@ -157,6 +158,37 @@ int return_pointer_abuse(int var1, int var2) {
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
+*/
+
+int structured_exception_handler_misuse(int var1, int var2) {
+    int resAdd = addition(var1, var2);
+    puts("Structured exception handler misuse");
+
+    DWORD ptr1 = (DWORD)structured_exception_handler_misuse - 10;
+
+    __asm {
+        push eax
+        push ecx
+        mov eax, [ptr1]
+        add eax, 10
+        push eax
+        mov eax, offset structured_exception_handler_misuse
+        push eax
+        ASSUME FS:NOTHING
+        push dword ptr fs:[0]
+        mov dword ptr fs:[0], esp
+        ASSUME FS:ERROR
+        mov ecx, 0ffffffffh
+        jmp $ + 2
+        inc ecx
+        div ecx
+        call eax
+        retn
+    }
+
+    int resSub = subtraction(resAdd, var2);
+    return resAdd;
+}
 
 
 int incrementAge(int age) {
@@ -166,7 +198,8 @@ int incrementAge(int age) {
     //int ageIncr = register_reassignment(age, 10);
     //int ageIncr = disassembly_desynchronization(age, 10);
     //int ageIncr = dynamically_computed_target_address(age, 10);
-    int ageIncr = return_pointer_abuse(age, 10);
+    //int ageIncr = return_pointer_abuse(age, 10);
+    int ageIncr = structured_exception_handler_misuse(age, 10);
     return ageIncr;
 }
 
@@ -224,6 +257,7 @@ int main() {
     //register_reassignment(var1, var2);
     //disassembly_desynchronization(var1, var2);
     //dynamically_computed_target_address(var1, var2);
-    return_pointer_abuse(var1, var2);
+    //return_pointer_abuse(var1, var2);
+    structured_exception_handler_misuse(var1, var2);
     return 0;
 }

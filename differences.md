@@ -25,3 +25,10 @@ All the tools agree
 ### Dynamically computed target address
 
 All the tools agree
+
+### Return pointer abuse
+
+Angr has two more nodes: 0x11c6b and 0x11c69, and two more edges. REP instruction causes this difference.
+Radare doesn't consider the function beginning.
+Ghidra considers 2 direct calls and 2 indirect calls, the other instead 3 direct and 1 indirect.
+The different call is given by `call $ + 5`, because it is recognized as an UNCONDITIONAL_JUMP.

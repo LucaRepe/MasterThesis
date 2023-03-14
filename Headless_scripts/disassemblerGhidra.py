@@ -101,6 +101,8 @@ def run():
                 norm_instr = 'JZ ' + instr.toString().split(' ')[1]
             elif 'RETN' in mnemonic:
                 norm_instr = 'RET'
+            elif 'STOSD.REP' in mnemonic:
+                norm_instr = 'REP STOSD ' + instr.toString().split(' ')[1]
             list_instr.append(f'{instr}')
             list_instr_norm.append(f'{norm_instr}')
             list_addr.append(f'{hex(instr.getAddress().getOffset())}')

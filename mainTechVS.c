@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 
 struct person {
     char name[20];
@@ -112,17 +113,47 @@ int disassembly_desynchronization(int var1, int var2) {
 }
 */
 
+/*
 int dynamically_computed_target_address(int var1, int var2) {
     int resAdd = addition(var1, var2);
     puts("Dynamically computed target address");
 
-    char *target = (char *)malloc(8);
-    *(unsigned long long *)target = (unsigned long long)dynamically_computed_target_address + 0x00000004;
+    char* target = (char*)malloc(8);
+    *(unsigned long long*)target = (unsigned long long)dynamically_computed_target_address + 0x00000004;
 
     __asm { 
         mov eax, target
         call eax
     }
+    int resSub = subtraction(resAdd, var2);
+    return resAdd;
+}
+*/
+
+int return_pointer_abuse(int var1, int var2) {
+    int resAdd = addition(var1, var2);
+    puts("Return pointer abuse");
+
+    DWORD ptr1 = (DWORD) return_pointer_abuse-10;
+    DWORD ptr2 = (DWORD) return_pointer_abuse+10;
+    __asm {
+        call $ + 5
+        add dword ptr[esp], 5
+        retn
+
+        push eax
+        push dword ptr[ptr1]
+        push dword ptr[ptr2]
+        mov eax, dword ptr[2]
+        add eax, 10
+        call eax
+        pop eax
+        pop eax
+        pop eax
+        pop ebp
+        retn
+    }
+
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
@@ -134,7 +165,8 @@ int incrementAge(int age) {
     //int ageIncr = impossible_disassembly(age, 10);
     //int ageIncr = register_reassignment(age, 10);
     //int ageIncr = disassembly_desynchronization(age, 10);
-    int ageIncr = dynamically_computed_target_address(age,10);
+    //int ageIncr = dynamically_computed_target_address(age, 10);
+    int ageIncr = return_pointer_abuse(age, 10);
     return ageIncr;
 }
 
@@ -191,6 +223,7 @@ int main() {
     //impossible_disassembly(var1, var2);
     //register_reassignment(var1, var2);
     //disassembly_desynchronization(var1, var2);
-    dynamically_computed_target_address(var1, var2);
+    //dynamically_computed_target_address(var1, var2);
+    return_pointer_abuse(var1, var2);
     return 0;
 }

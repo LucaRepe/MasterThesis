@@ -35,3 +35,6 @@ The different call is given by `call $ + 5`, because it is recognized as an UNCO
 
 ### Structured exception handler misuse
 
+IDA recognizes a BB at 0x11E09 that isn't a BB.
+Radare misses two BBs.
+Angr finds two more BBs, the REP instruction causes the difference.

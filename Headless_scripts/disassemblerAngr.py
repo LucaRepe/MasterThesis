@@ -60,6 +60,7 @@ def run():
             indir_jump = False
             has_return = False
             x = xxhash.xxh32()
+            unite_bb = False
 
             if c.addr == func_node.addr:
                 func_beg = True
@@ -118,6 +119,8 @@ def run():
                     list_edge_attr.append("Call")
                 if 'RET' in i.mnemonic.upper() or 'RETN' in i.mnemonic.upper():
                     has_return = True
+                if 'REP' in i.mnemonic.upper():
+                    unite_bb = True
 
             bb = BasicBlock()
             bb.start_addr = hex(block.addr)

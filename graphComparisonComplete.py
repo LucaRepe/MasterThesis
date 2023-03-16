@@ -2,7 +2,7 @@ import pickle
 import networkx as nx
 
 def return_eq(node1, node2):
-    return node1.get('label')==node2.get('label')
+    return node1.get('unique_hash_identifier')==node2.get('unique_hash_identifier')
 
 def run():
     radare_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_purged.p", "rb"))

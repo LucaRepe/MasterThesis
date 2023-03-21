@@ -44,8 +44,14 @@ def run():
      'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     g = nx.DiGraph()
     for func_node in cfg.functions.values():
+        rep_flag = False
+        merge_bb = False
         for block in func_node.blocks:
             c = block.capstone
+            if c.insns:
+                if 'rep' in c.insns[0].mnemonic:
+                    continue
+            
             list_bytes = list()
             list_instr = list()
             list_instr_norm = list()
@@ -59,8 +65,8 @@ def run():
             dir_jump = False
             indir_jump = False
             has_return = False
-            x = xxhash.xxh32()
-            unite_bb = False
+            if not merge_bb:
+                x = xxhash.xxh32()
 
             if c.addr == func_node.addr:
                 func_beg = True
@@ -120,10 +126,47 @@ def run():
                 if 'RET' in i.mnemonic.upper() or 'RETN' in i.mnemonic.upper():
                     has_return = True
                 if 'REP' in i.mnemonic.upper():
-                    unite_bb = True
+                    rep_flag = True
 
+            if rep_flag:
+                rep_flag = False
+                merge_bb = True
+                start_addr = hex(block.addr)
+                list_bytes_old = list_bytes.copy()
+                list_instr_old = list_instr.copy()
+                list_instr_norm_old = list_instr_norm.copy()
+                list_addr_old = list_addr.copy()
+                list_edges_old = list_edges.copy()
+                list_edge_attr_old = list_edge_attr.copy()
+                func_beg_old = func_beg
+                dir_call_old = dir_call
+                indir_call_old = indir_call
+                conditional_jump_old = conditional_jump
+                dir_jump_old = dir_jump
+                indir_jump_old = indir_jump
+                has_return_old = has_return
+                continue
+
+            if merge_bb:
+                merge_bb = False
+                list_bytes = list_bytes_old + list_bytes
+                list_instr = list_instr_old + list_instr
+                list_instr_norm = list_instr_norm_old + list_instr_norm
+                list_addr = list_addr_old + list_addr
+                list_edges = list_edges_old + list_edges
+                list_edge_attr = list_edge_attr_old + list_edge_attr
+                func_beg = func_beg_old or func_beg_old
+                dir_call = dir_call_old or dir_call
+                indir_call = indir_call_old or indir_call
+                conditional_jump = conditional_jump_old or conditional_jump
+                dir_jump = dir_jump_old or dir_jump
+                indir_jump = indir_jump_old or indir_jump
+                has_return = has_return_old or has_return
+            else:
+                start_addr = hex(block.addr)
+                
             bb = BasicBlock()
-            bb.start_addr = hex(block.addr)
+            bb.start_addr = start_addr
             bb.list_bytes = list_bytes
             bb.list_instr = list_instr
             bb.list_instr_norm = list_instr_norm
@@ -140,11 +183,11 @@ def run():
             bb.unique_hash_identifier = x.intdigest()
             if len(list_instr) != 0:
                 g.add_node(bb.start_addr, instr=bb.list_instr, instr_norm=bb.list_instr_norm, bytes=bb.list_bytes,
-                           addr=bb.list_addr, edges=bb.list_edges, edge_attr=bb.list_edge_attr,
-                           func_beg=bb.function_beginning, dir_call=bb.direct_fun_call,
-                           indir_call=bb.indirect_fun_call, cond_jump=bb.conditional_jump,
-                           dir_jump=bb.direct_jump, indir_jump=bb.indirect_jump, has_return=bb.has_return,
-                           unique_hash_identifier=bb.unique_hash_identifier)
+                        addr=bb.list_addr, edges=bb.list_edges, edge_attr=bb.list_edge_attr,
+                        func_beg=bb.function_beginning, dir_call=bb.direct_fun_call,
+                        indir_call=bb.indirect_fun_call, cond_jump=bb.conditional_jump,
+                        dir_jump=bb.direct_jump, indir_jump=bb.indirect_jump, has_return=bb.has_return,
+                        unique_hash_identifier=bb.unique_hash_identifier)
 
     list_sorted = sorted(list(g.nodes))[1:]
     for node in sorted(list(g.nodes)):

@@ -160,36 +160,38 @@ int return_pointer_abuse(int var1, int var2) {
 }
 */
 
+DWORD handle_exception(EXCEPTION_POINTERS* ep) {
+    return ep->ExceptionRecord->ExceptionCode;
+}
+
 int structured_exception_handler_misuse(int var1, int var2) {
     int resAdd = addition(var1, var2);
     puts("Structured exception handler misuse");
 
-    DWORD ptr1 = (DWORD)structured_exception_handler_misuse - 10;
-
+    LPVOID fn = &handle_exception;
     __asm {
-        push eax
-        push ecx
-        mov eax, [ptr1]
-        add eax, 10
-        push eax
-        mov eax, offset structured_exception_handler_misuse
-        push eax
-        ASSUME FS:NOTHING
-        push dword ptr fs:[0]
-        mov dword ptr fs:[0], esp
-        ASSUME FS:ERROR
-        mov ecx, 0ffffffffh
-        jmp $ + 2
-        inc ecx
-        div ecx
-        call eax
-        retn
+        mov eax, dword ptr fs:[0]
+        mov eax, dword ptr[eax + 0x04]
+        push fn
+        push dword ptr[eax]
+        mov dword ptr[eax], esp
+    }
+
+    __try {
+        *(int*)0 = 0;
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER) {
+        __asm {
+            mov eax, dword ptr fs:[0]
+            mov eax, dword ptr[eax + 0x04]
+            mov esp, dword ptr[eax]
+            pop dword ptr[eax]
+        }
     }
 
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
-
 
 int incrementAge(int age) {
     //int ageIncr = conditional_jumps_with_same_target(age, 10);

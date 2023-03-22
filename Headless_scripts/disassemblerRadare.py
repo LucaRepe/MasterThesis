@@ -127,8 +127,11 @@ def run(filepath):
 
             for block_instr in block_info:
                 skip_adding = False
+                if block_instr['type'] == 'invalid':
+                    f.write('Invalid instruction found at ' + hex(block_instr['offset']) + '\n')
+                    continue
                 f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + 
-                    block_instr['opcode'].upper() + '\n')
+                    block_instr['opcode'].upper() + hex(block_instr['offset']) + '\n')
                 mnemonic = block_instr['opcode'].upper().split(' ')[0]
                 norm_instr = block_instr['opcode'].upper()
                 if mnemonic in cond_jump_instructions:

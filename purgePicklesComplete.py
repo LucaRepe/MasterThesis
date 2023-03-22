@@ -20,7 +20,7 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
 
-    base_address = 0x2b0000
+    base_address = 0xad0000
     bbl_string = open('/home/luca/Scrivania/MasterThesis/mainTechVS.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
@@ -34,8 +34,8 @@ def run():
     # max_pin_addr = max(pin_trace)
     # int_min = int(min_pin_addr,16)
     # int_max = int(max_pin_addr,16)
-    int_min = 0x11d60
-    int_max = 0x11e5e
+    int_min = 0x11810
+    int_max = 0x11882
     ghidra_purged = ghidra.copy()
     set_addr_ghidra = set()
     for node in ghidra:
@@ -74,7 +74,7 @@ def run():
     pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "wb"))
     pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_purged.p", "wb"))
 
-    print(f'{"--- Pin subset check on original addresses ---"}')
+    print(f'{"--- Pin subset check on original addresses ---"} {len(pin_trace)}')
     print('\n')
     print(f'{"Ghidra is"} {pin_trace.issubset(set_addr_ghidra)} {"- addresses:"} {len(set_addr_ghidra)}')
     print(f'{"Radare is"} {pin_trace.issubset(set_addr_radare)} {"- addresses:"} {len(set_addr_radare)}')
@@ -121,6 +121,19 @@ def run():
             set_addr_ida_purged.update(ida_purged.nodes[node].get('addr'))
         if ida_purged.nodes[node].get('edges') is not None:
             set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
+
+    print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra_purged))}')
+    # print(pin_trace.difference(set_addr_ghidra_purged))
+
+    print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare_purged))}')
+    # print(pin_trace.difference(set_addr_radare_purged))
+
+    print(f'{"Addresses present on Pin that are missing in Angr: "} {len(pin_trace.difference(set_addr_angr_purged))}')
+    # print(pin_trace.difference(set_addr_angr_purged))
+
+    print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida_purged))}')
+    # print(pin_trace.difference(set_addr_ida_purged))
+    print('\n')
     
     print(f'{"--- Jaccard similarity check on purged addresses ---"}')
     print('\n')
@@ -128,22 +141,6 @@ def run():
     print(f'{"Radare"} {jaccard(pin_trace, set_addr_radare_purged)}')
     print(f'{"Angr"} {jaccard(pin_trace, set_addr_angr_purged)}')
     print(f'{"Ida"} {jaccard(pin_trace, set_addr_ida_purged)}')
-    print('\n')
-
-    print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra_purged))}')
-    # print(pin_trace.difference(set_addr_ghidra_purged))
-    print('\n')
-
-    print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare_purged))}')
-    # print(pin_trace.difference(set_addr_radare_purged))
-    print('\n')
-
-    print(f'{"Addresses present on Pin that are missing in Angr: "} {len(pin_trace.difference(set_addr_angr_purged))}')
-    # print(pin_trace.difference(set_addr_angr_purged))
-    print('\n')
-
-    print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida_purged))}')
-    # print(pin_trace.difference(set_addr_ida_purged))
     print('\n')
 
     print(f'{"--- Jaccard similarity check on nodes ---"}')

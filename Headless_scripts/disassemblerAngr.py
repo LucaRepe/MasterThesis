@@ -6,7 +6,6 @@ import pickle
 import xxhash
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-import scipy as sp
 
 from typing import List
 

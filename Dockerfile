@@ -1,17 +1,27 @@
 # Build image from openjdk repository
-FROM openjdk:11-slim
+FROM python:3.9
 
-# Creation of MasterThesis directory
+# RUN apt-get -y install git
+
+RUN dpkg --add-architecture i386
+RUN apt-get update
+RUN apt-get install --no-install-recommends --assume-yes wine
+
+## Install wine and winetricks
+# RUN apt-get -y install --install-recommends winehq-devel
+
+# Creation of MasterThesis directory and subdirectories
 RUN mkdir -p MasterThesis
+RUN mkdir -p MasterThesis/Pickles
+RUN mkdir -p MasterThesis/Pickles/Complete
+
+# RUN pip install r2pipe networkx xxhash matplotlib angr
 
 # Copy directory inside the container
-ADD . /MasterThesis
+ADD /Headless_scripts /MasterThesis
+ADD /../../IDAPro7.7/ /MasterThesis/IDAPro7.7
 
 # The image build will operate from the /MasterThesis directory
 WORKDIR /MasterThesis
-
-# Define command to run analyzeHeadless
-CMD ["./ghidra_10.2.2_PUBLIC/support/analyzeHeadless", "/MasterThesis/", "GhidraProject", "-import", "main-bin", "-scriptPath", "/MasterThesis/ghidra_10.2.2_PUBLIC/support/", "-postScript", "disassemblerGhidra.py", "/output.txt", "-deleteProject"]
-
-# Define command to visualize output
-RUN cat output.txt
+RUN git clone https://github.com/radareorg/radare2
+RUN radare2/sys/install.sh

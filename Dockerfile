@@ -1,27 +1,40 @@
-# Build image from openjdk repository
-FROM python:3.9
-
-# RUN apt-get -y install git
-
-RUN dpkg --add-architecture i386
-RUN apt-get update
-RUN apt-get install --no-install-recommends --assume-yes wine
-
-## Install wine and winetricks
-# RUN apt-get -y install --install-recommends winehq-devel
+# Build image from python repository
+FROM python:3.10
 
 # Creation of MasterThesis directory and subdirectories
-RUN mkdir -p MasterThesis
-RUN mkdir -p MasterThesis/Pickles
-RUN mkdir -p MasterThesis/Pickles/Complete
+RUN mkdir -p MasterThesis \
+    && mkdir -p MasterThesis/Pickles \
+    && mkdir -p MasterThesis/Pickles/Complete
 
+ADD mainTechVS.exe /MasterThesis
+
+# Install OpenJDK17
+# RUN apt-get update \
+    # && apt-get install -y openjdk-17-jdk
+
+# Install python packages
 # RUN pip install r2pipe networkx xxhash matplotlib angr
 
-# Copy directory inside the container
-ADD /Headless_scripts /MasterThesis
-ADD /../../IDAPro7.7/ /MasterThesis/IDAPro7.7
+# Install wine
+RUN dpkg --add-architecture i386 \
+    && apt-get update \
+    && apt-get install --no-install-recommends --assume-yes wine \
+    && apt-get install wine32 \
+    && winecfg
 
-# The image build will operate from the /MasterThesis directory
-WORKDIR /MasterThesis
-RUN git clone https://github.com/radareorg/radare2
-RUN radare2/sys/install.sh
+# Install python packages inside wine
+RUN wine cmd \
+    && python -m pip install xxhash matplotlib networkx
+
+# Add tools inside the container
+# ADD /Headless_scripts /MasterThesis/Headless_scripts
+ADD /Tools/IDAPro7.7/ /MasterThesis/Tools/IDAPro7.7
+# ADD /Tools/ghidra_10.2.3_PUBLIC/ /MasterThesis/Tools/ghidra_10.2.3_PUBLIC
+# ADD /Tools/radare2/ /MasterThesis/Tools/radare2
+# ADD /Tools/Ghidrathon-2.0.1 /Tools/Ghidrathon-2.0.1
+
+# The image build will operate from the MasterThesis directory
+# WORKDIR /MasterThesis
+
+# Run installation of radare2
+# RUN Tools/radare2/sys/install.sh

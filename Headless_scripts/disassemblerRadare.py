@@ -5,8 +5,6 @@ import networkx as nx
 import pickle
 import xxhash
 from typing import Tuple, List
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 
 if (sys.version_info.major, sys.version_info.minor) < (3, 6):
     exit("Run me with Python3.6 (or above) please.")

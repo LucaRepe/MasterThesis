@@ -4,8 +4,6 @@ import re
 import networkx as nx
 import pickle
 import xxhash
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 
 from typing import List
 

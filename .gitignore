@@ -1,6 +1,7 @@
 /Books
 /Malware
 /Dots
+/Tools
 main-bin
 *.dot
 *.id*

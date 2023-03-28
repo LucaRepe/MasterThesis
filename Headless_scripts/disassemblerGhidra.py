@@ -18,8 +18,6 @@ from ghidra.program.model.lang import OperandType
 import networkx as nx
 import pickle
 import xxhash
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 
 
 class BasicBlock:

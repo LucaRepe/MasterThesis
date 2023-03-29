@@ -20,8 +20,8 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
 
-    base_address = 0xad0000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/mainTechVS.bbl').read()
+    base_address = 0x400000
+    bbl_string = open('/home/luca/Scrivania/MasterThesis/Lab15-01.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
     for addr in bbl_list:
@@ -30,12 +30,12 @@ def run():
             continue
         pin_trace.add(hex(real_address))
 
-    # min_pin_addr = min(pin_trace)
-    # max_pin_addr = max(pin_trace)
-    # int_min = int(min_pin_addr,16)
-    # int_max = int(max_pin_addr,16)
-    int_min = 0x11c50
-    int_max = 0x11cbe
+    min_pin_addr = min(pin_trace)
+    max_pin_addr = max(pin_trace)
+    int_min = int(min_pin_addr,16)
+    int_max = int(max_pin_addr,16)
+    # int_min = 0x11c50
+    # int_max = 0x11cbe
     ghidra_purged = ghidra.copy()
     set_addr_ghidra = set()
     for node in ghidra:

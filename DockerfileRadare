@@ -1,0 +1,22 @@
+# Build image from python repository
+FROM python:3.10
+
+# Creation of MasterThesis directory and subdirectories
+RUN mkdir MasterThesis \
+    && mkdir MasterThesis/Pickles \
+    && mkdir MasterThesis/Pickles/Complete
+
+ADD mainTechVS.exe /MasterThesis
+
+# Install python packages
+RUN pip install r2pipe networkx xxhash matplotlib
+
+# Add tools inside the container
+ADD /Headless_scripts/disassemblerRadare.py /MasterThesis
+ADD /Tools/radare2/ /MasterThesis/Tools/radare2
+
+# The image build will operate from the MasterThesis directory
+WORKDIR /MasterThesis
+
+# Run installation of radare2
+RUN Tools/radare2/sys/install.sh

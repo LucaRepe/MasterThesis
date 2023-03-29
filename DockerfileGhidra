@@ -1,0 +1,20 @@
+# Build image from python repository
+FROM openjdk:17-jdk
+
+# Creation of MasterThesis directory and subdirectories
+RUN mkdir MasterThesis \
+    && mkdir MasterThesis/Pickles \
+    && mkdir MasterThesis/Pickles/Complete
+
+ADD mainTechVS.exe /MasterThesis
+
+# Install python packages
+# RUN pip install r2pipe networkx xxhash matplotlib angr
+
+# Add tools inside the container
+ADD /Headless_scripts/disassemblerGhidra.py /MasterThesis
+ADD /Tools/ghidra_10.2.3_PUBLIC/ /MasterThesis/Tools/ghidra_10.2.3_PUBLIC
+ADD /Tools/Ghidrathon-2.0.1 /Tools/Ghidrathon-2.0.1
+
+# The image build will operate from the MasterThesis directory
+WORKDIR /MasterThesis

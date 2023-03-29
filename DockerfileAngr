@@ -1,0 +1,23 @@
+# Build image from python repository
+FROM python:3.10
+
+# Creation of MasterThesis directory and subdirectories
+RUN mkdir MasterThesis \
+    && mkdir MasterThesis/Pickles \
+    && mkdir MasterThesis/Pickles/Complete
+
+ADD mainTechVS.exe /MasterThesis
+ADD entrypointAngr.sh /MasterThesis/entrypoint.sh
+
+RUN chmod +x /MasterThesis/entrypoint.sh
+
+# Install python packages
+RUN pip install r2pipe networkx xxhash matplotlib angr
+
+# Add tools inside the container
+ADD /Headless_scripts/disassemblerAngr.py /MasterThesis
+
+# The image build will operate from the MasterThesis directory
+WORKDIR /MasterThesis
+
+ENTRYPOINT ["/MasterThesis/entrypoint.sh"]

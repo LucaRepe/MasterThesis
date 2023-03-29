@@ -1,33 +1,12 @@
 # Build image from python repository
 FROM ghcr.io/nyamisty/docker-wine-ida:7.7sp1
 
-RUN add-apt-repository ppa:deadsnakes/ppa
+ADD entrypointIDA.sh /MasterThesis/entrypoint.sh
 
-# Creation of MasterThesis directory and subdirectories
-RUN mkdir -p /root/host/Pickles \
-    && mkdir -p /root/host/Pickles/Complete
-
-ADD mainTechVS.exe /root/host/
-
-# Install OpenJDK17
-RUN apt install -y openjdk-17-jdk
-
-# Install python packages
-RUN pip install r2pipe networkx xxhash matplotlib angr
+RUN chmod +x /MasterThesis/entrypoint.sh
 
 # Install python packages inside wine
-RUN wine cmd
+RUN wine cmd \
+    python -m pip install xxhash matplotlib networkx
 
-RUN python3 -m pip install xxhash matplotlib networkx
-
-WORKDIR /root/host
-
-ADD /Headless_scripts /root/host/Headless_scripts
-ADD /Tools/ghidra_10.2.3_PUBLIC/ /root/host/Tools/ghidra_10.2.3_PUBLIC
-ADD /Tools/radare2/ /root/host/Tools/radare2
-ADD /Tools/Ghidrathon-2.0.1 /Tools/Ghidrathon-2.0.1
-
-# Run installation of radare2
-RUN /root/host/Tools/radare2/sys/install.sh
-
-# ENTRYPOINT ["/home/luca/Scrivania/MasterThesis/hello.sh"]
+ENTRYPOINT ["/MasterThesis/entrypoint.sh"]

@@ -9,3 +9,4 @@ main-bin
 *.til
 *.exe.i64
 *.i64
+*.old

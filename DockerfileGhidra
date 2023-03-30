@@ -1,5 +1,5 @@
 # Build image from python repository
-FROM openjdk:17-jdk
+FROM python:3.10.6
 
 # Creation of MasterThesis directory and subdirectories
 RUN mkdir MasterThesis \
@@ -7,6 +7,22 @@ RUN mkdir MasterThesis \
     && mkdir MasterThesis/Pickles/Complete
 
 ADD mainTechVS.exe /MasterThesis
+ADD entrypointGhidra.sh /MasterThesis/entrypoint.sh
+
+RUN chmod +x /MasterThesis/entrypoint.sh
+
+# Install OpenJDK17
+RUN apt-get update \
+    && apt-get install -y openjdk-17-jdk
+
+RUN apt install zip \
+    && curl -s "https://get.sdkman.io" | bash \
+    && /bin/bash -c "source /root/.sdkman/bin/sdkman-init.sh; sdk install gradle 8.0.2"
+
+ENV GRADLE_HOME=/app/gradle-8.0.2
+ENV PATH=$PATH:$GRADLE_HOME/bin
+
+RUN gradle -PGHIDRA_INSTALL_DIR=/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
 
 # Install python packages
 # RUN pip install r2pipe networkx xxhash matplotlib angr
@@ -14,7 +30,9 @@ ADD mainTechVS.exe /MasterThesis
 # Add tools inside the container
 ADD /Headless_scripts/disassemblerGhidra.py /MasterThesis
 ADD /Tools/ghidra_10.2.3_PUBLIC/ /MasterThesis/Tools/ghidra_10.2.3_PUBLIC
-ADD /Tools/Ghidrathon-2.0.1 /Tools/Ghidrathon-2.0.1
+# ADD /Tools/Ghidrathon-2.0.1 /Tools/Ghidrathon-2.0.1
 
 # The image build will operate from the MasterThesis directory
 WORKDIR /MasterThesis
+
+ENTRYPOINT ["/MasterThesis/entrypoint.sh"]

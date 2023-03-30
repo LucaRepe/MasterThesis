@@ -1,5 +1,5 @@
 # Build image from python repository
-FROM python:3.10
+FROM python:3.10.6
 
 # Creation of MasterThesis directory and subdirectories
 RUN mkdir MasterThesis \
@@ -7,6 +7,9 @@ RUN mkdir MasterThesis \
     && mkdir MasterThesis/Pickles/Complete
 
 ADD mainTechVS.exe /MasterThesis
+ADD entrypointRadare.sh /MasterThesis/entrypoint.sh
+
+RUN chmod +x /MasterThesis/entrypoint.sh
 
 # Install python packages
 RUN pip install r2pipe networkx xxhash matplotlib
@@ -20,3 +23,5 @@ WORKDIR /MasterThesis
 
 # Run installation of radare2
 RUN Tools/radare2/sys/install.sh
+
+ENTRYPOINT ["/MasterThesis/entrypoint.sh"]

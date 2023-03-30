@@ -1,0 +1,2 @@
+#!/bin/bash
+./Tools/ghidra_10.2.3_PUBLIC/support/analyzeHeadless /MasterThesis ANewProject -import /MasterThesis/mainTechVS.exe -scriptPath /MasterThesis -postScript disassemblerGhidra.py /MasterThesis/analysisGhidra.txt -deleteProject

@@ -1,5 +1,5 @@
 # Build image from python repository
-FROM python:3.10
+FROM python:3.10.6
 
 # Creation of MasterThesis directory and subdirectories
 RUN mkdir MasterThesis \

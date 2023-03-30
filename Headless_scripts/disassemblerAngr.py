@@ -32,7 +32,7 @@ class BasicBlock:
 
 def run():
     f = open(sys.argv[2], 'w')
-    p = angr.Project(sys.argv[1], auto_load_libs=False, main_opts={'base_addr': 0} )
+    p = angr.Project(sys.argv[1], auto_load_libs=False, main_opts={'base_addr': 0, 'force_rebase': True} )
     cfg = p.analyses.CFGFast()
     cfg.normalize()
 

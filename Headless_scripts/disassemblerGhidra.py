@@ -50,7 +50,7 @@ def to_hex(integer):
 
 
 def run():
-    f = open("/home/luca/Scrivania/MasterThesis/analysisGhidra.txt", 'w')
+    f = open("/MasterThesis/analysisGhidra.txt", 'w')
     currentProgram.setImageBase(currentProgram.getAddressFactory().getDefaultAddressSpace().getAddress('0x0000'), False)
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
      'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
@@ -278,7 +278,7 @@ def run():
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra.p", "wb"))
+    pickle.dump(g, open("/MasterThesis/Pickles/Complete/ghidra.p", "wb"))
 
     
 if __name__ == '__main__':

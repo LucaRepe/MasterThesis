@@ -1,12 +1,22 @@
 # Build image from python repository
 FROM ghcr.io/nyamisty/docker-wine-ida:7.7sp1
 
-ADD entrypointIDA.sh /MasterThesis/entrypoint.sh
+# Creation of MasterThesis directory and subdirectories
+RUN mkdir /root/MasterThesis \
+    && mkdir /root/MasterThesis/Pickles \
+    && mkdir /root/MasterThesis/Pickles/Complete
 
-RUN chmod +x /MasterThesis/entrypoint.sh
+ADD mainTechVS.exe /root/MasterThesis
+
+ADD /Headless_scripts/disassemblerIDA.py /root/MasterThesis
+
+ADD entrypointIDA.sh /root/MasterThesis/entrypoint.sh
+RUN chmod +x /root/MasterThesis/entrypoint.sh
 
 # Install python packages inside wine
-RUN wine cmd \
-    python -m pip install xxhash matplotlib networkx
+RUN wine python -m pip install xxhash matplotlib networkx
 
-ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# The image build will operate from the MasterThesis directory
+WORKDIR /root/MasterThesis
+
+ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]

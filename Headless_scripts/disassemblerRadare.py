@@ -312,7 +312,7 @@ def run(filepath):
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("Pickles/Complete/radare.p", "wb"))
+    pickle.dump(g, open(sys.argv[3], "wb"))
 
 
 if __name__ == '__main__':

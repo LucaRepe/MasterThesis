@@ -19,4 +19,5 @@ RUN wine python -m pip install xxhash matplotlib networkx
 # The image build will operate from the MasterThesis directory
 WORKDIR /root/MasterThesis
 
-ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]

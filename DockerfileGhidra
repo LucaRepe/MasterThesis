@@ -34,11 +34,12 @@ RUN cd /MasterThesis/Tools/Ghidrathon-2.0.1 \
     && gradle -PGHIDRA_INSTALL_DIR=/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
 
 # Move the extension inside Ghidra
-RUN mv /MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230402_Ghidrathon-2.0.1.zip /MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
+RUN mv /MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230404_Ghidrathon-2.0.1.zip /MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
     && cd /MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
-    && unzip ghidra_10.2.3_PUBLIC_20230402_Ghidrathon-2.0.1.zip
+    && unzip ghidra_10.2.3_PUBLIC_20230404_Ghidrathon-2.0.1.zip
 
 # The image build will operate from the MasterThesis directory
 WORKDIR /MasterThesis
 
-ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]

@@ -20,4 +20,5 @@ ADD /Headless_scripts/disassemblerAngr.py /MasterThesis
 # The image build will operate from the MasterThesis directory
 WORKDIR /MasterThesis
 
-ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]

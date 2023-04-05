@@ -24,4 +24,5 @@ WORKDIR /MasterThesis
 # Run installation of radare2
 RUN Tools/radare2/sys/install.sh
 
-ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]

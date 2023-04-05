@@ -1,25 +1,40 @@
-# Sure, here is some sample Python code that uses the Docker SDK for Python to start a Docker container and wait until it ends:
-
+import os
 import docker
+import tarfile
+import hashlib
 
-client = docker.from_env()
 
-# Start a container
-container = client.containers.run("image_name", detach=True)
+def get_file_sha256sum(file_path: str) -> str:
+    hash_function = hashlib.sha256()
+    with open(file_path, 'rb', buffering=0) as f:
+        for chunk in iter(lambda: f.read(65536), b''):
+            hash_function.update(chunk)
+    return hash_function.hexdigest()
 
-# Wait for the container to exit
-exit_code = container.wait()['StatusCode']
+def run():
+    
+    input_folder = '/home/luca/Scrivania/MasterThesis/Input'
+    client = docker.from_env()
+    container = client.containers.run("angr", detach=True)
 
-# Remove the container
-container.remove()
+    for filename in os.listdir(input_folder):
 
-print("Container exited with code", exit_code)
-# In this code, we first create a Docker client using the docker.from_env() method. Then, we start a container using the client.containers.run() method,
-# passing the name of the Docker image we want to run.
+        filepath = os.path.join(input_folder, filename)
+        tarpath = f"/tmp/{filename}.tar"
+        with tarfile.open(tarpath, mode='w') as tar:
+            tar.add(filepath, arcname=os.path.basename(filepath))
 
-# We set detach=True to run the container in the background, so the code doesn't block while the container is running.
+        with open(tarpath, 'rb') as f:
+            container.put_archive('/MasterThesis', f.read())
+        
+        cmd = f"mkdir Pickles/{filename}"
+        container.exec_run(cmd)
 
-# Next, we wait for the container to exit using the container.wait() method, which blocks until the container is stopped.
-# This method returns a dictionary containing the exit code of the container, which we extract with the ['StatusCode'] key.
+        cmd = f"python3 disassemblerAngr.py {filename} analysisAngr.txt Pickles/{filename}/angr.p"
+        container.exec_run(cmd)
 
-# Finally, we remove the container with the container.remove() method, and print out the exit code of the container.
+    # container.remove()
+
+
+if __name__ == '__main__':
+    run()

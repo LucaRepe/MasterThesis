@@ -27,7 +27,6 @@ def run():
     client = docker.from_env()
     containerAngr = client.containers.run(
         image='angr',
-        # name='containerAngr',
         detach=True,
         mounts=[docker.types.Mount(
             source='/home/luca/Scrivania/MasterThesis/Pickles/',
@@ -35,10 +34,29 @@ def run():
             type='bind'
         )]
     )
+
+    # containerIda = client.containers.run(
+        # image='ida',
+        # detach=True,
+        # mounts=[docker.types.Mount(
+            # source='/home/luca/Scrivania/MasterThesis/Pickles/',
+            # target='/root/MasterThesis/Pickles/',
+            # type='bind'
+        # )]
+    # )
+
+    # containerGhidra = client.containers.run(
+        # image='ghidra',
+        # detach=True,
+        # mounts=[docker.types.Mount(
+            # source='/home/luca/Scrivania/MasterThesis/Pickles/',
+            # target='/MasterThesis/Pickles/',
+            # type='bind'
+        # )]
+    # )
 
     containerRadare = client.containers.run(
         image='radare2',
-        # name='containerRadare',
         detach=True,
         mounts=[docker.types.Mount(
             source='/home/luca/Scrivania/MasterThesis/Pickles/',
@@ -47,7 +65,7 @@ def run():
         )]
     )
 
-    containers = [containerAngr, containerRadare]
+    containers = [containerAngr, containerRadare] # containerIda, containerGhidra
     for container in containers:
         for filename in os.listdir(input_folder):
             filepath = os.path.join(input_folder, filename)
@@ -65,10 +83,13 @@ def run():
             container_info = container.attrs
             if container_info['Config']['Image'] == 'angr':
                 cmd = f"python3 disassemblerAngr.py {filename} analysisAngr.txt Pickles/{sha256}/angr.p"
-                container.exec_run(cmd)
             if container_info['Config']['Image'] == 'radare2':
                 cmd = f"python3 disassemblerRadare.py {filename} analysisRadare.txt Pickles/{sha256}/radare.p"
-                container.exec_run(cmd)
+            # if container_info['Config']['Image'] == 'ida':
+                # cmd = f'wine /root/.wine/drive_c/IDA/ida64.exe -c -A -S"/root/MasterThesis/disassemblerIDA.py /root/MasterThesis/analysisIDA.txt /root/MasterThesis/Pickles/{sha256}/ida.p" /root/MasterThesis/{filename}'
+            # if container_info['Config']['Image'] == 'ghidra':
+                # cmd = f'./Tools/ghidra_10.2.3_PUBLIC/support/analyzeHeadless /MasterThesis ANewProject -import /MasterThesis/{filename} -scriptPath /MasterThesis -postScript disassemblerGhidra.py /MasterThesis/analysisGhidra.txt -deleteProject'
+            container.exec_run(cmd)
 
         # container.remove()
 

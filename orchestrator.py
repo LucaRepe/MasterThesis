@@ -8,7 +8,7 @@ def is_supported_file(file_path: str) -> bool:
         with open(file_path, 'rb') as fp:
             first_two_bytes = fp.read(2)
             if first_two_bytes == b'MZ':
-                return True  # PE
+                return True
     except Exception:
         pass
     return False
@@ -30,42 +30,42 @@ def run():
         detach=True,
         mounts=[docker.types.Mount(
             source='/home/luca/Scrivania/MasterThesis/Pickles/',
-            target='/MasterThesis/Pickles/',
+            target='/root/MasterThesis/Pickles/',
             type='bind'
         )]
     )
 
-    # containerIda = client.containers.run(
-        # image='ida',
-        # detach=True,
-        # mounts=[docker.types.Mount(
-            # source='/home/luca/Scrivania/MasterThesis/Pickles/',
-            # target='/root/MasterThesis/Pickles/',
-            # type='bind'
-        # )]
-    # )
+    containerIda = client.containers.run(
+        image='ida',
+        detach=True,
+        mounts=[docker.types.Mount(
+            source='/home/luca/Scrivania/MasterThesis/Pickles/',
+            target='/root/MasterThesis/Pickles/',
+            type='bind'
+        )]
+    )
 
-    # containerGhidra = client.containers.run(
-        # image='ghidra',
-        # detach=True,
-        # mounts=[docker.types.Mount(
-            # source='/home/luca/Scrivania/MasterThesis/Pickles/',
-            # target='/MasterThesis/Pickles/',
-            # type='bind'
-        # )]
-    # )
+    containerGhidra = client.containers.run(
+        image='ghidra',
+        detach=True,
+        mounts=[docker.types.Mount(
+            source='/home/luca/Scrivania/MasterThesis/Pickles/',
+            target='/root/MasterThesis/Pickles/',
+            type='bind'
+        )]
+    )
 
     containerRadare = client.containers.run(
         image='radare2',
         detach=True,
         mounts=[docker.types.Mount(
             source='/home/luca/Scrivania/MasterThesis/Pickles/',
-            target='/MasterThesis/Pickles/',
+            target='/root/MasterThesis/Pickles/',
             type='bind'
         )]
     )
 
-    containers = [containerAngr, containerRadare] # containerIda, containerGhidra
+    containers = [containerAngr, containerRadare,containerIda, containerGhidra]
     for container in containers:
         for filename in os.listdir(input_folder):
             filepath = os.path.join(input_folder, filename)
@@ -77,18 +77,18 @@ def run():
             with tarfile.open(tarpath, mode='w') as tar:
                 tar.add(filepath, arcname=os.path.basename(filepath))
             with open(tarpath, 'rb') as f:
-                container.put_archive('/MasterThesis', f.read())
-            cmd = f"mkdir Pickles/{sha256}"
+                container.put_archive('/root/MasterThesis', f.read())
+            cmd = f"mkdir /root/MasterThesis/Pickles/{sha256}"
             container.exec_run(cmd)
             container_info = container.attrs
             if container_info['Config']['Image'] == 'angr':
-                cmd = f"python3 disassemblerAngr.py {filename} analysisAngr.txt Pickles/{sha256}/angr.p"
+                cmd = f"python3 disassemblerAngr.py {filename} Pickles/{sha256}/analysisAngr.txt Pickles/{sha256}/angr.p"
             if container_info['Config']['Image'] == 'radare2':
-                cmd = f"python3 disassemblerRadare.py {filename} analysisRadare.txt Pickles/{sha256}/radare.p"
-            # if container_info['Config']['Image'] == 'ida':
-                # cmd = f'wine /root/.wine/drive_c/IDA/ida64.exe -c -A -S"/root/MasterThesis/disassemblerIDA.py /root/MasterThesis/analysisIDA.txt /root/MasterThesis/Pickles/{sha256}/ida.p" /root/MasterThesis/{filename}'
-            # if container_info['Config']['Image'] == 'ghidra':
-                # cmd = f'./Tools/ghidra_10.2.3_PUBLIC/support/analyzeHeadless /MasterThesis ANewProject -import /MasterThesis/{filename} -scriptPath /MasterThesis -postScript disassemblerGhidra.py /MasterThesis/analysisGhidra.txt -deleteProject'
+                cmd = f"python3 disassemblerRadare.py {filename} Pickles/{sha256}/analysisRadare.txt Pickles/{sha256}/radare.p"
+            if container_info['Config']['Image'] == 'ida':
+                cmd = f'wine /root/.wine/drive_c/IDA/ida64.exe -c -A -S"/root/MasterThesis/disassemblerIDA.py /root/MasterThesis/Pickles/{sha256}/analysisIDA.txt /root/MasterThesis/Pickles/{sha256}/ida.p" /root/MasterThesis/{filename}'
+            if container_info['Config']['Image'] == 'ghidra':
+                cmd = f'./Tools/ghidra_10.2.3_PUBLIC/support/analyzeHeadless /root/MasterThesis ANewProject -import /root/MasterThesis/{filename} -scriptPath /root/MasterThesis -postScript disassemblerGhidra.py /root/MasterThesis/Pickles/{sha256}/analysisGhidra.txt /root/MasterThesis/Pickles/{sha256}/ghidra.p -deleteProject'
             container.exec_run(cmd)
 
         # container.remove()

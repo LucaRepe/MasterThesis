@@ -2,27 +2,24 @@
 FROM python:3.10.6
 
 # Creation of MasterThesis directory and subdirectories
-RUN mkdir MasterThesis \
-    && mkdir MasterThesis/Pickles \
-    && mkdir MasterThesis/Pickles/Complete
+RUN mkdir /root/MasterThesis \
+    && mkdir /root/MasterThesis/Pickles
 
-ADD mainTechVS.exe /MasterThesis
-ADD entrypointRadare.sh /MasterThesis/entrypoint.sh
-
-RUN chmod +x /MasterThesis/entrypoint.sh
+# ADD entrypointRadare.sh /root/MasterThesis/entrypoint.sh
+# RUN chmod +x /root/MasterThesis/entrypoint.sh
 
 # Install python packages
-RUN pip install r2pipe networkx xxhash matplotlib
+RUN pip install r2pipe networkx xxhash
 
 # Add tools inside the container
-ADD /Headless_scripts/disassemblerRadare.py /MasterThesis
-ADD /Tools/radare2/ /MasterThesis/Tools/radare2
+ADD /Headless_scripts/disassemblerRadare.py /root/MasterThesis
+ADD /Tools/radare2/ /root/MasterThesis/Tools/radare2
 
 # The image build will operate from the MasterThesis directory
-WORKDIR /MasterThesis
+WORKDIR /root/MasterThesis
 
 # Run installation of radare2
-RUN Tools/radare2/sys/install.sh
+RUN /root/MasterThesis/Tools/radare2/sys/install.sh
 
-# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

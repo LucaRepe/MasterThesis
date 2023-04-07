@@ -1,6 +1,9 @@
 from __future__ import print_function, division
 from typing import List
 import re
+import networkx as nx
+import pickle
+import xxhash
 
 from ghidra.util.task import TaskMonitor
 from ghidra.program.model.block import BasicBlockModel
@@ -14,11 +17,6 @@ from ghidra.program.model.listing import Listing
 from ghidra.program.database.code import InstructionDB
 from ghidra.program.model.address import Address
 from ghidra.program.model.lang import OperandType
-
-import networkx as nx
-import pickle
-import xxhash
-
 
 class BasicBlock:
     start_addr: int
@@ -50,7 +48,8 @@ def to_hex(integer):
 
 
 def run():
-    f = open("/MasterThesis/analysisGhidra.txt", 'w')
+    args = getScriptArgs()
+    f = open(args[0], 'w')
     currentProgram.setImageBase(currentProgram.getAddressFactory().getDefaultAddressSpace().getAddress('0x0000'), False)
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
      'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \
@@ -278,7 +277,7 @@ def run():
     # nx.draw_networkx(g, edge_color=colors, arrows=True)
     # plt.legend(handles=legend_elements, loc='upper right')
     # plt.show()
-    pickle.dump(g, open("/MasterThesis/Pickles/Complete/ghidra.p", "wb"))
+    pickle.dump(g, open(args[1], "wb"))
 
     
 if __name__ == '__main__':

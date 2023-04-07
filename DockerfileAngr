@@ -2,23 +2,20 @@
 FROM python:3.10.6
 
 # Creation of MasterThesis directory and subdirectories
-RUN mkdir MasterThesis \
-    && mkdir MasterThesis/Pickles \
-    && mkdir MasterThesis/Pickles/Complete
+RUN mkdir /root/MasterThesis \
+    && mkdir /root/MasterThesis/Pickles
 
-ADD mainTechVS.exe /MasterThesis
-ADD entrypointAngr.sh /MasterThesis/entrypoint.sh
-
-RUN chmod +x /MasterThesis/entrypoint.sh
+# ADD entrypointAngr.sh /root/MasterThesis/entrypoint.sh
+# RUN chmod +x /root/MasterThesis/entrypoint.sh
 
 # Install python packages
-RUN pip install r2pipe networkx xxhash matplotlib angr
+RUN pip install networkx xxhash angr
 
 # Add tools inside the container
-ADD /Headless_scripts/disassemblerAngr.py /MasterThesis
+ADD /Headless_scripts/disassemblerAngr.py /root/MasterThesis
 
 # The image build will operate from the MasterThesis directory
-WORKDIR /MasterThesis
+WORKDIR /root/MasterThesis
 
-# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

@@ -2,14 +2,11 @@
 FROM python:3.10.6
 
 # Creation of MasterThesis directory and subdirectories
-RUN mkdir MasterThesis \
-    && mkdir MasterThesis/Pickles \
-    && mkdir MasterThesis/Pickles/Complete
+RUN mkdir /root/MasterThesis \
+    && mkdir /root/MasterThesis/Pickles
 
-ADD mainTechVS.exe /MasterThesis
-ADD entrypointGhidra.sh /MasterThesis/entrypoint.sh
-
-RUN chmod +x /MasterThesis/entrypoint.sh
+# ADD entrypointGhidra.sh /root/MasterThesis/entrypoint.sh
+# RUN chmod +x /root/MasterThesis/entrypoint.sh
 
 # Install OpenJDK17
 RUN apt-get update \
@@ -22,24 +19,24 @@ RUN wget https://services.gradle.org/distributions/gradle-8.0.2-bin.zip \
     && ln -s /opt/gradle-8.0.2/bin/gradle /usr/bin/gradle
 
 # Install python packages
-RUN pip install networkx xxhash matplotlib
+RUN pip install networkx xxhash
 
 # Add tools inside the container
-ADD /Headless_scripts/disassemblerGhidra.py /MasterThesis
-ADD /Tools/ghidra_10.2.3_PUBLIC/ /MasterThesis/Tools/ghidra_10.2.3_PUBLIC
-ADD /Tools/Ghidrathon-2.0.1 /MasterThesis/Tools/Ghidrathon-2.0.1
+ADD /Headless_scripts/disassemblerGhidra.py /root/MasterThesis
+ADD /Tools/ghidra_10.2.3_PUBLIC/ /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
+ADD /Tools/Ghidrathon-2.0.1 /root/MasterThesis/Tools/Ghidrathon-2.0.1
 
 # Run command to build Ghidrathon
-RUN cd /MasterThesis/Tools/Ghidrathon-2.0.1 \ 
-    && gradle -PGHIDRA_INSTALL_DIR=/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
+RUN cd /root/MasterThesis/Tools/Ghidrathon-2.0.1 \ 
+    && gradle -PGHIDRA_INSTALL_DIR=/root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
 
 # Move the extension inside Ghidra
-RUN mv /MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230405_Ghidrathon-2.0.1.zip /MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
-    && cd /MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
-    && unzip ghidra_10.2.3_PUBLIC_20230405_Ghidrathon-2.0.1.zip
+RUN mv /root/MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230407_Ghidrathon-2.0.1.zip /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
+    && cd /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
+    && unzip ghidra_10.2.3_PUBLIC_20230407_Ghidrathon-2.0.1.zip
 
 # The image build will operate from the MasterThesis directory
-WORKDIR /MasterThesis
+WORKDIR /root/MasterThesis
 
-# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
+# ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

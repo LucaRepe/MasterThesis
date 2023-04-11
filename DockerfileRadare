@@ -5,9 +5,6 @@ FROM python:3.10.6
 RUN mkdir /root/MasterThesis \
     && mkdir /root/MasterThesis/Pickles
 
-# ADD entrypointRadare.sh /root/MasterThesis/entrypoint.sh
-# RUN chmod +x /root/MasterThesis/entrypoint.sh
-
 # Install python packages
 RUN pip install r2pipe networkx xxhash
 
@@ -21,5 +18,4 @@ WORKDIR /root/MasterThesis
 # Run installation of radare2
 RUN /root/MasterThesis/Tools/radare2/sys/install.sh
 
-# ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

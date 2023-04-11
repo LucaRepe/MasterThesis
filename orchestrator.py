@@ -44,7 +44,6 @@ def execute_command(sha256, filename):
 
 
 def process_file(filepath):
-    print(runningContainer)
     filename = os.path.basename(filepath)
     if not is_supported_file(file_path=filepath):
         print(f'{"File"} {filename} {"is not a x86 PE"}')
@@ -60,7 +59,7 @@ def process_file(filepath):
     execute_command(sha256, filename)
     
 
-def run():   
+def main():   
     client = docker.from_env() 
     global runningContainer
     files = glob.glob('/home/luca/Scrivania/MasterThesis/Input/*.exe')
@@ -83,4 +82,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    main()

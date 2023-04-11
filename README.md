@@ -11,6 +11,7 @@ Each node in the graph represents a basic block and contains as attributes:
     - start_addr: starting address of the basic block
     - bytes: list of opcode bytes of the instructions 
     - instr: list of instructions
+    - instr_norm: list of normalized instructions
     - addr: list of addresses
     - edges: list of edges
     - edge_attr: list of attributes of edges' types

@@ -5,9 +5,6 @@ FROM python:3.10.6
 RUN mkdir /root/MasterThesis \
     && mkdir /root/MasterThesis/Pickles
 
-# ADD entrypointGhidra.sh /root/MasterThesis/entrypoint.sh
-# RUN chmod +x /root/MasterThesis/entrypoint.sh
-
 # Install OpenJDK17
 RUN apt-get update \
     && apt-get install -y openjdk-17-jdk
@@ -38,5 +35,4 @@ RUN mv /root/MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230
 # The image build will operate from the MasterThesis directory
 WORKDIR /root/MasterThesis
 
-# ENTRYPOINT ["/root/MasterThesis/entrypoint.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

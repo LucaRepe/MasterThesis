@@ -3,7 +3,6 @@
 /Dots
 /Tools
 /Input
-main-bin
 *.dot
 *.id*
 *.nam

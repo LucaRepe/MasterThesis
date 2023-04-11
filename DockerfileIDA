@@ -5,9 +5,6 @@ FROM ghcr.io/nyamisty/docker-wine-ida:7.7sp1
 RUN mkdir /root/MasterThesis \
     && mkdir /root/MasterThesis/Pickles
 
-# ADD entrypointIDA.sh /root/MasterThesis/entrypoint.sh
-# RUN chmod +x /root/MasterThesis/entrypoint.sh
-
 ADD /Headless_scripts/disassemblerIDA.py /root/MasterThesis
 
 # Install python packages inside wine
@@ -16,5 +13,4 @@ RUN wine python -m pip install xxhash networkx
 # The image build will operate from the MasterThesis directory
 WORKDIR /root/MasterThesis
 
-# ENTRYPOINT ["/MasterThesis/entrypoint.sh"]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

@@ -3,6 +3,7 @@
 /Dots
 /Tools
 /Input
+/Common/__pycache__
 *.dot
 *.id*
 *.nam

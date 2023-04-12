@@ -20,8 +20,8 @@ def run():
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
 
-    base_address = 0x400000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/Lab15-01.bbl').read()
+    base_address = 0xa70000
+    bbl_string = open('/home/luca/Scrivania/MasterThesis/reportC.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
     for addr in bbl_list:

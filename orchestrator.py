@@ -6,7 +6,7 @@ import glob
 import multiprocessing
 import magic
 
-runningContainer = None
+running_container = None
 
 def is_supported_file(file_path: str) -> bool:
     try:
@@ -30,17 +30,19 @@ def get_sha256sum(file_path: str) -> str:
     return hash_function.hexdigest()
 
 
-def execute_command(sha256, filename):
-    container_info = runningContainer.attrs
+def execute_disass(sha256, filename):
+    container_info = running_container.attrs
     if container_info['Config']['Image'] == 'angr':
         cmd = f"python3 disassemblerAngr.py {filename} Pickles/{sha256}/analysisAngr.txt Pickles/{sha256}/angr.p"
-    elif container_info['Config']['Image'] == 'radare2':
-        cmd = f"python3 disassemblerRadare.py {filename} Pickles/{sha256}/analysisRadare.txt Pickles/{sha256}/radare.p"
-    elif container_info['Config']['Image'] == 'ida':
-        cmd = f'wine /root/.wine/drive_c/IDA/ida64.exe -c -A -S"/root/MasterThesis/disassemblerIDA.py /root/MasterThesis/Pickles/{sha256}/analysisIDA.txt /root/MasterThesis/Pickles/{sha256}/ida.p" /root/MasterThesis/{filename}'
     elif container_info['Config']['Image'] == 'ghidra':
         cmd = f'./Tools/ghidra_10.2.3_PUBLIC/support/analyzeHeadless /root/MasterThesis ANewProject -import /root/MasterThesis/{filename} -scriptPath /root/MasterThesis -postScript disassemblerGhidra.py /root/MasterThesis/Pickles/{sha256}/analysisGhidra.txt /root/MasterThesis/Pickles/{sha256}/ghidra.p -deleteProject'
-    runningContainer.exec_run(cmd)
+    elif container_info['Config']['Image'] == 'ida':
+        cmd = f'wine /root/.wine/drive_c/IDA/ida64.exe -c -A -S"/root/MasterThesis/disassemblerIDA.py /root/MasterThesis/Pickles/{sha256}/analysisIDA.txt /root/MasterThesis/Pickles/{sha256}/ida.p" /root/MasterThesis/{filename}'
+    elif container_info['Config']['Image'] == 'radare2':
+        cmd = f"python3 disassemblerRadare.py {filename} Pickles/{sha256}/analysisRadare.txt Pickles/{sha256}/radare.p"
+    running_container.exec_run(cmd)
+    cmd = f'cmd = "chmod -R a+wrx /root/MasterThesis/Pickles/{sha256}"'
+    running_container.exec_run(cmd)
 
 
 def process_file(filepath):
@@ -53,28 +55,35 @@ def process_file(filepath):
     with tarfile.open(tarpath, mode='w') as tar:
         tar.add(filepath, arcname=os.path.basename(filepath))
     with open(tarpath, 'rb') as f:
-        runningContainer.put_archive('/root/MasterThesis', f.read())
+        running_container.put_archive('/root/MasterThesis', f.read())
     cmd = f"mkdir /root/MasterThesis/Pickles/{sha256}"
-    runningContainer.exec_run(cmd)
-    execute_command(sha256, filename)
+    running_container.exec_run(cmd)
+    execute_disass(sha256, filename)
     
 
 def main():   
     client = docker.from_env() 
-    global runningContainer
-    files = glob.glob('/home/luca/Scrivania/MasterThesis/Input/*.exe')
+    global running_container
+    input_folder = "/home/luca/Scrivania/MasterThesis/Input"
+    assert input_folder
+    files = glob.glob(input_folder + '/*.exe')
+    
     image_names = ['angr', 'ghidra', 'ida', 'radare2']
     for name in image_names:
-        container = client.containers.run(
-            image=name,
-            detach=True,
-            mounts=[docker.types.Mount(
-                source='/home/luca/Scrivania/MasterThesis/Pickles/',
-                target='/root/MasterThesis/Pickles/',
-                type='bind'
-            )]
-        )
-        runningContainer = container
+        if client.images.get(name):
+            container = client.containers.run(
+                image=name,
+                detach=True,
+                mounts=[docker.types.Mount(
+                    source='/home/luca/Scrivania/MasterThesis/Pickles/',
+                    target='/root/MasterThesis/Pickles/',
+                    type='bind'
+                )]
+            )
+        else:
+            print(f"{name} {'image not found'}")
+            return
+        running_container = container
         with multiprocessing.Pool() as pool:
             pool.map(process_file, files)
         container.stop()

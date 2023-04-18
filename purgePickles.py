@@ -14,14 +14,14 @@ def jaccard(s1, s2):
     return float(len(s1.intersection(s2)) / len(s1.union(s2)))
 
 
-def run():
+def main():
     ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra.p", "rb"))
     radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare.p", "rb"))
     angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
     ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
 
-    base_address = 0xa70000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/reportC.bbl').read()
+    base_address = 0x400000
+    bbl_string = open('/home/luca/Scrivania/MasterThesis/Lab15-01.bbl').read()
     bbl_list = re.findall('.{1,8}', bbl_string)
     pin_trace = set()
     for addr in bbl_list:
@@ -34,8 +34,8 @@ def run():
     max_pin_addr = max(pin_trace)
     int_min = int(min_pin_addr,16)
     int_max = int(max_pin_addr,16)
-    # int_min = 0x11c50
-    # int_max = 0x11cbe
+
+
     ghidra_purged = ghidra.copy()
     set_addr_ghidra = set()
     for node in ghidra:
@@ -52,7 +52,6 @@ def run():
 
     radare_purged = purge(radare_purged, int_max, int_min)
     
-
     angr_purged = angr.copy()
     set_addr_angr = set()
     for node in angr:
@@ -84,54 +83,61 @@ def run():
 
     set_nodes_ghidra_purged = set()
     set_addr_ghidra_purged = set()
-    set_edges_ghidra_purged = set()
-    for node in ghidra_purged:
+    for node in ghidra_purged.nodes():
         set_nodes_ghidra_purged.add(node)
         if ghidra_purged.nodes[node].get('addr') is not None:
             set_addr_ghidra_purged.update(ghidra_purged.nodes[node].get('addr'))
-        if ghidra_purged.nodes[node].get('edges') is not None:
-            set_edges_ghidra_purged.update(ghidra_purged.nodes[node].get('edges'))
+    
+    set_edges_ghidra_purged = set()
+    for edge in ghidra_purged.edges():
+        set_edges_ghidra_purged.update(edge)
         
+
     set_nodes_radare_purged = set()
     set_addr_radare_purged = set()
-    set_edges_radare_purged = set()
-    for node in radare_purged:
+    for node in radare_purged.nodes():
         set_nodes_radare_purged.add(node)
         if radare_purged.nodes[node].get('addr') is not None:
             set_addr_radare_purged.update(radare_purged.nodes[node].get('addr'))
-        if radare_purged.nodes[node].get('edges') is not None:
-            set_edges_radare_purged.update(radare_purged.nodes[node].get('edges'))
+
+    set_edges_radare_purged = set()
+    for edge in radare_purged.edges():
+        set_edges_radare_purged.update(edge)
+
 
     set_nodes_angr_purged = set()
     set_addr_angr_purged = set()
-    set_edges_angr_purged = set()
-    for node in angr_purged:
+    for node in angr_purged.nodes():
         set_nodes_angr_purged.add(node)
         if angr_purged.nodes[node].get('addr') is not None:
             set_addr_angr_purged.update(angr_purged.nodes[node].get('addr'))
-        if angr_purged.nodes[node].get('edges') is not None:
-            set_edges_angr_purged.update(angr_purged.nodes[node].get('edges'))
+
+    set_edges_angr_purged = set()
+    for edge in angr_purged.edges():
+        set_edges_angr_purged.update(edge)
+
 
     set_nodes_ida_purged = set()
     set_addr_ida_purged = set()
-    set_edges_ida_purged = set()
-    for node in ida_purged:
+    for node in ida_purged.nodes():
         set_nodes_ida_purged.add(node)
         if ida_purged.nodes[node].get('addr') is not None:
             set_addr_ida_purged.update(ida_purged.nodes[node].get('addr'))
-        if ida_purged.nodes[node].get('edges') is not None:
-            set_edges_ida_purged.update(ida_purged.nodes[node].get('edges'))
+    
+    set_edges_ida_purged = set()
+    for edge in ida_purged.edges():
+        set_edges_ida_purged.update(edge)
 
-    print(f'{"Addresses present on Pin that are missing in Ghidra: "} {len(pin_trace.difference(set_addr_ghidra_purged))}')
+    print(f'{"Addresses present on Pin that are missing in Ghidra:"} {len(pin_trace.difference(set_addr_ghidra_purged))}')
     # print(pin_trace.difference(set_addr_ghidra_purged))
 
-    print(f'{"Addresses present on Pin that are missing in Radare: "} {len(pin_trace.difference(set_addr_radare_purged))}')
+    print(f'{"Addresses present on Pin that are missing in Radare:"} {len(pin_trace.difference(set_addr_radare_purged))}')
     # print(pin_trace.difference(set_addr_radare_purged))
 
-    print(f'{"Addresses present on Pin that are missing in Angr: "} {len(pin_trace.difference(set_addr_angr_purged))}')
+    print(f'{"Addresses present on Pin that are missing in Angr:"} {len(pin_trace.difference(set_addr_angr_purged))}')
     # print(pin_trace.difference(set_addr_angr_purged))
 
-    print(f'{"Addresses present on Pin that are missing in Ida: "} {len(pin_trace.difference(set_addr_ida_purged))}')
+    print(f'{"Addresses present on Pin that are missing in Ida:"} {len(pin_trace.difference(set_addr_ida_purged))}')
     # print(pin_trace.difference(set_addr_ida_purged))
     print('\n')
     
@@ -191,4 +197,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    main()

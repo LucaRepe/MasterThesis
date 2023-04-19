@@ -115,34 +115,26 @@ def main():
         if edge in common_edges_maj:
             radare_common.add_edge(edge[0], edge[1])
 
-    angr_diff = nx.DiGraph()
-    for node in angr_purged:
-        angr_diff.add_node(node, **angr_purged.nodes[node])
-    angr_diff.remove_nodes_from(angr_common.nodes())
-    angr_diff.add_edges_from([edge for edge in angr_purged.edges() if edge[0] in angr_diff.nodes() and edge[1] in angr_diff.nodes()])
+    angr_diff_maj = angr_purged.copy()
+    angr_diff_maj.remove_nodes_from(angr_common.nodes())
+    angr_diff_maj.add_edges_from([edge for edge in angr_purged.edges() if edge[0] in angr_diff_maj.nodes() and edge[1] in angr_diff_maj.nodes()])
 
-    ghidra_diff = nx.DiGraph()
-    for node in ghidra_purged:
-        ghidra_diff.add_node(node, **ghidra_purged.nodes[node])
-    ghidra_diff.remove_nodes_from(ghidra_common.nodes())
-    ghidra_diff.add_edges_from([edge for edge in ghidra_purged.edges() if edge[0] in ghidra_diff.nodes() and edge[1] in ghidra_diff.nodes()])
+    ghidra_diff_maj = ghidra_purged.copy()
+    ghidra_diff_maj.remove_nodes_from(ghidra_common.nodes())
+    ghidra_diff_maj.add_edges_from([edge for edge in ghidra_purged.edges() if edge[0] in ghidra_diff_maj.nodes() and edge[1] in ghidra_diff_maj.nodes()])
 
-    ida_diff = nx.DiGraph()
-    for node in ida_purged:
-        ida_diff.add_node(node, **ida_purged.nodes[node])
-    ida_diff.remove_nodes_from(ida_common.nodes())
-    ida_diff.add_edges_from([edge for edge in ida_purged.edges() if edge[0] in ida_diff.nodes() and edge[1] in ida_diff.nodes()])
+    ida_diff_maj = ida_purged.copy()
+    ida_diff_maj.remove_nodes_from(ida_common.nodes())
+    ida_diff_maj.add_edges_from([edge for edge in ida_purged.edges() if edge[0] in ida_diff_maj.nodes() and edge[1] in ida_diff_maj.nodes()])
 
-    radare_diff = nx.DiGraph()
-    for node in radare_purged:
-        radare_diff.add_node(node, **radare_purged.nodes[node])
-    radare_diff.remove_nodes_from(radare_common.nodes())
-    radare_diff.add_edges_from([edge for edge in radare_purged.edges() if edge[0] in radare_diff.nodes() and edge[1] in radare_diff.nodes()])
+    radare_diff_maj = radare_purged.copy()
+    radare_diff_maj.remove_nodes_from(radare_common.nodes())
+    radare_diff_maj.add_edges_from([edge for edge in radare_purged.edges() if edge[0] in radare_diff_maj.nodes() and edge[1] in radare_diff_maj.nodes()])
 
-    pickle.dump(ghidra_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_diff_avg.p", "wb"))
-    pickle.dump(radare_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_diff_avg.p", "wb"))
-    pickle.dump(angr_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_diff_avg.p", "wb"))
-    pickle.dump(ida_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_diff_avg.p", "wb"))
+    pickle.dump(ghidra_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_diff_maj.p", "wb"))
+    pickle.dump(radare_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_diff_maj.p", "wb"))
+    pickle.dump(angr_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_diff_maj.p", "wb"))
+    pickle.dump(ida_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_diff_maj.p", "wb"))
 
     
 if __name__ == '__main__':

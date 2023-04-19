@@ -1,5 +1,4 @@
 import pickle
-import networkx as nx
 
 
 def print_attributes(name, attributes):
@@ -28,9 +27,9 @@ def count_attributes(name, graph_purged):
         "ret_count": 0
     }
 
+    attributes['nodes_count'] = len(graph_purged.nodes())
     attributes['edges_count'] = len(graph_purged.edges())
     for node in graph_purged.nodes:
-        attributes['nodes_count'] += 1
         if graph_purged.nodes[node].get('func_beg'):
             attributes['func_beg_count'] +=1
         if graph_purged.nodes[node].get('dir_call'):
@@ -45,7 +44,6 @@ def count_attributes(name, graph_purged):
             attributes['indir_jump_count'] +=1
         if graph_purged.nodes[node].get('has_return'):
             attributes['ret_count'] +=1
-
     print_attributes(name, attributes)
     return attributes
 

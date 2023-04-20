@@ -111,26 +111,9 @@ def main():
     int_max = int(max_pin_addr,16)
 
     set_addr_angr = set_original_addresses(angr)
-    angr_purged = purge(angr, int_max, int_min)
-
     set_addr_ghidra = set_original_addresses(ghidra)
-    ghidra_purged = purge(ghidra, int_max, int_min)
-
     set_addr_ida = set_original_addresses(ida)
-    ida_purged = purge(ida, int_max, int_min)
-
     set_addr_radare = set_original_addresses(radare)
-    radare_purged = purge(radare, int_max, int_min)
-
-    pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "wb"))
-    pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_purged.p", "wb"))
-    pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_purged.p", "wb"))
-    pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_purged.p", "wb"))
-
-    count_attributes("Angr", angr_purged)
-    count_attributes("Ghidra", ghidra_purged)
-    count_attributes("Ida", ida_purged)
-    count_attributes("Radare", radare_purged)
 
     print(f'{"--- Pin subset check on original addresses ---"}')
     print('\n')
@@ -140,6 +123,23 @@ def main():
     print(f'{"Ida is"} {pin_trace.issubset(set_addr_ida)} {"- addresses:"} {len(set_addr_ida)}')
     print(f'{"Radare is"} {pin_trace.issubset(set_addr_radare)} {"- addresses:"} {len(set_addr_radare)}')
     print('\n')
+
+    angr_purged = purge(angr, int_max, int_min)
+    ghidra_purged = purge(ghidra, int_max, int_min)
+    ida_purged = purge(ida, int_max, int_min)
+    radare_purged = purge(radare, int_max, int_min)
+
+    pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "wb"))
+    pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_purged.p", "wb"))
+    pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_purged.p", "wb"))
+    pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_purged.p", "wb"))
+
+    print(f'{"--- Attributes comparison on purged graphs ---"}')
+    print('\n')
+    count_attributes("Angr", angr_purged)
+    count_attributes("Ghidra", ghidra_purged)
+    count_attributes("Ida", ida_purged)
+    count_attributes("Radare", radare_purged)
 
     set_nodes_angr_purged = set(angr_purged.nodes())
     set_addr_angr_purged = set_purged_addresses(angr_purged)
@@ -157,16 +157,16 @@ def main():
     set_addr_radare_purged = set_purged_addresses(radare_purged)
     set_edges_radare_purged = set_purged_edges(radare_purged)
 
-    print(f'{"Addresses present on Pin trace that are missing in Angr:"} {len(pin_trace.difference(set_addr_angr_purged))}')
+    print(f'{"Addresses present on the Pin trace that are missing in Angr:"} {len(pin_trace.difference(set_addr_angr_purged))}')
     if len(pin_trace.difference(set_addr_angr_purged)): print(pin_trace.difference(set_addr_angr_purged))
 
-    print(f'{"Addresses present on Pin trace that are missing in Ghidra:"} {len(pin_trace.difference(set_addr_ghidra_purged))}')
+    print(f'{"Addresses present on the Pin trace that are missing in Ghidra:"} {len(pin_trace.difference(set_addr_ghidra_purged))}')
     if len(pin_trace.difference(set_addr_ghidra_purged)): print(pin_trace.difference(set_addr_ghidra_purged))
 
-    print(f'{"Addresses present on Pin trace that are missing in Ida:"} {len(pin_trace.difference(set_addr_ida_purged))}')
+    print(f'{"Addresses present on the Pin trace that are missing in Ida:"} {len(pin_trace.difference(set_addr_ida_purged))}')
     if len(pin_trace.difference(set_addr_ida_purged)): print(pin_trace.difference(set_addr_ida_purged))
 
-    print(f'{"Addresses present on Pin trace that are missing in Radare:"} {len(pin_trace.difference(set_addr_radare_purged))}')
+    print(f'{"Addresses present on the Pin trace that are missing in Radare:"} {len(pin_trace.difference(set_addr_radare_purged))}')
     if len(pin_trace.difference(set_addr_radare_purged)): print(pin_trace.difference(set_addr_radare_purged))
     print('\n')
     

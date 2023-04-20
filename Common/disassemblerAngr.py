@@ -8,7 +8,7 @@ import xxhash
 from basic_block import BasicBlock
 
 
-def run():
+def main():
     f = open(sys.argv[2], 'w')
     p = angr.Project(sys.argv[1], auto_load_libs=False, main_opts={'base_addr': 0, 'force_rebase': True} )
     cfg = p.analyses.CFGFast()
@@ -207,18 +207,8 @@ def run():
                     if attr == 'Jump':
                         g.add_edge(node, edge, color='b')
 
-    # legend_elements = [
-        # Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),
-        # Line2D([0], [0], marker='_', color='g', label='Fallthrough', markerfacecolor='g', markersize=10),
-        # Line2D([0], [0], marker='_', color='b', label='Jump', markerfacecolor='b', markersize=10)
-    # ]
-
-    # colors = nx.get_edge_attributes(g, 'color').values()
-    # nx.draw_networkx(g, edge_color=colors, arrows=True)
-    # plt.legend(handles=legend_elements, loc='upper right')
-    # plt.show()
     pickle.dump(g, open(sys.argv[3], "wb"))
 
 
 if __name__ == '__main__':
-    run()
+    main()

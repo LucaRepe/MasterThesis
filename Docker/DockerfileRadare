@@ -8,8 +8,10 @@ RUN mkdir /root/MasterThesis \
 # Install python packages
 RUN pip install r2pipe networkx xxhash
 
-# Add tools inside the container
-ADD /Headless_scripts/disassemblerRadare.py /root/MasterThesis
+# Add script and tools inside the container
+ADD /Common/__init__.py /root/MasterThesis/__init__.py
+ADD /Common/basic_block.py /root/MasterThesis/basic_block.py
+ADD /Common/disassemblerRadare.py /root/MasterThesis
 ADD /Tools/radare2/ /root/MasterThesis/Tools/radare2
 
 # The image build will operate from the MasterThesis directory

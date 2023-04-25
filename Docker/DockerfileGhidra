@@ -18,8 +18,10 @@ RUN wget https://services.gradle.org/distributions/gradle-8.0.2-bin.zip \
 # Install python packages
 RUN pip install networkx xxhash
 
-# Add tools inside the container
-ADD /Headless_scripts/disassemblerGhidra.py /root/MasterThesis
+# Add script and tools inside the container
+ADD /Common/__init__.py /root/MasterThesis/__init__.py
+ADD /Common/basic_block.py /root/MasterThesis/basic_block.py
+ADD /Common/disassemblerGhidra.py /root/MasterThesis
 ADD /Tools/ghidra_10.2.3_PUBLIC/ /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
 ADD /Tools/Ghidrathon-2.0.1 /root/MasterThesis/Tools/Ghidrathon-2.0.1
 
@@ -28,9 +30,9 @@ RUN cd /root/MasterThesis/Tools/Ghidrathon-2.0.1 \
     && gradle -PGHIDRA_INSTALL_DIR=/root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC
 
 # Move the extension inside Ghidra
-RUN mv /root/MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230407_Ghidrathon-2.0.1.zip /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
+RUN mv /root/MasterThesis/Tools/Ghidrathon-2.0.1/dist/ghidra_10.2.3_PUBLIC_20230422_Ghidrathon-2.0.1.zip /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
     && cd /root/MasterThesis/Tools/ghidra_10.2.3_PUBLIC/Ghidra/Extensions \
-    && unzip ghidra_10.2.3_PUBLIC_20230407_Ghidrathon-2.0.1.zip
+    && unzip ghidra_10.2.3_PUBLIC_20230422_Ghidrathon-2.0.1.zip
 
 # The image build will operate from the MasterThesis directory
 WORKDIR /root/MasterThesis

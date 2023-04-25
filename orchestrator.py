@@ -41,8 +41,6 @@ def execute_disass(sha256, filename):
     elif container_info['Config']['Image'] == 'radare2':
         cmd = f"python3 disassemblerRadare.py {filename} Pickles/{sha256}/analysisRadare.txt Pickles/{sha256}/radare.p"
     running_container.exec_run(cmd)
-    cmd = f'cmd = "chmod -R a+wrx /root/MasterThesis/Pickles/{sha256}"'
-    running_container.exec_run(cmd)
 
 
 def process_file(filepath):

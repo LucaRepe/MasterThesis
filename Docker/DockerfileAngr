@@ -8,8 +8,10 @@ RUN mkdir /root/MasterThesis \
 # Install python packages
 RUN pip install networkx xxhash angr
 
-# Add tools inside the container
-ADD /Headless_scripts/disassemblerAngr.py /root/MasterThesis
+# Add the script inside the container
+ADD /Common/__init__.py /root/MasterThesis/__init__.py
+ADD /Common/basic_block.py /root/MasterThesis/basic_block.py
+ADD /Common/disassemblerAngr.py /root/MasterThesis
 
 # The image build will operate from the MasterThesis directory
 WORKDIR /root/MasterThesis

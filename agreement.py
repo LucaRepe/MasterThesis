@@ -51,6 +51,13 @@ def main():
     radare_purged = purge(radare, int_max, int_min)    
 
     common_edges = set(angr_purged.edges()).intersection(set(ghidra_purged.edges()), set(ida_purged.edges()), set(radare_purged.edges()))
+    for edge in common_edges.copy():
+        node1, node2 = edge
+        if not angr_purged.nodes[node1]["unique_hash_identifier"] == ghidra_purged.nodes[node1]["unique_hash_identifier"] == \
+            ida_purged.nodes[node1]["unique_hash_identifier"] ==  radare_purged.nodes[node1]["unique_hash_identifier"]:
+                print(edge)
+                common_edges.remove(edge)
+    
     agreement_graph = nx.DiGraph(common_edges)
     angr_diff = diff_graph_construction(agreement_graph, angr_purged)
     ghidra_diff = diff_graph_construction(agreement_graph, ghidra_purged)
@@ -95,8 +102,8 @@ def main():
     pickle.dump(ida_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_diff_maj.p", "wb"))
     pickle.dump(radare_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_diff_maj.p", "wb"))
     
-    nx.draw_networkx(agreement_graph, with_labels=True)
-    plt.show()
+    # nx.draw_networkx(agreement_graph, with_labels=True)
+    # plt.show()
 
 
 if __name__ == '__main__':

@@ -62,9 +62,12 @@ def process_file(filepath):
 def main():   
     client = docker.from_env() 
     global running_container
-    input_folder = "/home/luca/Scrivania/MasterThesis/Input"
+    input_folder = "Input"
     assert input_folder
     files = glob.glob(input_folder + '/*.exe')
+
+    actual_dir = os.path.dirname(os.path.abspath(__file__))
+    pickles_dir = os.path.join(actual_dir, 'Pickles')
     
     image_names = ['angr', 'ghidra', 'ida', 'radare2']
     for name in image_names:
@@ -73,7 +76,7 @@ def main():
                 image=name,
                 detach=True,
                 mounts=[docker.types.Mount(
-                    source='/home/luca/Scrivania/MasterThesis/Pickles/',
+                    source=pickles_dir,
                     target='/root/MasterThesis/Pickles/',
                     type='bind'
                 )]

@@ -53,15 +53,17 @@ def return_eq(node1, node2):
 
 
 def main():
-    angr_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "rb"))
-    ghidra_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_purged.p", "rb"))
-    ida_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_purged.p", "rb"))
-    radare_purged = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_purged.p", "rb"))
+    pickles_folder = "Pickles/Complete/"
+    assert pickles_folder
+    angr_purged = pickle.load(open(pickles_folder + "angr_purged.p", "rb"))
+    ghidra_purged = pickle.load(open(pickles_folder + "ghidra_purged.p", "rb"))
+    ida_purged = pickle.load(open(pickles_folder + "ida_purged.p", "rb"))
+    radare_purged = pickle.load(open(pickles_folder + "radare_purged.p", "rb"))
     
-    angr_attributes = count_attributes("Angr", angr_purged)
-    ghidra_attributes = count_attributes("Ghidra", ghidra_purged)
-    ida_attributes = count_attributes("Ida", ida_purged)
-    radare_attributes = count_attributes("Radare", radare_purged)
+    count_attributes("Angr", angr_purged)
+    count_attributes("Ghidra", ghidra_purged)
+    count_attributes("Ida", ida_purged)
+    count_attributes("Radare", radare_purged)
 
     # print(f'{"Ghidra vs radare"} {nx.graph_edit_distance(ghidra_purged, radare_purged, node_match=return_eq)}')
     # print(f'{"Ghidra vs angr"} {nx.graph_edit_distance(ghidra_purged, angr_purged, node_match=return_eq)}')

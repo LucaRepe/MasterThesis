@@ -1,5 +1,7 @@
 import re
 import pickle
+import os
+import json
 
 
 def jaccard(s1, s2):
@@ -37,22 +39,45 @@ def purge(graph, max_addr, min_addr):
     return graph
 
 
-def main():
-    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
-    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra.p", "rb"))
-    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
-    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare.p", "rb"))
+def get_bbl_file(pickles_folder, files):
+    bbl_file = [f for f in files if f.endswith(".bbl")]
+    file_path = os.path.join(pickles_folder, bbl_file[0])
+    bbl_string = open(file_path).read()
+    pin_addrs_list = re.findall('.{1,8}', bbl_string)
+    return pin_addrs_list
 
-    base_address = 0x400000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/Lab15-01.bbl').read()
-    bbl_list = re.findall('.{1,8}', bbl_string)
+
+def get_base_address(pickles_folder, files):
+    json_file = [f for f in files if f.endswith(".json")]
+    file_path = os.path.join(pickles_folder, json_file[0])
+    with open(file_path) as f:
+        lines = f.readlines()
+        data = json.loads(lines[2])
+        return data.get('Desc')
+
+
+def pin_trace_creation(pickles_folder):
+    files = os.listdir(pickles_folder)
+    base_address = get_base_address(pickles_folder, files)
+    pin_addrs_list = get_bbl_file(pickles_folder, files)
     pin_trace = set()
-    for addr in bbl_list:
-        real_address = int(addr, 16) - base_address
+    for addr in pin_addrs_list:
+        real_address = int(addr, 16) - int(base_address, 16)
         if real_address < 0:
             continue
         pin_trace.add(hex(real_address))
+    return pin_trace
 
+
+def main():
+    pickles_folder = "Pickles/Complete/"
+    assert pickles_folder
+    angr = pickle.load(open(pickles_folder + "angr.p", "rb"))
+    ghidra = pickle.load(open(pickles_folder + "ghidra.p", "rb"))
+    ida = pickle.load(open(pickles_folder + "ida.p", "rb"))
+    radare = pickle.load(open(pickles_folder + "radare.p", "rb"))
+
+    pin_trace = pin_trace_creation(pickles_folder)
     min_pin_addr = min(pin_trace)
     max_pin_addr = max(pin_trace)
     int_min = int(min_pin_addr,16)
@@ -70,10 +95,10 @@ def main():
     set_addr_radare = set_original_addresses(radare)
     radare_purged = purge(radare, int_max, int_min)
 
-    pickle.dump(angr_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_purged.p", "wb"))
-    pickle.dump(ghidra_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_purged.p", "wb"))
-    pickle.dump(ida_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_purged.p", "wb"))
-    pickle.dump(radare_purged, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_purged.p", "wb"))
+    pickle.dump(angr_purged, open(pickles_folder + "angr_purged.p", "wb"))
+    pickle.dump(ghidra_purged, open(pickles_folder + "ghidra_purged.p", "wb"))
+    pickle.dump(ida_purged, open(pickles_folder + "ida_purged.p", "wb"))
+    pickle.dump(radare_purged, open(pickles_folder + "radare_purged.p", "wb"))
 
     print(f'{"--- Pin subset check on original addresses ---"}')
     print('\n')

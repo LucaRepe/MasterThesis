@@ -1,5 +1,7 @@
 import re
 import pickle
+import json
+import os
 import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
@@ -24,22 +26,45 @@ def purge(graph, max_addr, min_addr):
     return graph
 
 
-def main():
-    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr.p", "rb"))
-    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra.p", "rb"))
-    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida.p", "rb"))
-    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare.p", "rb"))
+def get_bbl_file(pickles_folder, files):
+    bbl_file = [f for f in files if f.endswith(".bbl")]
+    file_path = os.path.join(pickles_folder, bbl_file[0])
+    bbl_string = open(file_path).read()
+    pin_addrs_list = re.findall('.{1,8}', bbl_string)
+    return pin_addrs_list
 
-    base_address = 0x400000
-    bbl_string = open('/home/luca/Scrivania/MasterThesis/Lab15-01.bbl').read()
-    bbl_list = re.findall('.{1,8}', bbl_string)
+
+def get_base_address(pickles_folder, files):
+    json_file = [f for f in files if f.endswith(".json")]
+    file_path = os.path.join(pickles_folder, json_file[0])
+    with open(file_path) as f:
+        lines = f.readlines()
+        data = json.loads(lines[2])
+        return data.get('Desc')
+
+
+def pin_trace_creation(pickles_folder):
+    files = os.listdir(pickles_folder)
+    base_address = get_base_address(pickles_folder, files)
+    pin_addrs_list = get_bbl_file(pickles_folder, files)
     pin_trace = set()
-    for addr in bbl_list:
-        real_address = int(addr, 16) - base_address
+    for addr in pin_addrs_list:
+        real_address = int(addr, 16) - int(base_address, 16)
         if real_address < 0:
             continue
         pin_trace.add(hex(real_address))
+    return pin_trace
 
+
+def main():
+    pickles_folder = "Pickles/Complete/"
+    assert pickles_folder
+    angr = pickle.load(open(pickles_folder + "angr.p", "rb"))
+    ghidra = pickle.load(open(pickles_folder + "ghidra.p", "rb"))
+    ida = pickle.load(open(pickles_folder + "ida.p", "rb"))
+    radare = pickle.load(open(pickles_folder + "radare.p", "rb"))
+
+    pin_trace = pin_trace_creation(pickles_folder)
     min_pin_addr = min(pin_trace)
     max_pin_addr = max(pin_trace)
     int_min = int(min_pin_addr,16)
@@ -71,18 +96,17 @@ def main():
     print(f"{'radare_diff'} {radare_diff}")
     print('\n') 
 
-    pickle.dump(agreement_graph, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/agreement.p", "wb"))
-    pickle.dump(angr_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_diff.p", "wb"))
-    pickle.dump(ghidra_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_diff.p", "wb"))
-    pickle.dump(ida_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_diff.p", "wb"))
-    pickle.dump(radare_diff, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_diff.p", "wb"))
+    pickle.dump(agreement_graph, open(pickles_folder + "agreement.p", "wb"))
+    pickle.dump(angr_diff, open(pickles_folder + "angr_diff.p", "wb"))
+    pickle.dump(ghidra_diff, open(pickles_folder + "ghidra_diff.p", "wb"))
+    pickle.dump(ida_diff, open(pickles_folder + "ida_diff.p", "wb"))
+    pickle.dump(radare_diff, open(pickles_folder + "radare_diff.p", "wb"))
     
     common_edges_maj = set()
     common_edges_maj |= ((set(angr_purged.edges) & set(ghidra_purged.edges) & set(ida_purged.edges)) |
                  (set(angr_purged.edges) & set(ghidra_purged.edges) & set(radare_purged.edges)) |
                  (set(angr_purged.edges) & set(ida_purged.edges) & set(radare_purged.edges)) |
                  (set(ghidra_purged.edges) & set(ida_purged.edges) & set(radare_purged.edges)))
-
 
     majority_graph = nx.DiGraph(common_edges_maj)
     angr_diff_maj = diff_graph_construction(majority_graph, angr_purged)
@@ -96,11 +120,11 @@ def main():
     print(f"{'ida_diff_maj'} {ida_diff_maj}")
     print(f"{'radare_diff_maj'} {radare_diff_maj}")      
 
-    pickle.dump(majority_graph, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/majority.p", "wb"))
-    pickle.dump(angr_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_diff_maj.p", "wb"))
-    pickle.dump(ghidra_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_diff_maj.p", "wb"))
-    pickle.dump(ida_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_diff_maj.p", "wb"))
-    pickle.dump(radare_diff_maj, open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_diff_maj.p", "wb"))
+    pickle.dump(majority_graph, open(pickles_folder + "majority.p", "wb"))
+    pickle.dump(angr_diff_maj, open(pickles_folder + "angr_diff_maj.p", "wb"))
+    pickle.dump(ghidra_diff_maj, open(pickles_folder + "ghidra_diff_maj.p", "wb"))
+    pickle.dump(ida_diff_maj, open(pickles_folder + "ida_diff_maj.p", "wb"))
+    pickle.dump(radare_diff_maj, open(pickles_folder + "radare_diff_maj.p", "wb"))
     
     # nx.draw_networkx(agreement_graph, with_labels=True)
     # plt.show()

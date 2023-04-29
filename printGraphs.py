@@ -12,10 +12,12 @@ def print_graph(graph, legend_elements):
 
 
 def main():
-    angr = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/angr_diff.p", "rb"))
-    ghidra = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ghidra_diff.p", "rb"))
-    ida = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/ida_diff.p", "rb"))
-    radare = pickle.load(open("/home/luca/Scrivania/MasterThesis/Pickles/Complete/radare_diff.p", "rb"))
+    pickles_folder = "Pickles/Complete/"
+    assert pickles_folder
+    angr = pickle.load(open(pickles_folder + "angr_diff.p", "rb"))
+    ghidra = pickle.load(open(pickles_folder + "ghidra_diff.p", "rb"))
+    ida = pickle.load(open(pickles_folder + "ida_diff.p", "rb"))
+    radare = pickle.load(open(pickles_folder + "radare_diff.p", "rb"))
 
     legend_elements = [
         Line2D([0], [0], marker='_', color='r', label='Call', markerfacecolor='r', markersize=10),

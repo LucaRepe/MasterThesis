@@ -1,0 +1,565 @@
+{"Time": "133258682738982633", "Type": "INF", "Title": "JLP MD5", "Desc": "ff4d0574fc80478a61993396eecd55fd" }
+{"Time": "133258682739138807", "Type": "INF", "Title": "PROCESS NAME", "Desc": "C:\Users\dude\RIC8SV36.exe" }
+{"Time": "133258682739138807", "Type": "INF", "Title": "BASEADDRESS", "Desc": "0x400000" }
+{"Time": "133258682740857593", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682740857593", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682741013832", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682741013832", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682741013832", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" }
+{"Time": "133258682741013832", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" }
+{"Time": "133258682741170211", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682741326401", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\FileSystem" }
+{"Time": "133258682741326401", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\FileSystem" }
+{"Time": "133258682741951404", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682741951404", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682742107684", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\SYSTEM32\apphelp.dll" }
+{"Time": "133258682742107684", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\apphelp.dll" }
+{"Time": "133258682742107684", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682742107684", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682742420201", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682742420201", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682742576450", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682742888828", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682743670210", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133258682743670210", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133258682743982661", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682743982661", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682744138953", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133258682744138953", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AppCompatFlags" }
+{"Time": "133258682744607704", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Users\dude\RIC8SV36.exe" }
+{"Time": "133258682744763936", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\ntdll.dll" }
+{"Time": "133258682744763936", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\kernel32.dll" }
+{"Time": "133258682744763936", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\KernelBase.dll" }
+{"Time": "133258682744763936", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\sechost.dll" }
+{"Time": "133258682744763936", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\rpcrt4.dll" }
+{"Time": "133258682745076460", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume3\Windows\apppatch\sysmain.sdb" }
+{"Time": "133258682745076460", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryInformationFile", "Arg": "\Device\HarddiskVolume3\Windows\apppatch\sysmain.sdb" }
+{"Time": "133258682745076460", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryInformationFile", "Arg": "\Device\HarddiskVolume3\Windows\apppatch\sysmain.sdb" }
+{"Time": "133258682745232724", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682745232724", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682745701460", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenProcess" }
+{"Time": "133258682745701460", "Type": "BEHwA", "Cat": "PROCESS", "Sym": "NtOpenProcess", "Arg": "C:\Users\dude\RIC8SV36.exe" }
+{"Time": "133258682745857671", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume3\Users\dude\RIC8SV36.exe" }
+{"Time": "133258682746014105", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\USER\S-1-5-21-3468414046-4101171493-1381072509-1000\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133258682746014105", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\USER\S-1-5-21-3468414046-4101171493-1381072509-1000\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133258682746014105", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\HarddiskVolume3\Users\dude\RIC8SV36.exe" }
+{"Time": "133258682746014105", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\USER\S-1-5-21-3468414046-4101171493-1381072509-1000\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133258682746014105", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\USER\S-1-5-21-3468414046-4101171493-1381072509-1000\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" }
+{"Time": "133258682746170194", "Type": "BEHwA", "Cat": "MUTEX", "Sym": "NtOpenMutant", "Arg": "Local\ShimViewer" }
+{"Time": "133258682746326380", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682747263945", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwUnmapViewOfSection" }
+{"Time": "133258682747576425", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682748045190", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748045190", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748045190", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748045190", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748201317", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748357646", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682748670182", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748670182", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748670182", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682748826355", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682748982609", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748982609", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682748982609", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682748982609", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749138887", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749295115", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749451382", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682749920069", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682750232604", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682750232604", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682750232604", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682750232604", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682750388890", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": null}
+{"Time": "133258682750545093", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682750545093", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682750545093", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682750545093", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682750545093", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682750701398", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\Users\dude\WININET.dllp" }
+{"Time": "133258682750701398", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\SYSTEM32\WININET.dll" }
+{"Time": "133258682750701398", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\wininet.dll" }
+{"Time": "133258682750701398", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682750701398", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751326298", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751482700", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751482700", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\ucrtbase.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\msvcp_win.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\win32u.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\gdi32full.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\gdi32.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\user32.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\shell32.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\ws2_32.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\msvcrt.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\advapi32.dll" }
+{"Time": "133258682751638963", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\wininet.dll" }
+{"Time": "133258682751795182", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682752420189", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682752576446", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682752732690", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\Nls\Sorting\Versions" }
+{"Time": "133258682752888936", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\Nls\Sorting\Versions" }
+{"Time": "133258682752888936", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\Nls\Sorting\Versions" }
+{"Time": "133258682753201439", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682754607692", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682755545198", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682755545198", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682755545198", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682755545198", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682755701427", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755701427", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755701427", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682755857688", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682756013934", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682756013934", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682756013934", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682756482644", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682756482644", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682756482644", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682758045147", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682758045147", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwFreeVirtualMemory" }
+{"Time": "133258682758045147", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682758357753", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682758357753", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682758670175", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682760388929", "Type": "BEHwA", "Cat": "MUTEX", "Sym": "NtCreateMutant", "Arg": "Local\SM0:4052:168:WilStaging_02C\i\oretosJaLsI-ulcsucsHosade.p" }
+{"Time": "133258682760857671", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682762107708", "Type": "BEHwA", "Cat": "MUTEX", "Sym": "NtCreateMutant", "Arg": "Local\SM0:4052:168:WilStaging_02" }
+{"Time": "133258682762263924", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682762263924", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682763357607", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE" }
+{"Time": "133258682763357607", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682763513957", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682763513957", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682763513957", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog" }
+{"Time": "133258682763826324", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682763826324", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682763983457", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682763983457", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682763983457", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9" }
+{"Time": "133258682763983457", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000001" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000001" }
+{"Time": "133258682764139508", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000001" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000002" }
+{"Time": "133258682764296016", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000002" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000002" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000003" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000003" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000003" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000004" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000004" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000004" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000005" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000005" }
+{"Time": "133258682764296016", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000005" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000006" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000006" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000006" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000007" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000007" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000007" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000008" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000008" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000008" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000009" }
+{"Time": "133258682764296016", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000009" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000009" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000010" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000010" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000010" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000011" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000011" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000011" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000012" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000012" }
+{"Time": "133258682764296016", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000012" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000013" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000013" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000013" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000014" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000014" }
+{"Time": "133258682764296016", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\Protocol_Catalog9\Catalog_Entries\000000000014" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764451303", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000001" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000002" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000003" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000004" }
+{"Time": "133258682764607639", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000005" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000006" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764607639", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\NameSpace_Catalog5\Catalog_Entries\000000000007" }
+{"Time": "133258682764763903", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682764763903", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682764763903", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682765233293", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682765233293", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682765389498", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\system32\napinsp.dlls?sts_rnltr@A6XPUECPINPITR@@PAI@@" }
+{"Time": "133258682765389498", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\NapiNSP.dll" }
+{"Time": "133258682765389498", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682765545758", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682765701339", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682765701339", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682765701339", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682765701339", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682765701339", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682765701339", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\NapiNSP.dll" }
+{"Time": "133258682765857696", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682765857696", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682766013944", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Rpc" }
+{"Time": "133258682766013944", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Rpc" }
+{"Time": "133258682766170191", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682766326440", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\ComputerName\ActiveComputerName" }
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Control\ComputerName\ActiveComputerName" }
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\Setup" }
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\Setup" }
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\Setup" }
+{"Time": "133258682766326440", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\Setup" }
+{"Time": "133258682766482706", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682766951444", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682767107623", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Rpc" }
+{"Time": "133258682767107623", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Rpc" }
+{"Time": "133258682768513894", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682769608201", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682769608201", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682769608201", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\system32\pnrpnsp.dll" }
+{"Time": "133258682769608201", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\pnrpnsp.dll" }
+{"Time": "133258682769608201", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682769608201", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682769763844", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682769763844", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682769763844", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682769763844", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682769763844", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682769763844", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\pnrpnsp.dll" }
+{"Time": "133258682770076452", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682770076452", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682770076452", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\system32\wshbth.dlle" }
+{"Time": "133258682770076452", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\wshbth.dll" }
+{"Time": "133258682770076452", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682770389541", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682770389541", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682770389541", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682770389541", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682770389541", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682770389541", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682770389541", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\wshbth.dll" }
+{"Time": "133258682770545358", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682770545358", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682770545358", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\system32\NLAapi.dll " }
+{"Time": "133258682770702220", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\nlaapi.dll" }
+{"Time": "133258682770702220", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682770702220", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682771013800", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\Users\dude\IPHLPAPI.DLL" }
+{"Time": "133258682771013800", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL?sts_rnltr@A6XPUECPINPITR@@PAI@@" }
+{"Time": "133258682771013800", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\IPHLPAPI.DLL" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682771013800", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682771170072", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771170072", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771170072", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771170072", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771170072", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771170072", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771170072", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\IPHLPAPI.DLL" }
+{"Time": "133258682771170072", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\nlaapi.dll" }
+{"Time": "133258682771638928", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682771638928", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682771638928", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\System32\mswsock.dll" }
+{"Time": "133258682771638928", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\mswsock.dll" }
+{"Time": "133258682771638928", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682771638928", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682771795770", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771795770", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771795770", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771795770", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771795770", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682771795770", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\mswsock.dll" }
+{"Time": "133258682771795770", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682772108240", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682772108240", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters" }
+{"Time": "133258682772263923", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682772263923", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682772420169", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\SYSTEM32\DNSAPI.dlle" }
+{"Time": "133258682772420169", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\dnsapi.dll" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772420169", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772420169", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\dnsapi.dll" }
+{"Time": "133258682772732699", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772732699", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772732699", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682772732699", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682772732699", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682772888889", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772888889", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772888889", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772888889", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772888889", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\nsi.dll" }
+{"Time": "133258682772888889", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682772888889", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682773357703", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtCreateFile", "Arg": "\Device\Nsi" }
+{"Time": "133258682773357703", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtDeviceIoControlFile", "Arg": "\Device\Nsi" }
+{"Time": "133258682773357703", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtDeviceIoControlFile", "Arg": "\Device\Nsi" }
+{"Time": "133258682773357703", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtDeviceIoControlFile", "Arg": "\Device\Nsi" }
+{"Time": "133258682773513928", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682773513928", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters\Interfaces" }
+{"Time": "133258682773513928", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip6\Parameters\Interfaces" }
+{"Time": "133258682773513928", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682773513928", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682773670207", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtCreateKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773670207", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Dnscache\Parameters" }
+{"Time": "133258682773670207", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682773670207", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773670207", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtCreateKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Dnscache\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtCreateKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Dnscache\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773826443", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682773982700", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682773982700", "Type": "BEH", "Cat": "PROCESS", "Sym": "NtOpenSection" }
+{"Time": "133258682773982700", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtQueryAttributesFile", "Arg": "\??\C:\WINDOWS\System32\winrnr.dll " }
+{"Time": "133258682773982700", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\winrnr.dll" }
+{"Time": "133258682773982700", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwCreateSection" }
+{"Time": "133258682774139532", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwMapViewOfSection" }
+{"Time": "133258682774139532", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774139532", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774139532", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774139532", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774139532", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774139532", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtOpenFile", "Arg": "\Device\HarddiskVolume3\Windows\SysWOW64\winrnr.dll" }
+{"Time": "133258682774295162", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774295162", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwProtectVirtualMemory" }
+{"Time": "133258682774763945", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtCreateKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682774763945", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Dnscache\Parameters" }
+{"Time": "133258682774763945", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": null}
+{"Time": "133258682774763945", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682774763945", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SYSTEM\ControlSet001\Services\Tcpip\Parameters" }
+{"Time": "133258682775388930", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682775545164", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwTerminateProcess" }
+{"Time": "133258682777420183", "Type": "BEHwA", "Cat": "FILESYSTEM", "Sym": "NtWriteFile", "Arg": "\Device\NamedPipe\W32PosixPipe.00002288.00000008" }
+{"Time": "133258682778670186", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682778670186", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682778670186", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtOpenKeyHook", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682778670186", "Type": "BEHwA", "Cat": "REGISTRY", "Sym": "NtQueryValueKey", "Arg": "\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\GRE_Initialize" }
+{"Time": "133258682779607685", "Type": "BEH", "Cat": "PROCESS", "Sym": "ZwAllocateVirtualMemory" }
+{"Time": "133258682779763903", "Type": "INF", "Title": "EXITCODE", "Desc": "-1" }
+{"Time": "133258682779763903", "Type": "INF", "Title": "PROGRAM INSTRUCTIONS", "Desc": "142" }
+{"Time": "133258682779763903", "Type": "INF", "Title": "LIBRARY INSTRUCTIONS", "Desc": "21384" }

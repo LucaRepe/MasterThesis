@@ -102,7 +102,7 @@ def get_bbl_file(pickles_folder, files):
 def get_base_address(pickles_folder, files):
     json_file = [f for f in files if f.endswith(".json")]
     file_path = os.path.join(pickles_folder, json_file[0])
-    with open(file_path) as f:
+    with open(file_path, 'r', encoding='iso-8859-1') as f:
         lines = f.readlines()
         data = json.loads(lines[2])
         return data.get('Desc')

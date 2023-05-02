@@ -1,12 +1,23 @@
 # MasterThesis
 
-Repository containing the files for the Master Thesis, being developed at Eurecom.
+Repository containing the files for the Master Thesis, developed at Eurecom.
+
+## Common
+
+Folder containing the basic_block module and the python scripts for the chosen tools: Angr, Ghidra, IDA Pro and Radare2.
+
+## Docker
+
+Folder containing the dockerfiles that build the image for each disassembler.
+
+## Graphs
+
+Folder containing the image representation of the graphs for each anti-disassembly technique.
 
 ## Pickles
 
-In this folder are present the pickle files containing the networkx graphs obtained by the scripts for each disassembler.
-
-Each node in the graph represents a basic block and contains as attributes: 
+Folder containing either the pickle files obtained by orchestrator and the purged ones.
+Each node in the graphs represents a basic block and contains as attributes: 
 
     - start_addr: starting address of the basic block
     - bytes: list of opcode bytes of the instructions 
@@ -24,11 +35,28 @@ Each node in the graph represents a basic block and contains as attributes:
     - has_return: boolean flag that indicates if the basic block has a RET instruction
     - unique_hash_identifier: identifier obtained with xxhash32, using as input all the mnemonics present in the basic block
 
-## Headless_scripts
+## Sources
 
-In this folder are present the python scripts for the chosen tools: Ghidra, IDA Pro, Radare and Angr.
+Folder containing the .c sources, mainComplete.c is the base script containing function calls, loops and conditional statements, mainTechniques.c adds also one anti-disassembly technique at a time. 
+This file will be used as input for the orchestrator, in order to produce Interprocedural Control Flow Graphs and evaluate how each tool will disassemble different anti-disassembly techniques.
 
-## MainComplete
+### fullAnalysis.py
 
-In the root are present both the .c and .exe files, the executable has been compiled as x86.
-This file will be used as input for the python scripts, in order to produce Interprocedural Control Flow Graphs and evaluate how each tool will disassemble different anti-disassembly techniques.
+This python script:
+    - purges the graphs considering the minimum and maximum addresses present inside the Pin trace
+    - checks the Pin subset over the original addresses
+    - checks the addresses present on the Pin trace that are missing in the graphs
+    - purges again considering the addresses of the function containing the technique 
+    - compares the attributes of the differences subgraphs
+    - creates the agreement graph and the differences subgraphs
+    - checks the Jaccard similarity on nodes
+    - checks the Jaccard similarity on edges
+    - checks the graph edit distance on differences subgraphs
+
+### orchestrator.py
+
+This python script runs a Docker container at a time, takes as input the file(s) from the folder and returns as output the graphs obtained by the disassemblers.
+
+### printGraphs.py
+
+This python script creates a .png representation for the agreement graph and the differences graphs.

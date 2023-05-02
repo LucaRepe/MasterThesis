@@ -55,10 +55,10 @@ def return_eq(node1, node2):
 def main():
     pickles_folder = "Pickles/Complete/"
     assert pickles_folder
-    angr_purged = pickle.load(open(pickles_folder + "angr_purged.p", "rb"))
-    ghidra_purged = pickle.load(open(pickles_folder + "ghidra_purged.p", "rb"))
-    ida_purged = pickle.load(open(pickles_folder + "ida_purged.p", "rb"))
-    radare_purged = pickle.load(open(pickles_folder + "radare_purged.p", "rb"))
+    angr_purged = pickle.load(open(pickles_folder + "angr_diff.p", "rb"))
+    ghidra_purged = pickle.load(open(pickles_folder + "ghidra_diff.p", "rb"))
+    ida_purged = pickle.load(open(pickles_folder + "ida_diff.p", "rb"))
+    radare_purged = pickle.load(open(pickles_folder + "radare_diff.p", "rb"))
     
     count_attributes("Angr", angr_purged)
     count_attributes("Ghidra", ghidra_purged)
@@ -69,17 +69,14 @@ def main():
     # print(f'{"Ghidra vs angr"} {nx.graph_edit_distance(ghidra_purged, angr_purged, node_match=return_eq)}')
     # print(f'{"Ghidra vs ida"} {nx.graph_edit_distance(ghidra_purged, ida_purged, node_match=return_eq)}')
     # print('\n')
-# 
     # print(f'{"Radare vs ghidra"} {nx.graph_edit_distance(radare_purged, ghidra_purged, node_match=return_eq)}')
     # print(f'{"Radare vs angr"} {nx.graph_edit_distance(radare_purged, angr_purged, node_match=return_eq)}')
     # print(f'{"Radare vs ida"} {nx.graph_edit_distance(radare_purged, ida_purged, node_match=return_eq)}')
     # print('\n')
-# 
     # print(f'{"Angr vs ghidra"} {nx.graph_edit_distance(angr_purged, ghidra_purged, node_match=return_eq)}')
     # print(f'{"Angr vs radare"} {nx.graph_edit_distance(angr_purged, radare_purged, node_match=return_eq)}')
     # print(f'{"Angr vs ida"} {nx.graph_edit_distance(angr_purged, ida_purged, node_match=return_eq)}')
     # print('\n')
-# 
     # print(f'{"Ida vs ghidra"} {nx.graph_edit_distance(ida_purged, ghidra_purged, node_match=return_eq)}')
     # print(f'{"Ida vs radare"} {nx.graph_edit_distance(ida_purged, radare_purged, node_match=return_eq)}')
     # print(f'{"Ida vs angr"} {nx.graph_edit_distance(ida_purged, angr_purged, node_match=return_eq)}')

@@ -127,13 +127,10 @@ def main():
 
     print(f'{"Addresses present on Pin trace that are missing in Angr:"} {len(pin_trace.difference(set_addr_angr_purged))}')
     if len(pin_trace.difference(set_addr_angr_purged)): print(pin_trace.difference(set_addr_angr_purged))
-
     print(f'{"Addresses present on Pin trace that are missing in Ghidra:"} {len(pin_trace.difference(set_addr_ghidra_purged))}')
     if len(pin_trace.difference(set_addr_ghidra_purged)): print(pin_trace.difference(set_addr_ghidra_purged))
-
     print(f'{"Addresses present on Pin trace that are missing in Ida:"} {len(pin_trace.difference(set_addr_ida_purged))}')
     if len(pin_trace.difference(set_addr_ida_purged)): print(pin_trace.difference(set_addr_ida_purged))
-
     print(f'{"Addresses present on Pin trace that are missing in Radare:"} {len(pin_trace.difference(set_addr_radare_purged))}')
     if len(pin_trace.difference(set_addr_radare_purged)): print(pin_trace.difference(set_addr_radare_purged))
     print('\n')
@@ -152,39 +149,32 @@ def main():
     print(f'{"Angr vs Radare"} {jaccard(set_nodes_angr_purged, set_nodes_radare_purged)}')
     print(f'{"Angr vs Ida"} {jaccard(set_nodes_angr_purged, set_nodes_ida_purged)}')
     print('\n')
-
     print(f'{"Ghidra vs Radare"} {jaccard(set_nodes_ghidra_purged, set_nodes_radare_purged)}')
     print(f'{"Ghidra vs Angr"} {jaccard(set_nodes_ghidra_purged, set_nodes_angr_purged)}')
     print(f'{"Ghidra vs Ida"} {jaccard(set_nodes_ghidra_purged, set_nodes_ida_purged)}')
     print('\n')
-
     print(f'{"Ida vs Ghidra"} {jaccard(set_nodes_ida_purged, set_nodes_ghidra_purged)}')
     print(f'{"Ida vs Angr"} {jaccard(set_nodes_ida_purged, set_nodes_angr_purged)}')
     print(f'{"Ida vs Radare"} {jaccard(set_nodes_ida_purged, set_nodes_radare_purged)}')
     print('\n')
-
     print(f'{"Radare vs Ghidra"} {jaccard(set_nodes_radare_purged, set_nodes_ghidra_purged)}')
     print(f'{"Radare vs Angr"} {jaccard(set_nodes_radare_purged, set_nodes_angr_purged)}')
     print(f'{"Radare vs Ida"} {jaccard(set_nodes_radare_purged, set_nodes_ida_purged)}')
     print('\n')
-
     print(f'{"--- Jaccard similarity check on edges ---"}')
     print('\n')
     print(f'{"Angr vs Ghidra"} {jaccard(set_edges_angr_purged, set_edges_ghidra_purged)}')
     print(f'{"Angr vs Radare"} {jaccard(set_edges_angr_purged, set_edges_radare_purged)}')
     print(f'{"Angr vs Ida"} {jaccard(set_edges_angr_purged, set_edges_ida_purged)}')
     print('\n')
-
     print(f'{"Ghidra vs Radare"} {jaccard(set_edges_ghidra_purged, set_edges_radare_purged)}')
     print(f'{"Ghidra vs Angr"} {jaccard(set_edges_ghidra_purged, set_edges_angr_purged)}')
     print(f'{"Ghidra vs Ida"} {jaccard(set_edges_ghidra_purged, set_edges_ida_purged)}')
     print('\n')
-
     print(f'{"Ida vs Ghidra"} {jaccard(set_edges_ida_purged, set_edges_ghidra_purged)}')
     print(f'{"Ida vs Angr"} {jaccard(set_edges_ida_purged, set_edges_angr_purged)}')
     print(f'{"Ida vs Radare"} {jaccard(set_edges_ida_purged, set_edges_radare_purged)}')
     print('\n')
-
     print(f'{"Radare vs Ghidra"} {jaccard(set_edges_radare_purged, set_edges_ghidra_purged)}')
     print(f'{"Radare vs Angr"} {jaccard(set_edges_radare_purged, set_edges_angr_purged)}')
     print(f'{"Radare vs Ida"} {jaccard(set_edges_radare_purged, set_edges_ida_purged)}')

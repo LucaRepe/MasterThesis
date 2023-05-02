@@ -14,6 +14,10 @@ def print_graph(graph, legend_elements):
 def main():
     pickles_folder = "Pickles/Complete/"
     assert pickles_folder
+    agreement = pickle.load(open(pickles_folder + "agreement.p", "rb"))
+    nx.draw_networkx(agreement, with_labels=True)
+    plt.show()
+
     angr = pickle.load(open(pickles_folder + "angr_diff.p", "rb"))
     ghidra = pickle.load(open(pickles_folder + "ghidra_diff.p", "rb"))
     ida = pickle.load(open(pickles_folder + "ida_diff.p", "rb"))

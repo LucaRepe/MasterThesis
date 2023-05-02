@@ -80,8 +80,11 @@ def main():
         node1, node2 = edge
         if not angr_purged.nodes[node1]["unique_hash_identifier"] == ghidra_purged.nodes[node1]["unique_hash_identifier"] == \
             ida_purged.nodes[node1]["unique_hash_identifier"] ==  radare_purged.nodes[node1]["unique_hash_identifier"]:
-                print(edge)
                 common_edges.remove(edge)
+        if angr_purged.nodes[node2] and ghidra_purged.nodes[node2] and ida_purged.nodes[node2] and radare_purged.nodes[node2]:
+            if not angr_purged.nodes[node2]["unique_hash_identifier"] == ghidra_purged.nodes[node2]["unique_hash_identifier"] == \
+                ida_purged.nodes[node2]["unique_hash_identifier"] ==  radare_purged.nodes[node2]["unique_hash_identifier"]:
+                    common_edges.remove(edge)
     
     agreement_graph = nx.DiGraph(common_edges)
     angr_diff = diff_graph_construction(agreement_graph, angr_purged)
@@ -125,9 +128,6 @@ def main():
     pickle.dump(ghidra_diff_maj, open(pickles_folder + "ghidra_diff_maj.p", "wb"))
     pickle.dump(ida_diff_maj, open(pickles_folder + "ida_diff_maj.p", "wb"))
     pickle.dump(radare_diff_maj, open(pickles_folder + "radare_diff_maj.p", "wb"))
-    
-    # nx.draw_networkx(agreement_graph, with_labels=True)
-    # plt.show()
 
 
 if __name__ == '__main__':

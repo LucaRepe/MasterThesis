@@ -56,6 +56,16 @@ def return_eq(node1, node2):
     return node1.get('unique_hash_identifier')==node2.get('unique_hash_identifier')
 
 
+def diff_graph_construction(agreement, purged):
+    graph_diff = nx.DiGraph()
+    graph_diff.add_edges_from(purged.edges() - agreement.edges())
+    for node in graph_diff.copy().nodes():
+        graph_diff.add_node(node, **purged.nodes[node])
+    for u, v, data in ((u, v, d) for u, v, d in purged.edges(data=True) if (u, v) not in agreement.edges()):
+        graph_diff.add_edge(u, v, **data)
+    return graph_diff
+
+
 def jaccard(s1, s2):
     return float(len(s1.intersection(s2)) / len(s1.union(s2)))
 
@@ -140,7 +150,7 @@ def main():
     set_addr_ida = set_original_addresses(ida)
     set_addr_radare = set_original_addresses(radare)
 
-    print(f'{"--- Pin subset check on original addresses ---"}')
+    print(f'{"Pin subset check on original addresses"}')
     print('\n')
     print(f'{"Pin trace addresses:"} {len(pin_trace)}')
     print(f'{"Angr is"} {pin_trace.issubset(set_addr_angr)} {"- addresses:"} {len(set_addr_angr)}')
@@ -159,119 +169,123 @@ def main():
     pickle.dump(ida_purged, open(pickles_folder + "ida_purged.p", "wb"))
     pickle.dump(radare_purged, open(pickles_folder + "radare_purged.p", "wb"))
 
-    print(f'{"--- Attributes comparison on purged graphs ---"}')
+    set_addr_angr_purged = set_purged_addresses(angr_purged)
+    set_addr_ghidra_purged = set_purged_addresses(ghidra_purged)
+    set_addr_ida_purged = set_purged_addresses(ida_purged)
+    set_addr_radare_purged = set_purged_addresses(radare_purged)
+
+    print(f'{"Addresses present on the Pin trace that are missing in Angr:"} {len(pin_trace.difference(set_addr_angr_purged))}')
+    if len(pin_trace.difference(set_addr_angr_purged)): print(pin_trace.difference(set_addr_angr_purged))
+    print(f'{"Addresses present on the Pin trace that are missing in Ghidra:"} {len(pin_trace.difference(set_addr_ghidra_purged))}')
+    if len(pin_trace.difference(set_addr_ghidra_purged)): print(pin_trace.difference(set_addr_ghidra_purged))
+    print(f'{"Addresses present on the Pin trace that are missing in Ida:"} {len(pin_trace.difference(set_addr_ida_purged))}')
+    if len(pin_trace.difference(set_addr_ida_purged)): print(pin_trace.difference(set_addr_ida_purged))
+    print(f'{"Addresses present on the Pin trace that are missing in Radare:"} {len(pin_trace.difference(set_addr_radare_purged))}')
+    if len(pin_trace.difference(set_addr_radare_purged)): print(pin_trace.difference(set_addr_radare_purged))
+    print('\n')
+
+    int_min = 0x1015
+    int_max = 0x1069
+
+    angr_purged = purge(angr, int_max, int_min)
+    ghidra_purged = purge(ghidra, int_max, int_min)
+    ida_purged = purge(ida, int_max, int_min)
+    radare_purged = purge(radare, int_max, int_min)
+
+    print(f'{"Attributes comparison on function containing the technique"}')
     print('\n')
     count_attributes("Angr", angr_purged)
     count_attributes("Ghidra", ghidra_purged)
     count_attributes("Ida", ida_purged)
     count_attributes("Radare", radare_purged)
 
-    set_nodes_angr_purged = set(angr_purged.nodes())
-    set_addr_angr_purged = set_purged_addresses(angr_purged)
-    set_edges_angr_purged = set_purged_edges(angr_purged)
-
-    set_nodes_ghidra_purged = set(ghidra_purged.nodes())
-    set_addr_ghidra_purged = set_purged_addresses(ghidra_purged)
-    set_edges_ghidra_purged = set_purged_edges(ghidra_purged)
-
-    set_nodes_ida_purged = set(ida_purged.nodes())
-    set_addr_ida_purged = set_purged_addresses(ida_purged)
-    set_edges_ida_purged = set_purged_edges(ida_purged)
-
-    set_nodes_radare_purged = set(radare_purged.nodes())
-    set_addr_radare_purged = set_purged_addresses(radare_purged)
-    set_edges_radare_purged = set_purged_edges(radare_purged)
-
-    print(f'{"Addresses present on the Pin trace that are missing in Angr:"} {len(pin_trace.difference(set_addr_angr_purged))}')
-    if len(pin_trace.difference(set_addr_angr_purged)): print(pin_trace.difference(set_addr_angr_purged))
-
-    print(f'{"Addresses present on the Pin trace that are missing in Ghidra:"} {len(pin_trace.difference(set_addr_ghidra_purged))}')
-    if len(pin_trace.difference(set_addr_ghidra_purged)): print(pin_trace.difference(set_addr_ghidra_purged))
-
-    print(f'{"Addresses present on the Pin trace that are missing in Ida:"} {len(pin_trace.difference(set_addr_ida_purged))}')
-    if len(pin_trace.difference(set_addr_ida_purged)): print(pin_trace.difference(set_addr_ida_purged))
-
-    print(f'{"Addresses present on the Pin trace that are missing in Radare:"} {len(pin_trace.difference(set_addr_radare_purged))}')
-    if len(pin_trace.difference(set_addr_radare_purged)): print(pin_trace.difference(set_addr_radare_purged))
-    print('\n')
+    common_edges = set(angr_purged.edges()).intersection(set(ghidra_purged.edges()), set(ida_purged.edges()), set(radare_purged.edges()))
+    for edge in common_edges.copy():
+        node1, node2 = edge
+        if not angr_purged.nodes[node1]["unique_hash_identifier"] == ghidra_purged.nodes[node1]["unique_hash_identifier"] == \
+            ida_purged.nodes[node1]["unique_hash_identifier"] ==  radare_purged.nodes[node1]["unique_hash_identifier"]:
+                common_edges.remove(edge)
+        if angr_purged.nodes[node2] and ghidra_purged.nodes[node2] and ida_purged.nodes[node2] and radare_purged.nodes[node2]:
+            if not angr_purged.nodes[node2]["unique_hash_identifier"] == ghidra_purged.nodes[node2]["unique_hash_identifier"] == \
+                ida_purged.nodes[node2]["unique_hash_identifier"] ==  radare_purged.nodes[node2]["unique_hash_identifier"]:
+                    common_edges.remove(edge)
     
-    print(f'{"--- Jaccard similarity check on purged addresses ---"}')
+    agreement_graph = nx.DiGraph(common_edges)
+    angr_diff = diff_graph_construction(agreement_graph, angr_purged)
+    ghidra_diff = diff_graph_construction(agreement_graph, ghidra_purged)
+    ida_diff = diff_graph_construction(agreement_graph, ida_purged)
+    radare_diff = diff_graph_construction(agreement_graph, radare_purged)
+
+    pickle.dump(agreement_graph, open(pickles_folder + "agreement.p", "wb"))
+    pickle.dump(angr_diff, open(pickles_folder + "angr_diff.p", "wb"))
+    pickle.dump(ghidra_diff, open(pickles_folder + "ghidra_diff.p", "wb"))
+    pickle.dump(ida_diff, open(pickles_folder + "ida_diff.p", "wb"))
+    pickle.dump(radare_diff, open(pickles_folder + "radare_diff.p", "wb"))
+
+    set_nodes_angr_diff = set(angr_diff.nodes())
+    set_edges_angr_diff = set_purged_edges(angr_diff)
+    set_nodes_ghidra_diff = set(ghidra_diff.nodes())
+    set_edges_ghidra_diff = set_purged_edges(ghidra_diff)
+    set_nodes_ida_diff = set(ida_diff.nodes())
+    set_edges_ida_diff = set_purged_edges(ida_diff)
+    set_nodes_radare_diff = set(radare_diff.nodes())
+    set_edges_radare_diff = set_purged_edges(radare_diff)
+
+    print(f'{"Jaccard similarity check on nodes"}')
     print('\n')
-    print(f'{"Angr"} {jaccard(pin_trace, set_addr_angr_purged)}')
-    print(f'{"Ghidra"} {jaccard(pin_trace, set_addr_ghidra_purged)}')
-    print(f'{"Ida"} {jaccard(pin_trace, set_addr_ida_purged)}')
-    print(f'{"Radare"} {jaccard(pin_trace, set_addr_radare_purged)}')
+    print(f'{"Angr vs Ghidra"} {jaccard(set_nodes_angr_diff, set_nodes_ghidra_diff)}')
+    print(f'{"Angr vs Radare"} {jaccard(set_nodes_angr_diff, set_nodes_radare_diff)}')
+    print(f'{"Angr vs Ida"} {jaccard(set_nodes_angr_diff, set_nodes_ida_diff)}')
+    print('\n')
+    print(f'{"Ghidra vs Radare"} {jaccard(set_nodes_ghidra_diff, set_nodes_radare_diff)}')
+    print(f'{"Ghidra vs Angr"} {jaccard(set_nodes_ghidra_diff, set_nodes_angr_diff)}')
+    print(f'{"Ghidra vs Ida"} {jaccard(set_nodes_ghidra_diff, set_nodes_ida_diff)}')
+    print('\n')
+    print(f'{"Ida vs Ghidra"} {jaccard(set_nodes_ida_diff, set_nodes_ghidra_diff)}')
+    print(f'{"Ida vs Angr"} {jaccard(set_nodes_ida_diff, set_nodes_angr_diff)}')
+    print(f'{"Ida vs Radare"} {jaccard(set_nodes_ida_diff, set_nodes_radare_diff)}')
+    print('\n')
+    print(f'{"Radare vs Ghidra"} {jaccard(set_nodes_radare_diff, set_nodes_ghidra_diff)}')
+    print(f'{"Radare vs Angr"} {jaccard(set_nodes_radare_diff, set_nodes_angr_diff)}')
+    print(f'{"Radare vs Ida"} {jaccard(set_nodes_radare_diff, set_nodes_ida_diff)}')
     print('\n')
 
-    print(f'{"--- Jaccard similarity check on nodes ---"}')
+    print(f'{"Jaccard similarity check on edges"}')
     print('\n')
-    print(f'{"Angr vs Ghidra"} {jaccard(set_nodes_angr_purged, set_nodes_ghidra_purged)}')
-    print(f'{"Angr vs Radare"} {jaccard(set_nodes_angr_purged, set_nodes_radare_purged)}')
-    print(f'{"Angr vs Ida"} {jaccard(set_nodes_angr_purged, set_nodes_ida_purged)}')
+    print(f'{"Angr vs Ghidra"} {jaccard(set_edges_angr_diff, set_edges_ghidra_diff)}')
+    print(f'{"Angr vs Radare"} {jaccard(set_edges_angr_diff, set_edges_radare_diff)}')
+    print(f'{"Angr vs Ida"} {jaccard(set_edges_angr_diff, set_edges_ida_diff)}')
     print('\n')
-
-    print(f'{"Ghidra vs Radare"} {jaccard(set_nodes_ghidra_purged, set_nodes_radare_purged)}')
-    print(f'{"Ghidra vs Angr"} {jaccard(set_nodes_ghidra_purged, set_nodes_angr_purged)}')
-    print(f'{"Ghidra vs Ida"} {jaccard(set_nodes_ghidra_purged, set_nodes_ida_purged)}')
+    print(f'{"Ghidra vs Radare"} {jaccard(set_edges_ghidra_diff, set_edges_radare_diff)}')
+    print(f'{"Ghidra vs Angr"} {jaccard(set_edges_ghidra_diff, set_edges_angr_diff)}')
+    print(f'{"Ghidra vs Ida"} {jaccard(set_edges_ghidra_diff, set_edges_ida_diff)}')
     print('\n')
-
-    print(f'{"Ida vs Ghidra"} {jaccard(set_nodes_ida_purged, set_nodes_ghidra_purged)}')
-    print(f'{"Ida vs Angr"} {jaccard(set_nodes_ida_purged, set_nodes_angr_purged)}')
-    print(f'{"Ida vs Radare"} {jaccard(set_nodes_ida_purged, set_nodes_radare_purged)}')
+    print(f'{"Ida vs Ghidra"} {jaccard(set_edges_ida_diff, set_edges_ghidra_diff)}')
+    print(f'{"Ida vs Angr"} {jaccard(set_edges_ida_diff, set_edges_angr_diff)}')
+    print(f'{"Ida vs Radare"} {jaccard(set_edges_ida_diff, set_edges_radare_diff)}')
     print('\n')
-
-    print(f'{"Radare vs Ghidra"} {jaccard(set_nodes_radare_purged, set_nodes_ghidra_purged)}')
-    print(f'{"Radare vs Angr"} {jaccard(set_nodes_radare_purged, set_nodes_angr_purged)}')
-    print(f'{"Radare vs Ida"} {jaccard(set_nodes_radare_purged, set_nodes_ida_purged)}')
+    print(f'{"Radare vs Ghidra"} {jaccard(set_edges_radare_diff, set_edges_ghidra_diff)}')
+    print(f'{"Radare vs Angr"} {jaccard(set_edges_radare_diff, set_edges_angr_diff)}')
+    print(f'{"Radare vs Ida"} {jaccard(set_edges_radare_diff, set_edges_ida_diff)}')
     print('\n')
 
-    print(f'{"--- Jaccard similarity check on edges ---"}')
+    print(f'{"Graph edit distance check on differences subgraphs"}')
     print('\n')
-    print(f'{"Angr vs Ghidra"} {jaccard(set_edges_angr_purged, set_edges_ghidra_purged)}')
-    print(f'{"Angr vs Radare"} {jaccard(set_edges_angr_purged, set_edges_radare_purged)}')
-    print(f'{"Angr vs Ida"} {jaccard(set_edges_angr_purged, set_edges_ida_purged)}')
+    print(f'{"Ghidra vs radare"} {nx.graph_edit_distance(ghidra_diff, radare_diff, node_match=return_eq)}')
+    print(f'{"Ghidra vs angr"} {nx.graph_edit_distance(ghidra_diff, angr_diff, node_match=return_eq)}')
+    print(f'{"Ghidra vs ida"} {nx.graph_edit_distance(ghidra_diff, ida_diff, node_match=return_eq)}')
     print('\n')
-
-    print(f'{"Ghidra vs Radare"} {jaccard(set_edges_ghidra_purged, set_edges_radare_purged)}')
-    print(f'{"Ghidra vs Angr"} {jaccard(set_edges_ghidra_purged, set_edges_angr_purged)}')
-    print(f'{"Ghidra vs Ida"} {jaccard(set_edges_ghidra_purged, set_edges_ida_purged)}')
+    print(f'{"Radare vs ghidra"} {nx.graph_edit_distance(radare_diff, ghidra_diff, node_match=return_eq)}')
+    print(f'{"Radare vs angr"} {nx.graph_edit_distance(radare_diff, angr_diff, node_match=return_eq)}')
+    print(f'{"Radare vs ida"} {nx.graph_edit_distance(radare_diff, ida_diff, node_match=return_eq)}')
     print('\n')
-
-    print(f'{"Ida vs Ghidra"} {jaccard(set_edges_ida_purged, set_edges_ghidra_purged)}')
-    print(f'{"Ida vs Angr"} {jaccard(set_edges_ida_purged, set_edges_angr_purged)}')
-    print(f'{"Ida vs Radare"} {jaccard(set_edges_ida_purged, set_edges_radare_purged)}')
+    print(f'{"Angr vs ghidra"} {nx.graph_edit_distance(angr_diff, ghidra_diff, node_match=return_eq)}')
+    print(f'{"Angr vs radare"} {nx.graph_edit_distance(angr_diff, radare_diff, node_match=return_eq)}')
+    print(f'{"Angr vs ida"} {nx.graph_edit_distance(angr_diff, ida_diff, node_match=return_eq)}')
     print('\n')
-
-    print(f'{"Radare vs Ghidra"} {jaccard(set_edges_radare_purged, set_edges_ghidra_purged)}')
-    print(f'{"Radare vs Angr"} {jaccard(set_edges_radare_purged, set_edges_angr_purged)}')
-    print(f'{"Radare vs Ida"} {jaccard(set_edges_radare_purged, set_edges_ida_purged)}')
-    print('\n')
-
-    angr_purged = pickle.load(open(pickles_folder + "angr_diff_maj.p", "rb"))
-    ghidra_purged = pickle.load(open(pickles_folder + "ghidra_diff_maj.p", "rb"))
-    ida_purged = pickle.load(open(pickles_folder + "ida_diff_maj.p", "rb"))
-    radare_purged = pickle.load(open(pickles_folder + "radare_diff_maj.p", "rb"))
-
-    print(f'{"--- Graph edit distance check ---"}')
-    print('\n')
-    print(f'{"Ghidra vs radare"} {nx.graph_edit_distance(ghidra_purged, radare_purged, node_match=return_eq)}')
-    print(f'{"Ghidra vs angr"} {nx.graph_edit_distance(ghidra_purged, angr_purged, node_match=return_eq)}')
-    print(f'{"Ghidra vs ida"} {nx.graph_edit_distance(ghidra_purged, ida_purged, node_match=return_eq)}')
-    print('\n')
- 
-    print(f'{"Radare vs ghidra"} {nx.graph_edit_distance(radare_purged, ghidra_purged, node_match=return_eq)}')
-    print(f'{"Radare vs angr"} {nx.graph_edit_distance(radare_purged, angr_purged, node_match=return_eq)}')
-    print(f'{"Radare vs ida"} {nx.graph_edit_distance(radare_purged, ida_purged, node_match=return_eq)}')
-    print('\n')
- 
-    print(f'{"Angr vs ghidra"} {nx.graph_edit_distance(angr_purged, ghidra_purged, node_match=return_eq)}')
-    print(f'{"Angr vs radare"} {nx.graph_edit_distance(angr_purged, radare_purged, node_match=return_eq)}')
-    print(f'{"Angr vs ida"} {nx.graph_edit_distance(angr_purged, ida_purged, node_match=return_eq)}')
-    print('\n')
- 
-    print(f'{"Ida vs ghidra"} {nx.graph_edit_distance(ida_purged, ghidra_purged, node_match=return_eq)}')
-    print(f'{"Ida vs radare"} {nx.graph_edit_distance(ida_purged, radare_purged, node_match=return_eq)}')
-    print(f'{"Ida vs angr"} {nx.graph_edit_distance(ida_purged, angr_purged, node_match=return_eq)}')
+    print(f'{"Ida vs ghidra"} {nx.graph_edit_distance(ida_diff, ghidra_diff, node_match=return_eq)}')
+    print(f'{"Ida vs radare"} {nx.graph_edit_distance(ida_diff, radare_diff, node_match=return_eq)}')
+    print(f'{"Ida vs angr"} {nx.graph_edit_distance(ida_diff, angr_diff, node_match=return_eq)}')
     print('\n')
 
 

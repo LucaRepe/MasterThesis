@@ -43,6 +43,7 @@ This file will be used as input for the orchestrator, in order to produce Interp
 ### fullAnalysis.py
 
 This python script:
+
     - purges the graphs considering the minimum and maximum addresses present inside the Pin trace
     - checks the Pin subset over the original addresses
     - checks the addresses present on the Pin trace that are missing in the graphs

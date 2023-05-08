@@ -92,6 +92,21 @@ def set_original_addresses(graph):
     return set_addr
 
 
+def purge_technique(graph):
+    min_addr = 0x1015
+    max_addr = 0x1069
+    for node in graph.copy():
+        if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
+            graph.remove_node(node)
+        elif int(node,16) < min_addr or int(node,16) > max_addr:
+            graph.remove_node(node)
+    for node in graph.copy().nodes():
+        if graph.nodes[node].get('edges'):
+            for edge in graph.nodes[node].get('edges'):
+                graph.add_edge(node, edge)
+    return graph
+
+
 def purge(graph, max_addr, min_addr):
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
@@ -184,13 +199,15 @@ def main():
     if len(pin_trace.difference(set_addr_radare_purged)): print(pin_trace.difference(set_addr_radare_purged))
     print('\n')
 
-    int_min = 0x1015
-    int_max = 0x1069
+    angr_purged = purge_technique(angr)
+    ghidra_purged = purge_technique(ghidra)
+    ida_purged = purge_technique(ida)
+    radare_purged = purge_technique(radare)
 
-    angr_purged = purge(angr, int_max, int_min)
-    ghidra_purged = purge(ghidra, int_max, int_min)
-    ida_purged = purge(ida, int_max, int_min)
-    radare_purged = purge(radare, int_max, int_min)
+    pickle.dump(angr_purged, open(pickles_folder + "angr_technique.p", "wb"))
+    pickle.dump(ghidra_purged, open(pickles_folder + "ghidra_technique.p", "wb"))
+    pickle.dump(ida_purged, open(pickles_folder + "ida_technique.p", "wb"))
+    pickle.dump(radare_purged, open(pickles_folder + "radare_technique.p", "wb"))
 
     print(f'{"Attributes comparison on function containing the technique"}')
     print('\n')

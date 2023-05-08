@@ -108,7 +108,7 @@ def main(filepath):
                     f.write('Invalid instruction found at ' + hex(block_instr['offset']) + '\n')
                     continue
                 f.write(' '.join(re.findall(r'.{1,2}', str(block_instr["bytes"]).upper())) + '\t' + 
-                    block_instr['opcode'].upper() + hex(block_instr['offset']) + '\n')
+                    block_instr['opcode'].upper() + '\t' + hex(block_instr['offset']) + '\n')
                 mnemonic = block_instr['opcode'].upper().split(' ')[0]
                 norm_instr = block_instr['opcode'].upper()
                 if mnemonic in cond_jump_instructions:

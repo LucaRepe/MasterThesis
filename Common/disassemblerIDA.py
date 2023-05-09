@@ -34,13 +34,11 @@ def main():
 
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
                               'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP',
-                              'JPE', \
-                              'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
+                              'JPE',  'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
     
     g = nx.DiGraph()
     idc.auto_wait()
     for func in idautils.Functions():
-
         flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT | idaapi.FC_CALL_ENDS)
         for bb in flowchart:
 
@@ -66,7 +64,7 @@ def main():
                 func_beg = True
 
             while cur_addr <= end:
-                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\n')
+                log(' '.join([to_hex(b) if b >= 0 else to_hex(unoverflow(b)) for b in idc.get_bytes(cur_addr, idc.get_item_size(cur_addr))]).upper() + '\t\t' + idc.GetDisasm(cur_addr).upper() + '\t' + hex(cur_addr) + '\n')
                 mnemonic = idc.GetDisasm(cur_addr).upper().split(' ')[0]
                 norm_instr = idc.GetDisasm(cur_addr).upper()
                 if mnemonic in cond_jump_instructions:

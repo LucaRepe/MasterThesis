@@ -93,8 +93,8 @@ def set_original_addresses(graph):
 
 
 def purge_technique(graph):
-    min_addr = 0x1000
-    max_addr = 0x102f
+    min_addr = 0x105b
+    max_addr = 0x109b
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -102,8 +102,13 @@ def purge_technique(graph):
             graph.remove_node(node)
     for node in graph.copy().nodes():
         if graph.nodes[node].get('edges'):
-            for edge in graph.nodes[node].get('edges'):
-                graph.add_edge(node, edge)
+            for edge, attr in zip(graph.nodes[node].get('edges'), graph.nodes[node].get('edge_attr')):
+                if attr == 'Call':
+                    graph.add_edge(node, edge, color='r')
+                if attr == 'Fallthrough':
+                    graph.add_edge(node, edge, color='g')
+                if attr == 'Jump':
+                    graph.add_edge(node, edge, color='b')
     return graph
 
 

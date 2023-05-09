@@ -130,36 +130,32 @@ int dynamically_computed_target_address(int var1, int var2) {
 }
 */
 
-/*
-int return_pointer_abuse(int var1, int var2) {
+
+void hidden_fun() {
+    puts("Hi I'm an hidden function");
+}
+
+
+int return_pointer_abuse(int var1, int var2, DWORD fun) {
     int resAdd = addition(var1, var2);
     puts("Return pointer abuse");
 
-    DWORD ptr1 = (DWORD) return_pointer_abuse-10;
-    DWORD ptr2 = (DWORD) return_pointer_abuse+10;
     __asm {
         call $ + 5
         add dword ptr[esp], 5
         retn
 
-        push eax
-        push dword ptr[ptr1]
-        push dword ptr[ptr2]
-        mov eax, dword ptr[2]
+        mov eax, dword ptr[fun]
         add eax, 10
         call eax
-        pop eax
-        pop eax
-        pop eax
-        pop ebp
-        retn
     }
 
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
-*/
 
+
+/*
 DWORD handle_exception(EXCEPTION_POINTERS* ep) {
     return ep->ExceptionRecord->ExceptionCode;
 }
@@ -192,6 +188,7 @@ int structured_exception_handler_misuse(int var1, int var2) {
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }
+*/
 
 int incrementAge(int age) {
     //int ageIncr = conditional_jumps_with_same_target(age, 10);
@@ -200,8 +197,8 @@ int incrementAge(int age) {
     //int ageIncr = register_reassignment(age, 10);
     //int ageIncr = disassembly_desynchronization(age, 10);
     //int ageIncr = dynamically_computed_target_address(age, 10);
-    //int ageIncr = return_pointer_abuse(age, 10);
-    int ageIncr = structured_exception_handler_misuse(age, 10);
+    int ageIncr = return_pointer_abuse(age, 10, (DWORD)hidden_fun - 10);
+    //int ageIncr = structured_exception_handler_misuse(age, 10);
     return ageIncr;
 }
 
@@ -259,7 +256,8 @@ int main() {
     //register_reassignment(var1, var2);
     //disassembly_desynchronization(var1, var2);
     //dynamically_computed_target_address(var1, var2);
-    //return_pointer_abuse(var1, var2);
-    structured_exception_handler_misuse(var1, var2);
+    DWORD func_ptr = (DWORD)hidden_fun - 10;
+    return_pointer_abuse(var1, var2, func_ptr);
+    //structured_exception_handler_misuse(var1, var2);
     return 0;
 }

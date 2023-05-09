@@ -70,7 +70,8 @@ class BlockDescriptor(dict):
 def main(filepath):
     r2 = r2pipe.open(filepath, flags=['-B 0x0000'])
     f = open(sys.argv[2], 'w')
-    r2.cmd("aaaa") 
+    r2.cmd("aaaa")
+    r2.cmd("e asm.bbmiddle=false")
     functions = r2.cmdj("aflj") 
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
      'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', 'JPE', \

@@ -33,14 +33,22 @@ def main():
         ida_funcs.add_func(start)
 
     cond_jump_instructions = ['JE', 'JNE', 'JBE', 'JLE', 'JA', 'JB', 'JG', 'JGE', 'JZ', 'JNZ', \
-                              'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP',
+                              'JNBE', 'JAE', 'JNB', 'JNAE', 'JNA', 'JL', 'JC', 'JNC', 'JO', 'JNO', 'JS', 'JNS', 'JP', \
                               'JPE',  'JNP', 'JPO', 'JCXZ', 'JECXZ', 'JNLE', 'JNL', 'JNGE', 'JNG']
+    
+    for ea in idautils.Segments():
+        for head in Heads(ea, SegEnd(ea)):
+            if FindDebuggerCheck(head) != BADADDR:
+                print("Debugger check found at address: 0x{:X}".format(head))
     
     g = nx.DiGraph()
     idc.auto_wait()
     for func in idautils.Functions():
         flowchart = idaapi.FlowChart(idaapi.get_func(func), flags=idaapi.FC_NOEXT | idaapi.FC_CALL_ENDS)
         for bb in flowchart:
+
+            if idaapi.is_cond_branch(bb.type):
+                print("Possible anti-disassembly technique detected at 0x{:X}".format(bb.start_ea))
 
             list_bytes = list()
             list_instr = list()

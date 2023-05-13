@@ -7,17 +7,6 @@ import xxhash
 
 from ghidra.util.task import TaskMonitor
 from ghidra.program.model.block import BasicBlockModel
-from ghidra.program.model.block import CodeBlockIterator
-from ghidra.program.model.block import CodeBlockReference 
-from ghidra.program.model.block import CodeBlockReferenceIterator 
-from ghidra.program.model.listing import CodeUnitIterator
-from ghidra.program.model.listing import Function
-from ghidra.program.model.listing import FunctionManager
-from ghidra.program.model.listing import Listing
-from ghidra.program.database.code import InstructionDB
-from ghidra.program.model.address import Address
-from ghidra.program.model.lang import OperandType
-
 
 def unoverflow(x):
     return (abs(x) ^ 0xff) + 1

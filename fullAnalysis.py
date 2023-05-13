@@ -93,8 +93,8 @@ def set_original_addresses(graph):
 
 
 def purge_technique(graph):
-    min_addr = 0x1077
-    max_addr = 0x10d3
+    min_addr = 0x1020
+    max_addr = 0x1067
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -151,6 +151,34 @@ def pin_trace_creation(pickles_folder):
     return pin_trace
 
 
+def CJWCC_check(graph):
+    list_nodes = list(graph.nodes())
+    for node in list_nodes:
+        if graph.nodes()[node]:
+            for bytes in graph.nodes()[node]['bytes']:
+                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes:
+                    list_bytes = graph.nodes()[node]['bytes']
+                    index = list_bytes.index(bytes)
+                    if index < len(list_bytes) - 1:
+                        if "74" in list_bytes[index+1] or "0F 84" in list_bytes[index+1]:
+                            print(f"{'In BB'} {node} {'there might be a CJWCC technique'}")
+
+
+def CJWST_check(graph):
+    list_nodes = list(graph.nodes())
+    for node in list_nodes:
+        if graph.nodes()[node]:
+            for bytes in graph.nodes()[node]['bytes']:
+                if "74" in bytes or "0F 84" in bytes:
+                    index = list_nodes.index(node)
+                    if index < len(list_nodes) - 1:
+                        next = list_nodes[index + 1]
+                        if graph.nodes()[next]:
+                            for bytes in graph.nodes()[next]['bytes']:
+                                if "75" in bytes or "0F 85" in bytes:
+                                    print(f"{'In BBs'} {node} {next} {'there might be a CJWST technique'}")
+            
+
 def main():
     pickles_folder = "Pickles/Complete/"
     assert pickles_folder
@@ -158,6 +186,8 @@ def main():
     ghidra = pickle.load(open(pickles_folder + "ghidra.p", "rb"))
     ida = pickle.load(open(pickles_folder + "ida.p", "rb"))
     radare = pickle.load(open(pickles_folder + "radare.p", "rb"))
+
+    CJWCC_check(angr)
 
     pin_trace = pin_trace_creation(pickles_folder)
     min_pin_addr = min(pin_trace)

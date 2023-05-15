@@ -63,6 +63,22 @@ int impossible_disassembly(int var1, int var2) {
         __emit 0xc0
         __emit 0x48
     }
+    __asm {
+        __emit 0x66
+        __emit 0xb8
+        __emit 0xeb
+        __emit 0x05
+        __emit 0x31
+        __emit 0xc0
+        __emit 0x74
+        __emit 0xf9
+        __emit 0xe8
+        __emit 0x58
+        __emit 0xc3
+        __emit 0x90
+        __emit 0x90
+
+    }
     int resSub = subtraction(resAdd, var2);
     return resAdd;
 }

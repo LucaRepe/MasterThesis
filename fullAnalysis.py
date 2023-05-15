@@ -93,8 +93,8 @@ def set_original_addresses(graph):
 
 
 def purge_technique(graph):
-    min_addr = 0x1020
-    max_addr = 0x1067
+    min_addr = 0x106b
+    max_addr = 0x109b
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -151,12 +151,31 @@ def pin_trace_creation(pickles_folder):
     return pin_trace
 
 
+def RPA_check(graph):
+    pass
+
+
+def ID_check(graph):
+    list_nodes = list(graph.nodes())
+    for node in list_nodes:
+        if graph.nodes()[node]:
+            for bytes in graph.nodes()[node]['bytes']:
+                if "EB FF" in bytes:
+                    print(f"{'In BB'} {node} {'there might be a ID technique'}")
+                elif "EB" in bytes or "74" in bytes or "75" in bytes:
+                    min_bb_addr = graph.nodes()[node]['addr'][0]
+                    max_bb_addr = graph.nodes()[node]['addr'][-1]
+                    if graph.nodes()[node]['edges']:
+                        if graph.nodes()[node]['edges'][0] > min_bb_addr and graph.nodes()[node]['edges'][0] < max_bb_addr:
+                            print(f"{'In BB'} {node} {'there might be a ID technique'}")
+
+
 def CJWCC_check(graph):
     list_nodes = list(graph.nodes())
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
-                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes:
+                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes or "85 E4" in bytes:
                     list_bytes = graph.nodes()[node]['bytes']
                     index = list_bytes.index(bytes)
                     if index < len(list_bytes) - 1:
@@ -168,15 +187,26 @@ def CJWST_check(graph):
     list_nodes = list(graph.nodes())
     for node in list_nodes:
         if graph.nodes()[node]:
-            for bytes in graph.nodes()[node]['bytes']:
-                if "74" in bytes or "0F 84" in bytes:
-                    index = list_nodes.index(node)
-                    if index < len(list_nodes) - 1:
-                        next = list_nodes[index + 1]
-                        if graph.nodes()[next]:
-                            for bytes in graph.nodes()[next]['bytes']:
-                                if "75" in bytes or "0F 85" in bytes:
-                                    print(f"{'In BBs'} {node} {next} {'there might be a CJWST technique'}")
+            bytes = graph.nodes()[node]['bytes'][-1]
+            if "74" in bytes or "0F 84" in bytes:
+                index = list_nodes.index(node)
+                target = graph.nodes()[node]['edges'][0]
+                if index < len(list_nodes) - 1:
+                    next = list_nodes[index + 1]
+                    if graph.nodes()[next]:
+                        bytes = graph.nodes()[next]['bytes'][0]
+                        if "75" in bytes or "0F 85" in bytes:
+                            if target == graph.nodes()[next]['edges'][0]:
+                                print(f"{'In BBs'} {node} {next} {'there might be a CJWST technique'}")
+
+
+def techniques_check(name, graph):
+    print(name)
+    CJWST_check(graph)
+    CJWCC_check(graph)
+    ID_check(graph)
+    RPA_check(graph)
+    print('\n')
             
 
 def main():
@@ -187,7 +217,10 @@ def main():
     ida = pickle.load(open(pickles_folder + "ida.p", "rb"))
     radare = pickle.load(open(pickles_folder + "radare.p", "rb"))
 
-    CJWCC_check(angr)
+    techniques_check("Angr", angr)
+    techniques_check("Ghidra", ghidra)
+    techniques_check("Ida", ida)
+    techniques_check("Radare", radare)
 
     pin_trace = pin_trace_creation(pickles_folder)
     min_pin_addr = min(pin_trace)

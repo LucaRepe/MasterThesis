@@ -185,7 +185,7 @@ def CJWCC_check(graph):
                     list_bytes = graph.nodes()[node]['bytes']
                     index = list_bytes.index(bytes)
                     if index < len(list_bytes) - 1:
-                        if "74" in list_bytes[index+1] or "0F 84" in list_bytes[index+1]:
+                        if "74" in list_bytes[index+1] or "0F 84" in list_bytes[index+1] or "75" in list_bytes[index+1] or "0F 85" in list_bytes[index+1]:
                             print(f"{'In BB'} {node} {'there might be a CJWCC technique'}")
 
 
@@ -224,6 +224,7 @@ def main():
     radare = pickle.load(open(pickles_folder + "radare.p", "rb"))
 
     print(f"{'Anti-disassembly techniques check'}")
+    print('\n')
     techniques_check("Angr", angr)
     techniques_check("Ghidra", ghidra)
     techniques_check("Ida", ida)

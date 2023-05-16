@@ -93,8 +93,8 @@ def set_original_addresses(graph):
 
 
 def purge_technique(graph):
-    min_addr = 0x106b
-    max_addr = 0x109b
+    min_addr = 0x108e
+    max_addr = 0x10bf
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -152,7 +152,13 @@ def pin_trace_creation(pickles_folder):
 
 
 def RPA_check(graph):
-    pass
+    list_nodes = list(graph.nodes())
+    for node in list_nodes:
+        if graph.nodes()[node]:
+            for bytes in graph.nodes()[node]['bytes']:
+                if "83 04 24" in bytes:
+                    if graph.nodes()[node]['bytes'][-1] == "C2" or graph.nodes()[node]['bytes'][-1] == "C3":
+                        print(f"{'In BB'} {node} {'there might be a RPA technique'}")
 
 
 def ID_check(graph):
@@ -201,7 +207,7 @@ def CJWST_check(graph):
 
 
 def techniques_check(name, graph):
-    print(name)
+    print(f"{name}")
     CJWST_check(graph)
     CJWCC_check(graph)
     ID_check(graph)
@@ -217,6 +223,7 @@ def main():
     ida = pickle.load(open(pickles_folder + "ida.p", "rb"))
     radare = pickle.load(open(pickles_folder + "radare.p", "rb"))
 
+    print(f"{'Anti-disassembly techniques check'}")
     techniques_check("Angr", angr)
     techniques_check("Ghidra", ghidra)
     techniques_check("Ida", ida)

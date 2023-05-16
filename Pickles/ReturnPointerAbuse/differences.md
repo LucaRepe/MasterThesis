@@ -1,7 +1,7 @@
 # Return pointer abuse
 
 
-Addresses of the function that contains the technique: 0x1077 -> 0x10D3
+Addresses of the function that contains the technique: 0x108E -> 0x10BF
 
 
 ## Pin subset check on original addresses
@@ -26,48 +26,49 @@ Addresses present on the Pin trace that are missing in Radare: 120
 
 
 Angr
-nodes_count 10
-edges_count 11
+nodes_count 7
+edges_count 7
 func_beg_count 2
 dir_call_count 1
-indir_call_count 4
-cond_jump_count 1
-dir_jump_count 1
+indir_call_count 3
+cond_jump_count 0
+dir_jump_count 0
 indir_jump_count 0
 ret_count 1
 
 Ghidra
-nodes_count 6
-edges_count 6
+nodes_count 4
+edges_count 4
 func_beg_count 0
 dir_call_count 0
 indir_call_count 2
-cond_jump_count 1
-dir_jump_count 1
+cond_jump_count 0
+dir_jump_count 0
 indir_jump_count 0
 ret_count 1
 
 Ida
-nodes_count 10
-edges_count 10
+nodes_count 7
+edges_count 6
 func_beg_count 0
 dir_call_count 1
-indir_call_count 3
-cond_jump_count 1
-dir_jump_count 1
+indir_call_count 2
+cond_jump_count 0
+dir_jump_count 0
 indir_jump_count 0
 ret_count 1
 
 Radare
-nodes_count 6
-edges_count 5
+nodes_count 4
+edges_count 3
 func_beg_count 0
 dir_call_count 1
 indir_call_count 1
-cond_jump_count 1
-dir_jump_count 1
+cond_jump_count 0
+dir_jump_count 0
 indir_jump_count 0
 ret_count 1
+
 
 ## Jaccard similarity check on nodes
 
@@ -119,20 +120,20 @@ Radare vs Ida 0.5
 
 
 Ghidra vs radare 1.0
-Ghidra vs angr 10.0
-Ghidra vs ida 12.0
+Ghidra vs angr 7.0
+Ghidra vs ida 8.0
 
 
 Radare vs ghidra 1.0
-Radare vs angr 11.0
-Radare vs ida 11.0
+Radare vs angr 8.0
+Radare vs ida 7.0
 
 
-Angr vs ghidra 10.0
-Angr vs radare 11.0
+Angr vs ghidra 7.0
+Angr vs radare 8.0
 Angr vs ida 2.0
 
 
-Ida vs ghidra 12.0
-Ida vs radare 11.0
+Ida vs ghidra 8.0
+Ida vs radare 7.0
 Ida vs angr 2.0

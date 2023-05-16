@@ -69,6 +69,7 @@ def diff_graph_construction(agreement, purged):
 def jaccard(s1, s2):
     return float(len(s1.intersection(s2)) / len(s1.union(s2)))
 
+
 def set_purged_edges(graph):
     set_edges_purged = set ()
     for edge in graph.edges():
@@ -123,6 +124,7 @@ def purge(graph, max_addr, min_addr):
 
 def get_bbl_file(pickles_folder, files):
     bbl_file = [f for f in files if f.endswith(".bbl")]
+    assert bbl_file
     file_path = os.path.join(pickles_folder, bbl_file[0])
     bbl_string = open(file_path).read()
     pin_addrs_list = re.findall('.{1,8}', bbl_string)
@@ -131,6 +133,7 @@ def get_bbl_file(pickles_folder, files):
 
 def get_base_address(pickles_folder, files):
     json_file = [f for f in files if f.endswith(".json")]
+    assert json_file
     file_path = os.path.join(pickles_folder, json_file[0])
     with open(file_path, 'r', encoding='iso-8859-1') as f:
         lines = f.readlines()
@@ -156,9 +159,8 @@ def RPA_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
-                if "83 04 24" in bytes:
-                    if graph.nodes()[node]['bytes'][-1] == "C2" or graph.nodes()[node]['bytes'][-1] == "C3":
-                        print(f"{'In BB'} {node} {'there might be a RPA technique'}")
+                if "83 04 24" in bytes or "89 45 04" in bytes or "89 5D 04" in bytes or "89 4D 04" in bytes:
+                    print(f"{'In BB'} {node} {'there might be a RPA technique'}")
 
 
 def ID_check(graph):

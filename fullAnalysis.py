@@ -183,7 +183,7 @@ def CJWCC_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
-                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes or "85 E4" in bytes:
+                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes or "33 D2" in bytes or "85 E4" in bytes or "85 F6" in bytes:
                     list_bytes = graph.nodes()[node]['bytes']
                     index = list_bytes.index(bytes)
                     if index < len(list_bytes) - 1:

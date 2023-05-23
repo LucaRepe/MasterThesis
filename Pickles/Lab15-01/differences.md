@@ -27,20 +27,20 @@ In BB 0x105e there might be a CJWCC technique
 Radare
 In BB 0x100c there might be a CJWCC technique
 In BB 0x101f there might be a CJWCC technique
-In BB 0x1032 there might be a CJWCC technique
 In BB 0x1033 there might be a CJWCC technique
 In BB 0x1047 there might be a CJWCC technique
 In BB 0x105e there might be a CJWCC technique
+In BB 0x1032 there might be a ID technique
 
 
-Pin subset check on original addresses
+## Pin subset check on original addresses
 
 
 Pin trace addresses: 88
 Angr is False - addresses: 139
 Ghidra is False - addresses: 138
 Ida is False - addresses: 139
-Radare is True - addresses: 138
+Radare is True - addresses: 155
 
 
 Addresses present on the Pin trace that are missing in Angr: 2

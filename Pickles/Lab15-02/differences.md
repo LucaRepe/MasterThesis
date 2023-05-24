@@ -24,7 +24,6 @@ In BBs 0x1263 0x126b there might be a CJWST technique
 In BB 0x1154 there might be a CJWCC technique
 In BB 0x11d0 there might be a CJWCC technique
 In BB 0x120f there might be a ID technique
-In BB 0x12e3 there might be a ID technique
 
 
 ## Pin subset check on original addresses

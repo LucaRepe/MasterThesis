@@ -93,9 +93,18 @@ def set_original_addresses(graph):
     return set_addr
 
 
+def color_edges_agreement(agreement, ida):
+    for edgeAgr in agreement.copy().edges():
+        for edgeIDA in ida.edges(data=True):
+            if edgeAgr[0] == edgeIDA[0] and edgeAgr[1] == edgeIDA[1]:
+                attr = ida.get_edge_data(edgeIDA[0], edgeIDA[1])
+                agreement.add_edge(edgeAgr[0], edgeAgr[1], **attr)
+    return agreement
+
+
 def purge_technique(graph):
-    min_addr = 0x105b
-    max_addr = 0x109b
+    min_addr = 0x108e
+    max_addr = 0x10bf
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -159,6 +168,7 @@ def RPA_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
+                #  ADD DWORD PTR [esp], xxx - MOV DWORD PTR [ebp+4],EAX (EBX, ECX)
                 if "83 04 24" in bytes or "89 45 04" in bytes or "89 5D 04" in bytes or "89 4D 04" in bytes:
                     print(f"{'In BB'} {node} {'there might be a RPA technique'}")
 
@@ -168,8 +178,10 @@ def ID_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
+                # JMP -1
                 if "EB FF" in bytes:
                     print(f"{'In BB'} {node} {'there might be a ID technique'}")
+                # JMP - JZ - JNZ
                 elif "EB" in bytes or "74" in bytes or "75" in bytes:
                     min_bb_addr = graph.nodes()[node]['addr'][0]
                     max_bb_addr = graph.nodes()[node]['addr'][-1]
@@ -183,11 +195,19 @@ def CJWCC_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
-                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes or "33 D2" in bytes or "85 E4" in bytes or "85 F6" in bytes:
+                # XOR EAX, EAX (EBX, ECX, EDX)
+                if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes or "33 D2" in bytes: 
                     list_bytes = graph.nodes()[node]['bytes']
                     index = list_bytes.index(bytes)
                     if index < len(list_bytes) - 1:
                         if "74" in list_bytes[index+1] or "0F 84" in list_bytes[index+1] or "75" in list_bytes[index+1] or "0F 85" in list_bytes[index+1]:
+                            print(f"{'In BB'} {node} {'there might be a CJWCC technique'}")
+                # TEST ESP, ESP
+                if "85 E4" in bytes:
+                    list_bytes = graph.nodes()[node]['bytes']
+                    index = list_bytes.index(bytes)
+                    if index < len(list_bytes) - 1:
+                        if "75" in list_bytes[index+1] or "0F 85" in list_bytes[index+1]:
                             print(f"{'In BB'} {node} {'there might be a CJWCC technique'}")
 
 
@@ -196,6 +216,7 @@ def CJWST_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             bytes = graph.nodes()[node]['bytes'][-1]
+            # JZ
             if "74" in bytes or "0F 84" in bytes:
                 index = list_nodes.index(node)
                 target = graph.nodes()[node]['edges'][0]
@@ -203,6 +224,7 @@ def CJWST_check(graph):
                     next = list_nodes[index + 1]
                     if graph.nodes()[next]:
                         bytes = graph.nodes()[next]['bytes'][0]
+                        # JNZ
                         if "75" in bytes or "0F 85" in bytes:
                             if target == graph.nodes()[next]['edges'][0]:
                                 print(f"{'In BBs'} {node} {next} {'there might be a CJWST technique'}")
@@ -306,6 +328,7 @@ def main():
                     common_edges.remove(edge)
     
     agreement_graph = nx.DiGraph(common_edges)
+    agreement_graph = color_edges_agreement(agreement_graph, ida_purged)
     angr_diff = diff_graph_construction(agreement_graph, angr_purged)
     ghidra_diff = diff_graph_construction(agreement_graph, ghidra_purged)
     ida_diff = diff_graph_construction(agreement_graph, ida_purged)

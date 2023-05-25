@@ -103,8 +103,8 @@ def color_edges_agreement(agreement, ida):
 
 
 def purge_technique(graph):
-    min_addr = 0x108e
-    max_addr = 0x10bf
+    min_addr = 0x113f
+    max_addr = 0x1167
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -186,8 +186,9 @@ def ID_check(graph):
                     min_bb_addr = graph.nodes()[node]['addr'][0]
                     max_bb_addr = graph.nodes()[node]['addr'][-1]
                     if graph.nodes()[node]['edges']:
-                        if graph.nodes()[node]['edges'][0] > min_bb_addr and graph.nodes()[node]['edges'][0] < max_bb_addr:
-                            print(f"{'In BB'} {node} {'there might be a ID technique'}")
+                        for edge, attr in zip(graph.nodes[node].get('edges'), graph.nodes[node].get('edge_attr')):
+                            if attr == 'Jump' and edge > min_bb_addr and edge < max_bb_addr:
+                                print(f"{'In BB'} {node} {'there might be a ID technique'}")                            
 
 
 def CJWCC_check(graph):
@@ -197,6 +198,13 @@ def CJWCC_check(graph):
             for bytes in graph.nodes()[node]['bytes']:
                 # XOR EAX, EAX (EBX, ECX, EDX)
                 if "33 C0" in bytes or "33 DB" in bytes or "33 C9" in bytes or "33 D2" in bytes: 
+                    list_bytes = graph.nodes()[node]['bytes']
+                    index = list_bytes.index(bytes)
+                    if index < len(list_bytes) - 1:
+                        if "74" in list_bytes[index+1] or "0F 84" in list_bytes[index+1]:
+                            print(f"{'In BB'} {node} {'there might be a CJWCC technique'}")
+                # XOR EAX, EAX (EBX, ECX, EDX)
+                if "31 C0" in bytes or "31 DB" in bytes or "31 C9" in bytes or "31 D2" in bytes: 
                     list_bytes = graph.nodes()[node]['bytes']
                     index = list_bytes.index(bytes)
                     if index < len(list_bytes) - 1:

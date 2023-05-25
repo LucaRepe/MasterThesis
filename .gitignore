@@ -4,6 +4,7 @@
 /Tools
 /Input
 /Common/__pycache__
+/Pickles/Complete
 *.dot
 *.id*
 *.nam

@@ -103,8 +103,8 @@ def color_edges_agreement(agreement, ida):
 
 
 def purge_technique(graph):
-    min_addr = 0x113f
-    max_addr = 0x1167
+    min_addr = 0x12e3
+    max_addr = 0x12f1
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)

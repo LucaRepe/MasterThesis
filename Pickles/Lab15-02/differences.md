@@ -44,7 +44,7 @@ Addresses present on the Pin trace that are missing in Ghidra: 0
 Addresses present on the Pin trace that are missing in Ida: 0
 Addresses present on the Pin trace that are missing in Radare: 0
 
-## Addresses of the function that contains the right technique: 0x113F -> 0x1167
+## Addresses of the function that contains the first CJWCC technique: 0x113F -> 0x1167
 
 
 ## Attributes comparison on function containing the technique
@@ -161,3 +161,147 @@ Angr vs ida 5.0
 Ida vs ghidra 0.0
 Ida vs radare 6.0
 Ida vs angr 5.0
+
+
+## Addresses of the function that contains the first CJWCC technique: 0x120F -> 0x1229
+
+Angr
+nodes_count 5
+edges_count 3
+func_beg_count 1
+dir_call_count 0
+indir_call_count 1
+cond_jump_count 0
+dir_jump_count 1
+indir_jump_count 0
+ret_count 0
+
+Ghidra
+nodes_count 0
+edges_count 0
+func_beg_count 0
+dir_call_count 0
+indir_call_count 0
+cond_jump_count 0
+dir_jump_count 0
+indir_jump_count 0
+ret_count 0
+
+Ida
+nodes_count 0
+edges_count 0
+func_beg_count 0
+dir_call_count 0
+indir_call_count 0
+cond_jump_count 0
+dir_jump_count 0
+indir_jump_count 0
+ret_count 0
+
+Radare
+nodes_count 6
+edges_count 5
+func_beg_count 0
+dir_call_count 1
+indir_call_count 1
+cond_jump_count 0
+dir_jump_count 1
+indir_jump_count 0
+ret_count 0
+
+
+## Addresses of the function that contains the CJWST technique: 0x1263 -> 0x126E
+
+Attributes comparison on function containing the technique
+
+
+Angr
+nodes_count 6
+edges_count 6
+func_beg_count 0
+dir_call_count 1
+indir_call_count 0
+cond_jump_count 2
+dir_jump_count 2
+indir_jump_count 0
+ret_count 0
+
+Ghidra
+nodes_count 0
+edges_count 0
+func_beg_count 0
+dir_call_count 0
+indir_call_count 0
+cond_jump_count 0
+dir_jump_count 0
+indir_jump_count 0
+ret_count 0
+
+Ida
+nodes_count 0
+edges_count 0
+func_beg_count 0
+dir_call_count 0
+indir_call_count 0
+cond_jump_count 0
+dir_jump_count 0
+indir_jump_count 0
+ret_count 0
+
+Radare
+nodes_count 7
+edges_count 8
+func_beg_count 0
+dir_call_count 1
+indir_call_count 1
+cond_jump_count 2
+dir_jump_count 2
+indir_jump_count 0
+ret_count 0
+
+
+## Addresses of the function that contains the CJWCC + ID technique: 0x12E3 -> 0x12F1
+
+Angr
+nodes_count 5
+edges_count 4
+func_beg_count 0
+dir_call_count 1
+indir_call_count 0
+cond_jump_count 1
+dir_jump_count 1
+indir_jump_count 0
+ret_count 0
+
+Ghidra
+nodes_count 0
+edges_count 0
+func_beg_count 0
+dir_call_count 0
+indir_call_count 0
+cond_jump_count 0
+dir_jump_count 0
+indir_jump_count 0
+ret_count 0
+
+Ida
+nodes_count 0
+edges_count 0
+func_beg_count 0
+dir_call_count 0
+indir_call_count 0
+cond_jump_count 0
+dir_jump_count 0
+indir_jump_count 0
+ret_count 0
+
+Radare
+nodes_count 6
+edges_count 6
+func_beg_count 0
+dir_call_count 1
+indir_call_count 0
+cond_jump_count 1
+dir_jump_count 2
+indir_jump_count 0
+ret_count 0

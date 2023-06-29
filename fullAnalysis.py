@@ -103,8 +103,8 @@ def color_edges_agreement(agreement, ida):
 
 
 def purge_technique(graph):
-    min_addr = 0x12e3
-    max_addr = 0x12f1
+    min_addr = 0x1000
+    max_addr = 0x101e
     for node in graph.copy():
         if node == 'UnresolvableCallTarget' or node == 'UnresolvableJumpTarget':
             graph.remove_node(node)
@@ -168,7 +168,7 @@ def RPA_check(graph):
     for node in list_nodes:
         if graph.nodes()[node]:
             for bytes in graph.nodes()[node]['bytes']:
-                #  ADD DWORD PTR [esp], xxx - MOV DWORD PTR [ebp+4],EAX (EBX, ECX)
+                # ADD DWORD PTR [esp], xxx - MOV DWORD PTR [ebp+4],EAX (EBX, ECX)
                 if "83 04 24" in bytes or "89 45 04" in bytes or "89 5D 04" in bytes or "89 4D 04" in bytes:
                     print(f"{'In BB'} {node} {'there might be a RPA technique'}")
 

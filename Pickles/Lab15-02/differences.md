@@ -163,7 +163,7 @@ Ida vs radare 6.0
 Ida vs angr 5.0
 
 
-## Addresses of the function that contains the first CJWCC technique: 0x120F -> 0x1229
+## Addresses of the function that contains the second CJWCC technique: 0x120F -> 0x1229
 
 Angr
 nodes_count 5
